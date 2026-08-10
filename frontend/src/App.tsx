@@ -22,7 +22,9 @@ const THEME_STORAGE_KEY = "yeshivish-translator-theme";
 
 function getSavedTheme(): Theme {
   try {
-    return localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
+    return localStorage.getItem(THEME_STORAGE_KEY) === "dark"
+      ? "dark"
+      : "light";
   } catch {
     return "light";
   }
@@ -120,6 +122,13 @@ export default function App() {
         <p className="eyebrow">{copy.eyebrow}</p>
         <h1>Translate a sentence</h1>
 
+        <p className="privacy-notice">
+          Submitted text is sent to OpenAI to generate your translation. Avoid
+          sharing sensitive, confidential, or personally identifying
+          information.{" "}
+          <a href="#privacy-details">Learn how your data is handled</a>.
+        </p>
+
         <div className="direction-selector" aria-label="Translation direction">
           {TRANSLATION_DIRECTIONS.map((value) => (
             <button
@@ -163,6 +172,21 @@ export default function App() {
             </>
           )}
         </div>
+
+        <section
+          id="privacy-details"
+          className="privacy-details"
+          aria-labelledby="privacy-details-heading"
+        >
+          <h2 id="privacy-details-heading">How your data is handled</h2>
+          <p>
+            Text you submit is sent to OpenAI&rsquo;s API only to generate your
+            translation and is not stored by this application afterward. No
+            online service can guarantee complete privacy or security, so please
+            avoid submitting passwords, financial details, medical information,
+            or other sensitive or personally identifying information.
+          </p>
+        </section>
       </section>
     </main>
   );
