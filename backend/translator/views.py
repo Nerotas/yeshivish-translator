@@ -17,6 +17,8 @@ from .prompt import build_translation_instructions
 logger = logging.getLogger(__name__)
 
 MAX_INPUT_CHARACTERS = 3000
+DEFAULT_DIRECTION = "yeshivish_to_english"
+SUPPORTED_DIRECTIONS = {DEFAULT_DIRECTION, "english_to_yeshivish"}
 
 
 @lru_cache(maxsize=1)
@@ -29,6 +31,18 @@ def get_openai_client():
 @permission_classes([AllowAny])
 def translate(request):
     text = request.data.get("text")
+    direction = request.data.get("direction", DEFAULT_DIRECTION)
+
+    if not isinstance(direction, str) or direction not in SUPPORTED_DIRECTIONS:
+        return Response(
+            {
+                "error": (
+                    "The direction field must be one of: "
+                    "yeshivish_to_english, english_to_yeshivish."
+                )
+            },
+            status=status.HTTP_400_BAD_REQUEST,
+        )
 
     if not isinstance(text, str):
         return Response(
@@ -36,8 +50,7 @@ def translate(request):
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    text = text.strip()
-    if not text:
+    if not text.strip():
         return Response(
             {"error": "Enter text to translate."},
             status=status.HTTP_400_BAD_REQUEST,
@@ -52,7 +65,7 @@ def translate(request):
     try:
         api_response = get_openai_client().responses.create(
             model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
-            instructions=build_translation_instructions(text),
+            instructions=build_translation_instructions(text, direction=direction),
             input=text,
             max_output_tokens=500,
         )

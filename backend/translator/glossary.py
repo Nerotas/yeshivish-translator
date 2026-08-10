@@ -7,6 +7,7 @@ from pathlib import Path
 
 GLOSSARY_PATH = Path(__file__).with_name("glossary.json")
 MAX_GLOSSARY_MATCHES = 8
+ENGLISH_MEANING_SEPARATOR = re.compile(r"\s+(?:or|and)\s+|\s*[/;]\s*")
 
 
 def _normalize(value):
@@ -62,7 +63,28 @@ def _alias_pattern(alias):
     return re.compile(rf"(?<!\w){escaped_alias}(?!\w)")
 
 
-def find_glossary_entries(text, entries=None, limit=MAX_GLOSSARY_MATCHES):
+def _english_aliases(entry):
+    aliases = []
+
+    for meaning in entry["meanings"]:
+        aliases.append(meaning)
+        aliases.extend(ENGLISH_MEANING_SEPARATOR.split(meaning))
+
+    # Articles describe the glossary definition, but are rarely important to a
+    # match (for example, "a Torah class" should match "Torah class").
+    return {
+        re.sub(r"^(?:a|an|the)\s+", "", alias, flags=re.IGNORECASE).strip(" .?!")
+        for alias in aliases
+        if alias.strip(" .?!")
+    }
+
+
+def find_glossary_entries(
+    text,
+    entries=None,
+    limit=MAX_GLOSSARY_MATCHES,
+    direction="yeshivish_to_english",
+):
     if limit <= 0:
         return []
 
@@ -71,7 +93,13 @@ def find_glossary_entries(text, entries=None, limit=MAX_GLOSSARY_MATCHES):
     candidates = []
 
     for entry_index, entry in enumerate(glossary_entries):
-        aliases = [entry["term"], *entry.get("variants", [])]
+        if direction == "yeshivish_to_english":
+            aliases = [entry["term"], *entry.get("variants", [])]
+        elif direction == "english_to_yeshivish":
+            aliases = _english_aliases(entry)
+        else:
+            raise ValueError(f"Unsupported translation direction: {direction}")
+
         for alias in aliases:
             for match in _alias_pattern(alias).finditer(normalized_text):
                 candidates.append(
@@ -105,22 +133,32 @@ def find_glossary_entries(text, entries=None, limit=MAX_GLOSSARY_MATCHES):
     return [entry for _, entry in sorted(selected, key=lambda item: item[0])]
 
 
-def format_glossary_context(entries):
+def format_glossary_context(entries, direction="yeshivish_to_english"):
     if not entries:
         return ""
 
-    lines = [
-        "Relevant glossary guidance:",
-        "Use these meanings only when supported by the submitted text's context.",
-    ]
+    lines = ["Relevant glossary guidance:"]
+
+    if direction == "yeshivish_to_english":
+        lines.append(
+            "Use these meanings only when supported by the submitted text's context."
+        )
+    elif direction == "english_to_yeshivish":
+        lines.append(
+            "Use these as optional, context-sensitive choices; do not force substitutions."
+        )
+    else:
+        raise ValueError(f"Unsupported translation direction: {direction}")
 
     for entry in entries:
         variants = entry.get("variants", [])
         variant_text = f" (variants: {', '.join(variants)})" if variants else ""
         meanings = "; ".join(entry["meanings"])
-        lines.append(
-            f'- {entry["term"]}{variant_text}: {meanings}. '
-            f'Context: {entry["context_note"]}'
-        )
+        if direction == "yeshivish_to_english":
+            mapping = f'{entry["term"]}{variant_text}: {meanings}'
+        else:
+            mapping = f'English "{meanings}" -> Yeshivish "{entry["term"]}"{variant_text}'
+
+        lines.append(f"- {mapping}. Context: {entry['context_note']}")
 
     return "\n".join(lines)

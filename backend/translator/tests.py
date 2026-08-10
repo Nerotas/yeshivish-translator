@@ -10,7 +10,11 @@ from .glossary import (
     format_glossary_context,
     load_glossary,
 )
-from .prompt import TRANSLATOR_INSTRUCTIONS, build_translation_instructions
+from .prompt import (
+    ENGLISH_TO_YESHIVISH_INSTRUCTIONS,
+    TRANSLATOR_INSTRUCTIONS,
+    build_translation_instructions,
+)
 
 
 def glossary_entry(term, variants=None):
@@ -87,6 +91,25 @@ class GlossaryMatchingTests(SimpleTestCase):
 
         self.assertEqual(len(matches), MAX_GLOSSARY_MATCHES)
 
+    def test_matches_english_meanings_for_reverse_translation(self):
+        matches = find_glossary_entries(
+            "That was a very enjoyable lesson.",
+            direction="english_to_yeshivish",
+        )
+
+        self.assertEqual(
+            [entry["term"] for entry in matches],
+            ["gishmak", "shiur"],
+        )
+
+    def test_reverse_matching_does_not_include_unrelated_entries(self):
+        matches = find_glossary_entries(
+            "That lesson was enjoyable.",
+            direction="english_to_yeshivish",
+        )
+
+        self.assertNotIn("bubbe", [entry["term"] for entry in matches])
+
     def test_formats_compact_context(self):
         context = format_glossary_context([glossary_entry("vort", ["vertel"])])
 
@@ -107,6 +130,26 @@ class TranslationPromptTests(SimpleTestCase):
         self.assertIn("- vort", instructions)
         self.assertNotIn("- bubbe", instructions)
 
+    def test_reverse_prompt_includes_only_relevant_glossary_entries(self):
+        instructions = build_translation_instructions(
+            "That was an enjoyable lesson.",
+            direction="english_to_yeshivish",
+        )
+
+        self.assertIn(ENGLISH_TO_YESHIVISH_INSTRUCTIONS.strip(), instructions)
+        self.assertIn('Yeshivish "gishmak"', instructions)
+        self.assertIn('Yeshivish "shiur"', instructions)
+        self.assertNotIn('Yeshivish "bubbe"', instructions)
+
+    def test_reverse_prompt_without_matches_uses_only_base_instructions(self):
+        self.assertEqual(
+            build_translation_instructions(
+                "ZXQV 12345",
+                direction="english_to_yeshivish",
+            ),
+            ENGLISH_TO_YESHIVISH_INSTRUCTIONS,
+        )
+
 
 class TranslationEndpointTests(SimpleTestCase):
     @patch("translator.views.get_openai_client")
@@ -125,3 +168,116 @@ class TranslationEndpointTests(SimpleTestCase):
         instructions = create.call_args.kwargs["instructions"]
         self.assertIn("- mamesh", instructions)
         self.assertNotIn("- bubbe", instructions)
+
+    @patch("translator.views.get_openai_client")
+    def test_defaults_to_yeshivish_to_english_when_direction_is_omitted(
+        self, get_client
+    ):
+        create = Mock(return_value=SimpleNamespace(output_text="Really good."))
+        get_client.return_value.responses.create = create
+
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            "Yeshivish-to-plain-English translator",
+            create.call_args.kwargs["instructions"],
+        )
+
+    @patch("translator.views.get_openai_client")
+    def test_sends_reverse_direction_prompt_to_openai(self, get_client):
+        create = Mock(
+            return_value=SimpleNamespace(
+                output_text="That was a very geshmake shiur."
+            )
+        )
+        get_client.return_value.responses.create = create
+
+        response = self.client.post(
+            "/api/translate/",
+            {
+                "text": "That was a very enjoyable lesson.",
+                "direction": "english_to_yeshivish",
+            },
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(
+            response.json(),
+            {"translation": "That was a very geshmake shiur."},
+        )
+        instructions = create.call_args.kwargs["instructions"]
+        self.assertIn("plain-English-to-Yeshivish translator", instructions)
+        self.assertIn('Yeshivish "gishmak"', instructions)
+        self.assertIn('Yeshivish "shiur"', instructions)
+
+    @patch("translator.views.get_openai_client")
+    def test_preserves_source_formatting_sent_to_openai(self, get_client):
+        create = Mock(return_value=SimpleNamespace(output_text='  "Reuven said hello."  '))
+        get_client.return_value.responses.create = create
+        source = '  Reuven said:\n\n"Hello."  '
+
+        response = self.client.post(
+            "/api/translate/",
+            {"text": source, "direction": "english_to_yeshivish"},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(create.call_args.kwargs["input"], source)
+
+    @patch("translator.views.get_openai_client")
+    def test_rejects_invalid_direction_without_calling_openai(self, get_client):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Hello", "direction": "sideways"},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("direction", response.json()["error"])
+        get_client.assert_not_called()
+
+    def test_rejects_non_string_direction(self):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Hello", "direction": ["english_to_yeshivish"]},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 400)
+
+    @patch("translator.views.get_openai_client")
+    def test_returns_bad_gateway_for_openai_error(self, get_client):
+        get_client.return_value.responses.create.side_effect = RuntimeError("offline")
+
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 502)
+        self.assertEqual(
+            response.json(),
+            {"error": "Translation is temporarily unavailable."},
+        )
+
+    @patch("translator.views.get_openai_client")
+    def test_returns_bad_gateway_for_empty_openai_translation(self, get_client):
+        get_client.return_value.responses.create.return_value = SimpleNamespace(
+            output_text="  "
+        )
+
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 502)

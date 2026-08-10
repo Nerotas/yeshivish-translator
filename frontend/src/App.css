@@ -29,6 +29,27 @@
   font-size: 1.5rem;
 }
 
+.direction-selector {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.translator-card .direction-selector button {
+  margin: 0;
+  padding: 0.65rem;
+  border: 1px solid #d1d5db;
+  background: transparent;
+  color: var(--text-h);
+}
+
+.translator-card .direction-selector button.active {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  color: #fff;
+}
+
 .translator-card label {
   display: block;
   font-weight: 600;
@@ -44,6 +65,10 @@
   border: 1px solid #d1d5db;
   border-radius: 8px;
   resize: vertical;
+}
+
+.translator-card textarea::placeholder {
+  color: #9ca3af;
 }
 
 .translator-card button {
@@ -64,6 +89,10 @@
 
 .result-region {
   margin-top: 1.5rem;
+}
+
+.translation-output {
+  white-space: pre-wrap;
 }
 
 .error {
