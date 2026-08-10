@@ -735,7 +735,7 @@
       "yeshivish_example": "I hear, but I still think the second option is safer.",
       "plain_english_example": "I understand your point, but I still think the second option is safer.",
       "confidence": "medium",
-      "needs_human_review": true
+      "needs_human_review": false
     },
     {
       "term": "hold",
@@ -755,7 +755,7 @@
       "yeshivish_example": "What does the Rav hold about this case?",
       "plain_english_example": "What position does the rabbi take on this case?",
       "confidence": "medium",
-      "needs_human_review": true
+      "needs_human_review": false
     },
     {
       "term": "gishmak",
@@ -947,7 +947,7 @@
       "yeshivish_example": "The small shul has a very heimish atmosphere.",
       "plain_english_example": "The small synagogue has a very warm, familiar atmosphere.",
       "confidence": "medium",
-      "needs_human_review": true
+      "needs_human_review": false
     },
     {
       "term": "bubbe",
@@ -1200,7 +1200,7 @@
       "yeshivish_example": "He shared a short vort at the table.",
       "plain_english_example": "He shared a brief Torah thought at the table.",
       "confidence": "medium",
-      "needs_human_review": true
+      "needs_human_review": false
     },
     {
       "term": "chasunah",
@@ -1786,7 +1786,7 @@
       "yeshivish_example": "He is teaching a new class this zman.",
       "plain_english_example": "He is teaching a new class this academic term.",
       "confidence": "medium",
-      "needs_human_review": true
+      "needs_human_review": false
     },
     {
       "term": "bein hazmanim",
@@ -2076,7 +2076,7 @@
       "yeshivish_example": "They moved to a neighborhood with a large frum community.",
       "plain_english_example": "They moved to a neighborhood with a large Orthodox observant community.",
       "confidence": "medium",
-      "needs_human_review": true
+      "needs_human_review": false
     },
     {
       "term": "baal teshuvah",
@@ -2113,7 +2113,7 @@
       "yeshivish_example": "He went off the derech in his late teens.",
       "plain_english_example": "He stopped living an Orthodox observant life in his late teens.",
       "confidence": "medium",
-      "needs_human_review": true
+      "needs_human_review": false
     },
     {
       "term": "shomer Shabbos",

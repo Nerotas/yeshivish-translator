@@ -1,3 +1,4 @@
+import re
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
@@ -24,6 +25,30 @@ def glossary_entry(term, variants=None):
 class GlossaryMatchingTests(SimpleTestCase):
     def test_seed_glossary_is_valid(self):
         self.assertGreater(len(load_glossary()), 0)
+
+    def test_seed_glossary_has_no_source_artifacts(self):
+        source_pattern = re.compile(
+            r"https?://|\[[^\]]+\]\(https?://|\(?\[[^\]]+\]\[\d+\]\)?"
+        )
+
+        for entry in load_glossary():
+            self.assertNotRegex(entry["context_note"], source_pattern)
+
+    def test_seed_glossary_aliases_are_unique(self):
+        alias_owners = {}
+
+        for entry in load_glossary():
+            for alias in [entry["term"], *entry["variants"]]:
+                normalized_alias = alias.casefold().strip()
+                self.assertNotIn(
+                    normalized_alias,
+                    alias_owners,
+                    msg=(
+                        f'Alias "{alias}" is shared by "{alias_owners.get(normalized_alias)}" '
+                        f'and "{entry["term"]}".'
+                    ),
+                )
+                alias_owners[normalized_alias] = entry["term"]
 
     def test_matches_canonical_term_and_variant_case_insensitively(self):
         canonical_matches = find_glossary_entries("That was MAMESH wonderful.")
@@ -78,7 +103,7 @@ class TranslationPromptTests(SimpleTestCase):
     def test_includes_only_relevant_glossary_entries(self):
         instructions = build_translation_instructions("A geshmake vort.")
 
-        self.assertIn("- geshmak", instructions)
+        self.assertIn("- gishmak", instructions)
         self.assertIn("- vort", instructions)
         self.assertNotIn("- bubbe", instructions)
 
