@@ -886,7 +886,8 @@
       "meanings": [
         "drag or carry with effort",
         "travel an inconvenient distance",
-        "a tiring or inconvenient trip"
+        "a tiring or inconvenient trip",
+        "hard work"
       ],
       "context_note": "As a verb, it emphasizes effort, inconvenience, or reluctance in carrying something or going somewhere. As a noun, “a schlep” is a burdensome trip or task."
     },
@@ -2170,6 +2171,22 @@
       ],
       "context_note": "Often used when an event, coincidence, or outcome is understood as personally guided by God rather than merely accidental."
     },
+    {
+  "term": "nosh",
+  "variants": ["nash", "nosch", "gnosh"],
+  "language_origin": "Yiddish",
+  "category": "food and celebrations",
+  "plain_english_meanings": [
+    "to snack",
+    "to eat something casually or in small amounts",
+    "a snack or tasty bite to eat"
+  ],
+  "usage_note": "Used as both a verb and a noun. As a verb, it usually means to snack or eat something casually rather than sit down for a full meal. As a noun, a nosh is a snack or small amount of tasty food.",
+  "yeshivish_example": "We can nosh on something before we leave.",
+  "plain_english_example": "We can have a snack before we leave.",
+  "confidence": "high",
+  "needs_human_review": false
+},
     {
       "term": "parnassa",
       "variants": [
