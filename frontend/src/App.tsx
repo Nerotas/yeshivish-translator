@@ -1,8 +1,21 @@
-import { useState } from "react";
-import { translateText } from "./api";
+import { type FormEvent, useState } from "react";
+import {
+  TRANSLATION_DIRECTIONS,
+  translateText,
+  type TranslationDirection,
+} from "./api";
 import "./App.css";
 
-const DIRECTIONS = {
+interface DirectionCopy {
+  button: string;
+  eyebrow: string;
+  inputLabel: string;
+  outputLabel: string;
+  placeholder: string;
+  emptyError: string;
+}
+
+const DIRECTIONS: Record<TranslationDirection, DirectionCopy> = {
   yeshivish_to_english: {
     button: "Yeshivish → English",
     eyebrow: "Yeshivish to plain English",
@@ -22,19 +35,20 @@ const DIRECTIONS = {
 };
 
 export default function App() {
-  const [direction, setDirection] = useState("yeshivish_to_english");
+  const [direction, setDirection] = useState<TranslationDirection>(
+    "yeshivish_to_english",
+  );
   const [text, setText] = useState("");
   const [translation, setTranslation] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
     setTranslation("");
 
-    const trimmed = text.trim();
-    if (!trimmed) {
+    if (!text.trim()) {
       setError(DIRECTIONS[direction].emptyError);
       return;
     }
@@ -42,14 +56,18 @@ export default function App() {
     setLoading(true);
     try {
       setTranslation(await translateText(text, direction));
-    } catch (requestError) {
-      setError(requestError.message);
+    } catch (requestError: unknown) {
+      setError(
+        requestError instanceof Error
+          ? requestError.message
+          : "Translation request failed.",
+      );
     } finally {
       setLoading(false);
     }
   }
 
-  function handleDirectionChange(nextDirection) {
+  function handleDirectionChange(nextDirection: TranslationDirection) {
     if (nextDirection === direction) return;
 
     setDirection(nextDirection);
@@ -66,7 +84,7 @@ export default function App() {
         <h1>Translate a sentence</h1>
 
         <div className="direction-selector" aria-label="Translation direction">
-          {Object.entries(DIRECTIONS).map(([value, option]) => (
+          {TRANSLATION_DIRECTIONS.map((value) => (
             <button
               key={value}
               type="button"
@@ -74,7 +92,7 @@ export default function App() {
               aria-pressed={direction === value}
               onClick={() => handleDirectionChange(value)}
             >
-              {option.button}
+              {DIRECTIONS[value].button}
             </button>
           ))}
         </div>
@@ -83,8 +101,8 @@ export default function App() {
           <label htmlFor="source-text">{copy.inputLabel}</label>
           <textarea
             id="source-text"
-            rows="7"
-            maxLength="3000"
+            rows={7}
+            maxLength={3000}
             placeholder={copy.placeholder}
             value={text}
             onChange={(event) => setText(event.target.value)}
@@ -96,7 +114,11 @@ export default function App() {
         </form>
 
         <div aria-live="polite" className="result-region">
-          {error && <p role="alert" className="error">{error}</p>}
+          {error && (
+            <p role="alert" className="error">
+              {error}
+            </p>
+          )}
           {translation && (
             <>
               <h2>{copy.outputLabel}</h2>

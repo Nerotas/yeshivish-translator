@@ -3,13 +3,16 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 import { translateText } from "./api";
 
-vi.mock("./api", () => ({
+vi.mock("./api", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("./api")>()),
   translateText: vi.fn(),
 }));
 
+const mockedTranslateText = vi.mocked(translateText);
+
 describe("App", () => {
   beforeEach(() => {
-    translateText.mockReset();
+    mockedTranslateText.mockReset();
   });
 
   it("switches direction, labels, and placeholder text", () => {
@@ -32,7 +35,7 @@ describe("App", () => {
   });
 
   it("sends the selected direction and clears an old translation on switch", async () => {
-    translateText.mockResolvedValue("That was a geshmake shiur.");
+    mockedTranslateText.mockResolvedValue("That was a geshmake shiur.");
     render(<App />);
 
     fireEvent.click(screen.getByRole("button", { name: "English → Yeshivish" }));
@@ -42,7 +45,7 @@ describe("App", () => {
     fireEvent.click(screen.getByRole("button", { name: "Translate" }));
 
     expect(await screen.findByText("That was a geshmake shiur.")).toBeVisible();
-    expect(translateText).toHaveBeenCalledWith(
+    expect(mockedTranslateText).toHaveBeenCalledWith(
       "That was an enjoyable lesson.",
       "english_to_yeshivish",
     );
@@ -55,7 +58,7 @@ describe("App", () => {
   });
 
   it("shows API errors", async () => {
-    translateText.mockRejectedValue(new Error("Translation request failed."));
+    mockedTranslateText.mockRejectedValue(new Error("Translation request failed."));
     render(<App />);
 
     fireEvent.change(screen.getByLabelText("Yeshivish text"), {
