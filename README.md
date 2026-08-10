@@ -1,6 +1,33 @@
 # Yeshivish Translator
 
-Yeshivish Translator is a two-direction translation application for converting:
+## About the app (English)
+
+Jewish communities share a rich heritage, but the words and expressions used in
+everyday conversation can vary widely. Yeshivish—with its distinctive blend of
+English, Yiddish, Hebrew, and Aramaic—can feel warm and familiar to some people
+while being difficult for others to understand.
+
+Yeshivish Translator helps bridge that gap. Its purpose is to make communication
+easier among Jews from all walks of life, whether someone grew up speaking
+Yeshivish, encounters it only occasionally, or simply wants to better understand
+the language and culture surrounding it.
+
+The app translates Yeshivish into clear English for greater understanding and
+turns English into expressive Yeshivish for learning, connection, and enjoyment.
+It is designed as a welcoming communication aid—one that helps people understand
+one another without requiring prior knowledge of specialized vocabulary.
+
+## About the app (Yeshivish)
+
+Di yiddishe kehilas, they have such a rich and beautiful heritage, but the way we schmooze and express ourselves can vary like night and day. Yeshivish—oy, the simcha of it!—with its special blend of English, Yiddish, Hebrew, and even a splash of Aramaic—it's like a warm hug for some, while for others, it can be mamash shver to grasp.
+
+Enter the Yeshivish Translator, a true lifesaver! Its whole tachlis is to help make the conversation flow smooth like a well-aged mashke among Jews from all corners of the globe. Whether you grew up steeped in Yeshivish, bump into it once in a blue moon, or just want to dive deeper into the beauty of our language and culture—it’s got your back.
+
+This app is a treasure! It takes Yeshivish and transforms it into plain, clear English for better comprehension, while also turning English into vibrant, expressive Yeshivish for learning, chaverus, and pure enjoyment. It’s crafted to be a heimish communication tool—creating connections and understanding without needing to be an expert on all those fancy words.
+
+## What it does
+
+Yeshivish Translator supports two directions:
 
 - Yeshivish to plain English
 - Plain English to expressive, entertainment-oriented Yeshivish
