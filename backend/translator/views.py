@@ -1,5 +1,6 @@
 import logging
 import os
+from functools import lru_cache
 
 from openai import OpenAI
 from rest_framework import status
@@ -11,12 +12,16 @@ from rest_framework.decorators import (
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-from .prompt import TRANSLATOR_INSTRUCTIONS
+from .prompt import build_translation_instructions
 
 logger = logging.getLogger(__name__)
-client = OpenAI()
 
 MAX_INPUT_CHARACTERS = 3000
+
+
+@lru_cache(maxsize=1)
+def get_openai_client():
+    return OpenAI()
 
 
 @api_view(["POST"])
@@ -45,9 +50,9 @@ def translate(request):
         )
 
     try:
-        api_response = client.responses.create(
+        api_response = get_openai_client().responses.create(
             model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
-            instructions=TRANSLATOR_INSTRUCTIONS,
+            instructions=build_translation_instructions(text),
             input=text,
             max_output_tokens=500,
         )

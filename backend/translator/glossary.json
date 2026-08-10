@@ -1,0 +1,48 @@
+{
+  "name": "Yeshivish to Plain English Seed Glossary",
+  "version": 1,
+  "entries": [
+    {
+      "term": "baruch Hashem",
+      "variants": ["boruch Hashem"],
+      "meanings": ["thank God", "thankfully"],
+      "context_note": "An expression of gratitude to God, often used when sharing good news or saying that things are well."
+    },
+    {
+      "term": "bubbe",
+      "variants": ["bubby", "bubbi", "bobbe"],
+      "meanings": ["grandmother", "grandma"],
+      "context_note": "Choose the more formal or affectionate English word from the surrounding tone."
+    },
+    {
+      "term": "geshmak",
+      "variants": ["geshmake", "geschmack"],
+      "meanings": ["enjoyable", "delightful", "satisfying"],
+      "context_note": "Can describe an experience, idea, discussion, or taste."
+    },
+    {
+      "term": "mamesh",
+      "variants": ["mamash"],
+      "meanings": ["really", "truly", "literally"],
+      "context_note": "Often intensifies a word or the whole sentence; select the natural English intensifier for the context."
+    },
+    {
+      "term": "teshuvah",
+      "variants": ["teshuva"],
+      "meanings": ["repentance", "returning to religious observance"],
+      "context_note": "The context determines whether the emphasis is moral repentance or renewed religious observance."
+    },
+    {
+      "term": "tzeadekes",
+      "variants": ["tzadekes", "tzaddekes"],
+      "meanings": ["righteous woman", "holy woman"],
+      "context_note": "Usually expresses admiration for a woman's character or religious devotion."
+    },
+    {
+      "term": "vort",
+      "variants": ["vertel"],
+      "meanings": ["saying", "short teaching", "short Torah insight"],
+      "context_note": "Choose the meaning from the surrounding religious or conversational context."
+    }
+  ]
+}
