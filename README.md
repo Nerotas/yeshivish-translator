@@ -3,7 +3,7 @@
 Yeshivish Translator is a two-direction translation application for converting:
 
 - Yeshivish to plain English
-- Plain English to natural, readable Yeshivish
+- Plain English to expressive, entertainment-oriented Yeshivish
 
 The application combines a React and TypeScript frontend with a Django REST API.
 The API uses the OpenAI Responses API and supplements each request with only the
@@ -14,7 +14,7 @@ avoids sending the entire glossary with every translation.
 
 - Two translation directions with a backward-compatible API default
 - Context-sensitive glossary matching in both directions
-- Natural translation rather than mechanical word replacement
+- Deliberately rich, idiomatic English-to-Yeshivish creative rewriting
 - Preservation of names, quotations, paragraph breaks, and formatting
 - Explicit, persistent light and dark themes
 - Input validation and anonymous API throttling
@@ -306,8 +306,11 @@ appropriate.
 
 For Yeshivish-to-English requests, the matcher searches glossary terms and their
 variants. For English-to-Yeshivish requests, it searches the English meanings in
-each glossary entry. The prompt treats reverse-direction matches as optional,
-context-sensitive vocabulary so the result remains natural.
+each glossary entry. That direction is intentionally entertainment-oriented: the
+model is asked to use a high density of authentic Yeshivish language and may
+recast the sentence or add brief idiomatic flourishes. It must keep the core
+situation and named people recognizable, but it is not constrained to a literal
+translation.
 
 ## Glossary maintenance
 

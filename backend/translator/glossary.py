@@ -145,7 +145,8 @@ def format_glossary_context(entries, direction="yeshivish_to_english"):
         )
     elif direction == "english_to_yeshivish":
         lines.append(
-            "Use these as optional, context-sensitive choices; do not force substitutions."
+            "Use these context-sensitive choices aggressively whenever they fit; "
+            "prefer idiomatic phrasing over literal substitution."
         )
     else:
         raise ValueError(f"Unsupported translation direction: {direction}")

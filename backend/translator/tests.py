@@ -54,6 +54,12 @@ class GlossaryMatchingTests(SimpleTestCase):
                 )
                 alias_owners[normalized_alias] = entry["term"]
 
+    def test_nosh_entry_uses_runtime_schema(self):
+        nosh = next(entry for entry in load_glossary() if entry["term"] == "nosh")
+
+        self.assertIn("a snack or tasty bite to eat", nosh["meanings"])
+        self.assertIn("both a verb and a noun", nosh["context_note"])
+
     def test_matches_canonical_term_and_variant_case_insensitively(self):
         canonical_matches = find_glossary_entries("That was MAMESH wonderful.")
         variant_matches = find_glossary_entries("That was mamash wonderful.")
@@ -110,6 +116,14 @@ class GlossaryMatchingTests(SimpleTestCase):
 
         self.assertNotIn("bubbe", [entry["term"] for entry in matches])
 
+    def test_reverse_matching_finds_nosh_for_snack(self):
+        matches = find_glossary_entries(
+            "Let's have a snack before we leave.",
+            direction="english_to_yeshivish",
+        )
+
+        self.assertIn("nosh", [entry["term"] for entry in matches])
+
     def test_formats_compact_context(self):
         context = format_glossary_context([glossary_entry("vort", ["vertel"])])
 
@@ -149,6 +163,17 @@ class TranslationPromptTests(SimpleTestCase):
             ),
             ENGLISH_TO_YESHIVISH_INSTRUCTIONS,
         )
+
+    def test_reverse_prompt_requests_maximal_entertaining_yeshivish(self):
+        instructions = build_translation_instructions(
+            "This was an ordinary afternoon.",
+            direction="english_to_yeshivish",
+        )
+
+        self.assertIn("make it as Yeshivish as possible", instructions)
+        self.assertIn("Take stylistic liberties", instructions)
+        self.assertIn("primarily for entertainment", instructions)
+        self.assertIn("Return only the translation", instructions)
 
 
 class TranslationEndpointTests(SimpleTestCase):
@@ -212,7 +237,7 @@ class TranslationEndpointTests(SimpleTestCase):
             {"translation": "That was a very geshmake shiur."},
         )
         instructions = create.call_args.kwargs["instructions"]
-        self.assertIn("plain-English-to-Yeshivish translator", instructions)
+        self.assertIn("plain-English-to-Yeshivish creative rewriter", instructions)
         self.assertIn('Yeshivish "gishmak"', instructions)
         self.assertIn('Yeshivish "shiur"', instructions)
 
