@@ -52,7 +52,9 @@ describe("App", () => {
       "Enter Yeshivish text to translate",
     );
 
-    fireEvent.click(screen.getByRole("button", { name: "English → Yeshivish" }));
+    fireEvent.click(
+      screen.getByRole("button", { name: "English → Yeshivish" }),
+    );
 
     expect(screen.getByLabelText("English text")).toHaveAttribute(
       "placeholder",
@@ -77,7 +79,9 @@ describe("App", () => {
     mockedTranslateText.mockResolvedValue("That was a geshmake shiur.");
     render(<App />);
 
-    fireEvent.click(screen.getByRole("button", { name: "English → Yeshivish" }));
+    fireEvent.click(
+      screen.getByRole("button", { name: "English → Yeshivish" }),
+    );
     fireEvent.change(screen.getByLabelText("English text"), {
       target: { value: "That was an enjoyable lesson." },
     });
@@ -89,15 +93,21 @@ describe("App", () => {
       "english_to_yeshivish",
     );
 
-    fireEvent.click(screen.getByRole("button", { name: "Yeshivish → English" }));
-    expect(screen.queryByText("That was a geshmake shiur.")).not.toBeInTheDocument();
+    fireEvent.click(
+      screen.getByRole("button", { name: "Yeshivish → English" }),
+    );
+    expect(
+      screen.queryByText("That was a geshmake shiur."),
+    ).not.toBeInTheDocument();
     expect(screen.getByLabelText("Yeshivish text")).toHaveValue(
       "That was an enjoyable lesson.",
     );
   });
 
   it("shows API errors", async () => {
-    mockedTranslateText.mockRejectedValue(new Error("Translation request failed."));
+    mockedTranslateText.mockRejectedValue(
+      new Error("Translation request failed."),
+    );
     render(<App />);
 
     fireEvent.change(screen.getByLabelText("Yeshivish text"), {
@@ -122,7 +132,9 @@ describe("App", () => {
     );
     expect(mockedTranslateText).not.toHaveBeenCalled();
 
-    fireEvent.click(screen.getByRole("button", { name: "English → Yeshivish" }));
+    fireEvent.click(
+      screen.getByRole("button", { name: "English → Yeshivish" }),
+    );
     fireEvent.click(screen.getByRole("button", { name: "Translate" }));
     expect(screen.getByRole("alert")).toHaveTextContent(
       "Enter English text to translate.",
@@ -143,11 +155,30 @@ describe("App", () => {
     });
     fireEvent.click(screen.getByRole("button", { name: "Translate" }));
 
-    expect(screen.getByRole("button", { name: "Translating..." })).toBeDisabled();
+    expect(
+      screen.getByRole("button", { name: "Translating..." }),
+    ).toBeDisabled();
 
     finishRequest("Really good.");
     expect(await screen.findByText("Really good.")).toBeVisible();
     expect(screen.getByRole("button", { name: "Translate" })).toBeEnabled();
+  });
+
+  it("shows a privacy notice with a link to the data-handling details", () => {
+    render(<App />);
+
+    expect(
+      screen.getByText(/submitted text is sent to openai/i),
+    ).toBeInTheDocument();
+
+    const link = screen.getByRole("link", {
+      name: "Learn how your data is handled",
+    });
+    expect(link).toHaveAttribute("href", "#privacy-details");
+
+    expect(
+      screen.getByRole("heading", { name: "How your data is handled" }),
+    ).toBeInTheDocument();
   });
 
   it("uses a safe fallback for unexpected non-Error failures", async () => {

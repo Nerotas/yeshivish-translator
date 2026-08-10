@@ -53,6 +53,34 @@
   font-size: 1.5rem;
 }
 
+.privacy-notice {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.privacy-notice a,
+.privacy-details a {
+  color: var(--text-h);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.privacy-details {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.privacy-details h2 {
+  font-size: 1rem;
+}
+
+.privacy-details p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 .direction-selector {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
