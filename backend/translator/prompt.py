@@ -1,3 +1,6 @@
+from .glossary import find_glossary_entries, format_glossary_context
+
+
 TRANSLATOR_INSTRUCTIONS = """
 You are a Yeshivish-to-plain-English translator.
 
@@ -21,3 +24,11 @@ Example output:
 "Really, my grandma did repentance and it was wonderful. She was such
  a holy person!"
 """
+
+
+def build_translation_instructions(text):
+    glossary_context = format_glossary_context(find_glossary_entries(text))
+    if not glossary_context:
+        return TRANSLATOR_INSTRUCTIONS
+
+    return f"{TRANSLATOR_INSTRUCTIONS.rstrip()}\n\n{glossary_context}"

@@ -1,0 +1,2328 @@
+{
+  "name": "Yeshivish to Plain English Runtime Glossary",
+  "version": 2,
+  "entry_count": 127,
+  "entries": [
+    {
+      "term": "mamesh",
+      "variants": [
+        "mamash",
+        "mamosh"
+      ],
+      "language_origin": "mixed",
+      "category": "everyday expression",
+      "yeshivish_example": "That was mamesh unbelievable.",
+      "plain_english_example": "That was truly unbelievable.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "really",
+        "truly",
+        "literally or concretely"
+      ],
+      "context_note": "Usually an intensifier meaning “really” or “truly.” In Torah discussion it can also contrast something concrete or literal with something abstract."
+    },
+    {
+      "term": "taka",
+      "variants": [
+        "tahke",
+        "takeh",
+        "takah"
+      ],
+      "language_origin": "Yiddish",
+      "category": "everyday expression",
+      "yeshivish_example": "He was taka right about the delay.",
+      "plain_english_example": "He really was right about the delay.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "indeed",
+        "really",
+        "actually"
+      ],
+      "context_note": "Often confirms that something is genuinely so. With questioning intonation, it can mean “Really?”"
+    },
+    {
+      "term": "avada",
+      "variants": [
+        "avade",
+        "avadeh"
+      ],
+      "language_origin": "mixed",
+      "category": "everyday expression",
+      "yeshivish_example": "Avada we should call them before we come.",
+      "plain_english_example": "Of course we should call them before we come.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "of course",
+        "certainly"
+      ],
+      "context_note": "Used as a confident confirmation, often stronger and more conversational than a plain “yes.”"
+    },
+    {
+      "term": "pashut",
+      "variants": [
+        "poshut"
+      ],
+      "language_origin": "Hebrew",
+      "category": "everyday expression",
+      "yeshivish_example": "It is pashut that we need more chairs.",
+      "plain_english_example": "It is obvious that we need more chairs.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "simple",
+        "obvious",
+        "straightforward"
+      ],
+      "context_note": "In ordinary conversation it often means “obvious.” In study it can also mean the simple or direct explanation."
+    },
+    {
+      "term": "stam",
+      "variants": [
+        "stom"
+      ],
+      "language_origin": "mixed",
+      "category": "everyday expression",
+      "yeshivish_example": "I was stam asking; I am not upset.",
+      "plain_english_example": "I was just asking; I am not upset.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "just",
+        "for no particular reason",
+        "ordinary or unspecified"
+      ],
+      "context_note": "Often softens a statement to mean “just” or “without a special reason.” In textual discussion it can mean an unnamed, unqualified, or default case."
+    },
+    {
+      "term": "a bissel",
+      "variants": [
+        "a bisel",
+        "a bissle",
+        "a bisl"
+      ],
+      "language_origin": "Yiddish",
+      "category": "everyday expression",
+      "yeshivish_example": "Give me a bissel more time.",
+      "plain_english_example": "Give me a little more time.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a little",
+        "a small amount"
+      ],
+      "context_note": "Used for a small quantity or degree and often sounds informal or affectionate."
+    },
+    {
+      "term": "nu",
+      "variants": [
+        "noo"
+      ],
+      "language_origin": "Yiddish",
+      "category": "interjection",
+      "yeshivish_example": "Nu, are we leaving or not?",
+      "plain_english_example": "Well, are we leaving or not?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "well?",
+        "so?",
+        "come on"
+      ],
+      "context_note": "Its meaning depends heavily on tone. It can prompt someone to continue, express impatience, or ask what happens next."
+    },
+    {
+      "term": "oy vey",
+      "variants": [
+        "oy vay"
+      ],
+      "language_origin": "Yiddish",
+      "category": "interjection",
+      "yeshivish_example": "Oy vey, I left the keys at home.",
+      "plain_english_example": "Oh no, I left the keys at home.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "oh no",
+        "what a problem",
+        "an expression of distress"
+      ],
+      "context_note": "Used for worry, frustration, pain, or dismay. It can be serious or mildly comic depending on tone."
+    },
+    {
+      "term": "gevalt",
+      "variants": [
+        "gevald"
+      ],
+      "language_origin": "Yiddish",
+      "category": "interjection",
+      "yeshivish_example": "Gevalt, we are going to miss the train.",
+      "plain_english_example": "Good grief, we are going to miss the train.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "help!",
+        "good grief!",
+        "an alarmed exclamation"
+      ],
+      "context_note": "Traditionally a cry for help, but commonly used as an emphatic reaction to urgency, shock, or exasperation."
+    },
+    {
+      "term": "nebach",
+      "variants": [
+        "nebich",
+        "nebech"
+      ],
+      "language_origin": "Yiddish",
+      "category": "feelings and criticism",
+      "yeshivish_example": "Nebach, he has been sick all week.",
+      "plain_english_example": "Unfortunately, he has been sick all week.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "unfortunately",
+        "poor thing",
+        "pitifully"
+      ],
+      "context_note": "Can express genuine sympathy, but it can also sound pitying or dismissive when applied to a person."
+    },
+    {
+      "term": "davka",
+      "variants": [
+        "dafka",
+        "dafke"
+      ],
+      "language_origin": "mixed",
+      "category": "everyday expression",
+      "yeshivish_example": "I davka wanted the later appointment.",
+      "plain_english_example": "I specifically wanted the later appointment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "specifically",
+        "precisely",
+        "of all things"
+      ],
+      "context_note": "Marks deliberate or unexpected specificity. Depending on tone, it can mean “specifically,” “precisely,” or “contrary to what you might expect.”"
+    },
+    {
+      "term": "tachlis",
+      "variants": [
+        "tachles",
+        "takhlis"
+      ],
+      "language_origin": "mixed",
+      "category": "everyday expression",
+      "yeshivish_example": "Tachlis, what time are we leaving?",
+      "plain_english_example": "The bottom line is: what time are we leaving?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the bottom line",
+        "practically speaking",
+        "the practical purpose"
+      ],
+      "context_note": "Used to move a discussion from theory to the concrete decision, result, or practical point."
+    },
+    {
+      "term": "yasher koach",
+      "variants": [
+        "yashar koach",
+        "yishar koach",
+        "shkoyach",
+        "shkoyekh",
+        "sh'koyach"
+      ],
+      "language_origin": "Hebrew",
+      "category": "greeting and praise",
+      "yeshivish_example": "Yasher koach for organizing the kiddush.",
+      "plain_english_example": "Thank you for organizing the reception after services.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "thank you",
+        "well done",
+        "more strength to you"
+      ],
+      "context_note": "Commonly said after someone performs a synagogue honor, teaches, helps, or does something commendable. It combines thanks with praise and encouragement."
+    },
+    {
+      "term": "mazel tov",
+      "variants": [
+        "mazal tov",
+        "mazeltof"
+      ],
+      "language_origin": "Hebrew",
+      "category": "greeting and celebration",
+      "yeshivish_example": "Mazel tov on your new baby.",
+      "plain_english_example": "Congratulations on your new baby.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "congratulations",
+        "best wishes on happy news"
+      ],
+      "context_note": "Said for a birth, engagement, wedding, bar or bat mitzvah, new job, or other happy milestone. It usually means “congratulations,” not ordinary “good luck.”"
+    },
+    {
+      "term": "baruch Hashem",
+      "variants": [
+        "boruch Hashem",
+        "barukh Hashem",
+        "B'H",
+        "BH"
+      ],
+      "language_origin": "Hebrew",
+      "category": "everyday expression",
+      "yeshivish_example": "Baruch Hashem, everyone is doing well.",
+      "plain_english_example": "Thank God, everyone is doing well.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "thank God",
+        "thankfully",
+        "all is well, thank God"
+      ],
+      "context_note": "Used to express gratitude to God, relief, or a positive response to “How are you?”"
+    },
+    {
+      "term": "im yirtzeh Hashem",
+      "variants": [
+        "im yirtze Hashem",
+        "IYH"
+      ],
+      "language_origin": "Hebrew",
+      "category": "time and plans",
+      "yeshivish_example": "Im yirtzeh Hashem, we will finish tomorrow.",
+      "plain_english_example": "God willing, we will finish tomorrow.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "God willing",
+        "I hope, with God's will"
+      ],
+      "context_note": "Usually attached to a hoped-for future event. It expresses dependence on divine will rather than certainty."
+    },
+    {
+      "term": "b'ezras Hashem",
+      "variants": [
+        "b'ezrat Hashem",
+        "be'ezras Hashem"
+      ],
+      "language_origin": "Hebrew",
+      "category": "time and plans",
+      "yeshivish_example": "B'ezras Hashem, we will open on time.",
+      "plain_english_example": "With God's help, we will open on time.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "with God's help"
+      ],
+      "context_note": "Often used when stating an intention or plan and emphasizing hoped-for divine assistance."
+    },
+    {
+      "term": "bli neder",
+      "variants": [
+        "b'li neder"
+      ],
+      "language_origin": "Hebrew",
+      "category": "time and plans",
+      "yeshivish_example": "Bli neder, I will call you tonight.",
+      "plain_english_example": "I intend to call you tonight, but I am not making a formal vow.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "without making a vow",
+        "I intend to, but not as a formal promise"
+      ],
+      "context_note": "Added to a commitment or plan to avoid treating the statement as a binding religious vow. It does not mean the speaker is being casual or insincere."
+    },
+    {
+      "term": "chas v'shalom",
+      "variants": [
+        "chas veshalom",
+        "chas v'sholem"
+      ],
+      "language_origin": "Hebrew",
+      "category": "interjection",
+      "yeshivish_example": "Chas v'shalom, I did not mean that anyone should get hurt.",
+      "plain_english_example": "God forbid, I did not mean that anyone should get hurt.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "God forbid",
+        "heaven forbid",
+        "certainly not"
+      ],
+      "context_note": "Used to reject or distance an undesirable possibility, accusation, or interpretation."
+    },
+    {
+      "term": "kein ayin hara",
+      "variants": [
+        "kein ayin hora",
+        "ken ayin hara",
+        "kenahora",
+        "kinehora"
+      ],
+      "language_origin": "mixed",
+      "category": "idiom",
+      "yeshivish_example": "The children are all healthy, kein ayin hara.",
+      "plain_english_example": "The children are all healthy, and may that good fortune continue.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "without attracting the evil eye",
+        "may the blessing continue unharmed"
+      ],
+      "context_note": "Often said after praising health, children, success, or another blessing, reflecting a traditional concern about drawing harmful attention to good fortune."
+    },
+    {
+      "term": "lo aleinu",
+      "variants": [
+        "lo aleynu"
+      ],
+      "language_origin": "Hebrew",
+      "category": "idiom",
+      "yeshivish_example": "Their house burned down, lo aleinu.",
+      "plain_english_example": "Their house burned down; may such a tragedy not happen to us.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "may it not happen to us",
+        "God spare us"
+      ],
+      "context_note": "Said when mentioning illness, tragedy, or another misfortune, usually as a brief expression of compassion and distance from the calamity."
+    },
+    {
+      "term": "l'maaseh",
+      "variants": [
+        "lemaaseh",
+        "l'maase",
+        "lemaase"
+      ],
+      "language_origin": "Hebrew",
+      "category": "Talmudic expression",
+      "yeshivish_example": "L'maaseh, we only have room for ten people.",
+      "plain_english_example": "Practically speaking, we only have room for ten people.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "practically speaking",
+        "in actual practice",
+        "in fact"
+      ],
+      "context_note": "Contrasts the practical conclusion or real situation with theory, appearances, or preliminary discussion."
+    },
+    {
+      "term": "l'choirah",
+      "variants": [
+        "lichora",
+        "l'choira",
+        "lechoirah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "Talmudic expression",
+      "yeshivish_example": "L'choirah, the earlier train is the better choice.",
+      "plain_english_example": "At first glance, the earlier train is the better choice.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "apparently",
+        "at first glance",
+        "seemingly"
+      ],
+      "context_note": "Introduces a tentative conclusion that may later be questioned or revised."
+    },
+    {
+      "term": "aderaba",
+      "variants": [
+        "adraba",
+        "adaraba"
+      ],
+      "language_origin": "Aramaic",
+      "category": "Talmudic expression",
+      "yeshivish_example": "Aderaba, the delay may make the plan easier.",
+      "plain_english_example": "On the contrary, the delay may make the plan easier.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "on the contrary",
+        "the opposite is true",
+        "if anything"
+      ],
+      "context_note": "Used to reverse the previous assumption and argue that the evidence points the other way."
+    },
+    {
+      "term": "kal vachomer",
+      "variants": [
+        "kal va-chomer",
+        "kal v'chomer"
+      ],
+      "language_origin": "Hebrew",
+      "category": "Talmudic expression",
+      "yeshivish_example": "If we call for a small delay, kal vachomer we should call for a full cancellation.",
+      "plain_english_example": "If we call about a small delay, all the more so we should call about a full cancellation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "all the more so",
+        "certainly, by stronger reasoning"
+      ],
+      "context_note": "Refers to reasoning from a lighter or less obvious case to a stronger one: if the first is true, the second is even more clearly true."
+    },
+    {
+      "term": "nafka mina",
+      "variants": [
+        "nafka minah",
+        "nafkemina"
+      ],
+      "language_origin": "Aramaic",
+      "category": "Talmudic expression",
+      "yeshivish_example": "What is the nafka mina between the two plans?",
+      "plain_english_example": "What practical difference is there between the two plans?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "practical difference",
+        "real-world consequence",
+        "point that changes the outcome"
+      ],
+      "context_note": "Asks what changes in practice between two explanations, positions, or facts."
+    },
+    {
+      "term": "hava amina",
+      "variants": [
+        "hava mina",
+        "havah amina"
+      ],
+      "language_origin": "Aramaic",
+      "category": "Talmudic expression",
+      "yeshivish_example": "My hava amina was that the store closed at six.",
+      "plain_english_example": "My initial assumption was that the store closed at six.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "initial assumption",
+        "first thought",
+        "possibility considered and then tested"
+      ],
+      "context_note": "In Talmudic discussion, this is a preliminary idea that may be rejected or refined. Conversationally it can mean the assumption someone started with."
+    },
+    {
+      "term": "kashya",
+      "variants": [
+        "kasha",
+        "kusha"
+      ],
+      "language_origin": "Aramaic",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "I have a kashya on that explanation.",
+      "plain_english_example": "I have a serious question about that explanation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a difficult question",
+        "a challenge to an argument",
+        "an apparent contradiction"
+      ],
+      "context_note": "Stronger than a request for information. It usually identifies a problem that an explanation or text must resolve."
+    },
+    {
+      "term": "teretz",
+      "variants": [
+        "teirutz",
+        "terutz",
+        "tairutz"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "His teretz answers the first problem but not the second.",
+      "plain_english_example": "His answer resolves the first problem but not the second.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "an answer",
+        "a resolution to a difficulty",
+        "an explanation that removes a contradiction"
+      ],
+      "context_note": "Usually paired conceptually with a kashya: the kashya raises the problem and the teretz resolves it."
+    },
+    {
+      "term": "svara",
+      "variants": [
+        "sevara",
+        "s'vara",
+        "svora"
+      ],
+      "language_origin": "Aramaic",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "There is a strong svara for reading the passage that way.",
+      "plain_english_example": "There is strong reasoning for reading the passage that way.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "reasoning",
+        "underlying logic",
+        "a reasoned argument"
+      ],
+      "context_note": "Refers to the conceptual logic behind a position, not merely a personal feeling or unsupported opinion."
+    },
+    {
+      "term": "pshat",
+      "variants": [
+        "peshat"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "What is the pshat in this sentence?",
+      "plain_english_example": "What is the straightforward meaning of this sentence?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "plain meaning",
+        "straightforward explanation",
+        "basic understanding"
+      ],
+      "context_note": "Often asks what a text or situation means at the most direct level, before more complex interpretation."
+    },
+    {
+      "term": "chiddush",
+      "variants": [
+        "chidush",
+        "hiddush"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "The main chiddush of the shiur was the distinction between the two cases.",
+      "plain_english_example": "The main new insight of the lesson was the distinction between the two cases.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a novel insight",
+        "a new interpretation",
+        "a surprising point"
+      ],
+      "context_note": "In study it is an original or newly noticed idea. In conversation it can also refer, sometimes dryly, to something presented as surprising or new."
+    },
+    {
+      "term": "shayla",
+      "variants": [
+        "she'eilah",
+        "sheila",
+        "shaila",
+        "she'elah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "We have a shayla about using the kitchen.",
+      "plain_english_example": "We have a religious-law question about using the kitchen.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a question",
+        "a religious-law question",
+        "an issue requiring a decision"
+      ],
+      "context_note": "Can mean any serious question, but often refers to a practical question of Jewish law that should be asked of a rabbi."
+    },
+    {
+      "term": "stira",
+      "variants": [
+        "setira",
+        "stirah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "There is a stira between the two reports.",
+      "plain_english_example": "There is a contradiction between the two reports.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a contradiction",
+        "a conflict between two statements or facts"
+      ],
+      "context_note": "Used when two sources, claims, or observations seem unable to stand together."
+    },
+    {
+      "term": "chazer",
+      "variants": [
+        "chazzer",
+        "hazzer"
+      ],
+      "language_origin": "mixed",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "Let's chazer the material before the test.",
+      "plain_english_example": "Let's review the material before the test.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "review",
+        "go over again",
+        "pig, in ordinary Yiddish"
+      ],
+      "context_note": "As a verb in yeshiva conversation, it normally means to review learned material. As a Yiddish noun, the same-sounding word can mean a pig, so context is essential."
+    },
+    {
+      "term": "shver",
+      "variants": [
+        "shvair",
+        "schwer"
+      ],
+      "language_origin": "Yiddish",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "That part of the argument is still shver.",
+      "plain_english_example": "That part of the argument is still difficult to explain.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "difficult",
+        "hard to understand",
+        "problematic or unresolved"
+      ],
+      "context_note": "In ordinary speech it means difficult. In learning, it often signals that a text or explanation presents a serious problem."
+    },
+    {
+      "term": "shayach",
+      "variants": [
+        "shayich",
+        "shayech",
+        "shayakh",
+        "shayekh"
+      ],
+      "language_origin": "mixed",
+      "category": "Talmudic expression",
+      "yeshivish_example": "That concern is not shayach in this case.",
+      "plain_english_example": "That concern is not relevant in this case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "relevant",
+        "applicable",
+        "related",
+        "possible in the circumstances"
+      ],
+      "context_note": "Usually describes whether a rule, idea, or action belongs in the present case. In some contexts it also means feasible or realistically possible."
+    },
+    {
+      "term": "maskim",
+      "variants": [
+        "maskem"
+      ],
+      "language_origin": "Hebrew",
+      "category": "everyday expression",
+      "yeshivish_example": "I am maskim to the revised schedule.",
+      "plain_english_example": "I agree to the revised schedule.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "agree",
+        "accept a proposal or position"
+      ],
+      "context_note": "Commonly used with English grammar, as in “I am maskim” or “I am maskim to that.”"
+    },
+    {
+      "term": "I hear",
+      "variants": [],
+      "language_origin": "mixed",
+      "category": "Yeshivish English",
+      "yeshivish_example": "I hear, but I still think the second option is safer.",
+      "plain_english_example": "I understand your point, but I still think the second option is safer.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "I understand your point",
+        "I follow the reasoning"
+      ],
+      "context_note": "Often acknowledges that the speaker understands an argument without necessarily agreeing with it."
+    },
+    {
+      "term": "hold",
+      "variants": [
+        "hold by",
+        "hold from",
+        "hold of"
+      ],
+      "language_origin": "mixed",
+      "category": "Yeshivish English",
+      "yeshivish_example": "What does the Rav hold about this case?",
+      "plain_english_example": "What position does the rabbi take on this case?",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "maintain a view",
+        "accept or approve of",
+        "be at a stage in a process"
+      ],
+      "context_note": "The intended meaning depends on its construction. A rabbi can “hold” a legal position; someone may “not hold of” a practice; and “Where are you holding?” can ask how far along someone is."
+    },
+    {
+      "term": "gishmak",
+      "variants": [
+        "geschmack",
+        "geshmak",
+        "geshmake"
+      ],
+      "language_origin": "Yiddish",
+      "category": "feelings and praise",
+      "yeshivish_example": "The shiur was really gishmak.",
+      "plain_english_example": "The lesson was really enjoyable.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "delicious",
+        "enjoyable",
+        "delightful",
+        "full of satisfying enthusiasm"
+      ],
+      "context_note": "Can describe food, an experience, a lesson, or the pleasure and energy someone feels toward an activity."
+    },
+    {
+      "term": "shtark",
+      "variants": [
+        "stark"
+      ],
+      "language_origin": "Yiddish",
+      "category": "feelings and praise",
+      "yeshivish_example": "She is very shtark in her learning.",
+      "plain_english_example": "She is very serious and committed in her Torah study.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "strong",
+        "intense",
+        "serious and committed",
+        "impressive in religious study or practice"
+      ],
+      "context_note": "Often praises someone who learns diligently, prays intensely, or is strongly committed. It can also simply mean physically or conceptually strong."
+    },
+    {
+      "term": "chashuv",
+      "variants": [
+        "choshuv",
+        "hashuv"
+      ],
+      "language_origin": "Hebrew",
+      "category": "feelings and praise",
+      "yeshivish_example": "He is a chashuv member of the community.",
+      "plain_english_example": "He is a highly respected member of the community.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "important",
+        "respected",
+        "distinguished",
+        "worthy of esteem"
+      ],
+      "context_note": "Usually describes a person, role, institution, or matter that carries genuine standing or significance."
+    },
+    {
+      "term": "mensch",
+      "variants": [
+        "mentsch",
+        "mentsh"
+      ],
+      "language_origin": "Yiddish",
+      "category": "personality and behavior",
+      "yeshivish_example": "He returned the wallet; he is a real mensch.",
+      "plain_english_example": "He returned the wallet; he is a genuinely decent person.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a decent person",
+        "a responsible and honorable person"
+      ],
+      "context_note": "More than simply “a person.” Calling someone a mensch praises reliability, consideration, and basic moral character."
+    },
+    {
+      "term": "nachas",
+      "variants": [
+        "nakhes",
+        "naches"
+      ],
+      "language_origin": "mixed",
+      "category": "feelings and praise",
+      "yeshivish_example": "The children give their grandparents so much nachas.",
+      "plain_english_example": "The children give their grandparents so much pride and joy.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pride and joy",
+        "satisfaction, especially from children or students"
+      ],
+      "context_note": "Usually refers to the deep pleasure someone receives from the good character, growth, or accomplishments of family members or students."
+    },
+    {
+      "term": "kvetch",
+      "variants": [
+        "kvetsh"
+      ],
+      "language_origin": "Yiddish",
+      "category": "personality and behavior",
+      "yeshivish_example": "He likes to kvetch about the traffic.",
+      "plain_english_example": "He likes to complain about the traffic.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "complain",
+        "whine",
+        "a habitual complaint"
+      ],
+      "context_note": "Can be a verb or a noun. It usually suggests repeated, fussy, or tiresome complaining rather than a single justified objection."
+    },
+    {
+      "term": "schlep",
+      "variants": [
+        "shlep",
+        "shlepp"
+      ],
+      "language_origin": "Yiddish",
+      "category": "everyday expression",
+      "yeshivish_example": "We had to schlep the boxes across town.",
+      "plain_english_example": "We had to haul the boxes across town.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "drag or carry with effort",
+        "travel an inconvenient distance",
+        "a tiring or inconvenient trip"
+      ],
+      "context_note": "As a verb, it emphasizes effort, inconvenience, or reluctance in carrying something or going somewhere. As a noun, “a schlep” is a burdensome trip or task."
+    },
+    {
+      "term": "schmooze",
+      "variants": [
+        "shmooze",
+        "shmooz",
+        "schmooz"
+      ],
+      "language_origin": "mixed",
+      "category": "community and social life",
+      "yeshivish_example": "We stayed after the meeting to schmooze.",
+      "plain_english_example": "We stayed after the meeting to chat.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "chat casually",
+        "have an informal conversation",
+        "a casual conversation"
+      ],
+      "context_note": "Can be a verb or a noun. It usually means relaxed social conversation and can also imply informal networking; it does not necessarily mean gossip."
+    },
+    {
+      "term": "chutzpah",
+      "variants": [
+        "chutzpa",
+        "hutzpah"
+      ],
+      "language_origin": "mixed",
+      "category": "personality and behavior",
+      "yeshivish_example": "It took real chutzpah to demand a refund after using the item.",
+      "plain_english_example": "It took remarkable nerve to demand a refund after using the item.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "nerve",
+        "audacity",
+        "brazen disrespect",
+        "boldness"
+      ],
+      "context_note": "Usually criticizes shameless or disrespectful behavior, though tone can sometimes make it admiring when someone shows unusual boldness."
+    },
+    {
+      "term": "heimish",
+      "variants": [
+        "heimishe",
+        "heimisch"
+      ],
+      "language_origin": "Yiddish",
+      "category": "community and social life",
+      "yeshivish_example": "The small shul has a very heimish atmosphere.",
+      "plain_english_example": "The small synagogue has a very warm, familiar atmosphere.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "homey",
+        "familiar",
+        "warm and informal",
+        "culturally traditional or in-group"
+      ],
+      "context_note": "Can describe a welcoming atmosphere or a style associated with familiar Orthodox or Yiddish-speaking community culture. Its social connotations vary by community."
+    },
+    {
+      "term": "bubbe",
+      "variants": [
+        "bubby",
+        "bobe",
+        "bubbeh"
+      ],
+      "language_origin": "Yiddish",
+      "category": "people and family",
+      "yeshivish_example": "My bubbe is coming for dinner.",
+      "plain_english_example": "My grandmother is coming for dinner.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "grandmother",
+        "an affectionate name for a grandmother"
+      ],
+      "context_note": "Primarily a family term. Some speakers also use it affectionately for an elderly woman, but that can sound overly familiar outside a close relationship."
+    },
+    {
+      "term": "zaide",
+      "variants": [
+        "zayde",
+        "zaydee",
+        "zeide"
+      ],
+      "language_origin": "Yiddish",
+      "category": "people and family",
+      "yeshivish_example": "My zaide taught me that song.",
+      "plain_english_example": "My grandfather taught me that song.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "grandfather",
+        "an affectionate name for a grandfather"
+      ],
+      "context_note": "A common Ashkenazi family term for a grandfather."
+    },
+    {
+      "term": "mishpacha",
+      "variants": [
+        "mishpocha",
+        "mishpachah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "people and family",
+      "yeshivish_example": "The whole mishpacha is coming for the weekend.",
+      "plain_english_example": "The whole family is coming for the weekend.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "family",
+        "extended family",
+        "one's family circle"
+      ],
+      "context_note": "Can refer to the immediate household or a wider network of relatives. Tone sometimes extends it warmly to people treated like family."
+    },
+    {
+      "term": "bochur",
+      "variants": [
+        "bachur",
+        "bocher"
+      ],
+      "language_origin": "mixed",
+      "category": "people and family",
+      "yeshivish_example": "The bochur is learning in yeshiva this year.",
+      "plain_english_example": "The unmarried young man is studying at a yeshiva this year.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "an unmarried young man",
+        "a male yeshiva student"
+      ],
+      "context_note": "In yeshivish communities it often means an unmarried young man of marriageable age, especially one studying in yeshiva; it does not simply mean any boy."
+    },
+    {
+      "term": "rebbe",
+      "variants": [
+        "rebbi"
+      ],
+      "language_origin": "mixed",
+      "category": "people and family",
+      "yeshivish_example": "I asked my rebbe to explain the passage again.",
+      "plain_english_example": "I asked my Jewish studies teacher to explain the passage again.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a Jewish studies teacher",
+        "a yeshiva teacher",
+        "a Hasidic spiritual leader"
+      ],
+      "context_note": "In a school or yeshiva, it often means a male Torah teacher. In Hasidic contexts, a Rebbe is the movement's or community's central spiritual leader."
+    },
+    {
+      "term": "rav",
+      "variants": [
+        "rov"
+      ],
+      "language_origin": "Hebrew",
+      "category": "people and family",
+      "yeshivish_example": "I need to ask the rav before we use it.",
+      "plain_english_example": "I need to ask the rabbi before we use it.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rabbi",
+        "rabbinic authority",
+        "one's regular rabbi for religious questions"
+      ],
+      "context_note": "Often implies a rabbi respected for scholarship or consulted for practical Jewish-law decisions, not merely someone with rabbinic ordination."
+    },
+    {
+      "term": "rebbetzin",
+      "variants": [
+        "rebbitzen",
+        "rebbetzen"
+      ],
+      "language_origin": "Yiddish",
+      "category": "people and family",
+      "yeshivish_example": "The rebbetzin is speaking at the program tonight.",
+      "plain_english_example": "The rabbi's wife is speaking at the program tonight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a rabbi's wife",
+        "a respected female religious educator or community figure"
+      ],
+      "context_note": "Traditionally the title for a rabbi's wife. In some settings it is also used as an honorific for a woman with an independent educational or communal role."
+    },
+    {
+      "term": "gabbai",
+      "variants": [
+        "gabai"
+      ],
+      "language_origin": "Hebrew",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "Ask the gabbai when the Torah reading begins.",
+      "plain_english_example": "Ask the synagogue official when the Torah reading begins.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a synagogue official",
+        "the person who coordinates services and honors",
+        "a communal administrator"
+      ],
+      "context_note": "In a synagogue, the gabbai commonly organizes prayer logistics, Torah-reading honors, announcements, and related practical matters."
+    },
+    {
+      "term": "shadchan",
+      "variants": [
+        "shadkhan"
+      ],
+      "language_origin": "mixed",
+      "category": "community and social life",
+      "yeshivish_example": "The shadchan called with a new suggestion.",
+      "plain_english_example": "The matchmaker called with a new suggestion.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a matchmaker",
+        "someone who proposes or facilitates a marriage match"
+      ],
+      "context_note": "May be a professional, a volunteer, a relative, or anyone who suggests and helps manage a potential match."
+    },
+    {
+      "term": "chosson",
+      "variants": [
+        "chassan",
+        "chatan",
+        "hatan"
+      ],
+      "language_origin": "Hebrew",
+      "category": "people and family",
+      "yeshivish_example": "The chosson arrived early for the photographs.",
+      "plain_english_example": "The groom arrived early for the photographs.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "groom",
+        "an engaged man"
+      ],
+      "context_note": "Can refer to the man at his wedding or, in many communities, throughout the engagement period."
+    },
+    {
+      "term": "kallah",
+      "variants": [
+        "kala"
+      ],
+      "language_origin": "Hebrew",
+      "category": "people and family",
+      "yeshivish_example": "The kallah thanked everyone for coming.",
+      "plain_english_example": "The bride thanked everyone for coming.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bride",
+        "an engaged woman"
+      ],
+      "context_note": "Can refer to the woman at her wedding or throughout the engagement period."
+    },
+    {
+      "term": "shidduch",
+      "variants": [
+        "shiduch"
+      ],
+      "language_origin": "mixed",
+      "category": "community and social life",
+      "yeshivish_example": "They are looking into a shidduch for their daughter.",
+      "plain_english_example": "They are considering a possible marriage match for their daughter.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a proposed marriage match",
+        "the Orthodox dating process",
+        "a person considered as a possible spouse"
+      ],
+      "context_note": "Usually refers to marriage-oriented dating arranged or suggested through family, friends, or a matchmaker. It does not necessarily mean that the marriage itself is decided in advance."
+    },
+    {
+      "term": "bashert",
+      "variants": [
+        "beshert",
+        "besheret"
+      ],
+      "language_origin": "Yiddish",
+      "category": "feelings and celebration",
+      "yeshivish_example": "After the third date, he wondered whether she was his bashert.",
+      "plain_english_example": "After the third date, he wondered whether she was the person he was meant to marry.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "destined",
+        "meant to be",
+        "one's destined spouse"
+      ],
+      "context_note": "In dating and marriage conversation it often means the person one is destined to marry. It can also describe an event or outcome that feels providentially meant to happen."
+    },
+    {
+      "term": "vort",
+      "variants": [],
+      "language_origin": "Yiddish",
+      "category": "celebrations",
+      "yeshivish_example": "He shared a short vort at the table.",
+      "plain_english_example": "He shared a brief Torah thought at the table.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "a word",
+        "a brief Torah thought",
+        "an engagement celebration or announcement"
+      ],
+      "context_note": "At a meal or class, a vort is usually a short Torah idea. In some Orthodox communities, “the vort” means a formal engagement gathering or the engagement itself."
+    },
+    {
+      "term": "chasunah",
+      "variants": [
+        "chassunah",
+        "chasuna",
+        "chasene"
+      ],
+      "language_origin": "mixed",
+      "category": "celebrations",
+      "yeshivish_example": "We are going to a chasunah on Sunday.",
+      "plain_english_example": "We are going to a wedding on Sunday.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wedding",
+        "Jewish wedding celebration"
+      ],
+      "context_note": "A common Ashkenazi or Yeshivish word for a wedding, including the ceremony and celebration."
+    },
+    {
+      "term": "simcha",
+      "variants": [
+        "simchah",
+        "simche"
+      ],
+      "language_origin": "Hebrew",
+      "category": "celebrations",
+      "yeshivish_example": "The family has a simcha this weekend.",
+      "plain_english_example": "The family has a happy celebration this weekend.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "joy",
+        "a happy occasion",
+        "a lifecycle celebration"
+      ],
+      "context_note": "In ordinary community conversation, “a simcha” usually means an event such as a wedding, bris, bar mitzvah, or other happy family occasion."
+    },
+    {
+      "term": "bris",
+      "variants": [
+        "brit",
+        "bris milah",
+        "brit milah"
+      ],
+      "language_origin": "mixed",
+      "category": "celebrations",
+      "yeshivish_example": "The bris will be tomorrow morning.",
+      "plain_english_example": "The ritual circumcision ceremony will be tomorrow morning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual circumcision",
+        "the ceremony welcoming a circumcised Jewish baby boy into the covenant"
+      ],
+      "context_note": "Usually refers both to the circumcision required by Jewish law and to the ceremony and meal surrounding it."
+    },
+    {
+      "term": "bar mitzvah",
+      "variants": [
+        "bar-mitzvah"
+      ],
+      "language_origin": "mixed",
+      "category": "celebrations",
+      "yeshivish_example": "We are going to his bar mitzvah on Sunday.",
+      "plain_english_example": "We are going to his Jewish coming-of-age celebration on Sunday.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a Jewish boy who has reached religious adulthood at age thirteen",
+        "the ceremony or celebration marking that milestone"
+      ],
+      "context_note": "The religious status begins at age thirteen whether or not a party is held. In conversation, “a bar mitzvah” often means the synagogue service, celebration, or both."
+    },
+    {
+      "term": "bas mitzvah",
+      "variants": [
+        "bat mitzvah",
+        "bat-mitzvah",
+        "bas-mitzvah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "celebrations",
+      "yeshivish_example": "Her bas mitzvah will be next month.",
+      "plain_english_example": "Her Jewish coming-of-age celebration will be next month.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a Jewish girl who has reached religious adulthood at age twelve",
+        "the ceremony or celebration marking that milestone"
+      ],
+      "context_note": "“Bas mitzvah” is the Ashkenazi or Yeshivish pronunciation; “bat mitzvah” is the common Modern Hebrew form. In Orthodox communities, the form of the celebration varies."
+    },
+    {
+      "term": "kiddush",
+      "variants": [
+        "kidush"
+      ],
+      "language_origin": "Hebrew",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "There is a kiddush after services.",
+      "plain_english_example": "There is a reception with refreshments after services.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the blessing over wine that sanctifies Shabbos or a festival",
+        "refreshments or a reception after synagogue services"
+      ],
+      "context_note": "Context determines whether it means the ritual blessing itself or the communal food gathering commonly held after services."
+    },
+    {
+      "term": "aliyah",
+      "variants": [
+        "aliya"
+      ],
+      "language_origin": "Hebrew",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "He received an aliyah on Shabbos.",
+      "plain_english_example": "He was called up for the Torah reading on the Sabbath.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the honor of being called to the Torah during a synagogue service",
+        "immigration to Israel"
+      ],
+      "context_note": "In synagogue conversation, someone “gets an aliyah” when called up for the Torah reading or its blessing. Someone who “makes aliyah” moves to Israel."
+    },
+    {
+      "term": "seudah",
+      "variants": [
+        "seuda",
+        "se'udah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "food and celebrations",
+      "yeshivish_example": "The seudah starts at one o'clock.",
+      "plain_english_example": "The festive meal starts at one o'clock.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "meal",
+        "formal or festive religious meal"
+      ],
+      "context_note": "Often refers to a Shabbos or holiday meal, a wedding meal, or another meal connected to a religious occasion."
+    },
+    {
+      "term": "bentsch",
+      "variants": [
+        "bentch",
+        "bentsh",
+        "bench",
+        "bensch"
+      ],
+      "language_origin": "Yiddish",
+      "category": "religious practice",
+      "yeshivish_example": "We should bentsch before everyone leaves.",
+      "plain_english_example": "We should recite Grace after Meals before everyone leaves.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "recite Grace after Meals",
+        "say a blessing",
+        "bless"
+      ],
+      "context_note": "In everyday Orthodox speech, it most often means reciting Birkat Hamazon, the formal Grace after Meals, after eating bread. In other phrases it can mean to say a blessing."
+    },
+    {
+      "term": "cholent",
+      "variants": [
+        "chulent"
+      ],
+      "language_origin": "Yiddish",
+      "category": "food and celebrations",
+      "yeshivish_example": "The cholent needs another hour.",
+      "plain_english_example": "The slow-cooked Sabbath stew needs another hour.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a slow-cooked stew traditionally eaten on Shabbos"
+      ],
+      "context_note": "Recipes vary widely, but the term usually means a hot stew prepared before Shabbos and kept cooking for the daytime meal."
+    },
+    {
+      "term": "fleishig",
+      "variants": [
+        "fleishik"
+      ],
+      "language_origin": "Yiddish",
+      "category": "food and kashrus",
+      "yeshivish_example": "This oven is fleishig.",
+      "plain_english_example": "This oven is designated for meat foods under kosher rules.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "meat",
+        "containing meat",
+        "designated for meat under kosher rules"
+      ],
+      "context_note": "Can describe food, cookware, a kitchen area, or a person who has recently eaten meat and is waiting before eating dairy."
+    },
+    {
+      "term": "milchig",
+      "variants": [
+        "milchik"
+      ],
+      "language_origin": "Yiddish",
+      "category": "food and kashrus",
+      "yeshivish_example": "Use the milchig pan for the cheese dish.",
+      "plain_english_example": "Use the dairy pan for the cheese dish.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "dairy",
+        "containing milk",
+        "designated for dairy under kosher rules"
+      ],
+      "context_note": "Can describe food, cookware, or a kitchen area used for dairy rather than meat."
+    },
+    {
+      "term": "pareve",
+      "variants": [
+        "parev",
+        "parve"
+      ],
+      "language_origin": "Yiddish",
+      "category": "food and kashrus",
+      "yeshivish_example": "The dessert is pareve, so we can serve it after meat.",
+      "plain_english_example": "The dessert is neither meat nor dairy, so we can serve it after a meat meal.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "neither meat nor dairy under kosher rules",
+        "neutral with respect to meat and dairy"
+      ],
+      "context_note": "Pareve food can generally be eaten with either meat or dairy, though preparation equipment and some foods can create additional kosher-law details."
+    },
+    {
+      "term": "gut Shabbos",
+      "variants": [
+        "good Shabbos",
+        "gut Shabbes"
+      ],
+      "language_origin": "mixed",
+      "category": "greeting",
+      "yeshivish_example": "Gut Shabbos, everyone.",
+      "plain_english_example": "Have a good Sabbath, everyone.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "have a good Sabbath",
+        "a traditional Sabbath greeting"
+      ],
+      "context_note": "Said before or during Shabbos, especially from Friday onward. It functions like “Have a good Shabbos” or “Good Shabbos.”"
+    },
+    {
+      "term": "l'chaim",
+      "variants": [
+        "lechayim",
+        "lchaim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "greeting and celebration",
+      "yeshivish_example": "They raised their glasses and said l'chaim.",
+      "plain_english_example": "They raised their glasses and toasted, “To life.”",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "to life",
+        "a toast",
+        "a small celebratory drink or gathering"
+      ],
+      "context_note": "Most commonly said as a toast before drinking. It can also refer to the drink or informal gathering itself."
+    },
+    {
+      "term": "Shabbos",
+      "variants": [
+        "Shabbat",
+        "Shabbas"
+      ],
+      "language_origin": "mixed",
+      "category": "religious practice",
+      "yeshivish_example": "We are staying with relatives for Shabbos.",
+      "plain_english_example": "We are staying with relatives for the Jewish Sabbath.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish Sabbath",
+        "the period from Friday before sunset until Saturday night"
+      ],
+      "context_note": "The Ashkenazi form “Shabbos” is especially common in Yeshivish speech. Conversation may use it for the sacred day, its meals, or weekend plans centered on it."
+    },
+    {
+      "term": "yom tov",
+      "variants": [
+        "yontif",
+        "yontiff",
+        "yumtif"
+      ],
+      "language_origin": "mixed",
+      "category": "religious practice",
+      "yeshivish_example": "The office will be closed for yom tov.",
+      "plain_english_example": "The office will be closed for the Jewish festival.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a major Jewish holy day or festival",
+        "holiday"
+      ],
+      "context_note": "Usually refers to a festival or major holy day with special religious observance. The Yiddish forms “yontif” and “yontiff” are common in speech."
+    },
+    {
+      "term": "erev Shabbos",
+      "variants": [
+        "erev Shabbat"
+      ],
+      "language_origin": "Hebrew",
+      "category": "time and plans",
+      "yeshivish_example": "Erev Shabbos is always busy in our house.",
+      "plain_english_example": "Friday before the Sabbath is always busy in our house.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Friday before Shabbos",
+        "the period of preparation before the Sabbath begins"
+      ],
+      "context_note": "Literally the eve of Shabbos. In ordinary conversation it often means Friday, especially the busy hours devoted to Sabbath preparation."
+    },
+    {
+      "term": "motzaei Shabbos",
+      "variants": [
+        "motzei Shabbos",
+        "motzaei Shabbat",
+        "motzei Shabbat"
+      ],
+      "language_origin": "Hebrew",
+      "category": "time and plans",
+      "yeshivish_example": "The meeting is motzaei Shabbos.",
+      "plain_english_example": "The meeting is Saturday night after the Sabbath ends.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Saturday night after Shabbos ends",
+        "the period immediately following the Sabbath"
+      ],
+      "context_note": "Used for scheduling events after nightfall on Saturday, once Shabbos has concluded."
+    },
+    {
+      "term": "daven",
+      "variants": [
+        "davening"
+      ],
+      "language_origin": "Yiddish",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "I need to daven Mincha before the meeting.",
+      "plain_english_example": "I need to pray the afternoon service before the meeting.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pray",
+        "recite the Jewish prayer service",
+        "prayer or a prayer service, in the form “davening”"
+      ],
+      "context_note": "“Daven” is the verb; “davening” is commonly the activity or service. It usually refers to formal Jewish prayer rather than any informal request to God."
+    },
+    {
+      "term": "shul",
+      "variants": [
+        "schul"
+      ],
+      "language_origin": "Yiddish",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "We will meet outside the shul.",
+      "plain_english_example": "We will meet outside the synagogue.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "synagogue",
+        "Jewish house of prayer"
+      ],
+      "context_note": "The everyday Yiddish and Yeshivish word for a synagogue. It may refer to the building, congregation, or local prayer community."
+    },
+    {
+      "term": "minyan",
+      "variants": [
+        "minyen"
+      ],
+      "language_origin": "Hebrew",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "There is a minyan at seven.",
+      "plain_english_example": "There is a communal prayer service at seven.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a prayer quorum",
+        "a communal prayer group or service"
+      ],
+      "context_note": "In Orthodox practice, a minyan is ten adult Jewish males required for certain public prayers. The word also commonly means a particular scheduled service or regular group."
+    },
+    {
+      "term": "shacharis",
+      "variants": [
+        "shacharit",
+        "shachris"
+      ],
+      "language_origin": "Hebrew",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "Shacharis starts at eight.",
+      "plain_english_example": "The morning prayer service starts at eight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the morning prayer service"
+      ],
+      "context_note": "The Ashkenazi form “shacharis” and the Israeli or Sephardi form “shacharit” refer to the same daily morning service."
+    },
+    {
+      "term": "mincha",
+      "variants": [
+        "minchah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "We can daven mincha before dinner.",
+      "plain_english_example": "We can pray the afternoon service before dinner.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the afternoon prayer service"
+      ],
+      "context_note": "Usually refers to the daily afternoon service. The exact time varies with the day and local schedule."
+    },
+    {
+      "term": "maariv",
+      "variants": [
+        "ma'ariv"
+      ],
+      "language_origin": "Hebrew",
+      "category": "prayer and synagogue",
+      "yeshivish_example": "Maariv begins ten minutes after sunset.",
+      "plain_english_example": "The evening prayer service begins ten minutes after sunset.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the evening prayer service"
+      ],
+      "context_note": "The common Ashkenazi name for the evening service; many Sephardi and Israeli speakers call it Arvit."
+    },
+    {
+      "term": "gemara",
+      "variants": [
+        "gemorah"
+      ],
+      "language_origin": "Aramaic",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "We learned that gemara last week.",
+      "plain_english_example": "We studied that Talmudic passage last week.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Talmudic discussion surrounding the Mishnah",
+        "a volume or passage of Talmud being studied"
+      ],
+      "context_note": "In yeshiva conversation, “Gemara” often means the Babylonian Talmud generally, a particular tractate, or the passage currently under discussion."
+    },
+    {
+      "term": "shiur",
+      "variants": [],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "The shiur begins at nine.",
+      "plain_english_example": "The Torah class begins at nine.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a Torah class or lesson",
+        "a prescribed measurement or minimum quantity in Jewish law"
+      ],
+      "context_note": "In ordinary scheduling, it usually means a class. In legal discussion, it can mean a defined amount, size, or measure."
+    },
+    {
+      "term": "chavrusa",
+      "variants": [
+        "chavruta",
+        "chevrusa"
+      ],
+      "language_origin": "Aramaic",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "My chavrusa is away this week.",
+      "plain_english_example": "My study partner is away this week.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a study partner",
+        "a paired Torah-study session"
+      ],
+      "context_note": "Can refer to either the person one studies with or the regular period of paired textual study."
+    },
+    {
+      "term": "beis midrash",
+      "variants": [
+        "beit midrash",
+        "beth midrash",
+        "beis medrash"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "He is waiting in the beis midrash.",
+      "plain_english_example": "He is waiting in the Torah study hall.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "study hall",
+        "a room or building used for Torah study, often also for prayer"
+      ],
+      "context_note": "Usually the central study space of a yeshiva or synagogue. It may function as both a learning hall and a prayer room."
+    },
+    {
+      "term": "yeshiva",
+      "variants": [
+        "yeshivah",
+        "yeshive"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "He plans to attend yeshiva next year.",
+      "plain_english_example": "He plans to attend a Jewish school focused on Torah study next year.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a Jewish school centered on Torah study",
+        "an academy for advanced Talmud study"
+      ],
+      "context_note": "The word covers different age levels and institutions, but in Yeshivish speech it often evokes intensive traditional Torah and Talmud study."
+    },
+    {
+      "term": "kollel",
+      "variants": [
+        "kolel"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "He learns in the kollel every morning.",
+      "plain_english_example": "He studies Torah in the advanced program every morning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "an advanced Torah-study program",
+        "a framework in which married men study Torah full time or extensively"
+      ],
+      "context_note": "Most often refers to a post-yeshiva institution or program for married scholars, though structures and schedules differ."
+    },
+    {
+      "term": "seder",
+      "variants": [
+        "seider"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "First seder starts at nine.",
+      "plain_english_example": "The first scheduled study period starts at nine.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a scheduled study period",
+        "an ordered sequence",
+        "the Passover ritual meal"
+      ],
+      "context_note": "In a yeshiva schedule, “seder” means a formal block of study. In holiday conversation, “the Seder” usually means the Passover meal and ritual."
+    },
+    {
+      "term": "zman",
+      "variants": [
+        "z'man"
+      ],
+      "language_origin": "Hebrew",
+      "category": "time and plans",
+      "yeshivish_example": "He is teaching a new class this zman.",
+      "plain_english_example": "He is teaching a new class this academic term.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "a yeshiva term or semester",
+        "time or season"
+      ],
+      "context_note": "When someone says “this zman” or “next zman,” the usual Yeshivish meaning is an academic term in the yeshiva calendar."
+    },
+    {
+      "term": "bein hazmanim",
+      "variants": [
+        "bein ha-zmanim",
+        "bein hazemanim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "time and plans",
+      "yeshivish_example": "They are traveling during bein hazmanim.",
+      "plain_english_example": "They are traveling during the break between yeshiva terms.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the break between yeshiva terms",
+        "yeshiva vacation period"
+      ],
+      "context_note": "Literally “between the times.” It is the interval between formal yeshiva study terms, when regular schedules are reduced or suspended."
+    },
+    {
+      "term": "rosh yeshiva",
+      "variants": [
+        "rosh hayeshiva",
+        "rosh ha-yeshiva"
+      ],
+      "language_origin": "Hebrew",
+      "category": "people and family",
+      "yeshivish_example": "The rosh yeshiva will speak after Maariv.",
+      "plain_english_example": "The head of the yeshiva will speak after the evening service.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "head of a yeshiva",
+        "senior Torah scholar and educational leader of a yeshiva"
+      ],
+      "context_note": "Usually denotes the institution's leading scholarly authority, not merely an administrative principal."
+    },
+    {
+      "term": "learning",
+      "variants": [],
+      "language_origin": "mixed",
+      "category": "Yeshivish English",
+      "yeshivish_example": "He is in learning full time.",
+      "plain_english_example": "He studies Torah full time.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Torah study",
+        "the activity or career of intensive religious study"
+      ],
+      "context_note": "In Yeshivish, “learning” often specifically means studying Torah or Talmud, not education in general. “In learning” can describe someone devoted to full-time or sustained Torah study."
+    },
+    {
+      "term": "bring down",
+      "variants": [],
+      "language_origin": "mixed",
+      "category": "Yeshivish English",
+      "yeshivish_example": "Can you bring down the source for that ruling?",
+      "plain_english_example": "Can you cite the source for that ruling?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cite",
+        "quote or report a source",
+        "record a teaching in a text"
+      ],
+      "context_note": "A source, book, or speaker can “bring down” an earlier opinion or teaching. It normally means cite or transmit, not physically lower something."
+    },
+    {
+      "term": "halacha",
+      "variants": [
+        "halachah",
+        "halakhah",
+        "halakha"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "What is the halacha in this situation?",
+      "plain_english_example": "What does Jewish law require in this situation?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish law",
+        "a specific legal ruling or rule",
+        "accepted religious practice"
+      ],
+      "context_note": "Can refer to the overall system of Jewish law or to one particular rule. In conversation, “What is the halacha?” asks what Jewish law requires in a specific case."
+    },
+    {
+      "term": "mitzvah",
+      "variants": [
+        "mitzva"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "Visiting the sick is a mitzvah.",
+      "plain_english_example": "Visiting the sick is a religiously significant good deed.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a commandment",
+        "a religious obligation",
+        "a religiously significant good deed"
+      ],
+      "context_note": "Its primary meaning is a commandment or commanded act. In casual English it can mean a good deed, but in Orthodox speech the connection to religious obligation remains important."
+    },
+    {
+      "term": "aveirah",
+      "variants": [
+        "aveira",
+        "avera"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "He realized that taking it would be an aveirah.",
+      "plain_english_example": "He realized that taking it would be a religious transgression.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sin",
+        "religious transgression",
+        "violation of Jewish law"
+      ],
+      "context_note": "Refers to doing something prohibited or failing a religious duty, with seriousness depending on the specific act and circumstances."
+    },
+    {
+      "term": "kosher",
+      "variants": [
+        "kasher"
+      ],
+      "language_origin": "mixed",
+      "category": "food and kashrus",
+      "yeshivish_example": "Is this restaurant kosher?",
+      "plain_english_example": "Does this restaurant follow Jewish dietary law?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "permitted under Jewish dietary law",
+        "prepared or supervised according to kosher rules",
+        "proper or legitimate, figuratively"
+      ],
+      "context_note": "Most often describes food, ingredients, utensils, or facilities that meet Jewish dietary requirements. Figuratively, it can mean acceptable or aboveboard."
+    },
+    {
+      "term": "treif",
+      "variants": [
+        "trayf",
+        "treyf"
+      ],
+      "language_origin": "mixed",
+      "category": "food and kashrus",
+      "yeshivish_example": "That meat is treif.",
+      "plain_english_example": "That meat is not kosher.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "not kosher",
+        "forbidden as food under Jewish dietary law",
+        "unacceptable, figuratively"
+      ],
+      "context_note": "Usually describes food or food equipment that is not kosher. Informally it can also label an idea or situation as religiously unacceptable."
+    },
+    {
+      "term": "hechsher",
+      "variants": [
+        "hekhsher",
+        "heksher"
+      ],
+      "language_origin": "Hebrew",
+      "category": "food and kashrus",
+      "yeshivish_example": "Which hechsher is on this package?",
+      "plain_english_example": "Which kosher certification is on this package?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kosher certification",
+        "a kosher-certifying symbol or supervision",
+        "religious approval"
+      ],
+      "context_note": "On food, it usually means the certification or symbol showing rabbinic kosher supervision. In broader discussion it can mean formal approval or validation."
+    },
+    {
+      "term": "assur",
+      "variants": [
+        "asur",
+        "ossur"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "It is assur to use that ingredient.",
+      "plain_english_example": "Jewish law forbids using that ingredient.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "forbidden under Jewish law",
+        "not permitted"
+      ],
+      "context_note": "A legal classification, not merely a personal preference or community custom. The reason and severity depend on the issue."
+    },
+    {
+      "term": "mutar",
+      "variants": [
+        "muttar"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "The rav said it is mutar in this case.",
+      "plain_english_example": "The rabbi said it is permitted in this case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "permitted under Jewish law",
+        "allowed"
+      ],
+      "context_note": "Means that Jewish law permits the act; it does not necessarily mean the act is recommended or ideal."
+    },
+    {
+      "term": "l'chatchila",
+      "variants": [
+        "lechatchila",
+        "l'chathila",
+        "lechatchilah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "L'chatchila, use a separate utensil.",
+      "plain_english_example": "Ideally, use a separate utensil.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ideally",
+        "from the outset",
+        "the preferred way to act"
+      ],
+      "context_note": "Describes what should be done before the fact when one can choose the best procedure, as distinct from what may still count afterward."
+    },
+    {
+      "term": "b'dieved",
+      "variants": [
+        "bedieved",
+        "b'diavad",
+        "bediavad"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "B'dieved, the meal can still be served.",
+      "plain_english_example": "After the fact, the meal can still be served.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "after the fact",
+        "acceptable once already done",
+        "valid but not ideal"
+      ],
+      "context_note": "Used when an action was not performed in the preferred way but may still be accepted after it happened."
+    },
+    {
+      "term": "be yotzei",
+      "variants": [
+        "be yotze",
+        "be yotzeh"
+      ],
+      "language_origin": "mixed",
+      "category": "religious practice",
+      "yeshivish_example": "Can I be yotzei with this bracha?",
+      "plain_english_example": "Can I fulfill the obligation with this blessing?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "fulfill an obligation",
+        "satisfy a religious requirement",
+        "discharge one's duty"
+      ],
+      "context_note": "Commonly asks whether a particular action, blessing, or performance counts as fulfilling the required mitzvah."
+    },
+    {
+      "term": "frum",
+      "variants": [],
+      "language_origin": "Yiddish",
+      "category": "community and social life",
+      "yeshivish_example": "They moved to a neighborhood with a large frum community.",
+      "plain_english_example": "They moved to a neighborhood with a large Orthodox observant community.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "religiously observant",
+        "Orthodox in practice or identity",
+        "pious or devout"
+      ],
+      "context_note": "Usually describes a person, family, institution, or environment committed to Orthodox observance. Exact standards and social connotations vary by speaker."
+    },
+    {
+      "term": "baal teshuvah",
+      "variants": [
+        "ba'al teshuva",
+        "ba'al teshuvah",
+        "bal teshuva"
+      ],
+      "language_origin": "Hebrew",
+      "category": "people and family",
+      "yeshivish_example": "He became a baal teshuvah in college.",
+      "plain_english_example": "He became religiously observant in college after a less-observant upbringing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a person who became religiously observant later in life",
+        "a person who returned to Jewish observance"
+      ],
+      "context_note": "Usually describes a Jew raised with less Orthodox observance who later adopted an observant life. It does not mean a convert to Judaism."
+    },
+    {
+      "term": "off the derech",
+      "variants": [
+        "off-the-derech",
+        "OTD"
+      ],
+      "language_origin": "mixed",
+      "category": "community and social life",
+      "yeshivish_example": "He went off the derech in his late teens.",
+      "plain_english_example": "He stopped living an Orthodox observant life in his late teens.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "no longer following the Orthodox religious path",
+        "having left or substantially reduced observance after an Orthodox upbringing"
+      ],
+      "context_note": "A sensitive community label, often used for someone raised Orthodox who no longer observes that way. It can oversimplify a person's identity and should be used carefully."
+    },
+    {
+      "term": "shomer Shabbos",
+      "variants": [
+        "shomer Shabbat"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "The job is suitable for someone who is shomer Shabbos.",
+      "plain_english_example": "The job is suitable for someone who observes the Jewish Sabbath.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sabbath-observant",
+        "a person who follows the laws of Shabbos"
+      ],
+      "context_note": "Literally “one who keeps Shabbos.” In many Orthodox settings it may suggest broader observance as well, but its direct meaning concerns the Sabbath."
+    },
+    {
+      "term": "loshon hara",
+      "variants": [
+        "lashon hara",
+        "lashon hora",
+        "loshon hora"
+      ],
+      "language_origin": "Hebrew",
+      "category": "personality and behavior",
+      "yeshivish_example": "We should not repeat that; it may be loshon hara.",
+      "plain_english_example": "We should not repeat that; it may be prohibited harmful gossip.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "prohibited harmful speech about another person",
+        "negative or damaging gossip"
+      ],
+      "context_note": "In Jewish law, the term can include harmful negative information even when it is true; false damaging speech is treated under related but distinct rules. Context and permitted purposes matter."
+    },
+    {
+      "term": "hashgacha pratis",
+      "variants": [
+        "hashgacha pratit",
+        "hashgachah pratis"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "Finding the document just then felt like hashgacha pratis.",
+      "plain_english_example": "Finding the document just then felt like an instance of individual divine providence.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "individual divine providence",
+        "God's guidance of particular events"
+      ],
+      "context_note": "Often used when an event, coincidence, or outcome is understood as personally guided by God rather than merely accidental."
+    },
+    {
+      "term": "parnassa",
+      "variants": [
+        "parnasa",
+        "parnosso"
+      ],
+      "language_origin": "Hebrew",
+      "category": "money, work, and practical matters",
+      "yeshivish_example": "He is looking for steady parnassa.",
+      "plain_english_example": "He is looking for a steady livelihood.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "livelihood",
+        "income",
+        "the means of supporting a household"
+      ],
+      "context_note": "Can refer to a job, earnings, or the broader need for financial sustenance, often with an implicit religious sense that livelihood is a blessing."
+    },
+    {
+      "term": "tzedakah",
+      "variants": [
+        "tzedaka",
+        "tsedakah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "money, work, and practical matters",
+      "yeshivish_example": "They set aside part of every paycheck for tzedakah.",
+      "plain_english_example": "They set aside part of every paycheck for charitable giving.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "charitable giving",
+        "money or aid given to people in need",
+        "a religious duty of material support"
+      ],
+      "context_note": "Usually translated as charity, but it carries a stronger sense of obligation and justice than purely optional generosity."
+    },
+    {
+      "term": "gemach",
+      "variants": [
+        "gemakh",
+        "g'mach"
+      ],
+      "language_origin": "Hebrew",
+      "category": "money, work, and practical matters",
+      "yeshivish_example": "We borrowed a folding table from the gemach.",
+      "plain_english_example": "We borrowed a folding table from the community lending service.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a free-loan fund",
+        "a community lending service",
+        "an organization that lends money or useful items without charge"
+      ],
+      "context_note": "Originally associated with interest-free loans, but a gemach may lend medical equipment, clothing, household items, or other resources."
+    },
+    {
+      "term": "machmir",
+      "variants": [
+        "mahmir"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "He is machmir about that certification.",
+      "plain_english_example": "He follows a stricter religious-law standard for that certification.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "strict or stringent in Jewish-law practice",
+        "following a more demanding accepted position"
+      ],
+      "context_note": "Describes a person, ruling, or choice that adopts a stricter halachic standard. It should not automatically be translated as more religious or more correct."
+    },
+    {
+      "term": "meikil",
+      "variants": [
+        "mekil",
+        "maikil",
+        "meykil"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "This rabbi is meikil in that specific case.",
+      "plain_english_example": "This rabbi follows a more lenient accepted ruling in that specific case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "lenient in Jewish-law practice",
+        "following a less restrictive accepted position"
+      ],
+      "context_note": "Describes a legitimate lenient ruling or practice within Jewish law; it does not necessarily imply carelessness."
+    },
+    {
+      "term": "chesed",
+      "variants": [
+        "hesed"
+      ],
+      "language_origin": "Hebrew",
+      "category": "community and social life",
+      "yeshivish_example": "Bringing meals to the family was a real chesed.",
+      "plain_english_example": "Bringing meals to the family was a genuine act of kindness.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kindness",
+        "an act of practical care",
+        "organized benevolence"
+      ],
+      "context_note": "Can mean a single helpful act or an ongoing commitment to caring for others, often through meals, visits, rides, loans, or communal support."
+    },
+    {
+      "term": "bracha",
+      "variants": [
+        "beracha",
+        "brachah",
+        "brocha"
+      ],
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "Which bracha do we say on this food?",
+      "plain_english_example": "Which blessing do we recite over this food?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "blessing",
+        "a prescribed blessing formula",
+        "a wish for well-being or success"
+      ],
+      "context_note": "Can refer to a formal blessing recited before food or a mitzvah, a personal blessing from a respected person, or a general expression of good wishes."
+    },
+    {
+      "term": "teshuvah",
+      "variants": [
+        "teshuva"
+      ],
+      "meanings": [
+        "repentance",
+        "returning to religious observance"
+      ],
+      "context_note": "The context determines whether the emphasis is moral repentance or renewed religious observance."
+    },
+    {
+      "term": "tzeadekes",
+      "variants": [
+        "tzadekes",
+        "tzaddekes"
+      ],
+      "meanings": [
+        "righteous woman",
+        "holy woman"
+      ],
+      "context_note": "Usually expresses admiration for a woman's character or religious devotion."
+    }
+  ]
+}
