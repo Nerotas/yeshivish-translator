@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,11 +31,18 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 DEBUG = os.getenv("DJANGO_DEBUG", "false").lower() == "true"
 
 
-def csv_env(name, default=""):
+def bool_env(name: str, default: bool = False) -> bool:
+    value = os.getenv(name)
+    return default if value is None else value.lower() == "true"
+
+
+def int_env(name: str, default: int = 0) -> int:
+    return int(os.getenv(name, str(default)))
+
+
+def csv_env(name: str, default: str = "") -> list[str]:
     return [
-        value.strip()
-        for value in os.getenv(name, default).split(",")
-        if value.strip()
+        value.strip() for value in os.getenv(name, default).split(",") if value.strip()
     ]
 
 
@@ -44,29 +52,41 @@ ALLOWED_HOSTS = csv_env("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1")
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'corsheaders',
-    'rest_framework',
-    'translator',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "corsheaders",
+    "rest_framework",
+    "translator",
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 CORS_ALLOWED_ORIGINS = csv_env("CORS_ALLOWED_ORIGINS", "http://localhost:5173")
+
+# HTTPS settings are opt-in for local development and must be enabled by the
+# production environment after TLS termination has been configured.
+SECURE_SSL_REDIRECT = bool_env("DJANGO_SECURE_SSL_REDIRECT")
+SESSION_COOKIE_SECURE = bool_env("DJANGO_SESSION_COOKIE_SECURE")
+CSRF_COOKIE_SECURE = bool_env("DJANGO_CSRF_COOKIE_SECURE")
+SECURE_HSTS_SECONDS = int_env("DJANGO_SECURE_HSTS_SECONDS")
+SECURE_HSTS_INCLUDE_SUBDOMAINS = bool_env("DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS")
+SECURE_HSTS_PRELOAD = bool_env("DJANGO_SECURE_HSTS_PRELOAD")
+
+if bool_env("DJANGO_TRUST_X_FORWARDED_PROTO"):
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 REST_FRAMEWORK = {
     "DEFAULT_THROTTLE_CLASSES": [
@@ -77,33 +97,33 @@ REST_FRAMEWORK = {
     },
 }
 
-ROOT_URLCONF = 'config.urls'
+ROOT_URLCONF = "config.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = "config.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -113,16 +133,18 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": (
+            "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -130,9 +152,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -142,14 +164,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
 
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
 MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+    "default": {
+        "BACKEND": "django.core.mail.backends.console.EmailBackend",
     },
 }

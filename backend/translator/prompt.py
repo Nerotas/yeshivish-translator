@@ -1,5 +1,8 @@
-from .glossary import find_glossary_entries, format_glossary_context
-
+from .glossary import (
+    TranslationDirection,
+    find_glossary_entries,
+    format_glossary_context,
+)
 
 YESHIVISH_TO_ENGLISH_INSTRUCTIONS = """
 You are a Yeshivish-to-plain-English translator.
@@ -60,13 +63,16 @@ Example output:
 # Kept as an import-compatible alias for existing callers.
 TRANSLATOR_INSTRUCTIONS = YESHIVISH_TO_ENGLISH_INSTRUCTIONS
 
-DIRECTION_INSTRUCTIONS = {
+DIRECTION_INSTRUCTIONS: dict[TranslationDirection, str] = {
     "yeshivish_to_english": YESHIVISH_TO_ENGLISH_INSTRUCTIONS,
     "english_to_yeshivish": ENGLISH_TO_YESHIVISH_INSTRUCTIONS,
 }
 
 
-def build_translation_instructions(text, direction="yeshivish_to_english"):
+def build_translation_instructions(
+    text: str,
+    direction: TranslationDirection = "yeshivish_to_english",
+) -> str:
     instructions = DIRECTION_INSTRUCTIONS[direction]
     glossary_context = format_glossary_context(
         find_glossary_entries(text, direction=direction), direction=direction

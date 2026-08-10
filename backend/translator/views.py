@@ -10,26 +10,31 @@ from rest_framework.decorators import (
     permission_classes,
 )
 from rest_framework.permissions import AllowAny
+from rest_framework.request import Request
 from rest_framework.response import Response
 
+from .glossary import TranslationDirection
 from .prompt import build_translation_instructions
 
 logger = logging.getLogger(__name__)
 
 MAX_INPUT_CHARACTERS = 3000
-DEFAULT_DIRECTION = "yeshivish_to_english"
-SUPPORTED_DIRECTIONS = {DEFAULT_DIRECTION, "english_to_yeshivish"}
+DEFAULT_DIRECTION: TranslationDirection = "yeshivish_to_english"
+SUPPORTED_DIRECTIONS: set[TranslationDirection] = {
+    DEFAULT_DIRECTION,
+    "english_to_yeshivish",
+}
 
 
 @lru_cache(maxsize=1)
-def get_openai_client():
+def get_openai_client() -> OpenAI:
     return OpenAI()
 
 
 @api_view(["POST"])
 @authentication_classes([])
 @permission_classes([AllowAny])
-def translate(request):
+def translate(request: Request) -> Response:
     text = request.data.get("text")
     direction = request.data.get("direction", DEFAULT_DIRECTION)
 
@@ -87,5 +92,5 @@ def translate(request):
 @api_view(["GET"])
 @authentication_classes([])
 @permission_classes([AllowAny])
-def health(request):
+def health(request: Request) -> Response:
     return Response({"status": "ok"})

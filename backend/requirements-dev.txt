@@ -1,0 +1,8 @@
+-r requirements.txt
+
+coverage==7.15.4
+django-stubs==5.2.9
+djangorestframework-stubs==3.16.9
+mypy==2.3.0
+pip-audit==2.10.1
+ruff==0.16.2

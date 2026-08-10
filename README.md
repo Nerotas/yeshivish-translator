@@ -69,16 +69,23 @@ avoids sending the entire glossary with every translation.
 │   │   ├── glossary.json       # Runtime translation glossary
 │   │   ├── glossary.py         # Relevant-entry matching and prompt formatting
 │   │   ├── prompt.py           # Direction-specific OpenAI instructions
+│   │   ├── eval_cases.json      # Representative translation-quality cases
+│   │   ├── evals.py             # Deterministic output-contract evaluator
 │   │   ├── tests.py            # Backend unit and endpoint tests
 │   │   └── views.py            # Translation and health endpoints
 │   ├── .env.example
 │   ├── manage.py
+│   ├── requirements-dev.txt     # Test, coverage, lint, typing, and audit tools
 │   └── requirements.txt
 ├── frontend/
+│   ├── e2e/                    # Playwright browser and accessibility tests
 │   ├── src/                    # React application, API client, styles, and tests
 │   ├── .env.example
 │   ├── package.json
 │   └── vite.config.ts
+├── .github/workflows/quality.yml
+├── Makefile                    # Consolidated local quality commands
+├── pyproject.toml              # Ruff and mypy configuration
 └── README.md
 ```
 
@@ -108,7 +115,7 @@ this guide assume that location.
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r backend/requirements.txt
+python -m pip install -r backend/requirements-dev.txt
 ```
 
 Create the backend environment file:
@@ -174,6 +181,13 @@ The backend reads `backend/.env` through `python-dotenv`.
 | `DJANGO_DEBUG` | No | `false` | Enables Django debug mode only when set to `true`. |
 | `DJANGO_ALLOWED_HOSTS` | No | `localhost,127.0.0.1` | Comma-separated hosts Django may serve. |
 | `CORS_ALLOWED_ORIGINS` | No | `http://localhost:5173` | Comma-separated frontend origins allowed to call the API. |
+| `DJANGO_SECURE_SSL_REDIRECT` | No | `false` | Redirects HTTP requests to HTTPS. Enable after HTTPS is configured. |
+| `DJANGO_SESSION_COOKIE_SECURE` | No | `false` | Restricts session cookies to HTTPS. |
+| `DJANGO_CSRF_COOKIE_SECURE` | No | `false` | Restricts CSRF cookies to HTTPS. |
+| `DJANGO_SECURE_HSTS_SECONDS` | No | `0` | Enables HTTP Strict Transport Security for the specified lifetime. |
+| `DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS` | No | `false` | Extends HSTS to subdomains. |
+| `DJANGO_SECURE_HSTS_PRELOAD` | No | `false` | Adds the HSTS preload directive. |
+| `DJANGO_TRUST_X_FORWARDED_PROTO` | No | `false` | Trusts `X-Forwarded-Proto` from a controlled reverse proxy. |
 
 ### Frontend
 
@@ -363,29 +377,57 @@ workers after changing `glossary.json`.
 
 ## Testing and quality checks
 
-### Backend
-
-From the repository root:
-
-```bash
-.venv/bin/python backend/manage.py test translator
-```
-
-The OpenAI client is mocked in the endpoint tests, so the test suite does not
-make paid network requests or require a valid OpenAI key after Django settings
-have loaded.
-
-### Frontend
+Install the backend development dependencies and frontend dependencies before
+running the complete local pipeline:
 
 ```bash
-cd frontend
-npm run typecheck
-npm test
-npm run lint
-npm run build
+python -m pip install -r backend/requirements-dev.txt
+npm --prefix frontend ci
+npm --prefix frontend exec playwright install chromium
+make check
+make audit
 ```
 
-`npm run build` writes the production assets to `frontend/dist/`.
+`make check` runs backend linting and formatting checks, strict Python type
+checking, frontend type checking and linting, production frontend compilation,
+unit tests with enforced coverage thresholds, deterministic translation-quality
+evals, and Playwright browser tests. It does not call OpenAI and therefore does
+not spend API credits.
+
+Useful focused commands are:
+
+```bash
+make test             # Backend and frontend unit tests
+make coverage         # Both unit suites with coverage reports and thresholds
+make backend-check    # Ruff and strict mypy
+make frontend-check   # TypeScript, Oxlint, and production build
+make eval             # Committed translation-output contract examples
+make e2e              # Chromium UI and accessibility tests
+make audit            # Python and npm dependency vulnerability audits
+```
+
+Backend branch measurement is enabled, and aggregate measured coverage must
+remain at or above 90%.
+Frontend thresholds are 90% for statements, functions, and lines, and 85% for
+branches. Reports are written to `coverage/backend-html/`,
+`coverage/backend.xml`, and `coverage/frontend/`; generated reports are ignored
+by Git.
+
+The backend suite mocks OpenAI while verifying the complete request contract,
+direction-specific prompts, glossary filtering, validation, throttling, and
+error handling. The eval cases check representative translations for required
+and forbidden vocabulary, paragraph and quotation preservation, and citation
+artifacts. These deterministic evals protect the output contract, but model
+quality can still vary; periodically review real translations when changing the
+model, prompts, or glossary.
+
+The frontend suite covers both directions, theme persistence, request failures,
+empty submissions, and pending requests. Playwright verifies the integrated UI
+flow with a mocked API and runs Axe accessibility scans in light and dark modes.
+
+GitHub Actions runs the same checks for every pull request and for pushes to
+`main`. Coverage artifacts are attached to each workflow run. The workflow is
+defined in `.github/workflows/quality.yml`.
 
 ## Production operation
 
@@ -403,6 +445,13 @@ DJANGO_ALLOWED_HOSTS=api.example.com
 CORS_ALLOWED_ORIGINS=https://translator.example.com
 OPENAI_API_KEY=replace-through-your-secret-manager
 DJANGO_SECRET_KEY=replace-through-your-secret-manager
+DJANGO_SECURE_SSL_REDIRECT=true
+DJANGO_SESSION_COOKIE_SECURE=true
+DJANGO_CSRF_COOKIE_SECURE=true
+DJANGO_SECURE_HSTS_SECONDS=31536000
+DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=true
+DJANGO_SECURE_HSTS_PRELOAD=true
+DJANGO_TRUST_X_FORWARDED_PROTO=true
 ```
 
 Apply migrations and start Gunicorn from the repository root:
@@ -419,6 +468,16 @@ Apply migrations and start Gunicorn from the repository root:
 Run Gunicorn behind an HTTPS reverse proxy or managed application platform.
 Choose the worker count for the available memory and expected concurrency rather
 than treating the example value as universal.
+
+Only enable `DJANGO_TRUST_X_FORWARDED_PROTO` when the application receives
+traffic exclusively through a trusted proxy that overwrites the header. Roll
+out HSTS carefully: browsers remember it, `includeSubDomains` affects every
+subdomain, and preload enrollment has additional external requirements. Validate
+the final environment before deployment:
+
+```bash
+DJANGO_DEBUG=false .venv/bin/python backend/manage.py check --deploy
+```
 
 The included SQLite database is suitable for local development and small,
 single-instance deployments. Evaluate a production database and shared rate-limit

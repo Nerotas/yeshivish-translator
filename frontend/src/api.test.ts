@@ -85,4 +85,13 @@ describe("translateText", () => {
       "The translation response was invalid.",
     );
   });
+
+  it("surfaces network failures", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn<typeof fetch>().mockRejectedValue(new TypeError("Network unavailable")),
+    );
+
+    await expect(translateText("Hello")).rejects.toThrow("Network unavailable");
+  });
 });

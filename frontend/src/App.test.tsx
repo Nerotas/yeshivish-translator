@@ -63,6 +63,16 @@ describe("App", () => {
     ).toHaveAttribute("aria-pressed", "true");
   });
 
+  it("switches back to light mode and updates the saved preference", () => {
+    localStorage.setItem("yeshivish-translator-theme", "dark");
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "Light" }));
+
+    expect(document.documentElement).toHaveAttribute("data-theme", "light");
+    expect(localStorage.getItem("yeshivish-translator-theme")).toBe("light");
+  });
+
   it("sends the selected direction and clears an old translation on switch", async () => {
     mockedTranslateText.mockResolvedValue("That was a geshmake shiur.");
     render(<App />);
@@ -100,5 +110,57 @@ describe("App", () => {
         "Translation request failed.",
       );
     });
+  });
+
+  it("validates empty input without making an API request", () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole("button", { name: "Translate" }));
+
+    expect(screen.getByRole("alert")).toHaveTextContent(
+      "Enter Yeshivish text to translate.",
+    );
+    expect(mockedTranslateText).not.toHaveBeenCalled();
+
+    fireEvent.click(screen.getByRole("button", { name: "English → Yeshivish" }));
+    fireEvent.click(screen.getByRole("button", { name: "Translate" }));
+    expect(screen.getByRole("alert")).toHaveTextContent(
+      "Enter English text to translate.",
+    );
+  });
+
+  it("disables submission while a translation is pending", async () => {
+    let finishRequest: (translation: string) => void = () => undefined;
+    mockedTranslateText.mockReturnValue(
+      new Promise((resolve) => {
+        finishRequest = resolve;
+      }),
+    );
+    render(<App />);
+
+    fireEvent.change(screen.getByLabelText("Yeshivish text"), {
+      target: { value: "Mamesh good." },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Translate" }));
+
+    expect(screen.getByRole("button", { name: "Translating..." })).toBeDisabled();
+
+    finishRequest("Really good.");
+    expect(await screen.findByText("Really good.")).toBeVisible();
+    expect(screen.getByRole("button", { name: "Translate" })).toBeEnabled();
+  });
+
+  it("uses a safe fallback for unexpected non-Error failures", async () => {
+    mockedTranslateText.mockRejectedValue("unexpected failure");
+    render(<App />);
+
+    fireEvent.change(screen.getByLabelText("Yeshivish text"), {
+      target: { value: "Mamesh good." },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Translate" }));
+
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "Translation request failed.",
+    );
   });
 });

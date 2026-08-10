@@ -1,0 +1,22 @@
+[
+  {
+    "id": "plain_english_clarity",
+    "direction": "yeshivish_to_english",
+    "source": "Mamesh, Reuven gave a vort.\n\nSarah said, \"Gevaldig!\"",
+    "candidate_translation": "Really, Reuven gave a short Torah teaching.\n\nSarah said, \"Wonderful!\"",
+    "required_terms": ["Reuven", "Sarah", "Torah teaching"],
+    "forbidden_terms": ["mamesh", "vort", "gevaldig"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "maximal_entertaining_yeshivish",
+    "direction": "english_to_yeshivish",
+    "source": "I should really spend more time with the kids.\n\nThey would enjoy that.",
+    "candidate_translation": "I should mamash chap more time with the kinder.\n\nThey would have such nachas from that—gevaldig!",
+    "required_terms": ["mamash", "chap", "kinder", "nachas", "gevaldig"],
+    "forbidden_terms": [],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  }
+]

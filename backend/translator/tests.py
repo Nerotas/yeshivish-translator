@@ -1,11 +1,15 @@
 import re
+from os import environ
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
+from django.core.cache import cache
 from django.test import SimpleTestCase
+from rest_framework.throttling import AnonRateThrottle
 
 from .glossary import (
     MAX_GLOSSARY_MATCHES,
+    _validate_entry,
     find_glossary_entries,
     format_glossary_context,
     load_glossary,
@@ -15,6 +19,11 @@ from .prompt import (
     TRANSLATOR_INSTRUCTIONS,
     build_translation_instructions,
 )
+from .views import MAX_INPUT_CHARACTERS, get_openai_client, translate
+
+
+class OneRequestAnonRateThrottle(AnonRateThrottle):
+    rate = "1/hour"
 
 
 def glossary_entry(term, variants=None):
@@ -48,7 +57,8 @@ class GlossaryMatchingTests(SimpleTestCase):
                     normalized_alias,
                     alias_owners,
                     msg=(
-                        f'Alias "{alias}" is shared by "{alias_owners.get(normalized_alias)}" '
+                        f'Alias "{alias}" is shared by '
+                        f'"{alias_owners.get(normalized_alias)}" '
                         f'and "{entry["term"]}".'
                     ),
                 )
@@ -59,6 +69,20 @@ class GlossaryMatchingTests(SimpleTestCase):
 
         self.assertIn("a snack or tasty bite to eat", nosh["meanings"])
         self.assertIn("both a verb and a noun", nosh["context_note"])
+
+    def test_rejects_each_invalid_glossary_shape(self):
+        invalid_entries = (
+            ({"term": "missing fields"}, "required fields"),
+            (glossary_entry(" "), "non-empty string"),
+            ({**glossary_entry("term"), "variants": "variant"}, "list of strings"),
+            ({**glossary_entry("term"), "meanings": []}, "at least one meaning"),
+            ({**glossary_entry("term"), "context_note": " "}, "non-empty string"),
+        )
+
+        for entry, message in invalid_entries:
+            with self.subTest(entry=entry):
+                with self.assertRaisesRegex(ValueError, message):
+                    _validate_entry(entry)
 
     def test_matches_canonical_term_and_variant_case_insensitively(self):
         canonical_matches = find_glossary_entries("That was MAMESH wonderful.")
@@ -97,6 +121,13 @@ class GlossaryMatchingTests(SimpleTestCase):
 
         self.assertEqual(len(matches), MAX_GLOSSARY_MATCHES)
 
+    def test_nonpositive_limit_returns_no_matches(self):
+        self.assertEqual(find_glossary_entries("mamesh", limit=0), [])
+
+    def test_rejects_unknown_matching_direction(self):
+        with self.assertRaisesRegex(ValueError, "Unsupported translation direction"):
+            find_glossary_entries("hello", direction="sideways")
+
     def test_matches_english_meanings_for_reverse_translation(self):
         matches = find_glossary_entries(
             "That was a very enjoyable lesson.",
@@ -128,6 +159,10 @@ class GlossaryMatchingTests(SimpleTestCase):
         context = format_glossary_context([glossary_entry("vort", ["vertel"])])
 
         self.assertIn("- vort (variants: vertel): meaning of vort.", context)
+
+    def test_rejects_unknown_context_direction(self):
+        with self.assertRaisesRegex(ValueError, "Unsupported translation direction"):
+            format_glossary_context([glossary_entry("vort")], direction="sideways")
 
 
 class TranslationPromptTests(SimpleTestCase):
@@ -175,8 +210,78 @@ class TranslationPromptTests(SimpleTestCase):
         self.assertIn("primarily for entertainment", instructions)
         self.assertIn("Return only the translation", instructions)
 
+    def test_both_prompts_forbid_citations_and_explanations(self):
+        for direction in ("yeshivish_to_english", "english_to_yeshivish"):
+            instructions = build_translation_instructions("Hello", direction=direction)
+
+            self.assertIn("Do not add citations", instructions)
+            self.assertIn("explanations", instructions)
+
 
 class TranslationEndpointTests(SimpleTestCase):
+    @patch("translator.views.OpenAI")
+    def test_openai_client_is_created_once_and_cached(self, openai):
+        client = object()
+        openai.return_value = client
+        get_openai_client.cache_clear()
+
+        try:
+            self.assertIs(get_openai_client(), client)
+            self.assertIs(get_openai_client(), client)
+            openai.assert_called_once_with()
+        finally:
+            get_openai_client.cache_clear()
+
+    def test_health_endpoint(self):
+        response = self.client.get("/api/health/")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), {"status": "ok"})
+
+    def test_rejects_get_requests(self):
+        response = self.client.get("/api/translate/")
+
+        self.assertEqual(response.status_code, 405)
+
+    def test_rejects_missing_text(self):
+        response = self.client.post(
+            "/api/translate/",
+            {},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json(), {"error": "The text field must be a string."})
+
+    def test_rejects_non_string_text(self):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": 123},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 400)
+
+    def test_rejects_blank_text(self):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": " \n\t "},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json(), {"error": "Enter text to translate."})
+
+    def test_rejects_oversized_text(self):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "x" * (MAX_INPUT_CHARACTERS + 1)},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertIn(str(MAX_INPUT_CHARACTERS), response.json()["error"])
+
     @patch("translator.views.get_openai_client")
     def test_sends_matched_glossary_context_to_openai(self, get_client):
         create = Mock(return_value=SimpleNamespace(output_text="Really good."))
@@ -216,9 +321,7 @@ class TranslationEndpointTests(SimpleTestCase):
     @patch("translator.views.get_openai_client")
     def test_sends_reverse_direction_prompt_to_openai(self, get_client):
         create = Mock(
-            return_value=SimpleNamespace(
-                output_text="That was a very geshmake shiur."
-            )
+            return_value=SimpleNamespace(output_text="That was a very geshmake shiur.")
         )
         get_client.return_value.responses.create = create
 
@@ -243,7 +346,9 @@ class TranslationEndpointTests(SimpleTestCase):
 
     @patch("translator.views.get_openai_client")
     def test_preserves_source_formatting_sent_to_openai(self, get_client):
-        create = Mock(return_value=SimpleNamespace(output_text='  "Reuven said hello."  '))
+        create = Mock(
+            return_value=SimpleNamespace(output_text='  "Reuven said hello."  ')
+        )
         get_client.return_value.responses.create = create
         source = '  Reuven said:\n\n"Hello."  '
 
@@ -255,6 +360,43 @@ class TranslationEndpointTests(SimpleTestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(create.call_args.kwargs["input"], source)
+
+    @patch("translator.views.get_openai_client")
+    def test_sends_complete_request_contract_to_openai(self, get_client):
+        create = Mock(return_value=SimpleNamespace(output_text="Translated."))
+        get_client.return_value.responses.create = create
+
+        with patch.dict(environ, {"OPENAI_MODEL": "test-model"}):
+            response = self.client.post(
+                "/api/translate/",
+                {"text": "Mamesh good."},
+                content_type="application/json",
+            )
+
+        self.assertEqual(response.status_code, 200)
+        create.assert_called_once()
+        request = create.call_args.kwargs
+        self.assertEqual(request["model"], "test-model")
+        self.assertEqual(request["input"], "Mamesh good.")
+        self.assertEqual(request["max_output_tokens"], 500)
+        self.assertIn("Yeshivish-to-plain-English translator", request["instructions"])
+
+    @patch("translator.views.get_openai_client")
+    def test_strips_only_outer_whitespace_from_model_output(self, get_client):
+        get_client.return_value.responses.create.return_value = SimpleNamespace(
+            output_text="  First paragraph.\n\nSecond paragraph.  "
+        )
+
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+        )
+
+        self.assertEqual(
+            response.json(),
+            {"translation": "First paragraph.\n\nSecond paragraph."},
+        )
 
     @patch("translator.views.get_openai_client")
     def test_rejects_invalid_direction_without_calling_openai(self, get_client):
@@ -306,3 +448,25 @@ class TranslationEndpointTests(SimpleTestCase):
         )
 
         self.assertEqual(response.status_code, 502)
+
+    @patch("translator.views.get_openai_client")
+    def test_throttles_repeated_anonymous_requests(self, get_client):
+        cache.clear()
+        get_client.return_value.responses.create.return_value = SimpleNamespace(
+            output_text="Translated."
+        )
+        payload = {"text": "Mamesh good."}
+
+        with patch.object(
+            translate.cls, "throttle_classes", [OneRequestAnonRateThrottle]
+        ):
+            first = self.client.post(
+                "/api/translate/", payload, content_type="application/json"
+            )
+            second = self.client.post(
+                "/api/translate/", payload, content_type="application/json"
+            )
+
+        self.assertEqual(first.status_code, 200)
+        self.assertEqual(second.status_code, 429)
+        cache.clear()

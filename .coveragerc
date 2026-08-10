@@ -1,0 +1,24 @@
+[run]
+branch = True
+source = backend/translator
+omit =
+    backend/translator/admin.py
+    backend/translator/apps.py
+    backend/translator/migrations/*
+    backend/translator/models.py
+    backend/translator/test*.py
+    backend/translator/tests.py
+
+[report]
+exclude_also =
+    if __name__ == .__main__.:
+    raise NotImplementedError
+fail_under = 90
+show_missing = True
+skip_covered = True
+
+[html]
+directory = coverage/backend-html
+
+[xml]
+output = coverage/backend.xml
