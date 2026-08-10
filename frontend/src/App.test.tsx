@@ -13,6 +13,35 @@ const mockedTranslateText = vi.mocked(translateText);
 describe("App", () => {
   beforeEach(() => {
     mockedTranslateText.mockReset();
+    localStorage.clear();
+    delete document.documentElement.dataset.theme;
+  });
+
+  it("uses light mode by default and persists an explicit dark selection", () => {
+    render(<App />);
+
+    expect(document.documentElement).toHaveAttribute("data-theme", "light");
+    expect(screen.getByRole("button", { name: "Light" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "Dark" }));
+
+    expect(document.documentElement).toHaveAttribute("data-theme", "dark");
+    expect(localStorage.getItem("yeshivish-translator-theme")).toBe("dark");
+  });
+
+  it("restores a saved theme without consulting system preferences", () => {
+    localStorage.setItem("yeshivish-translator-theme", "dark");
+
+    render(<App />);
+
+    expect(document.documentElement).toHaveAttribute("data-theme", "dark");
+    expect(screen.getByRole("button", { name: "Dark" })).toHaveAttribute(
+      "aria-pressed",
+      "true",
+    );
   });
 
   it("switches direction, labels, and placeholder text", () => {

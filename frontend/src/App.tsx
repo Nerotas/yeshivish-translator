@@ -1,4 +1,4 @@
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useLayoutEffect, useState } from "react";
 import {
   TRANSLATION_DIRECTIONS,
   translateText,
@@ -13,6 +13,19 @@ interface DirectionCopy {
   outputLabel: string;
   placeholder: string;
   emptyError: string;
+}
+
+type Theme = "light" | "dark";
+
+const THEMES: readonly Theme[] = ["light", "dark"];
+const THEME_STORAGE_KEY = "yeshivish-translator-theme";
+
+function getSavedTheme(): Theme {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
+  } catch {
+    return "light";
+  }
 }
 
 const DIRECTIONS: Record<TranslationDirection, DirectionCopy> = {
@@ -35,6 +48,7 @@ const DIRECTIONS: Record<TranslationDirection, DirectionCopy> = {
 };
 
 export default function App() {
+  const [theme, setTheme] = useState<Theme>(getSavedTheme);
   const [direction, setDirection] = useState<TranslationDirection>(
     "yeshivish_to_english",
   );
@@ -42,6 +56,16 @@ export default function App() {
   const [translation, setTranslation] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useLayoutEffect(() => {
+    document.documentElement.dataset.theme = theme;
+
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+      // The selected theme still applies for this session if storage is unavailable.
+    }
+  }, [theme]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -80,6 +104,19 @@ export default function App() {
   return (
     <main className="app-shell">
       <section className="translator-card">
+        <div className="theme-selector" aria-label="Color theme">
+          {THEMES.map((value) => (
+            <button
+              key={value}
+              type="button"
+              aria-pressed={theme === value}
+              onClick={() => setTheme(value)}
+            >
+              {value === "light" ? "Light" : "Dark"}
+            </button>
+          ))}
+        </div>
+
         <p className="eyebrow">{copy.eyebrow}</p>
         <h1>Translate a sentence</h1>
 
