@@ -11,7 +11,6 @@ export const TONES = [
   "straightforward",
   "warm_friendly",
   "enthusiastic",
-  "talmud_chacham",
 ] as const;
 
 export type Tone = (typeof TONES)[number];

@@ -152,9 +152,7 @@ function TranslatorPage() {
                   ? "Straightforward"
                   : value === "warm_friendly"
                     ? "Warm & Friendly"
-                    : value === "enthusiastic"
-                      ? "Enthusiastic"
-                      : "Talmud Chacham"}
+                    : "Enthusiastic"}
               </option>
             ))}
           </select>
