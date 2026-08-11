@@ -359,6 +359,7 @@ the compact `dialect_pattern` are not exposed.
     {
       "id": 1,
       "term": "Shabbos",
+      "aleph_beis": "שבת",
       "display_terms": {
         "shabbos": "Shabbos",
         "shabbat": "Shabbat"
@@ -447,6 +448,7 @@ They are editable through Django Admin and drive both translation matching and
 ```json
 {
   "term": "gishmak",
+  "aleph_beis": "געשמאַק",
   "variants": ["geshmak", "geshmake"],
   "meanings": ["enjoyable", "delightful"],
   "context_note": "Guidance explaining when the term is natural."

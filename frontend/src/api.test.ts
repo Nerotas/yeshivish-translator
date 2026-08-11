@@ -240,6 +240,7 @@ describe("fetchGlossary", () => {
   const term = {
     id: 1,
     term: "Shabbos",
+    aleph_beis: "שבת",
     display_terms: { shabbos: "Shabbos", shabbat: "Shabbat" },
     variants: ["Shabbat"],
     meanings: ["the Jewish Sabbath"],

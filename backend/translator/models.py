@@ -18,6 +18,7 @@ def normalize_glossary_alias(value: str) -> str:
 
 class GlossaryTerm(models.Model):
     term = models.CharField(max_length=200, unique=True)
+    aleph_beis = models.CharField(max_length=200)
     dialect_pattern = models.CharField(max_length=200, blank=True)
     variants = models.JSONField(default=list, blank=True)
     meanings = models.JSONField(default=list)

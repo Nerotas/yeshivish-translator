@@ -261,6 +261,24 @@
   color: var(--text-muted);
 }
 
+.page-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 12rem;
+  color: var(--text-muted);
+}
+
+.page-loader-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
 .MuiDialog-paper {
   background: var(--surface) !important;
   color: var(--text) !important;
@@ -294,7 +312,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .spinner {
+  .spinner,
+  .page-loader-spinner {
     animation: none;
   }
 }

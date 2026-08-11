@@ -7,6 +7,7 @@ from .models import GlossaryTerm
 class GlossaryTermAdmin(admin.ModelAdmin):  # type: ignore[type-arg]
     list_display = (
         "term",
+        "aleph_beis",
         "category",
         "language_origin",
         "confidence",
@@ -20,6 +21,7 @@ class GlossaryTermAdmin(admin.ModelAdmin):  # type: ignore[type-arg]
     )
     search_fields = (
         "term",
+        "aleph_beis",
         "variants",
         "meanings",
         "context_note",

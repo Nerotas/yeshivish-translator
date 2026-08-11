@@ -9,11 +9,13 @@ from .models import GlossaryTerm
 class GlossaryModelTests(TestCase):
     def test_migration_imports_complete_runtime_glossary(self):
         self.assertEqual(GlossaryTerm.objects.count(), 130)
+        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 130)
         self.assertEqual(len(load_glossary()), 130)
 
     def test_rejects_invalid_array_fields(self):
         term = GlossaryTerm(
             term="test term",
+            aleph_beis="טעסט",
             variants="not a list",
             meanings=[],
             context_note="Context.",
@@ -28,6 +30,7 @@ class GlossaryModelTests(TestCase):
     def test_rejects_alias_collision_across_entries(self):
         term = GlossaryTerm(
             term="new canonical term",
+            aleph_beis="נײַ",
             variants=["mamash"],
             meanings=["test meaning"],
             context_note="Test context.",
@@ -75,6 +78,7 @@ class GlossaryApiTests(TestCase):
             {"shabbos": "Shabbos", "shabbat": "Shabbat"},
         )
         self.assertIn("Shabbat", shabbos["variants"])
+        self.assertEqual(shabbos["aleph_beis"], "שבת")
         self.assertIsInstance(shabbos["meanings"], list)
         self.assertIn("context_note", shabbos)
         self.assertNotIn("dialect_pattern", shabbos)

@@ -5,6 +5,7 @@ test.beforeEach(async ({ page }) => {
   const glossaryTerms = Array.from({ length: 12 }, (_, index) => ({
     id: index + 2,
     term: `Term ${String(index + 1).padStart(2, "0")}`,
+    aleph_beis: `מונח ${index + 1}`,
     display_terms: {
       shabbos: `Term ${String(index + 1).padStart(2, "0")}`,
       shabbat: `Term ${String(index + 1).padStart(2, "0")}`,
@@ -23,6 +24,7 @@ test.beforeEach(async ({ page }) => {
       {
         id: 1,
         term: "Shabbos",
+        aleph_beis: "שבת",
         display_terms: { shabbos: "Shabbos", shabbat: "Shabbat" },
         variants: ["Shabbat", "Shabbas"],
         meanings: ["the Jewish Sabbath"],
@@ -144,17 +146,59 @@ test("searches, sorts, paginates, and applies pronunciation in the glossary", as
     page.getByRole("heading", { name: "Yeshivish glossary" }),
   ).toBeVisible();
   await expect(page.getByText("Browse 13 terms.")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Export" })).toHaveCount(0);
+  await expect(
+    page.getByRole("columnheader", { name: "Aleph Beis" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Dark" }).click();
+  await expect(
+    page.getByRole("columnheader", { name: "Term" }),
+  ).toHaveCSS(
+    "background-color",
+    "rgb(36, 42, 53)",
+  );
+  await expect(page.getByRole("button", { name: "Filters" })).toHaveCSS(
+    "color",
+    "rgb(203, 213, 225)",
+  );
+  const firstRow = page.locator(".MuiDataGrid-row").first();
+  await firstRow.hover();
+  await expect(firstRow).toHaveCSS("background-color", "rgb(36, 42, 53)");
+
+  await expect(
+    page.getByRole("columnheader", { name: "Alternate spellings" }),
+  ).toHaveCount(0);
+  await expect(page.getByRole("columnheader", { name: "Category" })).toHaveCount(0);
+  await expect(page.getByRole("columnheader", { name: "Origin" })).toHaveCount(0);
 
   const search = page.getByRole("searchbox", { name: "Search…" });
+  await search.fill("שבת");
+  await expect(page.locator(".MuiDataGrid-row")).toHaveCount(1);
+  await expect(page.getByRole("gridcell", { name: "שבת" })).toBeVisible();
+  for (const hiddenValue of ["Shabbas", "religious practice", "mixed"]) {
+    await search.fill(hiddenValue);
+    await expect(
+      page.getByRole("gridcell", { name: "Shabbos", exact: true }),
+    ).toBeVisible();
+    await expect(page.locator(".MuiDataGrid-row")).toHaveCount(1);
+  }
   await search.fill("weekly sacred");
-  await expect(page.getByRole("gridcell", { name: "Shabbos" })).toBeVisible();
+  await expect(
+    page.getByRole("gridcell", { name: "Shabbos", exact: true }),
+  ).toBeVisible();
   await expect(page.locator(".MuiDataGrid-row")).toHaveCount(1);
 
   await page.getByRole("button", { name: "Shabbat" }).click();
   await expect(
+    page.getByRole("columnheader", { name: "Aleph Beit" }),
+  ).toBeVisible();
+  await expect(
     page.getByRole("gridcell", { name: "Shabbat", exact: true }),
   ).toBeVisible();
 
+  await page.getByRole("combobox", { name: "Rows per page:" }).click();
+  await page.getByRole("option", { name: "10", exact: true }).click();
   await search.clear();
   await page.getByRole("columnheader", { name: "Term" }).click();
   await expect(page.locator(".MuiDataGrid-row")).toHaveCount(10);
@@ -172,7 +216,7 @@ test("keeps the glossary usable on mobile without accessibility violations", asy
   await expect(page.getByTestId("glossary-grid")).toBeVisible();
   await expect(
     page.getByRole("columnheader", { name: "Alternate spellings" }),
-  ).toBeHidden();
+  ).toHaveCount(0);
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);
 });

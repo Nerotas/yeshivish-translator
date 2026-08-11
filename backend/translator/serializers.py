@@ -14,6 +14,7 @@ class GlossaryTermSerializer(serializers.ModelSerializer[GlossaryTerm]):
         fields = (
             "id",
             "term",
+            "aleph_beis",
             "display_terms",
             "variants",
             "meanings",

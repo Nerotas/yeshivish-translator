@@ -241,7 +241,14 @@ export default function App() {
           <Route
             path="/glossary"
             element={
-              <Suspense fallback={<p role="status">Loading glossary…</p>}>
+              <Suspense
+                fallback={
+                  <div className="page-loader" role="status">
+                    <span className="page-loader-spinner" aria-hidden="true" />
+                    <span>Loading glossary…</span>
+                  </div>
+                }
+              >
                 <GlossaryPage />
               </Suspense>
             }

@@ -5,7 +5,8 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
 import { DataGrid, type GridColDef } from "@mui/x-data-grid";
 import {
   fetchGlossary,
@@ -28,7 +29,6 @@ function EmptyGlossary() {
 
 export default function GlossaryPage() {
   const { preference } = usePronunciationPreference();
-  const isMobile = useMediaQuery("(max-width:700px)");
   const [selectedTerm, setSelectedTerm] = useState<GlossaryRow | null>(null);
   const glossary = useQuery({
     queryKey: glossaryQueryKey,
@@ -51,6 +51,7 @@ export default function GlossaryPage() {
           searchText: [
             displayTerm,
             entry.term,
+            entry.aleph_beis,
             variantText,
             meaningText,
             entry.context_note,
@@ -73,54 +74,51 @@ export default function GlossaryPage() {
         flex: 0.8,
       },
       {
-        field: "variantText",
-        headerName: "Alternate spellings",
-        minWidth: 190,
-        flex: 1,
+        field: "aleph_beis",
+        headerName: preference === "shabbos" ? "Aleph Beis" : "Aleph Beit",
+        minWidth: 135,
+        flex: 0.8,
+        renderCell: ({ value }) => <span dir="rtl">{value}</span>,
       },
       {
         field: "meaningText",
         headerName: "Meanings",
         minWidth: 260,
-        flex: 1.8,
-      },
-      {
-        field: "category",
-        headerName: "Category",
-        minWidth: 165,
-        flex: 1,
-      },
-      {
-        field: "language_origin",
-        headerName: "Origin",
-        minWidth: 100,
-        flex: 0.6,
+        flex: 2.4,
       },
       {
         field: "details",
-        headerName: "Details",
+        headerName: "More info",
         sortable: false,
         filterable: false,
-        width: 92,
+        align: "center",
+        headerAlign: "center",
+        width: 88,
         renderCell: ({ row }) => (
-          <Button size="small" onClick={() => setSelectedTerm(row)}>
-            Details
-          </Button>
+          <Tooltip title="View details" arrow>
+            <IconButton
+              aria-label={`View details for ${row.displayTerm}`}
+              size="small"
+              onClick={() => setSelectedTerm(row)}
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor"
+              >
+                <path d="M12 5c-5.5 0-9.5 5.2-9.7 5.4a1 1 0 0 0 0 1.2C2.5 11.8 6.5 17 12 17s9.5-5.2 9.7-5.4a1 1 0 0 0 0-1.2C21.5 10.2 17.5 5 12 5Zm0 10c-3.6 0-6.6-2.8-7.6-4 1-1.2 4-4 7.6-4s6.6 2.8 7.6 4c-1 1.2-4 4-7.6 4Zm0-6a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm0 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+              </svg>
+            </IconButton>
+          </Tooltip>
         ),
       },
       { field: "searchText", headerName: "Search text" },
     ],
-    [],
+    [preference],
   );
-
-  if (glossary.isLoading) {
-    return (
-      <section className="glossary-page" aria-labelledby="glossary-heading">
-        <h1 id="glossary-heading">Yeshivish glossary</h1>
-        <p role="status">Loading glossary…</p>
-      </section>
-    );
-  }
 
   if (glossary.isError) {
     return (
@@ -139,23 +137,31 @@ export default function GlossaryPage() {
     <section className="glossary-page" aria-labelledby="glossary-heading">
       <p className="eyebrow">Terms used by the translator</p>
       <h1 id="glossary-heading">Yeshivish glossary</h1>
-      <p className="glossary-intro">
-        Browse {glossary.data?.count ?? 0} terms. Search includes alternate
-        spellings, meanings, context, category, origin, and examples.
-      </p>
+      {glossary.isLoading ? (
+        <p className="glossary-intro" role="status">
+          Loading glossary…
+        </p>
+      ) : (
+        <p className="glossary-intro">
+          Browse {glossary.data?.count ?? 0} terms. Search includes Aleph
+          Beis/Beit, alternate spellings, meanings, context, category, origin,
+          and examples.
+        </p>
+      )}
 
       <div className="glossary-grid" data-testid="glossary-grid">
         <DataGrid
           aria-label="Yeshivish glossary terms"
           rows={rows}
           columns={columns}
+          loading={glossary.isLoading}
           showToolbar
           disableRowSelectionOnClick
           disableColumnSelector
           getRowHeight={() => "auto"}
-          pageSizeOptions={[10, 25, 50]}
+          pageSizeOptions={[10, 25, 50, 100]}
           initialState={{
-            pagination: { paginationModel: { page: 0, pageSize: 10 } },
+            pagination: { paginationModel: { page: 0, pageSize: 50 } },
             filter: {
               filterModel: {
                 items: [],
@@ -163,24 +169,32 @@ export default function GlossaryPage() {
               },
             },
           }}
-          columnVisibilityModel={{
-            searchText: false,
-            variantText: !isMobile,
-            category: !isMobile,
-            language_origin: !isMobile,
-          }}
+          columnVisibilityModel={{ searchText: false }}
           slots={{ noRowsOverlay: EmptyGlossary }}
           slotProps={{
+            loadingOverlay: {
+              variant: "skeleton",
+              noRowsVariant: "skeleton",
+            },
             toolbar: {
               showQuickFilter: true,
               quickFilterProps: { debounceMs: 200 },
+              csvOptions: { disableToolbarButton: true },
+              printOptions: { disableToolbarButton: true },
             },
           }}
           sx={{
+            "--DataGrid-t-color-background-base": "var(--surface)",
+            "--DataGrid-t-header-background-base": "var(--surface-muted)",
+            "--DataGrid-t-cell-background-pinned": "var(--surface)",
+            "--DataGrid-t-color-border-base": "var(--border)",
+            "--DataGrid-t-color-foreground-base": "var(--text)",
+            "--DataGrid-t-color-foreground-muted": "var(--text-muted)",
+            "--DataGrid-t-color-foreground-accent": "var(--text-h)",
             borderColor: "var(--border)",
             color: "var(--text)",
             backgroundColor: "var(--surface)",
-            "& .MuiDataGrid-columnHeaders": {
+            "& .MuiDataGrid-columnHeaders, & .MuiDataGrid-columnHeader, & .MuiDataGrid-columnHeaders .MuiDataGrid-filler, & .MuiDataGrid-columnHeaders .MuiDataGrid-scrollbarFiller, & .MuiDataGrid-columnHeader .MuiDataGrid-sortButton": {
               color: "var(--text-h)",
               backgroundColor: "var(--surface-muted)",
             },
@@ -190,7 +204,10 @@ export default function GlossaryPage() {
               whiteSpace: "normal",
               lineHeight: 1.4,
             },
-            "& .MuiTablePagination-root, & .MuiInputBase-root, & .MuiButton-root": {
+            "& .MuiDataGrid-row:hover": {
+              backgroundColor: "var(--surface-muted)",
+            },
+            "& .MuiTablePagination-root, & .MuiInputBase-root, & .MuiButton-root, & .MuiIconButton-root, & [role='toolbar'] button": {
               color: "var(--text)",
             },
           }}
@@ -212,6 +229,12 @@ export default function GlossaryPage() {
             <DialogContent dividers>
               {selectedTerm.variantText && (
                 <p><strong>Alternate spellings:</strong> {selectedTerm.variantText}</p>
+              )}
+              {selectedTerm.category && (
+                <p><strong>Category:</strong> {selectedTerm.category}</p>
+              )}
+              {selectedTerm.language_origin && (
+                <p><strong>Language origin:</strong> {selectedTerm.language_origin}</p>
               )}
               <p><strong>Meanings:</strong> {selectedTerm.meaningText}</p>
               <p><strong>Context:</strong> {selectedTerm.context_note}</p>

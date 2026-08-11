@@ -10,6 +10,7 @@ export type TranslationDirection = (typeof TRANSLATION_DIRECTIONS)[number];
 export interface GlossaryTerm {
   id: number;
   term: string;
+  aleph_beis: string;
   display_terms: Record<PronunciationPreference, string>;
   variants: string[];
   meanings: string[];
@@ -107,6 +108,7 @@ function isGlossaryTerm(value: unknown): value is GlossaryTerm {
   return (
     typeof term.id === "number" &&
     typeof term.term === "string" &&
+    typeof term.aleph_beis === "string" &&
     typeof displayTerms?.shabbos === "string" &&
     typeof displayTerms.shabbat === "string" &&
     isStringArray(term.variants) &&
