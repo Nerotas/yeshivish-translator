@@ -8,6 +8,7 @@ import httpx
 import openai
 from django.conf import settings
 from openai import OpenAI
+from pydantic import BaseModel, ConfigDict
 from rest_framework import status
 from rest_framework.decorators import (
     api_view,
@@ -38,6 +39,8 @@ from .throttling import (
 logger = logging.getLogger(__name__)
 
 MAX_INPUT_CHARACTERS = 3000
+MIN_OUTPUT_TOKENS = 48
+MAX_OUTPUT_TOKENS = 500
 DEFAULT_DIRECTION: TranslationDirection = "yeshivish_to_english"
 SUPPORTED_DIRECTIONS: set[TranslationDirection] = {
     DEFAULT_DIRECTION,
@@ -48,6 +51,17 @@ SUPPORTED_PRONUNCIATION_PREFERENCES: set[PronunciationPreference] = {
     DEFAULT_PRONUNCIATION_PREFERENCE,
     "shabbat",
 }
+
+
+class TranslationOutput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    translation: str
+
+
+def _max_output_tokens(text: str) -> int:
+    proportional_limit = len(text) // 2 + 32
+    return min(MAX_OUTPUT_TOKENS, max(MIN_OUTPUT_TOKENS, proportional_limit))
 
 
 def _classify_openai_error(error: Exception) -> str:
@@ -140,17 +154,24 @@ def translate(request: Request) -> Response:
     started_at = time.monotonic()
 
     try:
-        api_response = get_openai_client().responses.create(
+        api_response = get_openai_client().responses.parse(
             model=model,
             instructions=build_translation_instructions(
                 text,
                 direction=direction,
                 pronunciation_preference=pronunciation_preference,
             ),
-            input=text,
-            max_output_tokens=500,
+            input=[{"role": "user", "content": text}],
+            text_format=TranslationOutput,
+            tools=[],
+            store=False,
+            max_output_tokens=_max_output_tokens(text),
         )
-        translation = (api_response.output_text or "").strip()
+        parsed_output = api_response.output_parsed
+        if parsed_output is None:
+            raise RuntimeError("The model returned an invalid translation response.")
+
+        translation = parsed_output.translation.strip()
 
         if not translation:
             raise RuntimeError("The model returned an empty translation.")

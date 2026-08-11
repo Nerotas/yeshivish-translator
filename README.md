@@ -364,9 +364,13 @@ guardrails.
 3. Overlapping matches prefer the longer phrase, duplicate entries are removed,
    and at most eight glossary entries are selected.
 4. The prompt builder resolves dialect-aware glossary terms and combines the
-   selected guidance with the direction and pronunciation instructions.
-5. Django sends the source text and instructions to the OpenAI Responses API.
-6. The API returns only the translated text to the frontend.
+   selected guidance with trusted direction, pronunciation, and task-boundary
+   instructions.
+5. Django sends those trusted instructions and a separate user-role source-text
+   message to the OpenAI Responses API.
+6. Structured Outputs require exactly one string field, `translation`; Django
+   rejects missing, malformed, extra-field, or empty output.
+7. The API returns only the translated text to the frontend.
 
 For Yeshivish-to-English requests, the matcher searches glossary terms and their
 variants. For English-to-Yeshivish requests, it searches the English meanings in
@@ -375,6 +379,28 @@ model is asked to use a high density of authentic Yeshivish language and may
 recast the sentence or add brief idiomatic flourishes. It must keep the core
 situation and named people recognizable, but it is not constrained to a literal
 translation.
+
+### Translation security boundary
+
+The translation endpoint treats submitted text as untrusted content, including
+questions, code requests, fake role labels, prompt-extraction requests, and
+instructions to change tasks. The trusted prompt tells the model to translate
+that content rather than answer or execute it. Source text is never concatenated
+into the trusted instructions; it is sent as a separate user-role message.
+
+The endpoint is deliberately non-agentic: it sends no conversation history or
+`previous_response_id`, provides an empty tool list, disables response storage,
+and applies a source-length-relative output cap with an absolute maximum of 500
+tokens. The default `gpt-4o-mini` model supports
+Structured Outputs, and the Python SDK parses its response into a strict
+single-field schema. The frontend renders the resulting string through normal
+React text interpolation, with no Markdown parser or unsafe HTML rendering.
+
+Prompt injection is not handled with a keyword blacklist. Legitimate source
+text such as “ignore previous instructions” remains valid input and is sent to
+the model for translation. Regression tests cover both translation directions,
+questions, code requests, prompt extraction, fake system messages, quoted
+instructions, and maximum-length adversarial input.
 
 ## Glossary maintenance
 
