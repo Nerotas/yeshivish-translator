@@ -139,16 +139,15 @@ function TranslatorPage() {
       </div>
 
       {direction === "english_to_yeshivish" && (
-        <div className="tone-selector" aria-label="Translation tone">
-          <span>Tone</span>
-          <div>
+        <div className="tone-selector">
+          <label htmlFor="tone-select">Tone</label>
+          <select
+            id="tone-select"
+            value={tone}
+            onChange={(e) => setTone(e.target.value as Tone)}
+          >
             {TONES.map((value) => (
-              <button
-                key={value}
-                type="button"
-                aria-pressed={tone === value}
-                onClick={() => setTone(value)}
-              >
+              <option key={value} value={value}>
                 {value === "straightforward"
                   ? "Straightforward"
                   : value === "warm_friendly"
@@ -156,9 +155,9 @@ function TranslatorPage() {
                     : value === "enthusiastic"
                       ? "Enthusiastic"
                       : "Talmud Chacham"}
-              </button>
+              </option>
             ))}
-          </div>
+          </select>
         </div>
       )}
 
