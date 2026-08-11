@@ -354,7 +354,7 @@ the compact `dialect_pattern` are not exposed.
 
 ```json
 {
-  "count": 130,
+  "count": 822,
   "results": [
     {
       "id": 1,
@@ -485,7 +485,15 @@ The current glossary audit marks these canonical entries: `b'ezras Hashem`,
 `motzaei Shabbos`, `shacharis`, `chavrusa`, `beis midrash`, `shomer Shabbos`,
 and `hashgacha pratis`. Entries without an explicit two-form relationship were
 left unchanged; the implementation never performs a blanket `s`-to-`t`
-conversion.
+conversion. The Kashrus expansion additionally marks `kashrus`, `keilim`,
+`hechsher keilim`, `tevillas keilim`, `b'lios`, `ta'aroves`, `bishul Yisroel`,
+`pas Yisroel`, `pas palter`, `pas baal habayis`, `pas akum`, `cholov Yisroel`,
+`cholov stam`, `cholov akum`, `gevinas Yisroel`, `gevinas akum`,
+`simanei kashrus`, `bedikas tolaim`, `hafrashas challah`,
+`terumos u'maasros`, `yoshon`, `chodosh`, `kitniyos`, and `mechiras chametz`.
+The Yom Tov and calendar expansion adds explicit pronunciation pairs for 47
+more entries, including `Shabbos Mevorchim`, `Sukkos`, `Simchas Torah`,
+`Shavuos`, `Selichos`, and their Shabbat-mode forms.
 
 The runtime loader reads the database for each translation request so Admin edits
 take effect across backend workers without a restart. The frontend glossary

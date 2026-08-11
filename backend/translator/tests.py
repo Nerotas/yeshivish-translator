@@ -125,6 +125,66 @@ class GlossaryMatchingTests(TestCase):
         self.assertEqual([entry["term"] for entry in canonical_matches], ["mamesh"])
         self.assertEqual([entry["term"] for entry in variant_matches], ["mamesh"])
 
+    def test_distinguishes_rav_from_rov(self):
+        rav_matches = find_glossary_entries("I need to ask the rav about this.")
+        rov_matches = find_glossary_entries("We follow the rov in this case.")
+
+        self.assertEqual([entry["term"] for entry in rav_matches], ["rav"])
+        self.assertEqual([entry["term"] for entry in rov_matches], ["rov"])
+
+    def test_distinguishes_kasher_from_kosher(self):
+        kasher_matches = find_glossary_entries("We need to kasher the oven.")
+        kosher_matches = find_glossary_entries("The restaurant is kosher.")
+
+        self.assertEqual([entry["term"] for entry in kasher_matches], ["kasher"])
+        self.assertEqual([entry["term"] for entry in kosher_matches], ["kosher"])
+
+    def test_prefers_bishul_akum_over_the_general_bishul_term(self):
+        matches = find_glossary_entries("The restaurant must address bishul akum.")
+
+        self.assertEqual([entry["term"] for entry in matches], ["bishul akum"])
+
+    def test_kashrus_definitions_do_not_create_overbroad_reverse_matches(self):
+        dairy_matches = find_glossary_entries(
+            "This meal contains dairy.", direction="english_to_yeshivish"
+        )
+        prohibition_matches = find_glossary_entries(
+            "That is a prohibition.", direction="english_to_yeshivish"
+        )
+
+        self.assertNotIn("basar b'chalav", [entry["term"] for entry in dairy_matches])
+        self.assertNotIn("chodosh", [entry["term"] for entry in prohibition_matches])
+
+    def test_calendar_synonyms_match_their_own_canonical_entries(self):
+        english_matches = find_glossary_entries("During the Three Weeks.")
+        hebrew_matches = find_glossary_entries("During Bein Hametzarim.")
+
+        self.assertEqual(
+            [entry["term"] for entry in english_matches], ["the Three Weeks"]
+        )
+        self.assertEqual(
+            [entry["term"] for entry in hebrew_matches], ["Bein Hametzarim"]
+        )
+
+    def test_lifecycle_variants_match_chuppah(self):
+        canonical_matches = find_glossary_entries("The chuppah was beautiful.")
+        variant_matches = find_glossary_entries("The huppah was beautiful.")
+
+        self.assertEqual([entry["term"] for entry in canonical_matches], ["chuppah"])
+        self.assertEqual([entry["term"] for entry in variant_matches], ["chuppah"])
+
+    def test_distinguishes_kriah_from_keriah(self):
+        reading_matches = find_glossary_entries("The kriah was today.")
+        mourning_matches = find_glossary_entries("They performed keriah.")
+
+        self.assertEqual([entry["term"] for entry in reading_matches], ["kriah"])
+        self.assertEqual([entry["term"] for entry in mourning_matches], ["keriah"])
+
+    def test_taharas_hamishpacha_terms_match(self):
+        matches = find_glossary_entries("She completed a hefsek taharah.")
+
+        self.assertEqual([entry["term"] for entry in matches], ["hefsek taharah"])
+
     def test_matches_multiword_phrase_across_whitespace(self):
         matches = find_glossary_entries("Baruch\nHashem, everyone is well.")
 

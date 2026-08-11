@@ -18,5 +18,95 @@
     "forbidden_terms": [],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "rav_means_rabbinic_authority",
+    "direction": "yeshivish_to_english",
+    "source": "I need to ask the rav before deciding.",
+    "candidate_translation": "I need to ask the rabbi before deciding.",
+    "required_terms": ["rabbi"],
+    "forbidden_terms": ["rav", "majority"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "rov_means_majority",
+    "direction": "yeshivish_to_english",
+    "source": "We follow the rov in this case.",
+    "candidate_translation": "We follow the majority in this case.",
+    "required_terms": ["majority"],
+    "forbidden_terms": ["rov", "rabbi"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "kasher_is_an_action",
+    "direction": "yeshivish_to_english",
+    "source": "We need to kasher the oven before using it.",
+    "candidate_translation": "We need to make the oven kosher before using it.",
+    "required_terms": ["make", "oven", "kosher"],
+    "forbidden_terms": ["kasher"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "bishul_akum_is_context_specific",
+    "direction": "yeshivish_to_english",
+    "source": "The restaurant must address bishul akum.",
+    "candidate_translation": "The restaurant must address restrictions on certain foods cooked by a non-Jew.",
+    "required_terms": ["restaurant", "cooked", "non-Jew"],
+    "forbidden_terms": ["bishul akum"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "bein_hametzarim_calendar_context",
+    "direction": "yeshivish_to_english",
+    "source": "Those restrictions apply during Bein Hametzarim.",
+    "candidate_translation": "Those restrictions apply during the Three Weeks.",
+    "required_terms": ["Three Weeks"],
+    "forbidden_terms": ["Bein Hametzarim"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "shabbos_mevorchim_calendar_context",
+    "direction": "yeshivish_to_english",
+    "source": "This Shabbos is Shabbos Mevorchim.",
+    "candidate_translation": "This Sabbath is the special Sabbath when the coming Jewish month is announced and blessed.",
+    "required_terms": ["Sabbath", "Jewish month", "blessed"],
+    "forbidden_terms": ["Shabbos Mevorchim"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "chuppah_lifecycle_context",
+    "direction": "yeshivish_to_english",
+    "source": "The chuppah was beautiful.",
+    "candidate_translation": "The wedding canopy was beautiful.",
+    "required_terms": ["wedding canopy"],
+    "forbidden_terms": ["chuppah"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "kriah_torah_reading_context",
+    "direction": "yeshivish_to_english",
+    "source": "The kriah was beautiful.",
+    "candidate_translation": "The Torah reading was beautiful.",
+    "required_terms": ["Torah reading"],
+    "forbidden_terms": ["kriah", "tearing"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "hefsek_taharah_context",
+    "direction": "yeshivish_to_english",
+    "source": "She completed a hefsek taharah.",
+    "candidate_translation": "She completed the examination used to establish that bleeding has ceased.",
+    "required_terms": ["examination", "bleeding has ceased"],
+    "forbidden_terms": ["hefsek taharah"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]
