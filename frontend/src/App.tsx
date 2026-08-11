@@ -155,6 +155,7 @@ export default function App() {
           />
 
           <button type="submit" disabled={loading}>
+            {loading && <span className="spinner" aria-hidden="true" />}
             {loading ? "Translating..." : "Translate"}
           </button>
         </form>
