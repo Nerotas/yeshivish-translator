@@ -170,6 +170,27 @@
       "context_note": "Used for worry, frustration, pain, or dismay. It can be serious or mildly comic depending on tone."
     },
     {
+  "term": "shmutz",
+  "variants": [
+    "schmutz",
+    "shmuts",
+    "shmootz"
+  ],
+  "language_origin": "Yiddish",
+  "category": "everyday expression",
+  "yeshivish_example": "You have some shmutz on your shirt.",
+  "plain_english_example": "You have some dirt on your shirt.",
+  "confidence": "high",
+  "needs_human_review": false,
+  "meanings": [
+    "dirt",
+    "grime",
+    "a dirty or soiling substance",
+    "garbage"
+  ],
+  "context_note": "Usually refers to dirt, grime, or some unwanted dirty substance on a person or object."
+},
+    {
       "term": "gevalt",
       "variants": [
         "gevald"
