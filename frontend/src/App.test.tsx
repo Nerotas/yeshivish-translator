@@ -2,9 +2,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 import { translateText } from "./api";
-import {
-  PRONUNCIATION_STORAGE_KEY,
-} from "./pronunciation";
+import { PRONUNCIATION_STORAGE_KEY } from "./pronunciation";
 import { PronunciationProvider } from "./PronunciationProvider";
 
 vi.mock("./api", async (importOriginal) => ({
@@ -206,6 +204,21 @@ describe("App", () => {
     expect(await screen.findByRole("alert")).toHaveTextContent(
       "Translation request failed.",
     );
+  });
+
+  it("renders model output as escaped plain text", async () => {
+    mockedTranslateText.mockResolvedValue(
+      '<script data-testid="model-script">alert("unsafe")</script>',
+    );
+    renderApp();
+
+    fireEvent.change(screen.getByLabelText("Yeshivish text"), {
+      target: { value: "Translate this." },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Translate" }));
+
+    expect(await screen.findByText(/<script data-testid=/)).toBeVisible();
+    expect(screen.queryByTestId("model-script")).not.toBeInTheDocument();
   });
 
   it("defaults to Shabbos and persists pronunciation switching", () => {

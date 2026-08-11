@@ -8,6 +8,7 @@ import httpx
 import openai
 from django.conf import settings
 from openai import OpenAI
+from pydantic import BaseModel, ConfigDict
 from rest_framework import status
 from rest_framework.decorators import (
     api_view,
@@ -48,6 +49,12 @@ SUPPORTED_PRONUNCIATION_PREFERENCES: set[PronunciationPreference] = {
     DEFAULT_PRONUNCIATION_PREFERENCE,
     "shabbat",
 }
+
+
+class TranslationOutput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    translation: str
 
 
 def _classify_openai_error(error: Exception) -> str:
@@ -140,17 +147,24 @@ def translate(request: Request) -> Response:
     started_at = time.monotonic()
 
     try:
-        api_response = get_openai_client().responses.create(
+        api_response = get_openai_client().responses.parse(
             model=model,
             instructions=build_translation_instructions(
                 text,
                 direction=direction,
                 pronunciation_preference=pronunciation_preference,
             ),
-            input=text,
+            input=[{"role": "user", "content": text}],
+            text_format=TranslationOutput,
+            tools=[],
+            store=False,
             max_output_tokens=500,
         )
-        translation = (api_response.output_text or "").strip()
+        parsed_output = api_response.output_parsed
+        if parsed_output is None:
+            raise RuntimeError("The model returned an invalid translation response.")
+
+        translation = parsed_output.translation.strip()
 
         if not translation:
             raise RuntimeError("The model returned an empty translation.")

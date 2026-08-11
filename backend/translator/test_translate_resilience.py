@@ -14,7 +14,7 @@ from django.core.cache import cache
 from django.test import SimpleTestCase
 
 from . import guardrails
-from .tests import bearer_auth_header
+from .tests import bearer_auth_header, openai_translation_response
 
 
 def _httpx_request() -> httpx.Request:
@@ -29,7 +29,7 @@ class TranslateUpstreamFailureTests(SimpleTestCase):
     def test_timeout_returns_a_generic_502_without_leaking_upstream_details(
         self, get_client
     ):
-        get_client.return_value.responses.create.side_effect = openai.APITimeoutError(
+        get_client.return_value.responses.parse.side_effect = openai.APITimeoutError(
             request=_httpx_request()
         )
 
@@ -47,8 +47,8 @@ class TranslateUpstreamFailureTests(SimpleTestCase):
 
     @patch("translator.views.get_openai_client")
     def test_connection_error_returns_a_generic_502(self, get_client):
-        get_client.return_value.responses.create.side_effect = (
-            openai.APIConnectionError(request=_httpx_request())
+        get_client.return_value.responses.parse.side_effect = openai.APIConnectionError(
+            request=_httpx_request()
         )
 
         response = self.client.post(
@@ -63,7 +63,7 @@ class TranslateUpstreamFailureTests(SimpleTestCase):
     @patch("translator.views.get_openai_client")
     def test_rate_limit_error_returns_a_generic_502(self, get_client):
         request = _httpx_request()
-        get_client.return_value.responses.create.side_effect = openai.RateLimitError(
+        get_client.return_value.responses.parse.side_effect = openai.RateLimitError(
             "rate limited",
             response=httpx.Response(429, request=request),
             body=None,
@@ -82,8 +82,8 @@ class TranslateUpstreamFailureTests(SimpleTestCase):
     def test_does_not_retry_a_failed_request_itself(self, get_client):
         """The view must not add its own retry loop on top of the OpenAI
         client's bounded `max_retries` - a failure results in exactly one
-        call to `responses.create`."""
-        get_client.return_value.responses.create.side_effect = RuntimeError("boom")
+        call to `responses.parse`."""
+        get_client.return_value.responses.parse.side_effect = RuntimeError("boom")
 
         self.client.post(
             "/api/translate/",
@@ -92,12 +92,12 @@ class TranslateUpstreamFailureTests(SimpleTestCase):
             **bearer_auth_header(),
         )
 
-        get_client.return_value.responses.create.assert_called_once()
+        get_client.return_value.responses.parse.assert_called_once()
 
     @patch("translator.views.get_openai_client")
     def test_never_logs_the_submitted_text_or_translation(self, get_client):
-        get_client.return_value.responses.create.return_value = SimpleNamespace(
-            output_text="Secret translated output."
+        get_client.return_value.responses.parse.return_value = (
+            openai_translation_response("Secret translated output.")
         )
 
         with self.assertLogs("translator.views", level="INFO") as captured:
@@ -116,7 +116,7 @@ class TranslateUpstreamFailureTests(SimpleTestCase):
 
     @patch("translator.views.get_openai_client")
     def test_failure_logs_do_not_include_the_submitted_text(self, get_client):
-        get_client.return_value.responses.create.side_effect = RuntimeError("boom")
+        get_client.return_value.responses.parse.side_effect = RuntimeError("boom")
 
         with self.assertLogs("translator.views", level="ERROR") as captured:
             self.client.post(
@@ -147,13 +147,15 @@ class TranslateGuardrailTests(SimpleTestCase):
             )
 
         self.assertEqual(response.status_code, 503)
-        get_client.return_value.responses.create.assert_not_called()
+        get_client.return_value.responses.parse.assert_not_called()
 
     @patch("translator.views.get_openai_client")
     def test_records_usage_after_a_successful_call(self, get_client):
-        get_client.return_value.responses.create.return_value = SimpleNamespace(
-            output_text="Translated.",
-            usage=SimpleNamespace(input_tokens=12, output_tokens=34),
+        get_client.return_value.responses.parse.return_value = (
+            openai_translation_response(
+                "Translated.",
+                usage=SimpleNamespace(input_tokens=12, output_tokens=34),
+            )
         )
 
         response = self.client.post(
