@@ -187,6 +187,11 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+  }
+}
 @media (max-width: 560px) {
   .app-shell {
     padding: 1rem;
