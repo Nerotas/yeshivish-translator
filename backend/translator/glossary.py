@@ -1,9 +1,7 @@
-import json
 import re
 import unicodedata
 from collections.abc import Collection, Sequence
 from functools import lru_cache
-from pathlib import Path
 from typing import Literal, TypedDict, cast
 
 from typing_extensions import NotRequired
@@ -20,7 +18,6 @@ class GlossaryEntry(TypedDict):
 TranslationDirection = Literal["yeshivish_to_english", "english_to_yeshivish"]
 PronunciationPreference = Literal["shabbos", "shabbat"]
 
-GLOSSARY_PATH = Path(__file__).with_name("glossary.json")
 MAX_GLOSSARY_MATCHES = 8
 ENGLISH_MEANING_SEPARATOR = re.compile(r"\s+(?:or|and)\s+|\s*[/;]\s*")
 DIALECT_PATTERN = re.compile(r"\[([^|\]]+)\|([^\]]+)\]")
@@ -65,15 +62,10 @@ def _validate_entry(entry: object) -> None:
         raise ValueError("Each glossary context note must be a non-empty string.")
 
 
-@lru_cache(maxsize=1)
 def load_glossary() -> tuple[GlossaryEntry, ...]:
-    with GLOSSARY_PATH.open(encoding="utf-8") as glossary_file:
-        data = json.load(glossary_file)
+    from .models import GlossaryTerm
 
-    entries = data.get("entries")
-    if not isinstance(entries, list):
-        raise ValueError("The glossary must contain an entries list.")
-
+    entries = [term.as_glossary_entry() for term in GlossaryTerm.objects.all()]
     for entry in entries:
         _validate_entry(entry)
 

@@ -7,6 +7,27 @@ export const TRANSLATION_DIRECTIONS = [
 
 export type TranslationDirection = (typeof TRANSLATION_DIRECTIONS)[number];
 
+export interface GlossaryTerm {
+  id: number;
+  term: string;
+  display_terms: Record<PronunciationPreference, string>;
+  variants: string[];
+  meanings: string[];
+  context_note: string;
+  category: string;
+  language_origin: string;
+  yeshivish_example: string;
+  plain_english_example: string;
+}
+
+export interface GlossaryResponse {
+  count: number;
+  results: GlossaryTerm[];
+}
+
+export const glossaryQueryKey = ["glossary"] as const;
+export const GLOSSARY_STALE_TIME_MS = 60 * 60 * 1000;
+
 const API_BASE_URL = (
   import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000"
 ).replace(/\/$/, "");
@@ -72,6 +93,63 @@ function readStringProperty(
 
   const candidate = (value as Record<string, unknown>)[property];
   return typeof candidate === "string" ? candidate : undefined;
+}
+
+function isStringArray(value: unknown): value is string[] {
+  return Array.isArray(value) && value.every((item) => typeof item === "string");
+}
+
+function isGlossaryTerm(value: unknown): value is GlossaryTerm {
+  if (typeof value !== "object" || value === null) return false;
+
+  const term = value as Record<string, unknown>;
+  const displayTerms = term.display_terms as Record<string, unknown> | undefined;
+  return (
+    typeof term.id === "number" &&
+    typeof term.term === "string" &&
+    typeof displayTerms?.shabbos === "string" &&
+    typeof displayTerms.shabbat === "string" &&
+    isStringArray(term.variants) &&
+    isStringArray(term.meanings) &&
+    typeof term.context_note === "string" &&
+    typeof term.category === "string" &&
+    typeof term.language_origin === "string" &&
+    typeof term.yeshivish_example === "string" &&
+    typeof term.plain_english_example === "string"
+  );
+}
+
+export async function fetchGlossary(): Promise<GlossaryResponse> {
+  const response = await fetch(`${API_BASE_URL}/api/glossary/`);
+  let data: unknown;
+
+  try {
+    data = await response.json();
+  } catch {
+    throw new Error("The glossary response was invalid.");
+  }
+
+  if (!response.ok) {
+    throw new Error(
+      readStringProperty(data, "error") || "Unable to load the glossary.",
+    );
+  }
+
+  if (typeof data !== "object" || data === null) {
+    throw new Error("The glossary response was invalid.");
+  }
+
+  const payload = data as Record<string, unknown>;
+  if (
+    typeof payload.count !== "number" ||
+    !Array.isArray(payload.results) ||
+    !payload.results.every(isGlossaryTerm) ||
+    payload.count !== payload.results.length
+  ) {
+    throw new Error("The glossary response was invalid.");
+  }
+
+  return { count: payload.count, results: payload.results };
 }
 
 function requestTranslation(

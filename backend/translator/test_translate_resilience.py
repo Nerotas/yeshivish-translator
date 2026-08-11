@@ -11,7 +11,7 @@ from unittest.mock import patch
 import httpx
 import openai
 from django.core.cache import cache
-from django.test import SimpleTestCase
+from django.test import TestCase
 
 from . import guardrails
 from .tests import bearer_auth_header, openai_translation_response
@@ -21,7 +21,7 @@ def _httpx_request() -> httpx.Request:
     return httpx.Request("POST", "https://api.openai.com/v1/responses")
 
 
-class TranslateUpstreamFailureTests(SimpleTestCase):
+class TranslateUpstreamFailureTests(TestCase):
     def tearDown(self):
         cache.clear()
 
@@ -130,7 +130,7 @@ class TranslateUpstreamFailureTests(SimpleTestCase):
             self.assertNotIn("Another very secret input.", record.getMessage())
 
 
-class TranslateGuardrailTests(SimpleTestCase):
+class TranslateGuardrailTests(TestCase):
     def tearDown(self):
         cache.clear()
 

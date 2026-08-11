@@ -27,7 +27,9 @@ from .authentication import (
     revoke_session_token,
 )
 from .glossary import PronunciationPreference, TranslationDirection
+from .models import GlossaryTerm
 from .prompt import build_translation_instructions
+from .serializers import GlossaryTermSerializer
 from .throttling import (
     SessionIssueGlobalRateThrottle,
     SessionIssueRateThrottle,
@@ -214,6 +216,15 @@ def translate(request: Request) -> Response:
 @permission_classes([AllowAny])
 def health(request: Request) -> Response:
     return Response({"status": "ok"})
+
+
+@api_view(["GET"])
+@authentication_classes([])
+@permission_classes([AllowAny])
+def glossary(request: Request) -> Response:
+    terms = GlossaryTerm.objects.all()
+    serializer = GlossaryTermSerializer(terms, many=True)
+    return Response({"count": terms.count(), "results": serializer.data})
 
 
 @api_view(["POST"])

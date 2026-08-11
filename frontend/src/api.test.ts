@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { clearSessionToken, translateText } from "./api";
+import { clearSessionToken, fetchGlossary, translateText } from "./api";
 
 function jsonResponse(
   body: unknown,
@@ -229,5 +229,78 @@ describe("translateText", () => {
     );
 
     await expect(translateText("Hello")).rejects.toThrow("Network unavailable");
+  });
+});
+
+describe("fetchGlossary", () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  const term = {
+    id: 1,
+    term: "Shabbos",
+    display_terms: { shabbos: "Shabbos", shabbat: "Shabbat" },
+    variants: ["Shabbat"],
+    meanings: ["the Jewish Sabbath"],
+    context_note: "A sacred day of rest.",
+    category: "religious practice",
+    language_origin: "mixed",
+    yeshivish_example: "Gut Shabbos.",
+    plain_english_example: "Have a good Sabbath.",
+  };
+
+  it("retrieves and validates the complete glossary collection", async () => {
+    const fetchMock = vi
+      .fn<typeof fetch>()
+      .mockResolvedValue(jsonResponse({ count: 1, results: [term] }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await expect(fetchGlossary()).resolves.toEqual({
+      count: 1,
+      results: [term],
+    });
+    expect(fetchMock.mock.calls[0]?.[0]).toContain("/api/glossary/");
+    expect(fetchMock.mock.calls[0]?.[1]).toBeUndefined();
+  });
+
+  it("rejects malformed or count-mismatched glossary responses", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi
+        .fn<typeof fetch>()
+        .mockResolvedValueOnce(jsonResponse({ count: 2, results: [term] }))
+        .mockResolvedValueOnce(jsonResponse({ count: 1, results: [{}] })),
+    );
+
+    await expect(fetchGlossary()).rejects.toThrow(
+      "The glossary response was invalid.",
+    );
+    await expect(fetchGlossary()).rejects.toThrow(
+      "The glossary response was invalid.",
+    );
+  });
+
+  it("surfaces API and non-JSON errors", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi
+        .fn<typeof fetch>()
+        .mockResolvedValueOnce(
+          jsonResponse({ error: "Glossary unavailable." }, false, 503),
+        )
+        .mockResolvedValueOnce({
+          ok: true,
+          status: 200,
+          json: async () => {
+            throw new SyntaxError("invalid JSON");
+          },
+        } as unknown as Response),
+    );
+
+    await expect(fetchGlossary()).rejects.toThrow("Glossary unavailable.");
+    await expect(fetchGlossary()).rejects.toThrow(
+      "The glossary response was invalid.",
+    );
   });
 });
