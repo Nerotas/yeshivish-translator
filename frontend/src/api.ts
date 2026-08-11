@@ -1,3 +1,5 @@
+import type { PronunciationPreference } from "./pronunciation";
+
 export const TRANSLATION_DIRECTIONS = [
   "yeshivish_to_english",
   "english_to_yeshivish",
@@ -75,6 +77,7 @@ function readStringProperty(
 function requestTranslation(
   text: string,
   direction: TranslationDirection,
+  pronunciationPreference: PronunciationPreference,
   token: string,
 ): Promise<Response> {
   return fetch(`${API_BASE_URL}/api/translate/`, {
@@ -83,22 +86,37 @@ function requestTranslation(
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ text, direction }),
+    body: JSON.stringify({
+      text,
+      direction,
+      pronunciation_preference: pronunciationPreference,
+    }),
   });
 }
 
 export async function translateText(
   text: string,
   direction: TranslationDirection = "yeshivish_to_english",
+  pronunciationPreference: PronunciationPreference = "shabbos",
 ): Promise<string> {
   let token = await getSessionToken();
-  let response = await requestTranslation(text, direction, token);
+  let response = await requestTranslation(
+    text,
+    direction,
+    pronunciationPreference,
+    token,
+  );
 
   if (response.status === 401) {
     // The cached token expired or was rejected; refresh once and retry.
     clearSessionToken();
     token = await getSessionToken();
-    response = await requestTranslation(text, direction, token);
+    response = await requestTranslation(
+      text,
+      direction,
+      pronunciationPreference,
+      token,
+    );
   }
 
   let data: unknown = {};

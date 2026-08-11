@@ -48,6 +48,7 @@ describe("translateText", () => {
     expect(bodyOf(fetchMock.mock.calls[1])).toEqual({
       text: "Mamesh good.",
       direction: "yeshivish_to_english",
+      pronunciation_preference: "shabbos",
     });
     expect(headersOf(fetchMock.mock.calls[1]).Authorization).toBe(
       "Bearer session-token",
@@ -67,6 +68,20 @@ describe("translateText", () => {
 
     expect(bodyOf(fetchMock.mock.calls[1]).direction).toBe(
       "english_to_yeshivish",
+    );
+  });
+
+  it("sends an explicitly selected pronunciation preference", async () => {
+    const fetchMock = vi
+      .fn<typeof fetch>()
+      .mockResolvedValueOnce(sessionResponse())
+      .mockResolvedValueOnce(jsonResponse({ translation: "A Shabbat meal." }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await translateText("A Sabbath meal.", "english_to_yeshivish", "shabbat");
+
+    expect(bodyOf(fetchMock.mock.calls[1]).pronunciation_preference).toBe(
+      "shabbat",
     );
   });
 

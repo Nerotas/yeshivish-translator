@@ -25,7 +25,7 @@ from .authentication import (
     issue_session_token,
     revoke_session_token,
 )
-from .glossary import TranslationDirection
+from .glossary import PronunciationPreference, TranslationDirection
 from .prompt import build_translation_instructions
 from .throttling import (
     SessionIssueGlobalRateThrottle,
@@ -42,6 +42,11 @@ DEFAULT_DIRECTION: TranslationDirection = "yeshivish_to_english"
 SUPPORTED_DIRECTIONS: set[TranslationDirection] = {
     DEFAULT_DIRECTION,
     "english_to_yeshivish",
+}
+DEFAULT_PRONUNCIATION_PREFERENCE: PronunciationPreference = "shabbos"
+SUPPORTED_PRONUNCIATION_PREFERENCES: set[PronunciationPreference] = {
+    DEFAULT_PRONUNCIATION_PREFERENCE,
+    "shabbat",
 }
 
 
@@ -78,6 +83,9 @@ def get_openai_client() -> OpenAI:
 def translate(request: Request) -> Response:
     text = request.data.get("text")
     direction = request.data.get("direction", DEFAULT_DIRECTION)
+    pronunciation_preference = request.data.get(
+        "pronunciation_preference", DEFAULT_PRONUNCIATION_PREFERENCE
+    )
 
     if not isinstance(direction, str) or direction not in SUPPORTED_DIRECTIONS:
         return Response(
@@ -93,6 +101,20 @@ def translate(request: Request) -> Response:
     if not isinstance(text, str):
         return Response(
             {"error": "The text field must be a string."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    if (
+        not isinstance(pronunciation_preference, str)
+        or pronunciation_preference not in SUPPORTED_PRONUNCIATION_PREFERENCES
+    ):
+        return Response(
+            {
+                "error": (
+                    "The pronunciation_preference field must be one of: "
+                    "shabbos, shabbat."
+                )
+            },
             status=status.HTTP_400_BAD_REQUEST,
         )
 
@@ -120,7 +142,11 @@ def translate(request: Request) -> Response:
     try:
         api_response = get_openai_client().responses.create(
             model=model,
-            instructions=build_translation_instructions(text, direction=direction),
+            instructions=build_translation_instructions(
+                text,
+                direction=direction,
+                pronunciation_preference=pronunciation_preference,
+            ),
             input=text,
             max_output_tokens=500,
         )

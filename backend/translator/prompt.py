@@ -1,4 +1,5 @@
 from .glossary import (
+    PronunciationPreference,
     TranslationDirection,
     find_glossary_entries,
     format_glossary_context,
@@ -68,16 +69,46 @@ DIRECTION_INSTRUCTIONS: dict[TranslationDirection, str] = {
     "english_to_yeshivish": ENGLISH_TO_YESHIVISH_INSTRUCTIONS,
 }
 
+PRONUNCIATION_INSTRUCTIONS: dict[PronunciationPreference, str] = {
+    "shabbos": (
+        "Pronunciation preference: Shabbos. When generating "
+        "transliterated Jewish terminology, use the Shabbos-mode spelling from "
+        "glossary guidance (for example, Shabbos, bas mitzvah, shacharis, and "
+        "beis midrash). Treat listed variants as recognition aliases, not "
+        "preferred output spellings. Preserve Hebrew script, names, proper nouns, "
+        "and quoted source wording unchanged. If a transliteration from the "
+        "submitted text must be retained, preserve its spelling rather than "
+        "normalizing it solely to match this preference."
+    ),
+    "shabbat": (
+        "Pronunciation preference: Shabbat. When generating "
+        "transliterated Jewish terminology, use the Shabbat-mode spelling from "
+        "glossary guidance (for example, Shabbat, bat mitzvah, shacharit, and "
+        "beit midrash). Treat listed variants as recognition aliases, not "
+        "preferred output spellings. Preserve Hebrew script, names, proper nouns, "
+        "and quoted source wording unchanged. If a transliteration from the "
+        "submitted text must be retained, preserve its spelling rather than "
+        "normalizing it solely to match this preference."
+    ),
+}
+
 
 def build_translation_instructions(
     text: str,
     direction: TranslationDirection = "yeshivish_to_english",
+    pronunciation_preference: PronunciationPreference = "shabbos",
 ) -> str:
     instructions = DIRECTION_INSTRUCTIONS[direction]
     glossary_context = format_glossary_context(
-        find_glossary_entries(text, direction=direction), direction=direction
+        find_glossary_entries(text, direction=direction),
+        direction=direction,
+        pronunciation_preference=pronunciation_preference,
     )
+    prompt_sections = [
+        instructions.rstrip(),
+        PRONUNCIATION_INSTRUCTIONS[pronunciation_preference],
+    ]
     if not glossary_context:
-        return instructions
+        return "\n\n".join(prompt_sections) + "\n"
 
-    return f"{instructions.rstrip()}\n\n{glossary_context}"
+    return "\n\n".join([*prompt_sections, glossary_context])

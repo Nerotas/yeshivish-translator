@@ -23,7 +23,7 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test("translates in both directions and persists the selected theme", async ({
+test("translates in both directions and persists global preferences", async ({
   page,
 }) => {
   await page.goto("/");
@@ -42,9 +42,14 @@ test("translates in both directions and persists the selected theme", async ({
   ).toBeVisible();
 
   await page.getByRole("button", { name: "Dark" }).click();
+  await page.getByRole("button", { name: "Shabbat" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await page.reload();
   await expect(page.getByRole("button", { name: "Dark" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await expect(page.getByRole("button", { name: "Shabbat" })).toHaveAttribute(
     "aria-pressed",
     "true",
   );
