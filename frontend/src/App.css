@@ -82,7 +82,7 @@
   font-weight: 600;
 }
 
-.pronunciation-selector > div {
+.pronunciation-selector>div {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -111,6 +111,41 @@
   border-color: var(--accent);
   background: var(--accent);
   color: var(--accent-text);
+}
+
+.tone-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.tone-selector label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.translator-card .tone-selector select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  color: var(--text-h);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.translator-card .tone-selector select:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+.translator-card .tone-selector select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .eyebrow {
@@ -205,7 +240,7 @@
   outline-offset: 2px;
 }
 
-.translator-page form > button {
+.translator-page form>button {
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
   font-size: 1rem;
@@ -216,7 +251,7 @@
   cursor: pointer;
 }
 
-.translator-page form > button:hover:not(:disabled) {
+.translator-page form>button:hover:not(:disabled) {
   background: var(--accent-hover);
 }
 
@@ -226,7 +261,7 @@
   background: var(--surface-muted);
 }
 
-.translator-page form > button:disabled {
+.translator-page form>button:disabled {
   background: var(--disabled);
   cursor: not-allowed;
 }
@@ -284,7 +319,7 @@
   color: var(--text) !important;
 }
 
-.MuiDialogContent-root p + p {
+.MuiDialogContent-root p+p {
   margin-top: 1rem;
 }
 
@@ -312,11 +347,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .spinner,
   .page-loader-spinner {
     animation: none;
   }
 }
+
 @media (max-width: 560px) {
   .app-shell {
     padding: 1rem;

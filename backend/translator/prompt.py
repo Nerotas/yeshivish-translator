@@ -1,5 +1,6 @@
 from .glossary import (
     PronunciationPreference,
+    Tone,
     TranslationDirection,
     find_glossary_entries,
     format_glossary_context,
@@ -116,11 +117,42 @@ PRONUNCIATION_INSTRUCTIONS: dict[PronunciationPreference, str] = {
     ),
 }
 
+TONE_INSTRUCTIONS: dict[Tone, str] = {
+    "straightforward": (
+        "Tone: Straightforward. Use clear, direct, and practical Yeshivish "
+        "that conveys meaning without embellishment. Maintain a neutral, "
+        "professional demeanor while staying authentic to Yeshivish speech "
+        "patterns."
+    ),
+    "warm_friendly": (
+        "Tone: Warm and friendly. Use expressive, conversational Yeshivish "
+        "that feels approachable and welcoming. Include gentle, affectionate "
+        "Yeshivish idioms and speech patterns that convey warmth and connection "
+        "without being overly sentimental."
+    ),
+    "enthusiastic": (
+        "Tone: Enthusiastic. Go big! Use exuberant, over-the-top Yeshivish that "
+        "overflows with excitement and playful energy. Pack the translation with "
+        "colorful Yeshivish expressions, exclamations (like 'Mamesh!', 'Gevaldig!', "
+        "'Oy!', 'Ay!'), enthusiastic idioms, and dramatic speech patterns. Use lots "
+        "of authentic Yeshivish words, Yiddish flourishes, and Hebrew/Aramaic terms "
+        "liberally. Make it sound like you're expressing unbridled joy and animation "
+        "while staying true to Yeshivish culture. The energy should be infectious!"
+    ),
+    "talmud_chacham": (
+        "Tone: Talmud Chacham. Use serious, authoritative Yeshivish that befits "
+        "a Rosh Yeshiva addressing his students. Employ scholarly language, "
+        "thoughtful phrasing, and measured tone. Maintain gravitas and wisdom "
+        "while preserving authentic Yeshivish intellectual discourse patterns."
+    ),
+}
+
 
 def build_translation_instructions(
     text: str,
     direction: TranslationDirection = "yeshivish_to_english",
     pronunciation_preference: PronunciationPreference = "shabbos",
+    tone: Tone = "warm_friendly",
 ) -> str:
     instructions = DIRECTION_INSTRUCTIONS[direction]
     glossary_context = format_glossary_context(
@@ -133,6 +165,11 @@ def build_translation_instructions(
         instructions.rstrip(),
         PRONUNCIATION_INSTRUCTIONS[pronunciation_preference],
     ]
+
+    # Only include tone instruction for english_to_yeshivish
+    if direction == "english_to_yeshivish":
+        prompt_sections.append(TONE_INSTRUCTIONS[tone])
+
     if not glossary_context:
         return "\n\n".join(prompt_sections) + "\n"
 

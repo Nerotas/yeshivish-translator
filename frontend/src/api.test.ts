@@ -49,6 +49,7 @@ describe("translateText", () => {
       text: "Mamesh good.",
       direction: "yeshivish_to_english",
       pronunciation_preference: "shabbos",
+      tone: "warm_friendly",
     });
     expect(headersOf(fetchMock.mock.calls[1]).Authorization).toBe(
       "Bearer session-token",

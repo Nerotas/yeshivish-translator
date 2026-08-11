@@ -111,6 +111,7 @@ describe("App", () => {
       "That was an enjoyable lesson.",
       "english_to_yeshivish",
       "shabbos",
+      "warm_friendly",
     );
 
     fireEvent.click(
@@ -279,6 +280,7 @@ describe("App", () => {
       "A Shabbos seudah.",
       "yeshivish_to_english",
       "shabbat",
+      "warm_friendly",
     );
   });
 });

@@ -5,10 +5,18 @@ import {
   useLayoutEffect,
   useState,
 } from "react";
-import { NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import {
+  NavLink,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import {
+  TONES,
   TRANSLATION_DIRECTIONS,
   translateText,
+  type Tone,
   type TranslationDirection,
 } from "./api";
 import { PRONUNCIATION_PREFERENCES } from "./pronunciation";
@@ -33,7 +41,9 @@ const THEME_STORAGE_KEY = "yeshivish-translator-theme";
 
 function getSavedTheme(): Theme {
   try {
-    return localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
+    return localStorage.getItem(THEME_STORAGE_KEY) === "dark"
+      ? "dark"
+      : "light";
   } catch {
     return "light";
   }
@@ -63,6 +73,7 @@ function TranslatorPage() {
   const [direction, setDirection] = useState<TranslationDirection>(
     "yeshivish_to_english",
   );
+  const [tone, setTone] = useState<Tone>("warm_friendly");
   const [text, setText] = useState("");
   const [translation, setTranslation] = useState("");
   const [error, setError] = useState("");
@@ -80,7 +91,7 @@ function TranslatorPage() {
 
     setLoading(true);
     try {
-      setTranslation(await translateText(text, direction, preference));
+      setTranslation(await translateText(text, direction, preference, tone));
     } catch (requestError: unknown) {
       setError(
         requestError instanceof Error
@@ -126,6 +137,27 @@ function TranslatorPage() {
           </button>
         ))}
       </div>
+
+      {direction === "english_to_yeshivish" && (
+        <div className="tone-selector">
+          <label htmlFor="tone-select">Tone</label>
+          <select
+            id="tone-select"
+            value={tone}
+            onChange={(e) => setTone(e.target.value as Tone)}
+          >
+            {TONES.map((value) => (
+              <option key={value} value={value}>
+                {value === "straightforward"
+                  ? "Straightforward"
+                  : value === "warm_friendly"
+                    ? "Warm & Friendly"
+                    : "Enthusiastic"}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="source-text">{copy.inputLabel}</label>
