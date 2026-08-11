@@ -1,10 +1,11 @@
 {
   "name": "Yeshivish to Plain English Runtime Glossary",
-  "version": 2,
+  "version": 3,
   "entry_count": 130,
   "entries": [
     {
       "term": "mamesh",
+      "aleph_beis": "ממש",
       "variants": [
         "mamash",
         "mamosh"
@@ -24,6 +25,7 @@
     },
     {
   "term": "avreich",
+  "aleph_beis": "אברך",
   "variants": [
     "avrech"
   ],
@@ -42,6 +44,7 @@
 },
     {
       "term": "taka",
+      "aleph_beis": "טאַקע",
       "variants": [
         "tahke",
         "takeh",
@@ -62,6 +65,7 @@
     },
     {
       "term": "avada",
+      "aleph_beis": "אַוודאי",
       "variants": [
         "avade",
         "avadeh"
@@ -80,6 +84,7 @@
     },
     {
       "term": "pashut",
+      "aleph_beis": "פשוט",
       "variants": [
         "poshut"
       ],
@@ -98,6 +103,7 @@
     },
     {
       "term": "stam",
+      "aleph_beis": "סתם",
       "variants": [
         "stom"
       ],
@@ -116,6 +122,7 @@
     },
     {
       "term": "a bissel",
+      "aleph_beis": "אַ ביסל",
       "variants": [
         "a bisel",
         "a bissle",
@@ -135,6 +142,7 @@
     },
     {
       "term": "nu",
+      "aleph_beis": "נו",
       "variants": [
         "noo"
       ],
@@ -153,6 +161,7 @@
     },
     {
       "term": "oy vey",
+      "aleph_beis": "אוי וויי",
       "variants": [
         "oy vay"
       ],
@@ -171,6 +180,7 @@
     },
     {
   "term": "shmutz",
+  "aleph_beis": "שמוץ",
   "variants": [
     "schmutz",
     "shmuts",
@@ -192,6 +202,7 @@
 },
     {
       "term": "gevalt",
+      "aleph_beis": "געוואַלד",
       "variants": [
         "gevald"
       ],
@@ -210,6 +221,7 @@
     },
     {
       "term": "nebach",
+      "aleph_beis": "נעבעך",
       "variants": [
         "nebich",
         "nebech"
@@ -229,6 +241,7 @@
     },
     {
       "term": "davka",
+      "aleph_beis": "דווקא",
       "variants": [
         "dafka",
         "dafke"
@@ -248,6 +261,7 @@
     },
     {
       "term": "tachlis",
+      "aleph_beis": "תכלית",
       "variants": [
         "tachles",
         "takhlis"
@@ -267,6 +281,7 @@
     },
     {
       "term": "yasher koach",
+      "aleph_beis": "יישר כוח",
       "variants": [
         "yashar koach",
         "yishar koach",
@@ -289,6 +304,7 @@
     },
     {
       "term": "mazel tov",
+      "aleph_beis": "מזל טוב",
       "variants": [
         "mazal tov",
         "mazeltof"
@@ -307,6 +323,7 @@
     },
     {
       "term": "baruch Hashem",
+      "aleph_beis": "ברוך השם",
       "variants": [
         "boruch Hashem",
         "barukh Hashem",
@@ -328,6 +345,7 @@
     },
     {
       "term": "im yirtzeh Hashem",
+      "aleph_beis": "אם ירצה השם",
       "variants": [
         "im yirtze Hashem",
         "IYH"
@@ -346,6 +364,7 @@
     },
     {
       "term": "b'ezras Hashem",
+      "aleph_beis": "בעזרת השם",
       "dialect_pattern": "b'ezra[s|t] Hashem",
       "variants": [
         "b'ezrat Hashem",
@@ -364,6 +383,7 @@
     },
     {
       "term": "bli neder",
+      "aleph_beis": "בלי נדר",
       "variants": [
         "b'li neder"
       ],
@@ -381,6 +401,7 @@
     },
     {
       "term": "chas v'shalom",
+      "aleph_beis": "חס ושלום",
       "variants": [
         "chas veshalom",
         "chas v'sholem"
@@ -400,6 +421,7 @@
     },
     {
       "term": "kein ayin hara",
+      "aleph_beis": "קיין עין הרע",
       "variants": [
         "kein ayin hora",
         "ken ayin hara",
@@ -420,6 +442,7 @@
     },
     {
       "term": "lo aleinu",
+      "aleph_beis": "לא עלינו",
       "variants": [
         "lo aleynu"
       ],
@@ -437,6 +460,7 @@
     },
     {
       "term": "l'maaseh",
+      "aleph_beis": "למעשה",
       "variants": [
         "lemaaseh",
         "l'maase",
@@ -457,6 +481,7 @@
     },
     {
       "term": "l'choirah",
+      "aleph_beis": "לכאורה",
       "variants": [
         "lichora",
         "l'choira",
@@ -477,6 +502,7 @@
     },
     {
       "term": "aderaba",
+      "aleph_beis": "אדרבה",
       "variants": [
         "adraba",
         "adaraba"
@@ -496,6 +522,7 @@
     },
     {
       "term": "kal vachomer",
+      "aleph_beis": "קל וחומר",
       "variants": [
         "kal va-chomer",
         "kal v'chomer"
@@ -514,6 +541,7 @@
     },
     {
       "term": "nafka mina",
+      "aleph_beis": "נפקא מינה",
       "variants": [
         "nafka minah",
         "nafkemina"
@@ -533,6 +561,7 @@
     },
     {
       "term": "hava amina",
+      "aleph_beis": "הוה אמינא",
       "variants": [
         "hava mina",
         "havah amina"
@@ -552,6 +581,7 @@
     },
     {
       "term": "kashya",
+      "aleph_beis": "קשיא",
       "variants": [
         "kasha",
         "kusha"
@@ -571,6 +601,7 @@
     },
     {
       "term": "teretz",
+      "aleph_beis": "תירוץ",
       "variants": [
         "teirutz",
         "terutz",
@@ -591,6 +622,7 @@
     },
     {
       "term": "svara",
+      "aleph_beis": "סברא",
       "variants": [
         "sevara",
         "s'vara",
@@ -611,6 +643,7 @@
     },
     {
       "term": "pshat",
+      "aleph_beis": "פשט",
       "variants": [
         "peshat"
       ],
@@ -629,6 +662,7 @@
     },
     {
       "term": "chiddush",
+      "aleph_beis": "חידוש",
       "variants": [
         "chidush",
         "hiddush"
@@ -648,6 +682,7 @@
     },
     {
       "term": "shayla",
+      "aleph_beis": "שאלה",
       "variants": [
         "she'eilah",
         "sheila",
@@ -669,6 +704,7 @@
     },
     {
       "term": "stira",
+      "aleph_beis": "סתירה",
       "variants": [
         "setira",
         "stirah"
@@ -687,6 +723,7 @@
     },
     {
       "term": "chazer",
+      "aleph_beis": "חזר",
       "variants": [
         "chazzer",
         "hazzer"
@@ -706,6 +743,7 @@
     },
     {
       "term": "shver",
+      "aleph_beis": "שווער",
       "variants": [
         "shvair",
         "schwer"
@@ -725,6 +763,7 @@
     },
     {
       "term": "shayach",
+      "aleph_beis": "שייך",
       "variants": [
         "shayich",
         "shayech",
@@ -747,6 +786,7 @@
     },
     {
       "term": "maskim",
+      "aleph_beis": "מסכים",
       "variants": [
         "maskem"
       ],
@@ -764,6 +804,7 @@
     },
     {
       "term": "I hear",
+      "aleph_beis": "איך הער",
       "variants": [],
       "language_origin": "mixed",
       "category": "Yeshivish English",
@@ -779,6 +820,7 @@
     },
     {
       "term": "hold",
+      "aleph_beis": "האַלטן",
       "variants": [
         "hold by",
         "hold from",
@@ -799,6 +841,7 @@
     },
     {
       "term": "gishmak",
+      "aleph_beis": "געשמאַק",
       "variants": [
         "geschmack",
         "geshmak",
@@ -820,6 +863,7 @@
     },
     {
       "term": "shtark",
+      "aleph_beis": "שטאַרק",
       "variants": [
         "stark"
       ],
@@ -839,6 +883,7 @@
     },
     {
       "term": "chashuv",
+      "aleph_beis": "חשוב",
       "variants": [
         "choshuv",
         "hashuv"
@@ -859,6 +904,7 @@
     },
     {
       "term": "mensch",
+      "aleph_beis": "מענטש",
       "variants": [
         "mentsch",
         "mentsh"
@@ -877,6 +923,7 @@
     },
     {
       "term": "nachas",
+      "aleph_beis": "נחת",
       "variants": [
         "nakhes",
         "naches"
@@ -895,6 +942,7 @@
     },
     {
       "term": "kvetch",
+      "aleph_beis": "קוועטשן",
       "variants": [
         "kvetsh"
       ],
@@ -913,6 +961,7 @@
     },
     {
       "term": "schlep",
+      "aleph_beis": "שלעפּן",
       "variants": [
         "shlep",
         "shlepp"
@@ -933,6 +982,7 @@
     },
     {
       "term": "schmooze",
+      "aleph_beis": "שמועסן",
       "variants": [
         "shmooze",
         "shmooz",
@@ -953,6 +1003,7 @@
     },
     {
       "term": "chutzpah",
+      "aleph_beis": "חוצפה",
       "variants": [
         "chutzpa",
         "hutzpah"
@@ -973,6 +1024,7 @@
     },
     {
       "term": "heimish",
+      "aleph_beis": "היימיש",
       "variants": [
         "heimishe",
         "heimisch"
@@ -993,6 +1045,7 @@
     },
     {
       "term": "bubbe",
+      "aleph_beis": "באָבע",
       "variants": [
         "bubby",
         "bobe",
@@ -1012,6 +1065,7 @@
     },
     {
       "term": "zaide",
+      "aleph_beis": "זיידע",
       "variants": [
         "zayde",
         "zaydee",
@@ -1031,6 +1085,7 @@
     },
     {
       "term": "mishpacha",
+      "aleph_beis": "משפחה",
       "variants": [
         "mishpocha",
         "mishpachah"
@@ -1050,6 +1105,7 @@
     },
     {
       "term": "bochur",
+      "aleph_beis": "בחור",
       "variants": [
         "bachur",
         "bocher"
@@ -1068,6 +1124,7 @@
     },
     {
       "term": "rebbe",
+      "aleph_beis": "רבי",
       "variants": [
         "rebbi"
       ],
@@ -1086,6 +1143,7 @@
     },
     {
       "term": "rav",
+      "aleph_beis": "רב",
       "variants": [
         "rov"
       ],
@@ -1104,6 +1162,7 @@
     },
     {
       "term": "rebbetzin",
+      "aleph_beis": "רביצין",
       "variants": [
         "rebbitzen",
         "rebbetzen"
@@ -1122,6 +1181,7 @@
     },
     {
       "term": "gabbai",
+      "aleph_beis": "גבאי",
       "variants": [
         "gabai"
       ],
@@ -1140,6 +1200,7 @@
     },
     {
       "term": "shadchan",
+      "aleph_beis": "שדכן",
       "variants": [
         "shadkhan"
       ],
@@ -1157,6 +1218,7 @@
     },
     {
       "term": "chosson",
+      "aleph_beis": "חתן",
       "dialect_pattern": "ch[osso|ata]n",
       "variants": [
         "chassan",
@@ -1177,6 +1239,7 @@
     },
     {
       "term": "kallah",
+      "aleph_beis": "כלה",
       "variants": [
         "kala"
       ],
@@ -1194,6 +1257,7 @@
     },
     {
       "term": "shidduch",
+      "aleph_beis": "שידוך",
       "variants": [
         "shiduch"
       ],
@@ -1212,6 +1276,7 @@
     },
     {
       "term": "bashert",
+      "aleph_beis": "באַשערט",
       "variants": [
         "beshert",
         "besheret"
@@ -1231,6 +1296,7 @@
     },
     {
       "term": "vort",
+      "aleph_beis": "וואָרט",
       "variants": [],
       "language_origin": "Yiddish",
       "category": "celebrations",
@@ -1247,6 +1313,7 @@
     },
     {
       "term": "chasunah",
+      "aleph_beis": "חתונה",
       "variants": [
         "chassunah",
         "chasuna",
@@ -1266,6 +1333,7 @@
     },
     {
       "term": "simcha",
+      "aleph_beis": "שמחה",
       "variants": [
         "simchah",
         "simche"
@@ -1285,6 +1353,7 @@
     },
     {
       "term": "bris",
+      "aleph_beis": "ברית",
       "dialect_pattern": "bri[s|t]",
       "variants": [
         "brit",
@@ -1305,6 +1374,7 @@
     },
     {
       "term": "bar mitzvah",
+      "aleph_beis": "בר מצוה",
       "variants": [
         "bar-mitzvah"
       ],
@@ -1322,6 +1392,7 @@
     },
     {
       "term": "bas mitzvah",
+      "aleph_beis": "בת מצוה",
       "dialect_pattern": "ba[s|t] mitzvah",
       "variants": [
         "bat mitzvah",
@@ -1342,6 +1413,7 @@
     },
     {
       "term": "kiddush",
+      "aleph_beis": "קידוש",
       "variants": [
         "kidush"
       ],
@@ -1359,6 +1431,7 @@
     },
     {
       "term": "aliyah",
+      "aleph_beis": "עליה",
       "variants": [
         "aliya"
       ],
@@ -1376,6 +1449,7 @@
     },
     {
       "term": "seudah",
+      "aleph_beis": "סעודה",
       "variants": [
         "seuda",
         "se'udah"
@@ -1394,6 +1468,7 @@
     },
     {
       "term": "bentsch",
+      "aleph_beis": "בענטשן",
       "variants": [
         "bentch",
         "bentsh",
@@ -1415,6 +1490,7 @@
     },
     {
       "term": "cholent",
+      "aleph_beis": "טשאָלנט",
       "variants": [
         "chulent"
       ],
@@ -1431,6 +1507,7 @@
     },
     {
       "term": "fleishig",
+      "aleph_beis": "פֿליישיק",
       "variants": [
         "fleishik"
       ],
@@ -1449,6 +1526,7 @@
     },
     {
       "term": "milchig",
+      "aleph_beis": "מילכיק",
       "variants": [
         "milchik"
       ],
@@ -1467,6 +1545,7 @@
     },
     {
       "term": "pareve",
+      "aleph_beis": "פּאַרעווע",
       "variants": [
         "parev",
         "parve"
@@ -1485,6 +1564,7 @@
     },
     {
       "term": "gut Shabbos",
+      "aleph_beis": "גוט שבת",
       "dialect_pattern": "gut Shabb[os|at]",
       "variants": [
         "good Shabbos",
@@ -1505,6 +1585,7 @@
     },
     {
       "term": "l'chaim",
+      "aleph_beis": "לחיים",
       "variants": [
         "lechayim",
         "lchaim"
@@ -1524,6 +1605,7 @@
     },
     {
       "term": "Shabbos",
+      "aleph_beis": "שבת",
       "dialect_pattern": "Shabb[os|at]",
       "variants": [
         "Shabbat",
@@ -1543,6 +1625,7 @@
     },
     {
       "term": "yom tov",
+      "aleph_beis": "יום טוב",
       "variants": [
         "yontif",
         "yontiff",
@@ -1562,6 +1645,7 @@
     },
     {
       "term": "erev Shabbos",
+      "aleph_beis": "ערב שבת",
       "dialect_pattern": "erev Shabb[os|at]",
       "variants": [
         "erev Shabbat"
@@ -1580,6 +1664,7 @@
     },
     {
       "term": "motzaei Shabbos",
+      "aleph_beis": "מוצאי שבת",
       "dialect_pattern": "motzaei Shabb[os|at]",
       "variants": [
         "motzei Shabbos",
@@ -1600,6 +1685,7 @@
     },
     {
       "term": "daven",
+      "aleph_beis": "דאַוונען",
       "variants": [
         "davening"
       ],
@@ -1618,6 +1704,7 @@
     },
     {
       "term": "shul",
+      "aleph_beis": "שול",
       "variants": [
         "schul"
       ],
@@ -1635,6 +1722,7 @@
     },
     {
       "term": "minyan",
+      "aleph_beis": "מנין",
       "variants": [
         "minyen"
       ],
@@ -1652,6 +1740,7 @@
     },
     {
       "term": "shacharis",
+      "aleph_beis": "שחרית",
       "dialect_pattern": "shachari[s|t]",
       "variants": [
         "shacharit",
@@ -1670,6 +1759,7 @@
     },
     {
       "term": "mincha",
+      "aleph_beis": "מנחה",
       "variants": [
         "minchah"
       ],
@@ -1686,6 +1776,7 @@
     },
     {
       "term": "maariv",
+      "aleph_beis": "מעריב",
       "variants": [
         "ma'ariv"
       ],
@@ -1702,6 +1793,7 @@
     },
     {
       "term": "gemara",
+      "aleph_beis": "גמרא",
       "variants": [
         "gemorah"
       ],
@@ -1719,6 +1811,7 @@
     },
     {
       "term": "shiur",
+      "aleph_beis": "שיעור",
       "variants": [],
       "language_origin": "Hebrew",
       "category": "yeshiva and Torah study",
@@ -1734,6 +1827,7 @@
     },
     {
       "term": "chavrusa",
+      "aleph_beis": "חברותא",
       "dialect_pattern": "chavru[s|t]a",
       "variants": [
         "chavruta",
@@ -1753,6 +1847,7 @@
     },
     {
       "term": "beis midrash",
+      "aleph_beis": "בית מדרש",
       "dialect_pattern": "bei[s|t] midrash",
       "variants": [
         "beit midrash",
@@ -1773,6 +1868,7 @@
     },
     {
       "term": "yeshiva",
+      "aleph_beis": "ישיבה",
       "variants": [
         "yeshivah",
         "yeshive"
@@ -1791,6 +1887,7 @@
     },
     {
       "term": "kollel",
+      "aleph_beis": "כולל",
       "variants": [
         "kolel"
       ],
@@ -1808,6 +1905,7 @@
     },
     {
       "term": "seder",
+      "aleph_beis": "סדר",
       "variants": [
         "seider"
       ],
@@ -1826,6 +1924,7 @@
     },
     {
       "term": "zman",
+      "aleph_beis": "זמן",
       "variants": [
         "z'man"
       ],
@@ -1843,6 +1942,7 @@
     },
     {
       "term": "bein hazmanim",
+      "aleph_beis": "בין הזמנים",
       "variants": [
         "bein ha-zmanim",
         "bein hazemanim"
@@ -1861,6 +1961,7 @@
     },
     {
       "term": "rosh yeshiva",
+      "aleph_beis": "ראש ישיבה",
       "variants": [
         "rosh hayeshiva",
         "rosh ha-yeshiva"
@@ -1879,6 +1980,7 @@
     },
     {
       "term": "learning",
+      "aleph_beis": "לערנען",
       "variants": [],
       "language_origin": "mixed",
       "category": "Yeshivish English",
@@ -1894,6 +1996,7 @@
     },
     {
       "term": "bring down",
+      "aleph_beis": "אַראָפּברענגען",
       "variants": [],
       "language_origin": "mixed",
       "category": "Yeshivish English",
@@ -1910,6 +2013,7 @@
     },
     {
       "term": "halacha",
+      "aleph_beis": "הלכה",
       "variants": [
         "halachah",
         "halakhah",
@@ -1930,6 +2034,7 @@
     },
     {
       "term": "mitzvah",
+      "aleph_beis": "מצוה",
       "variants": [
         "mitzva"
       ],
@@ -1948,6 +2053,7 @@
     },
     {
       "term": "aveirah",
+      "aleph_beis": "עבירה",
       "variants": [
         "aveira",
         "avera"
@@ -1967,6 +2073,7 @@
     },
     {
       "term": "kosher",
+      "aleph_beis": "כּשר",
       "variants": [
         "kasher"
       ],
@@ -1985,6 +2092,7 @@
     },
     {
       "term": "treif",
+      "aleph_beis": "טרייף",
       "variants": [
         "trayf",
         "treyf"
@@ -2004,6 +2112,7 @@
     },
     {
       "term": "hechsher",
+      "aleph_beis": "הכשר",
       "variants": [
         "hekhsher",
         "heksher"
@@ -2023,6 +2132,7 @@
     },
     {
       "term": "assur",
+      "aleph_beis": "אסור",
       "variants": [
         "asur",
         "ossur"
@@ -2041,6 +2151,7 @@
     },
     {
       "term": "mutar",
+      "aleph_beis": "מותר",
       "variants": [
         "muttar"
       ],
@@ -2058,6 +2169,7 @@
     },
     {
       "term": "l'chatchila",
+      "aleph_beis": "לכתחילה",
       "variants": [
         "lechatchila",
         "l'chathila",
@@ -2078,6 +2190,7 @@
     },
     {
       "term": "b'dieved",
+      "aleph_beis": "בדיעבד",
       "variants": [
         "bedieved",
         "b'diavad",
@@ -2098,6 +2211,7 @@
     },
     {
       "term": "be yotzei",
+      "aleph_beis": "יוצא זײַן",
       "variants": [
         "be yotze",
         "be yotzeh"
@@ -2117,6 +2231,7 @@
     },
     {
       "term": "frum",
+      "aleph_beis": "פֿרום",
       "variants": [],
       "language_origin": "Yiddish",
       "category": "community and social life",
@@ -2133,6 +2248,7 @@
     },
     {
       "term": "baal teshuvah",
+      "aleph_beis": "בעל תשובה",
       "variants": [
         "ba'al teshuva",
         "ba'al teshuvah",
@@ -2152,6 +2268,7 @@
     },
     {
       "term": "off the derech",
+      "aleph_beis": "אוף די דרך",
       "variants": [
         "off-the-derech",
         "OTD"
@@ -2170,6 +2287,7 @@
     },
     {
       "term": "shomer Shabbos",
+      "aleph_beis": "שומר שבת",
       "dialect_pattern": "shomer Shabb[os|at]",
       "variants": [
         "shomer Shabbat"
@@ -2188,6 +2306,7 @@
     },
     {
       "term": "loshon hara",
+      "aleph_beis": "לשון הרע",
       "variants": [
         "lashon hara",
         "lashon hora",
@@ -2207,6 +2326,7 @@
     },
     {
       "term": "hashgacha pratis",
+      "aleph_beis": "השגחה פרטית",
       "dialect_pattern": "hashgacha prati[s|t]",
       "variants": [
         "hashgacha pratit",
@@ -2226,6 +2346,7 @@
     },
     {
       "term": "nosh",
+      "aleph_beis": "נאַשן",
       "variants": [
         "nash",
         "nosch",
@@ -2246,6 +2367,7 @@
     },
     {
       "term": "parnassa",
+      "aleph_beis": "פרנסה",
       "variants": [
         "parnasa",
         "parnosso"
@@ -2265,6 +2387,7 @@
     },
     {
       "term": "tzedakah",
+      "aleph_beis": "צדקה",
       "variants": [
         "tzedaka",
         "tsedakah"
@@ -2284,6 +2407,7 @@
     },
     {
       "term": "gemach",
+      "aleph_beis": "גמ״ח",
       "variants": [
         "gemakh",
         "g'mach"
@@ -2303,6 +2427,7 @@
     },
     {
       "term": "machmir",
+      "aleph_beis": "מחמיר",
       "variants": [
         "mahmir"
       ],
@@ -2320,6 +2445,7 @@
     },
     {
       "term": "meikil",
+      "aleph_beis": "מקיל",
       "variants": [
         "mekil",
         "maikil",
@@ -2339,6 +2465,7 @@
     },
     {
       "term": "chesed",
+      "aleph_beis": "חסד",
       "variants": [
         "hesed"
       ],
@@ -2357,6 +2484,7 @@
     },
     {
       "term": "bracha",
+      "aleph_beis": "ברכה",
       "variants": [
         "beracha",
         "brachah",
@@ -2377,6 +2505,7 @@
     },
     {
       "term": "teshuvah",
+      "aleph_beis": "תשובה",
       "variants": [
         "teshuva"
       ],
@@ -2388,6 +2517,7 @@
     },
     {
       "term": "tzeadekes",
+      "aleph_beis": "צדקת",
       "variants": [
         "tzadekes",
         "tzaddekes"
