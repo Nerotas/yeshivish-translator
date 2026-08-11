@@ -173,6 +173,13 @@ class GlossaryMatchingTests(TestCase):
         self.assertEqual([entry["term"] for entry in canonical_matches], ["chuppah"])
         self.assertEqual([entry["term"] for entry in variant_matches], ["chuppah"])
 
+    def test_distinguishes_kriah_from_keriah(self):
+        reading_matches = find_glossary_entries("The kriah was today.")
+        mourning_matches = find_glossary_entries("They performed keriah.")
+
+        self.assertEqual([entry["term"] for entry in reading_matches], ["kriah"])
+        self.assertEqual([entry["term"] for entry in mourning_matches], ["keriah"])
+
     def test_matches_multiword_phrase_across_whitespace(self):
         matches = find_glossary_entries("Baruch\nHashem, everyone is well.")
 

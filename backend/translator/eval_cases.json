@@ -88,5 +88,15 @@
     "forbidden_terms": ["chuppah"],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "kriah_torah_reading_context",
+    "direction": "yeshivish_to_english",
+    "source": "The kriah was beautiful.",
+    "candidate_translation": "The Torah reading was beautiful.",
+    "required_terms": ["Torah reading"],
+    "forbidden_terms": ["kriah", "tearing"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]

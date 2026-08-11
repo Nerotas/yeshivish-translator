@@ -1,0 +1,2819 @@
+{
+  "name": "Yeshivish Everyday Mitzvah and Religious-Object Glossary Expansion",
+  "version": 1,
+  "entry_count": 157,
+  "expansion_counts": {
+    "Sefer Torah and synagogue": 16,
+    "Torah reading": 17,
+    "Torah service": 3,
+    "everyday religious objects": 26,
+    "mezuzah": 9,
+    "mitzvah concepts": 5,
+    "sacred books": 23,
+    "sacred objects": 1,
+    "sacred-object handling": 4,
+    "sofrus": 19,
+    "tefillin": 18,
+    "tzitzis and tallis": 16
+  },
+  "entries": [
+    {
+      "term": "sefer",
+      "variants": [
+        "sefer kodesh"
+      ],
+      "aleph_beis": "ספר",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "I left the sefer in the beis midrash.",
+      "plain_english_example": "I left the religious book in the study hall.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "religious book",
+        "Torah book or sacred Jewish text"
+      ],
+      "context_note": "In Yeshivish, sefer commonly means a Jewish religious book rather than any book."
+    },
+    {
+      "term": "sefarim",
+      "variants": [
+        "sforim"
+      ],
+      "aleph_beis": "ספרים",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "The new shelves are for sefarim.",
+      "plain_english_example": "The new shelves are for religious books.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "religious books",
+        "Jewish sacred or Torah-study books"
+      ],
+      "context_note": "Plural of sefer; often used collectively for a home or synagogue Torah library."
+    },
+    {
+      "term": "sifrei kodesh",
+      "variants": [
+        "sifrei kedushah"
+      ],
+      "aleph_beis": "ספרי קודש",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Please do not put food on the sifrei kodesh.",
+      "plain_english_example": "Please do not put food on the sacred books.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sacred Jewish books",
+        "holy books"
+      ],
+      "context_note": "A general term for Jewish religious texts that are treated with respect."
+    },
+    {
+      "term": "chumash",
+      "variants": [
+        "chumashim"
+      ],
+      "aleph_beis": "חומש",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Take a chumash so you can follow the leining.",
+      "plain_english_example": "Take a printed Torah volume so you can follow the public reading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "printed volume of the Five Books of Moses",
+        "Pentateuch used for study or following the Torah reading"
+      ],
+      "context_note": "Often contains the Torah text together with commentaries and sometimes the haftaros."
+    },
+    {
+      "term": "Tanach",
+      "variants": [
+        "Tanakh"
+      ],
+      "aleph_beis": "תנ״ך",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "The pasuk is in Tanach.",
+      "plain_english_example": "The verse is in the Hebrew Bible.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Hebrew Bible",
+        "Torah, Prophets, and Writings"
+      ],
+      "context_note": "An acronym for Torah, Neviim, and Kesuvim."
+    },
+    {
+      "term": "Nevi'im",
+      "variants": [
+        "Neviim"
+      ],
+      "aleph_beis": "נביאים",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "That haftorah comes from Nevi'im.",
+      "plain_english_example": "That prophetic reading comes from the Prophets.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Prophets section of the Hebrew Bible",
+        "books of the Prophets"
+      ],
+      "context_note": "The second major division of Tanach."
+    },
+    {
+      "term": "Kesuvim",
+      "variants": [
+        "Ketuvim"
+      ],
+      "aleph_beis": "כתובים",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Tehillim is part of Kesuvim.",
+      "plain_english_example": "Psalms is part of the Writings.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Writings section of the Hebrew Bible",
+        "Hagiographa"
+      ],
+      "context_note": "The third major division of Tanach."
+    },
+    {
+      "term": "Mishnah",
+      "variants": [
+        "Mishna"
+      ],
+      "aleph_beis": "משנה",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "We learned that Mishnah yesterday.",
+      "plain_english_example": "We studied that unit of the Mishnah yesterday.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Mishnah",
+        "early rabbinic legal compilation"
+      ],
+      "context_note": "Can mean the work as a whole or an individual unit of Mishnah."
+    },
+    {
+      "term": "Mishnayos",
+      "variants": [
+        "Mishnayot"
+      ],
+      "aleph_beis": "משניות",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "They divided the Mishnayos among the family.",
+      "plain_english_example": "They divided the Mishnah study among the family.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Mishnah texts or tractates",
+        "plural units of Mishnah"
+      ],
+      "context_note": "Commonly used for studying chapters or tractates of Mishnah, including in memorial learning."
+    },
+    {
+      "term": "masechta",
+      "variants": [
+        "masechet"
+      ],
+      "aleph_beis": "מסכת",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Which masechta are they learning this zman?",
+      "plain_english_example": "Which Talmudic tractate are they studying this term?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Talmudic tractate",
+        "tractate of Mishnah or Gemara"
+      ],
+      "context_note": "In yeshiva conversation, usually a tractate being learned."
+    },
+    {
+      "term": "daf",
+      "variants": [
+        "blatt"
+      ],
+      "aleph_beis": "דף",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "What daf are you holding on?",
+      "plain_english_example": "Which Talmud folio are you up to?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "folio page of Talmud",
+        "page or folio"
+      ],
+      "context_note": "In Gemara study, daf normally refers to a folio with an a and b side."
+    },
+    {
+      "term": "daf yomi",
+      "variants": [],
+      "aleph_beis": "דף יומי",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "He goes to a daf yomi shiur every morning.",
+      "plain_english_example": "He attends a daily Talmud-cycle class every morning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "daily Talmud study cycle",
+        "one-folio-per-day Talmud program"
+      ],
+      "context_note": "A worldwide study schedule completing the Babylonian Talmud in a fixed cycle."
+    },
+    {
+      "term": "perek",
+      "variants": [],
+      "aleph_beis": "פרק",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "We finished the perek.",
+      "plain_english_example": "We finished the chapter.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "chapter",
+        "chapter of a Jewish text"
+      ],
+      "context_note": "Commonly used for chapters of Tanach, Mishnah, or other Torah texts."
+    },
+    {
+      "term": "siman",
+      "variants": [],
+      "aleph_beis": "סימן",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Look in siman shin yud ches.",
+      "plain_english_example": "Look in the numbered legal section indicated.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "numbered section in a halachic work",
+        "section or chapter reference"
+      ],
+      "context_note": "Especially common in Shulchan Aruch and later halachic works."
+    },
+    {
+      "term": "se'if",
+      "variants": [
+        "seif"
+      ],
+      "aleph_beis": "סעיף",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "The din is in se'if beis.",
+      "plain_english_example": "The rule is in subsection two.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "subsection of a halachic text",
+        "paragraph-level legal section"
+      ],
+      "context_note": "A subdivision of a siman in works such as Shulchan Aruch."
+    },
+    {
+      "term": "se'if katan",
+      "variants": [
+        "seif katan"
+      ],
+      "aleph_beis": "סעיף קטן",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "See se'if katan five.",
+      "plain_english_example": "See subcomment five.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "numbered subcomment within a commentary",
+        "small subsection reference"
+      ],
+      "context_note": "Often used when citing commentaries such as Mishnah Berurah."
+    },
+    {
+      "term": "mareh makom",
+      "variants": [
+        "mar'eh makom"
+      ],
+      "aleph_beis": "מראה מקום",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Can you send me the mareh makom?",
+      "plain_english_example": "Can you send me the source reference?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "source reference",
+        "citation to a Torah source"
+      ],
+      "context_note": "Literally a place-reference; often means the source for a statement."
+    },
+    {
+      "term": "mareh mekomos",
+      "variants": [
+        "marei mekomos",
+        "mareh mekomot"
+      ],
+      "aleph_beis": "מראי מקומות",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "The rebbe gave out mareh mekomos.",
+      "plain_english_example": "The teacher distributed a source-reference sheet.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "source sheet or list of references",
+        "multiple source references"
+      ],
+      "context_note": "Often used for a prepared sheet of sources for a shiur or chavrusa."
+    },
+    {
+      "term": "Shulchan Aruch",
+      "variants": [],
+      "aleph_beis": "שולחן ערוך",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "The Shulchan Aruch discusses the case.",
+      "plain_english_example": "The Code of Jewish Law discusses the case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Code of Jewish Law",
+        "major halachic code"
+      ],
+      "context_note": "Commonly cited simply by title in practical halachic discussion."
+    },
+    {
+      "term": "Mishnah Berurah",
+      "variants": [
+        "Mishna Berura"
+      ],
+      "aleph_beis": "משנה ברורה",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Check the Mishnah Berurah on that siman.",
+      "plain_english_example": "Check the Mishnah Berurah commentary on that section.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Mishnah Berurah halachic commentary",
+        "widely used commentary on Orach Chaim"
+      ],
+      "context_note": "A standard practical halachic work frequently cited in Ashkenazi Orthodox settings."
+    },
+    {
+      "term": "Rambam",
+      "variants": [],
+      "aleph_beis": "רמב״ם",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "What does the Rambam hold here?",
+      "plain_english_example": "What position does Maimonides take here?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Maimonides",
+        "Rabbi Moshe ben Maimon or his works"
+      ],
+      "context_note": "In learning, “the Rambam” often means Maimonides or a passage in Mishneh Torah."
+    },
+    {
+      "term": "Rashi",
+      "variants": [],
+      "aleph_beis": "רש״י",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "Look at the Rashi inside.",
+      "plain_english_example": "Look at Rashi's commentary in the text.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Rashi",
+        "Rabbi Shlomo Yitzchaki or his commentary"
+      ],
+      "context_note": "Commonly refers to Rashi’s commentary on Torah or Talmud."
+    },
+    {
+      "term": "Tosafos",
+      "variants": [
+        "Tosafot"
+      ],
+      "aleph_beis": "תוספות",
+      "language_origin": "Hebrew",
+      "category": "sacred books",
+      "yeshivish_example": "The Tosafos asks a kashya.",
+      "plain_english_example": "The Tosafist commentary raises a difficulty.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Tosafist commentary on the Talmud",
+        "medieval Talmudic glosses"
+      ],
+      "context_note": "A core layer of traditional Gemara study."
+    },
+    {
+      "term": "pasul",
+      "variants": [
+        "possul"
+      ],
+      "aleph_beis": "פסול",
+      "language_origin": "Hebrew",
+      "category": "sacred objects",
+      "yeshivish_example": "The sofer said the mezuzah is pasul.",
+      "plain_english_example": "The scribe said the mezuzah is invalid under Jewish law.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "invalid under Jewish law",
+        "ritually or halachically unfit"
+      ],
+      "context_note": "Frequently applied to a Sefer Torah, tefillin, mezuzah, sukkah, esrog, or other mitzvah object."
+    },
+    {
+      "term": "genizah",
+      "variants": [
+        "geniza"
+      ],
+      "aleph_beis": "גניזה",
+      "language_origin": "Hebrew",
+      "category": "sacred-object handling",
+      "yeshivish_example": "Put those old pages in genizah.",
+      "plain_english_example": "Place those old sacred pages in the repository for respectful disposal.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "repository for worn sacred texts",
+        "respectful storage or burial process for holy writings"
+      ],
+      "context_note": "Sacred texts and certain holy objects that may not be discarded normally are placed in genizah."
+    },
+    {
+      "term": "shaimos",
+      "variants": [
+        "sheimos",
+        "shemos"
+      ],
+      "aleph_beis": "שמות",
+      "language_origin": "mixed",
+      "category": "sacred-object handling",
+      "yeshivish_example": "Is this paper shaimos?",
+      "plain_english_example": "Does this paper require respectful sacred-text disposal?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sacred writings requiring respectful disposal",
+        "items containing divine names or other sanctified text"
+      ],
+      "context_note": "In common Ashkenazi speech, shaimos often means papers or books that belong in genizah."
+    },
+    {
+      "term": "tashmishei kedushah",
+      "variants": [
+        "tashmishei kedusha"
+      ],
+      "aleph_beis": "תשמישי קדושה",
+      "language_origin": "Hebrew",
+      "category": "sacred-object handling",
+      "yeshivish_example": "Do you have the tashmishei kedushah?",
+      "plain_english_example": "Do you have the objects that directly serve items of sanctity?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "objects that directly serve items of sanctity",
+        "accessories of sacred objects with special halachic status"
+      ],
+      "context_note": "A technical category including objects that directly serve highly sacred items; exact disposal rules depend on the object."
+    },
+    {
+      "term": "tashmishei mitzvah",
+      "variants": [
+        "tashmishei mitzva"
+      ],
+      "aleph_beis": "תשמישי מצוה",
+      "language_origin": "Hebrew",
+      "category": "sacred-object handling",
+      "yeshivish_example": "Do you have the tashmishei mitzvah?",
+      "plain_english_example": "Do you have the objects used to perform a mitzvah?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "objects used to perform a mitzvah",
+        "mitzvah accessories"
+      ],
+      "context_note": "A halachic category distinct from tashmishei kedushah; treatment after use depends on the object and custom."
+    },
+    {
+      "term": "hidur mitzvah",
+      "variants": [
+        "hiddur mitzvah",
+        "hiddur mitzva"
+      ],
+      "aleph_beis": "הידור מצוה",
+      "language_origin": "Hebrew",
+      "category": "mitzvah concepts",
+      "yeshivish_example": "He paid extra for hidur mitzvah.",
+      "plain_english_example": "He paid extra to perform the mitzvah with a finer object.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "beautifying or enhancing a mitzvah",
+        "performing a mitzvah in an especially fine manner"
+      ],
+      "context_note": "Used for choosing a more beautiful or higher-quality mitzvah object or performance."
+    },
+    {
+      "term": "sofer",
+      "variants": [],
+      "aleph_beis": "סופר",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "Take the tefillin to a sofer.",
+      "plain_english_example": "Take the tefillin to a qualified sacred scribe.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "scribe trained to write sacred Jewish scrolls",
+        "Torah scribe"
+      ],
+      "context_note": "A sofer writes or repairs items such as Sifrei Torah, tefillin, and mezuzos."
+    },
+    {
+      "term": "sofer STaM",
+      "variants": [],
+      "aleph_beis": "סופר סת״ם",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The sofer STaM checked the parshiyos.",
+      "plain_english_example": "The sacred scribe checked the parchment passages.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "scribe specializing in Sefer Torah, tefillin, and mezuzah",
+        "STaM scribe"
+      ],
+      "context_note": "STaM is an acronym for Sefer Torah, Tefillin, Mezuzah."
+    },
+    {
+      "term": "ST'M",
+      "variants": [
+        "stam sofrus"
+      ],
+      "aleph_beis": "סת״ם",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "He learned STaM for several years.",
+      "plain_english_example": "He studied the laws and craft of writing sacred scrolls for several years.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sefer Torah, tefillin, and mezuzah scribal field",
+        "acronym for sacred scroll writing"
+      ],
+      "context_note": "An acronym formed from Sefer Torah, Tefillin, and Mezuzah. It refers to the scribal field and its sacred written objects."
+    },
+    {
+      "term": "klaf",
+      "variants": [
+        "kelaf"
+      ],
+      "aleph_beis": "קלף",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The letters are written directly on the klaf.",
+      "plain_english_example": "The letters are written directly on the parchment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "parchment used for sacred scrolls",
+        "kosher parchment"
+      ],
+      "context_note": "Used for Sifrei Torah, tefillin parshiyos, and mezuzos."
+    },
+    {
+      "term": "kulmus",
+      "variants": [
+        "qulmus"
+      ],
+      "aleph_beis": "קולמוס",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The sofer trimmed his kulmus.",
+      "plain_english_example": "The scribe trimmed his writing quill.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "scribe’s pen or quill",
+        "writing implement used by a sofer"
+      ],
+      "context_note": "Traditionally a reed or feather-type writing instrument prepared for sacred writing."
+    },
+    {
+      "term": "diyo",
+      "variants": [
+        "dio"
+      ],
+      "aleph_beis": "דיו",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The diyo cracked on one letter.",
+      "plain_english_example": "The ink cracked on one letter.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ink used for sacred writing",
+        "scribal ink"
+      ],
+      "context_note": "Sacred scrolls require suitable black ink written according to the relevant halachic rules."
+    },
+    {
+      "term": "ksav Ashuris",
+      "variants": [
+        "ketav Ashurit"
+      ],
+      "aleph_beis": "כתב אשורית",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "STaM is written in ksav Ashuris.",
+      "plain_english_example": "Sacred scrolls are written in the traditional square Hebrew script.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional square Hebrew script used for sacred scrolls",
+        "Ashurit script"
+      ],
+      "context_note": "The formal script used for Sifrei Torah, tefillin, and mezuzos."
+    },
+    {
+      "term": "otiyos",
+      "variants": [
+        "otiyot"
+      ],
+      "aleph_beis": "אותיות",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "Two otiyos are touching.",
+      "plain_english_example": "Two letters are touching.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "letters",
+        "Hebrew characters in a sacred text"
+      ],
+      "context_note": "In sofrus, the precise form and separation of letters can determine validity."
+    },
+    {
+      "term": "tagim",
+      "variants": [
+        "tagin"
+      ],
+      "aleph_beis": "תגין",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The sofer repaired the tagim.",
+      "plain_english_example": "The scribe repaired the letter crowns.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "decorative crowns on specified Hebrew letters",
+        "scribal crowns"
+      ],
+      "context_note": "Small crown-like strokes added to designated letters in sacred writing."
+    },
+    {
+      "term": "sirtut",
+      "variants": [],
+      "aleph_beis": "שרטוט",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The klaf already has sirtut.",
+      "plain_english_example": "The parchment already has ruled guide lines.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ruled guide lines on parchment",
+        "scored writing lines"
+      ],
+      "context_note": "Certain sacred texts require ruled lines before writing."
+    },
+    {
+      "term": "yeriah",
+      "variants": [
+        "yeria"
+      ],
+      "aleph_beis": "יריעה",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The tear is near the edge of the yeriah.",
+      "plain_english_example": "The tear is near the edge of the Torah-scroll parchment sheet.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "parchment sheet or panel of a Torah scroll",
+        "scroll sheet"
+      ],
+      "context_note": "A Sefer Torah is assembled from multiple parchment sheets sewn together."
+    },
+    {
+      "term": "parshiyos",
+      "variants": [
+        "parshiot"
+      ],
+      "aleph_beis": "פרשיות",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The batim are fine but the parshiyos need checking.",
+      "plain_english_example": "The tefillin boxes are fine but the parchment passages need checking.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "written Torah passages",
+        "parchment sections, especially in tefillin or mezuzah"
+      ],
+      "context_note": "In sofrus and tefillin discussions, parshiyos often means the handwritten parchment passages."
+    },
+    {
+      "term": "mukaf gvil",
+      "variants": [],
+      "aleph_beis": "מוקף גויל",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "Do you have the mukaf gvil?",
+      "plain_english_example": "Do you have the letter surrounded by blank parchment?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "letter surrounded by blank parchment",
+        "requirement that a letter not improperly touch another letter"
+      ],
+      "context_note": "A technical scribal rule concerning the blank parchment around letters."
+    },
+    {
+      "term": "chok tochos",
+      "variants": [
+        "chak tochot"
+      ],
+      "aleph_beis": "חק תוכות",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "Do you have the chok tochos?",
+      "plain_english_example": "Do you have the forming a letter by carving away around it rather than writing it?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "forming a letter by carving away around it rather than writing it",
+        "prohibited method of creating sacred-script letters"
+      ],
+      "context_note": "A technical law in STaM; application can be intricate."
+    },
+    {
+      "term": "kesidran",
+      "variants": [],
+      "aleph_beis": "כסדרן",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "Do you have the kesidran?",
+      "plain_english_example": "Do you have the written in proper sequence?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "written in proper sequence",
+        "in order"
+      ],
+      "context_note": "Especially important in tefillin and mezuzah, where certain corrections cannot be made out of sequence."
+    },
+    {
+      "term": "shelo kesidran",
+      "variants": [],
+      "aleph_beis": "שלא כסדרן",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "Do you have the shelo kesidran?",
+      "plain_english_example": "Do you have the out of the required writing sequence?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "out of the required writing sequence",
+        "not in proper order"
+      ],
+      "context_note": "A technical STaM issue that can make some later corrections invalid, especially in tefillin and mezuzah."
+    },
+    {
+      "term": "hagahah",
+      "variants": [
+        "hagaah"
+      ],
+      "aleph_beis": "הגהה",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The sefer Torah is out for hagahah.",
+      "plain_english_example": "The Torah scroll is being professionally checked for errors.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "proofreading or inspection of sacred writing",
+        "scribal checking"
+      ],
+      "context_note": "Often means checking a Sefer Torah, tefillin, or mezuzah for errors."
+    },
+    {
+      "term": "magiah",
+      "variants": [
+        "magiha"
+      ],
+      "aleph_beis": "מגיה",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "The magiah found a problem in one word.",
+      "plain_english_example": "The sacred-text examiner found a problem in one word.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "proofreader or checker of sacred texts",
+        "STaM examiner"
+      ],
+      "context_note": "A person who checks sacred writing for textual or letter-form errors."
+    },
+    {
+      "term": "lishmah",
+      "variants": [],
+      "aleph_beis": "לשמה",
+      "language_origin": "Hebrew",
+      "category": "sofrus",
+      "yeshivish_example": "Do you have the lishmah?",
+      "plain_english_example": "Do you have the for the sake of the mitzvah or sanctity?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "for the sake of the mitzvah or sanctity",
+        "with the required specific intention"
+      ],
+      "context_note": "A general halachic concept; in STaM it can refer to writing or preparing components with required intent."
+    },
+    {
+      "term": "sefer Torah",
+      "variants": [
+        "Torah scroll"
+      ],
+      "aleph_beis": "ספר תורה",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "They took out a sefer Torah for leining.",
+      "plain_english_example": "They removed a handwritten Torah scroll for the public reading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "handwritten Torah scroll",
+        "scroll containing the Five Books of Moses"
+      ],
+      "context_note": "Written by a qualified sofer on parchment and used for public Torah reading."
+    },
+    {
+      "term": "sifrei Torah",
+      "variants": [],
+      "aleph_beis": "ספרי תורה",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "There are three sifrei Torah in the aron kodesh.",
+      "plain_english_example": "There are three Torah scrolls in the holy ark.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Torah scrolls",
+        "plural of Sefer Torah"
+      ],
+      "context_note": "Plural used when a synagogue owns or takes out multiple Torah scrolls."
+    },
+    {
+      "term": "beis knesses",
+      "variants": [
+        "beit knesset",
+        "bais knesses"
+      ],
+      "aleph_beis": "בית כנסת",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "The beis knesses is across the street.",
+      "plain_english_example": "The synagogue is across the street.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "synagogue",
+        "house of assembly for Jewish prayer"
+      ],
+      "context_note": "A Hebrew term for synagogue; Yeshivish speech also commonly uses shul."
+    },
+    {
+      "term": "aron kodesh",
+      "variants": [
+        "aron hakodesh",
+        "aron ha-kodesh"
+      ],
+      "aleph_beis": "ארון קודש",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "Please open the aron kodesh.",
+      "plain_english_example": "Please open the holy ark that contains the Torah scrolls.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "holy ark that holds Torah scrolls",
+        "Torah ark"
+      ],
+      "context_note": "The cabinet at the front of a synagogue where Sifrei Torah are kept."
+    },
+    {
+      "term": "heichal",
+      "variants": [
+        "heikhal"
+      ],
+      "aleph_beis": "היכל",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "Do you have the heichal?",
+      "plain_english_example": "Do you have the sanctuary or Torah ark, especially in Sephardic usage?",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "sanctuary or Torah ark, especially in Sephardic usage",
+        "holy chamber"
+      ],
+      "context_note": "In many Sephardic communities the Torah ark is called the heichal."
+    },
+    {
+      "term": "paroches",
+      "variants": [
+        "parochet"
+      ],
+      "aleph_beis": "פרוכת",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "They changed the paroches before Yom Tov.",
+      "plain_english_example": "They changed the curtain covering the Torah ark before the festival.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "curtain covering the Torah ark",
+        "ark curtain"
+      ],
+      "context_note": "The decorative curtain associated with the aron kodesh."
+    },
+    {
+      "term": "bimah",
+      "variants": [
+        "bima"
+      ],
+      "aleph_beis": "בימה",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "Put the sefer Torah on the bimah.",
+      "plain_english_example": "Place the Torah scroll on the reading platform.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "platform or table from which the Torah is read",
+        "synagogue reading platform"
+      ],
+      "context_note": "Usually the central Torah-reading platform in an Ashkenazi synagogue."
+    },
+    {
+      "term": "Torah yad",
+      "variants": [
+        "yad pointer",
+        "Torah pointer"
+      ],
+      "aleph_beis": "יד",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "The baal koreh used a Torah yad.",
+      "plain_english_example": "The Torah reader used a pointer to follow the text.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pointer used to follow text in a Torah scroll",
+        "Torah-reading pointer"
+      ],
+      "context_note": "A hand-shaped pointer used so the reader does not touch the parchment directly."
+    },
+    {
+      "term": "eitz chaim",
+      "variants": [
+        "etz chaim"
+      ],
+      "aleph_beis": "עץ חיים",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "Hold the eitz chaim when you lift the Torah.",
+      "plain_english_example": "Hold the Torah-scroll handle when you lift it.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wooden roller or handle of a Torah scroll",
+        "Torah-scroll shaft, singular"
+      ],
+      "context_note": "Literally “tree of life”; one of the wooden shafts attached to a Torah scroll."
+    },
+    {
+      "term": "atzei chaim",
+      "variants": [
+        "atzei hayim"
+      ],
+      "aleph_beis": "עצי חיים",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "The atzei chaim need repair.",
+      "plain_english_example": "The Torah-scroll wooden handles need repair.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wooden rollers or handles of a Torah scroll",
+        "Torah-scroll shafts"
+      ],
+      "context_note": "Plural of eitz chaim."
+    },
+    {
+      "term": "me'il",
+      "variants": [
+        "Torah mantle",
+        "meil"
+      ],
+      "aleph_beis": "מעיל",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "The new me'il was donated for the sefer Torah.",
+      "plain_english_example": "The new cloth Torah mantle was donated for the scroll.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cloth mantle covering a Torah scroll",
+        "Torah cover"
+      ],
+      "context_note": "Common Ashkenazi covering placed over a rolled Sefer Torah."
+    },
+    {
+      "term": "gartel",
+      "variants": [
+        "Torah gartel"
+      ],
+      "aleph_beis": "גאַרטל",
+      "language_origin": "Yiddish",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "Put the gartel around the sefer Torah before the me'il.",
+      "plain_english_example": "Fasten the Torah binder around the scroll before putting on its mantle.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "belt or binder",
+        "belt used around a Torah scroll or as a prayer garment"
+      ],
+      "context_note": "The word can mean a Torah binder or a prayer belt depending on context."
+    },
+    {
+      "term": "rimonim",
+      "variants": [
+        "Torah finials"
+      ],
+      "aleph_beis": "רימונים",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "They polished the rimonim for Yom Tov.",
+      "plain_english_example": "They polished the Torah-scroll finials for the festival.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "decorative finials placed on Torah-scroll handles",
+        "Torah ornaments"
+      ],
+      "context_note": "Often silver ornaments placed over the upper ends of the atzei chaim."
+    },
+    {
+      "term": "keser Torah",
+      "variants": [
+        "keter Torah"
+      ],
+      "aleph_beis": "כתר תורה",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "The keser Torah is kept in the cabinet.",
+      "plain_english_example": "The Torah crown is kept in the cabinet.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Torah crown",
+        "decorative crown placed on a Torah scroll"
+      ],
+      "context_note": "An ornamental crown used on some Torah scrolls."
+    },
+    {
+      "term": "tas",
+      "variants": [
+        "Torah breastplate"
+      ],
+      "aleph_beis": "טס",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "The tas has the donor's inscription.",
+      "plain_english_example": "The Torah breastplate has the donor's inscription.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ornamental Torah breastplate or shield",
+        "decorative metal plate hung on a Torah scroll"
+      ],
+      "context_note": "An Ashkenazi Torah ornament, often suspended from the upper handles."
+    },
+    {
+      "term": "tik",
+      "variants": [
+        "Torah case"
+      ],
+      "aleph_beis": "תיק",
+      "language_origin": "Hebrew",
+      "category": "Sefer Torah and synagogue",
+      "yeshivish_example": "Do you have the tik?",
+      "plain_english_example": "Do you have the rigid case for a Torah scroll?",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "rigid case for a Torah scroll",
+        "Sephardic-style Torah case"
+      ],
+      "context_note": "Many Sephardic and Mizrahi Torah scrolls are housed in a rigid tik rather than a cloth mantle."
+    },
+    {
+      "term": "pesicha",
+      "variants": [
+        "peticha"
+      ],
+      "aleph_beis": "פתיחה",
+      "language_origin": "Hebrew",
+      "category": "Torah service",
+      "yeshivish_example": "He got pesicha for Neilah.",
+      "plain_english_example": "He received the honor of opening the Torah ark for the closing service.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "honor of opening the Torah ark",
+        "opening the ark"
+      ],
+      "context_note": "In Ashkenazi synagogue usage, pesicha often means being honored with opening the aron kodesh."
+    },
+    {
+      "term": "hotzaas Sefer Torah",
+      "variants": [
+        "hotzaat Sefer Torah"
+      ],
+      "aleph_beis": "הוצאת ספר תורה",
+      "language_origin": "Hebrew",
+      "category": "Torah service",
+      "yeshivish_example": "We are up to hotzaas Sefer Torah.",
+      "plain_english_example": "The service has reached the removal of the Torah scroll from the ark.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "taking the Torah scroll out of the ark",
+        "removal of the Torah for public reading"
+      ],
+      "context_note": "Refers to the part of the service when the Torah is removed from the ark."
+    },
+    {
+      "term": "hachnasas Sefer Torah",
+      "variants": [
+        "hachnasat Sefer Torah"
+      ],
+      "aleph_beis": "הכנסת ספר תורה",
+      "language_origin": "Hebrew",
+      "category": "Torah service",
+      "yeshivish_example": "The hachnasas Sefer Torah is Sunday.",
+      "plain_english_example": "The Torah-scroll dedication procession is Sunday.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bringing a Torah scroll into a synagogue",
+        "Torah-scroll dedication procession"
+      ],
+      "context_note": "Often means the celebratory dedication and procession of a newly completed Sefer Torah."
+    },
+    {
+      "term": "leining",
+      "variants": [
+        "layning",
+        "laining"
+      ],
+      "aleph_beis": "ליינען",
+      "language_origin": "Yiddish",
+      "category": "Torah reading",
+      "yeshivish_example": "Who is leining this Shabbos?",
+      "plain_english_example": "Who is reading the Torah publicly this Sabbath?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "public chanting or reading of the Torah",
+        "Torah reading"
+      ],
+      "context_note": "A Yiddish-derived term widely used in Ashkenazi Orthodox English."
+    },
+    {
+      "term": "baal koreh",
+      "variants": [
+        "baal korei",
+        "baal kore"
+      ],
+      "aleph_beis": "בעל קורא",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "The baal koreh knows the whole parsha.",
+      "plain_english_example": "The Torah reader knows the entire weekly portion.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Torah reader",
+        "person who chants the public Torah reading"
+      ],
+      "context_note": "The person who reads the Torah aloud for the congregation."
+    },
+    {
+      "term": "baal kriah",
+      "variants": [
+        "baal keriah"
+      ],
+      "aleph_beis": "בעל קריאה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "Ask the baal kriah about the trop.",
+      "plain_english_example": "Ask the Torah reader about the cantillation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Torah reader",
+        "person responsible for the public reading"
+      ],
+      "context_note": "Another common term for the baal koreh."
+    },
+    {
+      "term": "kriah",
+      "variants": [],
+      "aleph_beis": "קריאה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "The kriah was very clear.",
+      "plain_english_example": "The public Torah reading was very clear.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "reading",
+        "public Torah reading, depending on context"
+      ],
+      "context_note": "Context determines whether it means reading generally or a formal liturgical reading. This transliteration can collide with the mourning term keriah/kriah (קריעה), meaning ritual tearing; the Aleph-Beis spelling and context distinguish them."
+    },
+    {
+      "term": "krias haTorah",
+      "variants": [
+        "kerias haTorah",
+        "kriat haTorah"
+      ],
+      "aleph_beis": "קריאת התורה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "Krias haTorah starts after Shacharis.",
+      "plain_english_example": "The public Torah reading begins after the morning prayer service.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "public Torah reading",
+        "reading of the Torah in synagogue"
+      ],
+      "context_note": "Formal Hebrew term for the communal Torah-reading service."
+    },
+    {
+      "term": "parsha",
+      "variants": [
+        "parashah",
+        "parashat"
+      ],
+      "aleph_beis": "פרשה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "What is the parsha this week?",
+      "plain_english_example": "What is the weekly Torah portion this week?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Torah portion",
+        "section of the Torah"
+      ],
+      "context_note": "In weekly conversation, usually means the weekly Torah reading."
+    },
+    {
+      "term": "parshas hashavua",
+      "variants": [
+        "parashat hashavua"
+      ],
+      "aleph_beis": "פרשת השבוע",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "The vort is on the parshas hashavua.",
+      "plain_english_example": "The Torah thought is about the weekly portion.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "weekly Torah portion",
+        "Torah reading assigned to the week"
+      ],
+      "context_note": "Literally the portion of the week."
+    },
+    {
+      "term": "sedra",
+      "variants": [
+        "sidra"
+      ],
+      "aleph_beis": "סדרה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "Which sedra are we reading?",
+      "plain_english_example": "Which weekly Torah portion are we reading?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "weekly Torah portion",
+        "scheduled Torah reading"
+      ],
+      "context_note": "An older/common Ashkenazi term for the weekly parsha."
+    },
+    {
+      "term": "haftorah",
+      "variants": [
+        "haftara",
+        "haftarah"
+      ],
+      "aleph_beis": "הפטרה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "He is doing the haftorah for his bar mitzvah.",
+      "plain_english_example": "He is chanting the prophetic reading for his bar mitzvah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "prophetic reading following the Torah reading",
+        "Haftarah"
+      ],
+      "context_note": "A selection from the Prophets read after the Torah portion on designated days."
+    },
+    {
+      "term": "maftir",
+      "variants": [],
+      "aleph_beis": "מפטיר",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "Who has maftir this week?",
+      "plain_english_example": "Who has the final Torah aliyah and haftarah assignment this week?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "final Torah aliyah associated with the haftarah reader",
+        "person or reading called maftir"
+      ],
+      "context_note": "The maftir aliyah precedes the haftarah; on special days it may be read from an additional scroll."
+    },
+    {
+      "term": "oleh",
+      "variants": [
+        "oleh laTorah"
+      ],
+      "aleph_beis": "עולה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "The oleh should stand next to the baal koreh.",
+      "plain_english_example": "The person called to the Torah should stand next to the reader.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person called to the Torah for an aliyah",
+        "Torah honoree"
+      ],
+      "context_note": "Literally one who goes up; in synagogue context the person receiving an aliyah."
+    },
+    {
+      "term": "hagbah",
+      "variants": [
+        "hagbahah"
+      ],
+      "aleph_beis": "הגבהה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "He got hagbah today.",
+      "plain_english_example": "He received the honor of lifting and displaying the Torah scroll today.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "lifting the Torah scroll for display",
+        "Torah-lifting honor"
+      ],
+      "context_note": "The ritual lifting and displaying of the Torah scroll around the conclusion of the reading."
+    },
+    {
+      "term": "gelilah",
+      "variants": [
+        "gelila"
+      ],
+      "aleph_beis": "גלילה",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "His son did gelilah.",
+      "plain_english_example": "His son received the honor of dressing the Torah scroll.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rolling and dressing the Torah scroll",
+        "Torah-dressing honor"
+      ],
+      "context_note": "The honor of closing, binding, and dressing the Torah after hagbah."
+    },
+    {
+      "term": "trop",
+      "variants": [
+        "trope"
+      ],
+      "aleph_beis": "טראָפּ",
+      "language_origin": "Yiddish",
+      "category": "Torah reading",
+      "yeshivish_example": "He is practicing the trop.",
+      "plain_english_example": "He is practicing the Torah-reading cantillation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cantillation melody or marks used for Torah and haftarah reading",
+        "Torah-reading chant system"
+      ],
+      "context_note": "Yeshivish/Ashkenazi term for the cantillation system; Hebrew terminology is taamei hamikra."
+    },
+    {
+      "term": "taamei hamikra",
+      "variants": [
+        "taamei mikra"
+      ],
+      "aleph_beis": "טעמי המקרא",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "The taamei hamikra change the phrasing.",
+      "plain_english_example": "The biblical cantillation marks affect the phrasing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "biblical cantillation marks",
+        "cantillation system for Scripture"
+      ],
+      "context_note": "Formal Hebrew term for the accent and cantillation marks used when chanting Tanach."
+    },
+    {
+      "term": "pasuk",
+      "variants": [
+        "posuk"
+      ],
+      "aleph_beis": "פסוק",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "Read the next pasuk again.",
+      "plain_english_example": "Read the next biblical verse again.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "verse of Scripture",
+        "biblical verse"
+      ],
+      "context_note": "Very common in learning and Torah-reading conversation."
+    },
+    {
+      "term": "pesukim",
+      "variants": [
+        "psukim"
+      ],
+      "aleph_beis": "פסוקים",
+      "language_origin": "Hebrew",
+      "category": "Torah reading",
+      "yeshivish_example": "These pesukim are in the haftorah.",
+      "plain_english_example": "These biblical verses are in the prophetic reading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "verses of Scripture",
+        "biblical verses"
+      ],
+      "context_note": "Plural of pasuk."
+    },
+    {
+      "term": "tefillin",
+      "variants": [
+        "tefilin"
+      ],
+      "aleph_beis": "תפילין",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "Did you bring your tefillin?",
+      "plain_english_example": "Did you bring the ritual leather boxes worn for weekday prayer?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pair of black leather boxes containing Torah passages worn for weekday prayer",
+        "phylacteries"
+      ],
+      "context_note": "The mitzvah uses one tefillin on the arm and one on the head."
+    },
+    {
+      "term": "hanachas tefillin",
+      "variants": [
+        "hanachat tefillin"
+      ],
+      "aleph_beis": "הנחת תפילין",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "Hanachas tefillin is before Shacharis.",
+      "plain_english_example": "Putting on tefillin is before the morning service.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "putting on tefillin",
+        "donning tefillin"
+      ],
+      "context_note": "The act or mitzvah performance of placing and fastening tefillin."
+    },
+    {
+      "term": "tefillin shel yad",
+      "variants": [
+        "shel yad",
+        "arm tefillin"
+      ],
+      "aleph_beis": "תפילין של יד",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "The tefillin shel yad goes on the arm.",
+      "plain_english_example": "The arm tefillin is placed on the upper arm.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "arm tefillin",
+        "tefillin worn on the upper arm"
+      ],
+      "context_note": "Contains the four Torah passages written together on one parchment scroll."
+    },
+    {
+      "term": "tefillin shel rosh",
+      "variants": [
+        "shel rosh",
+        "head tefillin"
+      ],
+      "aleph_beis": "תפילין של ראש",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "Check that the tefillin shel rosh is centered.",
+      "plain_english_example": "Check that the head tefillin is centered.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "head tefillin",
+        "tefillin worn on the head"
+      ],
+      "context_note": "Contains the four passages in separate compartments."
+    },
+    {
+      "term": "batim",
+      "variants": [
+        "tefillin batim"
+      ],
+      "aleph_beis": "בתים",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "The batim need to stay square.",
+      "plain_english_example": "The tefillin boxes need to retain their required square form.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tefillin boxes or housings",
+        "leather compartments of tefillin"
+      ],
+      "context_note": "Literally houses; in tefillin context, the black leather box structures."
+    },
+    {
+      "term": "retzuos",
+      "variants": [
+        "retzuot"
+      ],
+      "aleph_beis": "רצועות",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "The retzuos are starting to fade.",
+      "plain_english_example": "The tefillin straps are starting to lose their black color.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tefillin straps",
+        "leather straps of tefillin"
+      ],
+      "context_note": "Black leather straps used to fasten the shel yad and shel rosh."
+    },
+    {
+      "term": "ketzitzah",
+      "variants": [
+        "ketzitza"
+      ],
+      "aleph_beis": "קציצה",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "Do you have the ketzitzah?",
+      "plain_english_example": "Do you have the main cube of a tefillin box?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "main cube of a tefillin box",
+        "upper box containing the parchment passages"
+      ],
+      "context_note": "A technical term for the square upper section of the tefillin bayis."
+    },
+    {
+      "term": "titura",
+      "variants": [],
+      "aleph_beis": "תיתורא",
+      "language_origin": "Aramaic",
+      "category": "tefillin",
+      "yeshivish_example": "Do you have the titura?",
+      "plain_english_example": "Do you have the base or platform of a tefillin box?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "base or platform of a tefillin box",
+        "lower base of the tefillin housing"
+      ],
+      "context_note": "A technical tefillin-construction term for the base beneath the main cube."
+    },
+    {
+      "term": "maabarta",
+      "variants": [
+        "maavarta",
+        "ma’abarta"
+      ],
+      "aleph_beis": "מעברתא",
+      "language_origin": "Aramaic",
+      "category": "tefillin",
+      "yeshivish_example": "Do you have the maabarta?",
+      "plain_english_example": "Do you have the passage or bridge through which the tefillin strap runs?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "passage or bridge through which the tefillin strap runs",
+        "strap channel of the tefillin housing"
+      ],
+      "context_note": "A technical structural component of tefillin."
+    },
+    {
+      "term": "kesher shel yad",
+      "variants": [],
+      "aleph_beis": "קשר של יד",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "The kesher shel yad became loose.",
+      "plain_english_example": "The knot of the arm tefillin became loose.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "knot of the arm tefillin",
+        "shel-yad strap knot"
+      ],
+      "context_note": "The specially formed knot associated with the arm tefillin."
+    },
+    {
+      "term": "kesher shel rosh",
+      "variants": [],
+      "aleph_beis": "קשר של ראש",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "The kesher shel rosh needs adjustment.",
+      "plain_english_example": "The knot of the head tefillin needs adjustment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "knot of the head tefillin",
+        "shel-rosh strap knot"
+      ],
+      "context_note": "The specially formed knot at the back of the head-tefillin straps."
+    },
+    {
+      "term": "shin shel tefillin",
+      "variants": [],
+      "aleph_beis": "שי״ן של תפילין",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "Do you have the shin shel tefillin?",
+      "plain_english_example": "Do you have the raised Hebrew shin formed on the head-tefillin box?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "raised Hebrew shin formed on the head-tefillin box",
+        "shin of the shel rosh"
+      ],
+      "context_note": "The shel rosh has molded shin forms on its sides."
+    },
+    {
+      "term": "Rashi tefillin",
+      "variants": [
+        "tefillin Rashi"
+      ],
+      "aleph_beis": "תפילין דרש״י",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "These are my Rashi tefillin.",
+      "plain_english_example": "These are my tefillin arranged according to Rashi's ordering.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tefillin arranged according to Rashi’s ordering",
+        "standard Rashi-order tefillin"
+      ],
+      "context_note": "Refers to the order of the parchment passages according to Rashi."
+    },
+    {
+      "term": "Rabbeinu Tam tefillin",
+      "variants": [
+        "Rabenu Tam tefillin",
+        "Rabbenu Tam tefillin"
+      ],
+      "aleph_beis": "תפילין דרבנו תם",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "He also puts on Rabbeinu Tam tefillin.",
+      "plain_english_example": "He also wears an additional pair arranged according to Rabbeinu Tam.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tefillin arranged according to Rabbeinu Tam’s ordering",
+        "Rabbeinu Tam tefillin"
+      ],
+      "context_note": "Some people wear an additional pair with the passage order associated with Rabbeinu Tam."
+    },
+    {
+      "term": "batim macher",
+      "variants": [
+        "batim maker"
+      ],
+      "aleph_beis": "בתים־מאַכער",
+      "language_origin": "mixed",
+      "category": "tefillin",
+      "yeshivish_example": "The batim macher repaired the corner.",
+      "plain_english_example": "The tefillin-box craftsman repaired the corner.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "craftsman who makes tefillin boxes",
+        "tefillin-box maker"
+      ],
+      "context_note": "A Yiddish/Hebrew occupational term used in the tefillin trade."
+    },
+    {
+      "term": "giddin",
+      "variants": [
+        "gidin"
+      ],
+      "aleph_beis": "גידין",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "Do you have the giddin?",
+      "plain_english_example": "Do you have the sinew thread used in sacred-object construction?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sinew thread used in sacred-object construction",
+        "animal sinews used for sewing tefillin or Torah sheets"
+      ],
+      "context_note": "Used in specific construction and sewing requirements for STaM items."
+    },
+    {
+      "term": "ribua",
+      "variants": [
+        "ribbuah"
+      ],
+      "aleph_beis": "ריבוע",
+      "language_origin": "Hebrew",
+      "category": "tefillin",
+      "yeshivish_example": "Do you have the ribua?",
+      "plain_english_example": "Do you have the squareness?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "squareness",
+        "required square form of tefillin components"
+      ],
+      "context_note": "Tefillin have detailed squareness requirements; practical measurements belong to sofrus expertise."
+    },
+    {
+      "term": "tefillin bag",
+      "variants": [
+        "tefillin pouch"
+      ],
+      "aleph_beis": "תיק תפילין",
+      "language_origin": "mixed",
+      "category": "tefillin",
+      "yeshivish_example": "My tefillin bag is in the locker.",
+      "plain_english_example": "My tefillin pouch is in the locker.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "protective bag or case for tefillin",
+        "tefillin pouch"
+      ],
+      "context_note": "Common everyday term for the bag in which tefillin are stored and carried."
+    },
+    {
+      "term": "tzitzis",
+      "variants": [
+        "tzitzit",
+        "tsitsis"
+      ],
+      "aleph_beis": "ציצית",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "His tzitzis are showing under his shirt.",
+      "plain_english_example": "The ritual fringes of his four-cornered garment are showing under his shirt.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual fringes attached to a four-cornered garment",
+        "tzitzit"
+      ],
+      "context_note": "In Yeshivish, tzitzis can refer either to the fringes or to the tallis katan garment itself."
+    },
+    {
+      "term": "tallis",
+      "variants": [
+        "tallit",
+        "talit"
+      ],
+      "aleph_beis": "טלית",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "He put on his tallis before davening.",
+      "plain_english_example": "He put on his prayer shawl before praying.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "prayer shawl with tzitzis",
+        "tallit"
+      ],
+      "context_note": "In Ashkenazi pronunciation commonly tallis; context may mean a tallis gadol specifically."
+    },
+    {
+      "term": "tallis katan",
+      "variants": [
+        "tallit katan",
+        "arba kanfos garment"
+      ],
+      "aleph_beis": "טלית קטן",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "He needs a new tallis katan.",
+      "plain_english_example": "He needs a new small four-cornered tzitzis garment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "small four-cornered garment worn with tzitzis",
+        "tallit katan"
+      ],
+      "context_note": "Usually worn under or over clothing throughout the day."
+    },
+    {
+      "term": "tallis gadol",
+      "variants": [
+        "tallit gadol"
+      ],
+      "aleph_beis": "טלית גדול",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "The tallis gadol is in his bag.",
+      "plain_english_example": "The large prayer shawl is in his bag.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "large prayer shawl worn during prayer",
+        "tallit gadol"
+      ],
+      "context_note": "The larger tallis worn over the shoulders for prayer according to community custom."
+    },
+    {
+      "term": "arba kanfos",
+      "variants": [
+        "arba kanfot",
+        "arba kanfes"
+      ],
+      "aleph_beis": "ארבע כנפות",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "The child started wearing arba kanfos.",
+      "plain_english_example": "The child started wearing a four-cornered tzitzis garment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "four-cornered garment",
+        "tallis katan, in common usage"
+      ],
+      "context_note": "Literally four corners; often another name for the small tzitzis garment."
+    },
+    {
+      "term": "chutim",
+      "variants": [
+        "chutin"
+      ],
+      "aleph_beis": "חוטים",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "One of the chutim tore.",
+      "plain_english_example": "One of the tzitzis strings tore.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "threads or strings",
+        "tzitzis strings, depending on context"
+      ],
+      "context_note": "In tzitzis discussion, usually the strings tied through the corners."
+    },
+    {
+      "term": "gedilim",
+      "variants": [],
+      "aleph_beis": "גדילים",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "The gedilim were tied lishmah.",
+      "plain_english_example": "The ritual fringes were tied with the required mitzvah intention.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "twisted or knotted fringes",
+        "tzitzis cords"
+      ],
+      "context_note": "A Torah term associated with the fringes attached to a four-cornered garment."
+    },
+    {
+      "term": "techeles",
+      "variants": [
+        "tekhelet",
+        "techelet"
+      ],
+      "aleph_beis": "תכלת",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "Do you have the techeles?",
+      "plain_english_example": "Do you have the blue-dyed thread used in tzitzis according to traditions that identify it?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "blue-dyed thread used in tzitzis according to traditions that identify it",
+        "biblical blue dye/thread"
+      ],
+      "context_note": "Modern use and identification of techeles varies among communities and authorities."
+    },
+    {
+      "term": "pesil techeles",
+      "variants": [
+        "petil tekhelet"
+      ],
+      "aleph_beis": "פתיל תכלת",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "Do you have the pesil techeles?",
+      "plain_english_example": "Do you have the thread of techeles?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "thread of techeles",
+        "blue tzitzis cord"
+      ],
+      "context_note": "Biblical phrase for the blue thread among the tzitzis."
+    },
+    {
+      "term": "atarah",
+      "variants": [
+        "atara"
+      ],
+      "aleph_beis": "עטרה",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "The tallis has a silver atarah.",
+      "plain_english_example": "The prayer shawl has a silver decorative neckband.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "decorative neckband or crown on a tallis",
+        "tallis collar decoration"
+      ],
+      "context_note": "Some talleisim have a decorative atarah along the edge worn at the head or neck."
+    },
+    {
+      "term": "tallis bag",
+      "variants": [
+        "tallit bag"
+      ],
+      "aleph_beis": "תיק טלית",
+      "language_origin": "mixed",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "His tallis bag has his Hebrew name on it.",
+      "plain_english_example": "His prayer-shawl bag has his Hebrew name on it.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bag for storing a tallis",
+        "prayer-shawl bag"
+      ],
+      "context_note": "Often paired with a matching tefillin bag."
+    },
+    {
+      "term": "beged",
+      "variants": [],
+      "aleph_beis": "בגד",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "Is this beged obligated in tzitzis?",
+      "plain_english_example": "Does this garment require ritual fringes?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "garment",
+        "piece of clothing"
+      ],
+      "context_note": "In tzitzis halacha, refers to the garment to which the fringes are attached."
+    },
+    {
+      "term": "kanaf",
+      "variants": [],
+      "aleph_beis": "כנף",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "The hole is too close to the edge of the kanaf.",
+      "plain_english_example": "The hole is too close to the edge of the garment corner.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "corner of a garment",
+        "wing or corner"
+      ],
+      "context_note": "In tzitzis discussion, a corner of the garment where the strings are attached."
+    },
+    {
+      "term": "chulya",
+      "variants": [],
+      "aleph_beis": "חוליה",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "Do you have the chulya?",
+      "plain_english_example": "Do you have the group or segment of tzitzis windings?",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "group or segment of tzitzis windings",
+        "winding section"
+      ],
+      "context_note": "A technical term for a grouping of wraps in certain tzitzis-tying systems."
+    },
+    {
+      "term": "krichos",
+      "variants": [
+        "krichot"
+      ],
+      "aleph_beis": "כריכות",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "Count the krichos again.",
+      "plain_english_example": "Count the tzitzis windings again.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "windings or wraps of tzitzis strings",
+        "tzitzis wrapping turns"
+      ],
+      "context_note": "Refers to the wraps made while tying tzitzis."
+    },
+    {
+      "term": "l'shem mitzvas tzitzis",
+      "variants": [
+        "leshem mitzvat tzitzit"
+      ],
+      "aleph_beis": "לשם מצות ציצית",
+      "language_origin": "Hebrew",
+      "category": "tzitzis and tallis",
+      "yeshivish_example": "Do you have the l'shem mitzvas tzitzis?",
+      "plain_english_example": "Do you have the for the sake of the mitzvah of tzitzis?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "for the sake of the mitzvah of tzitzis",
+        "intentional preparation for the tzitzis mitzvah"
+      ],
+      "context_note": "Phrase describing the required or preferred intent during certain stages of tzitzis preparation or tying."
+    },
+    {
+      "term": "mezuzah",
+      "variants": [
+        "mezuza"
+      ],
+      "aleph_beis": "מזוזה",
+      "language_origin": "Hebrew",
+      "category": "mezuzah",
+      "yeshivish_example": "The new office needs a mezuzah.",
+      "plain_english_example": "The new office doorway needs a mezuzah scroll.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "parchment scroll affixed to a Jewish doorway",
+        "mezuzah"
+      ],
+      "context_note": "The essential mitzvah object is the handwritten parchment scroll; the outer case protects it."
+    },
+    {
+      "term": "mezuzos",
+      "variants": [
+        "mezuzot"
+      ],
+      "aleph_beis": "מזוזות",
+      "language_origin": "Hebrew",
+      "category": "mezuzah",
+      "yeshivish_example": "We are checking all the mezuzos in the house.",
+      "plain_english_example": "We are checking all the mezuzah scrolls in the house.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mezuzah scrolls",
+        "plural of mezuzah"
+      ],
+      "context_note": "Common plural in Ashkenazi/Yeshivish speech."
+    },
+    {
+      "term": "mezuzah case",
+      "variants": [
+        "mezuzah cover"
+      ],
+      "aleph_beis": "בית מזוזה",
+      "language_origin": "mixed",
+      "category": "mezuzah",
+      "yeshivish_example": "The mezuzah case cracked but the klaf is fine.",
+      "plain_english_example": "The protective mezuzah case cracked but the parchment is fine.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "protective case holding a mezuzah scroll",
+        "mezuzah housing"
+      ],
+      "context_note": "The case is not itself the written mezuzah scroll and should not be confused with it."
+    },
+    {
+      "term": "mezuzah scroll",
+      "variants": [
+        "mezuzah klaf"
+      ],
+      "aleph_beis": "קלף מזוזה",
+      "language_origin": "mixed",
+      "category": "mezuzah",
+      "yeshivish_example": "Make sure there is a real mezuzah scroll inside.",
+      "plain_english_example": "Make sure there is a handwritten kosher parchment inside the case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "handwritten parchment inside a mezuzah case",
+        "mezuzah parchment scroll"
+      ],
+      "context_note": "Contains prescribed Torah passages handwritten by a qualified sofer."
+    },
+    {
+      "term": "kevias mezuzah",
+      "variants": [
+        "kvius mezuzah",
+        "kviat mezuzah"
+      ],
+      "aleph_beis": "קביעת מזוזה",
+      "language_origin": "Hebrew",
+      "category": "mezuzah",
+      "yeshivish_example": "The kevias mezuzah is after Mincha.",
+      "plain_english_example": "The mezuzah installation is after the afternoon service.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "affixing a mezuzah",
+        "installation of a mezuzah"
+      ],
+      "context_note": "The act or ceremony of properly fixing the mezuzah to the doorway."
+    },
+    {
+      "term": "kovea mezuzah",
+      "variants": [
+        "likboa mezuzah"
+      ],
+      "aleph_beis": "קובע מזוזה",
+      "language_origin": "Hebrew",
+      "category": "mezuzah",
+      "yeshivish_example": "Who is going to be kovea mezuzah?",
+      "plain_english_example": "Who is going to affix the mezuzah?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "affixes a mezuzah",
+        "sets a mezuzah in place"
+      ],
+      "context_note": "Used as a verb or in discussion of the blessing for affixing a mezuzah."
+    },
+    {
+      "term": "bedikas mezuzos",
+      "variants": [
+        "bedikat mezuzot"
+      ],
+      "aleph_beis": "בדיקת מזוזות",
+      "language_origin": "Hebrew",
+      "category": "mezuzah",
+      "yeshivish_example": "It is time for bedikas mezuzos.",
+      "plain_english_example": "It is time to have the mezuzah scrolls inspected.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "inspection of mezuzah scrolls",
+        "checking mezuzos for validity"
+      ],
+      "context_note": "A sofer or qualified checker examines the lettering and parchment for problems."
+    },
+    {
+      "term": "heker tzir",
+      "variants": [],
+      "aleph_beis": "היכר ציר",
+      "language_origin": "Hebrew",
+      "category": "mezuzah",
+      "yeshivish_example": "Do you have the heker tzir?",
+      "plain_english_example": "Do you have the door-hinge indicator used in some mezuzah-placement questions?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "door-hinge indicator used in some mezuzah-placement questions",
+        "hinge-side criterion"
+      ],
+      "context_note": "A technical factor used in some halachic discussions of which side of a doorway receives the mezuzah; application varies."
+    },
+    {
+      "term": "makom mezuzah",
+      "variants": [],
+      "aleph_beis": "מקום מזוזה",
+      "language_origin": "Hebrew",
+      "category": "mezuzah",
+      "yeshivish_example": "Do you have the makom mezuzah?",
+      "plain_english_example": "Do you have the proper location for placing a mezuzah on a doorway?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "proper location for placing a mezuzah on a doorway",
+        "mezuzah placement area"
+      ],
+      "context_note": "Placement has detailed halachic requirements regarding side and height."
+    },
+    {
+      "term": "kippah",
+      "variants": [
+        "kipah"
+      ],
+      "aleph_beis": "כיפה",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "He keeps an extra kippah in the car.",
+      "plain_english_example": "He keeps an extra Jewish head covering in the car.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish head covering",
+        "skullcap"
+      ],
+      "context_note": "Common Hebrew term for a Jewish head covering."
+    },
+    {
+      "term": "yarmulke",
+      "variants": [
+        "yarmulka",
+        "yamaka"
+      ],
+      "aleph_beis": "יאַרמלקע",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The boy lost his yarmulke.",
+      "plain_english_example": "The boy lost his Jewish skullcap.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish skullcap",
+        "kippah"
+      ],
+      "context_note": "Yiddish/Ashkenazi term corresponding to kippah."
+    },
+    {
+      "term": "sheitel",
+      "variants": [
+        "sheitl"
+      ],
+      "aleph_beis": "שייטל",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "She bought a new sheitel for the wedding.",
+      "plain_english_example": "She bought a new hair-covering wig for the wedding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wig worn as a married woman’s hair covering",
+        "religious hair-covering wig"
+      ],
+      "context_note": "Common in many Orthodox communities; practices and norms vary."
+    },
+    {
+      "term": "tichel",
+      "variants": [
+        "tichl"
+      ],
+      "aleph_beis": "טיכל",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "She wore a tichel today.",
+      "plain_english_example": "She wore a headscarf as her hair covering today.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "headscarf used as a hair covering",
+        "religious headscarf"
+      ],
+      "context_note": "A Yiddish term for a scarf used by many married Orthodox women as a hair covering."
+    },
+    {
+      "term": "mitpachas",
+      "variants": [
+        "mitpachat"
+      ],
+      "aleph_beis": "מטפחת",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "Her mitpachas matched the dress.",
+      "plain_english_example": "Her headscarf matched the dress.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "headscarf or cloth covering",
+        "scarf, often a married woman’s hair covering"
+      ],
+      "context_note": "Modern Hebrew term often used alongside Yiddish tichel."
+    },
+    {
+      "term": "kittel",
+      "variants": [],
+      "aleph_beis": "קיטל",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "He brought his kittel for Yom Kippur.",
+      "plain_english_example": "He brought his white ritual robe for the Day of Atonement.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "white ritual robe",
+        "white garment worn on certain Jewish occasions"
+      ],
+      "context_note": "Worn according to community custom on occasions such as Yom Kippur, the Pesach Seder, or by a chosson."
+    },
+    {
+      "term": "shatnez",
+      "variants": [
+        "sha'atnez"
+      ],
+      "aleph_beis": "שעטנז",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The new suit was checked for shatnez.",
+      "plain_english_example": "The new suit was checked for a forbidden wool-linen mixture.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "forbidden wool-linen mixture",
+        "prohibition against wearing specified mixtures of wool and linen"
+      ],
+      "context_note": "Commonly discussed when checking suits and garments."
+    },
+    {
+      "term": "shatnez checker",
+      "variants": [
+        "shatnez lab"
+      ],
+      "aleph_beis": "בודק שעטנז",
+      "language_origin": "mixed",
+      "category": "everyday religious objects",
+      "yeshivish_example": "Take the jacket to a shatnez checker.",
+      "plain_english_example": "Take the jacket to a specialist who checks for forbidden wool-linen mixtures.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person or service that checks garments for shatnez",
+        "wool-linen mixture inspector"
+      ],
+      "context_note": "A specialist or laboratory that examines clothing for prohibited wool-linen mixtures."
+    },
+    {
+      "term": "pushka",
+      "variants": [
+        "pushke"
+      ],
+      "aleph_beis": "פּושקע",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "Put a dollar in the pushka.",
+      "plain_english_example": "Put a dollar in the charity box.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "charity box",
+        "tzedakah collection box"
+      ],
+      "context_note": "A common Yiddish term for a small charity box kept at home, school, or synagogue."
+    },
+    {
+      "term": "tzedakah box",
+      "variants": [
+        "charity box"
+      ],
+      "aleph_beis": "קופת צדקה",
+      "language_origin": "mixed",
+      "category": "everyday religious objects",
+      "yeshivish_example": "There is a tzedakah box by the door.",
+      "plain_english_example": "There is a charity collection box by the door.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "box used to collect charitable donations",
+        "charity collection box"
+      ],
+      "context_note": "English/Yeshivish phrase corresponding to Hebrew kupat tzedakah and Yiddish pushka."
+    },
+    {
+      "term": "leichter",
+      "variants": [
+        "Shabbos leichter"
+      ],
+      "aleph_beis": "לייכטער",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The leichter were her grandmother's.",
+      "plain_english_example": "The Sabbath candlesticks belonged to her grandmother.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "candlesticks, especially Sabbath candlesticks",
+        "ritual candlesticks"
+      ],
+      "context_note": "In Yiddish family usage, lighter or leichter often refers to the Shabbos candlesticks."
+    },
+    {
+      "term": "kiddush cup",
+      "variants": [
+        "kos kiddush"
+      ],
+      "aleph_beis": "כוס קידוש",
+      "language_origin": "mixed",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The kiddush cup is on the table.",
+      "plain_english_example": "The cup used for Kiddush is on the table.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cup used for Kiddush",
+        "ritual wine cup for sanctifying Shabbos or Yom Tov"
+      ],
+      "context_note": "Often a dedicated silver or decorative cup, though the mitzvah does not require a specific material."
+    },
+    {
+      "term": "kos shel bracha",
+      "variants": [
+        "kos bracha"
+      ],
+      "aleph_beis": "כוס של ברכה",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "They filled the kos shel bracha.",
+      "plain_english_example": "They filled the ritual cup used for the blessing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cup of wine used for a blessing or ritual",
+        "ritual cup of blessing"
+      ],
+      "context_note": "A broader term than kiddush cup; can apply to several ceremonies involving a cup of wine."
+    },
+    {
+      "term": "challah cover",
+      "variants": [
+        "challah deckel"
+      ],
+      "aleph_beis": "כיסוי חלה",
+      "language_origin": "mixed",
+      "category": "everyday religious objects",
+      "yeshivish_example": "Put the challah cover over the loaves.",
+      "plain_english_example": "Place the ritual cloth over the challah loaves.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cloth used to cover challah at a Shabbos or Yom Tov meal",
+        "challah covering"
+      ],
+      "context_note": "A common ritual table object used while making Kiddush and Hamotzi."
+    },
+    {
+      "term": "Havdalah candle",
+      "variants": [
+        "havdala candle"
+      ],
+      "aleph_beis": "נר הבדלה",
+      "language_origin": "mixed",
+      "category": "everyday religious objects",
+      "yeshivish_example": "We need a new Havdalah candle.",
+      "plain_english_example": "We need a new multi-wick candle for the Havdalah ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "multi-wick candle used for Havdalah",
+        "Havdalah light"
+      ],
+      "context_note": "The candle used for the blessing over fire during Havdalah."
+    },
+    {
+      "term": "besamim",
+      "variants": [
+        "besomim"
+      ],
+      "aleph_beis": "בשמים",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "Pass the besamim around.",
+      "plain_english_example": "Pass the fragrant spices around.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "fragrant spices",
+        "spices used for the Havdalah blessing"
+      ],
+      "context_note": "At Havdalah, fragrant spices are smelled with a blessing in the standard Saturday-night service."
+    },
+    {
+      "term": "besamim box",
+      "variants": [
+        "spice box"
+      ],
+      "aleph_beis": "כלי בשמים",
+      "language_origin": "mixed",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The besamim box is next to the candle.",
+      "plain_english_example": "The spice container is next to the Havdalah candle.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "container for Havdalah spices",
+        "ritual spice holder"
+      ],
+      "context_note": "Often decorative; the mitzvah concerns smelling the fragrance rather than a particular container."
+    },
+    {
+      "term": "negel vasser",
+      "variants": [
+        "negelwasser",
+        "negel vaser"
+      ],
+      "aleph_beis": "נעגל וואַסער",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "He set up negel vasser by the bed.",
+      "plain_english_example": "He prepared water by the bed for ritual hand washing upon waking.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "morning hand-washing water",
+        "ritual washing setup used upon waking"
+      ],
+      "context_note": "Yiddish term for the water and practice of washing hands upon waking; customs vary in details."
+    },
+    {
+      "term": "natla",
+      "variants": [
+        "natlah"
+      ],
+      "aleph_beis": "נטלה",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The natla is by the sink.",
+      "plain_english_example": "The ritual hand-washing cup is by the sink.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "handled cup used for ritual hand washing",
+        "washing cup"
+      ],
+      "context_note": "Common term for the cup used for netilas yadayim."
+    },
+    {
+      "term": "bentcher",
+      "variants": [
+        "bencher",
+        "bentscher"
+      ],
+      "aleph_beis": "בענטשער",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "There are bentchers on every table.",
+      "plain_english_example": "There are Grace-after-Meals booklets on every table.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "booklet containing Grace after Meals and often songs or blessings",
+        "benching booklet"
+      ],
+      "context_note": "Commonly used at Shabbos meals, weddings, and other celebrations."
+    },
+    {
+      "term": "zemiros",
+      "variants": [
+        "zemirot",
+        "zmiros"
+      ],
+      "aleph_beis": "זמירות",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "We sang zemiros after the first course.",
+      "plain_english_example": "We sang Sabbath table songs after the first course.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sabbath table songs",
+        "religious songs, especially for Shabbos meals"
+      ],
+      "context_note": "Often printed in a bentcher or sung from memory at Shabbos meals."
+    },
+    {
+      "term": "shtender",
+      "variants": [
+        "stander"
+      ],
+      "aleph_beis": "שטענדער",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "His Gemara is on the shtender.",
+      "plain_english_example": "His Talmud volume is on the study lectern.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "lectern or bookstand used for prayer or Torah study",
+        "study/prayer stand"
+      ],
+      "context_note": "A common piece of synagogue and beis-midраш furniture."
+    },
+    {
+      "term": "mechitzah",
+      "variants": [
+        "mechitza"
+      ],
+      "aleph_beis": "מחיצה",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The mechitzah was moved for the larger event.",
+      "plain_english_example": "The synagogue partition was moved for the larger event.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "partition separating sections in an Orthodox synagogue",
+        "synagogue separation partition"
+      ],
+      "context_note": "Usually refers to the partition between men’s and women’s prayer areas; forms vary by community and synagogue."
+    },
+    {
+      "term": "ezras nashim",
+      "variants": [
+        "ezrat nashim"
+      ],
+      "aleph_beis": "עזרת נשים",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "There are more seats upstairs in the ezras nashim.",
+      "plain_english_example": "There are more seats upstairs in the women's section of the synagogue.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "women’s section of a synagogue",
+        "women’s prayer area"
+      ],
+      "context_note": "Literally women’s section; may be on the same floor, a balcony, or another designated area."
+    },
+    {
+      "term": "ner tamid",
+      "variants": [],
+      "aleph_beis": "נר תמיד",
+      "language_origin": "Hebrew",
+      "category": "everyday religious objects",
+      "yeshivish_example": "The ner tamid is above the aron kodesh.",
+      "plain_english_example": "The synagogue's eternal light is above the holy ark.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "eternal light in a synagogue",
+        "continually burning sanctuary lamp"
+      ],
+      "context_note": "A light customarily kept near or above the aron kodesh."
+    },
+    {
+      "term": "shtibl",
+      "variants": [
+        "shtiebel",
+        "shtibel"
+      ],
+      "aleph_beis": "שטיבל",
+      "language_origin": "Yiddish",
+      "category": "everyday religious objects",
+      "yeshivish_example": "He davens in the shtibl around the corner.",
+      "plain_english_example": "He prays in the small synagogue around the corner.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "small synagogue or prayer room",
+        "small informal shul"
+      ],
+      "context_note": "A Yiddish term especially common for a small or neighborhood prayer house."
+    },
+    {
+      "term": "mitzvas aseh",
+      "variants": [
+        "mitzvat aseh"
+      ],
+      "aleph_beis": "מצות עשה",
+      "language_origin": "Hebrew",
+      "category": "mitzvah concepts",
+      "yeshivish_example": "Putting on tefillin is a mitzvas aseh.",
+      "plain_english_example": "Putting on tefillin is a positive commandment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "positive commandment",
+        "commandment requiring an action"
+      ],
+      "context_note": "Contrasts with a negative commandment, mitzvas lo saaseh."
+    },
+    {
+      "term": "mitzvas lo sa'aseh",
+      "variants": [
+        "mitzvat lo taaseh",
+        "lo saaseh"
+      ],
+      "aleph_beis": "מצות לא תעשה",
+      "language_origin": "Hebrew",
+      "category": "mitzvah concepts",
+      "yeshivish_example": "Shatnez involves a mitzvas lo sa'aseh.",
+      "plain_english_example": "The prohibition of shatnez is a negative commandment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "negative commandment",
+        "Torah prohibition stated as something not to do"
+      ],
+      "context_note": "Often shortened conversationally to a lo saaseh."
+    },
+    {
+      "term": "chiyuv",
+      "variants": [
+        "hiyuv"
+      ],
+      "aleph_beis": "חיוב",
+      "language_origin": "Hebrew",
+      "category": "mitzvah concepts",
+      "yeshivish_example": "Is there a chiyuv to do it now?",
+      "plain_english_example": "Is there a halachic obligation to do it now?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "obligation",
+        "halachic requirement"
+      ],
+      "context_note": "Can describe a person’s obligation or the level of requirement of an act."
+    },
+    {
+      "term": "patur",
+      "variants": [
+        "pattur"
+      ],
+      "aleph_beis": "פטור",
+      "language_origin": "Hebrew",
+      "category": "mitzvah concepts",
+      "yeshivish_example": "In that case he may be patur.",
+      "plain_english_example": "In that case he may be exempt from the obligation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "exempt",
+        "not obligated in a particular requirement"
+      ],
+      "context_note": "Does not necessarily mean an act is forbidden; it means the obligation does not apply in the stated way."
+    }
+  ]
+}
