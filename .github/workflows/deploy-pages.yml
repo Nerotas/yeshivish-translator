@@ -7,15 +7,20 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 20
 
       - name: Install dependencies
         run: npm --prefix frontend ci
@@ -23,13 +28,14 @@ jobs:
       - name: Build frontend
         run: VITE_API_BASE_URL=${{ secrets.VITE_API_BASE_URL }} npm --prefix frontend run build
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "frontend/dist"
+
       - name: Deploy to GitHub Pages
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git checkout --orphan gh-pages
-          git rm -rf .
-          cp -r frontend/dist/* .
-          git add .
-          git commit -m "Deploy frontend (commit $(git rev-parse --short HEAD~1))"
-          git push -f origin gh-pages
+        id: deployment
+        uses: actions/deploy-pages@v4
