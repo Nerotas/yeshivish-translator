@@ -1,0 +1,84 @@
+<svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" style="stop-color:#704214;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5a2b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#704214;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="parchGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf6f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8dcc8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Left roller (etz chayim) -->
+  <g>
+    <!-- Wooden cylinder -->
+    <rect x="25" y="100" width="40" height="220" rx="4" fill="url(#woodGrad)"/>
+    <ellipse cx="45" cy="100" rx="20" ry="10" fill="#9a6b33"/>
+    <ellipse cx="45" cy="320" rx="20" ry="10" fill="#5a3a1a"/>
+    
+    <!-- Wood grain -->
+    <line x1="25" y1="130" x2="65" y2="130" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    <line x1="25" y1="180" x2="65" y2="180" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    <line x1="25" y1="230" x2="65" y2="230" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    <line x1="25" y1="280" x2="65" y2="280" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    
+    <!-- Top handle/finial -->
+    <circle cx="45" cy="65" r="14" fill="#8b5a2b" stroke="#5a3a1a" stroke-width="1.5"/>
+    <circle cx="45" cy="65" r="10" fill="#a67c52" opacity="0.6"/>
+    <circle cx="45" cy="58" r="3" fill="#c9a876" opacity="0.8"/>
+  </g>
+  
+  <!-- Right roller (etz chayim) -->
+  <g>
+    <!-- Wooden cylinder -->
+    <rect x="235" y="100" width="40" height="220" rx="4" fill="url(#woodGrad)"/>
+    <ellipse cx="255" cy="100" rx="20" ry="10" fill="#9a6b33"/>
+    <ellipse cx="255" cy="320" rx="20" ry="10" fill="#5a3a1a"/>
+    
+    <!-- Wood grain -->
+    <line x1="235" y1="130" x2="275" y2="130" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    <line x1="235" y1="180" x2="275" y2="180" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    <line x1="235" y1="230" x2="275" y2="230" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    <line x1="235" y1="280" x2="275" y2="280" stroke="#4a2a0a" stroke-width="0.5" opacity="0.4"/>
+    
+    <!-- Top handle/finial -->
+    <circle cx="255" cy="65" r="14" fill="#8b5a2b" stroke="#5a3a1a" stroke-width="1.5"/>
+    <circle cx="255" cy="65" r="10" fill="#a67c52" opacity="0.6"/>
+    <circle cx="255" cy="58" r="3" fill="#c9a876" opacity="0.8"/>
+  </g>
+  
+  <!-- Parchment sheets -->
+  <g>
+    <!-- Top curved section -->
+    <path d="M 65 110 Q 150 75 235 110" fill="none" stroke="url(#parchGrad)" stroke-width="32" stroke-linecap="round"/>
+    
+    <!-- Main parchment body -->
+    <rect x="65" y="105" width="170" height="210" fill="url(#parchGrad)" stroke="#b8956a" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Text lines (subtle) -->
+    <line x1="75" y1="140" x2="225" y2="140" stroke="#9a7c52" stroke-width="0.8" opacity="0.25"/>
+    <line x1="75" y1="165" x2="225" y2="165" stroke="#9a7c52" stroke-width="0.8" opacity="0.25"/>
+    <line x1="75" y1="190" x2="225" y2="190" stroke="#9a7c52" stroke-width="0.8" opacity="0.25"/>
+    <line x1="75" y1="215" x2="225" y2="215" stroke="#9a7c52" stroke-width="0.8" opacity="0.25"/>
+    <line x1="75" y1="240" x2="225" y2="240" stroke="#9a7c52" stroke-width="0.8" opacity="0.25"/>
+    <line x1="75" y1="265" x2="225" y2="265" stroke="#9a7c52" stroke-width="0.8" opacity="0.25"/>
+    <line x1="75" y1="290" x2="225" y2="290" stroke="#9a7c52" stroke-width="0.8" opacity="0.25"/>
+    
+    <!-- Bottom curved section -->
+    <path d="M 65 315 Q 150 350 235 315" fill="none" stroke="url(#parchGrad)" stroke-width="32" stroke-linecap="round"/>
+    
+    <!-- Parchment aging/fold marks -->
+    <line x1="85" y1="110" x2="85" y2="315" stroke="#c9a876" stroke-width="0.5" opacity="0.2"/>
+    <line x1="150" y1="105" x2="150" y2="320" stroke="#c9a876" stroke-width="0.5" opacity="0.2"/>
+    <line x1="215" y1="110" x2="215" y2="315" stroke="#c9a876" stroke-width="0.5" opacity="0.2"/>
+  </g>
+  
+  <!-- Binder/tie -->
+  <ellipse cx="150" cy="210" rx="90" ry="18" fill="none" stroke="#704214" stroke-width="2.5" opacity="0.6"/>
+  
+  <!-- Shine/highlights on handles -->
+  <circle cx="44" cy="55" r="5" fill="#d4b896" opacity="0.7"/>
+  <circle cx="256" cy="55" r="5" fill="#d4b896" opacity="0.7"/>
+</svg>
