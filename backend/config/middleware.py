@@ -1,6 +1,9 @@
 """
-Custom middleware for the yeshivish-translator backend.
-"""
+"""Custom middleware for the yeshivish-translator backend."""
+
+from collections.abc import Callable
+
+from django.http import HttpRequest, HttpResponse
 
 
 class DisableClientSideCompressionMiddleware:
@@ -13,10 +16,10 @@ class DisableClientSideCompressionMiddleware:
     and compression middleware interact poorly with browser fetch requests.
     """
 
-    def __init__(self, get_response):
+    def __init__(self, get_response: Callable[[HttpRequest], HttpResponse]) -> None:
         self.get_response = get_response
 
-    def __call__(self, request):
+    def __call__(self, request: HttpRequest) -> HttpResponse:
         # Remove Accept-Encoding for API requests to prevent compression
         # issues with CORS responses in the browser fetch API
         if request.path.startswith("/api/"):
