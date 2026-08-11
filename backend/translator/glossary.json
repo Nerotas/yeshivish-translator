@@ -1,7 +1,7 @@
 {
   "name": "Yeshivish to Plain English Runtime Glossary",
-  "version": 5,
-  "entry_count": 277,
+  "version": 6,
+  "entry_count": 460,
   "entries": [
     {
       "term": "mamesh",
@@ -5270,6 +5270,3261 @@
       ],
       "context_note": "Relevant after Pesach when determining whether chametz was properly sold or otherwise not under prohibited Jewish ownership during the holiday.",
       "aleph_beis": "חמץ שעבר עליו הפסח"
+    },
+    {
+      "term": "Rosh Chodesh",
+      "variants": [
+        "Rosh Hodesh",
+        "Rosh Chodes"
+      ],
+      "aleph_beis": "ראש חודש",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "Rosh Chodesh is on Sunday and Monday this month.",
+      "plain_english_example": "The beginning of the new Jewish month is observed on Sunday and Monday this month.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "beginning of a Jewish month",
+        "minor festival marking the new month"
+      ],
+      "context_note": "Can be one or two days depending on the preceding month and calendar arrangement.",
+      "dialect_pattern": "[Rosh Chodesh|Rosh Hodesh]"
+    },
+    {
+      "term": "Shabbos Mevorchim",
+      "variants": [
+        "Shabbat Mevarchim",
+        "Shabbos Mevarchim HaChodesh"
+      ],
+      "aleph_beis": "שבת מברכים",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "This Shabbos is Shabbos Mevorchim.",
+      "plain_english_example": "This Sabbath is the one on which the coming Jewish month is announced and blessed.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sabbath before most new months when the coming month is blessed"
+      ],
+      "context_note": "Usually the Shabbos before Rosh Chodesh; Tishrei is a notable exception to the ordinary practice.",
+      "dialect_pattern": "[Shabbos Mevorchim|Shabbat Mevarchim]"
+    },
+    {
+      "term": "birkas hachodesh",
+      "variants": [
+        "birchas hachodesh",
+        "birkat hachodesh"
+      ],
+      "aleph_beis": "ברכת החודש",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "They announced the molad during birkas hachodesh.",
+      "plain_english_example": "They announced the lunar conjunction during the blessing of the new month.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "prayer announcing and blessing the coming Jewish month"
+      ],
+      "context_note": "Recited on Shabbos Mevorchim in many communities.",
+      "dialect_pattern": "[birkas hachodesh|birkat hachodesh]"
+    },
+    {
+      "term": "molad",
+      "variants": [
+        "mold"
+      ],
+      "aleph_beis": "מולד",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "What time is the molad?",
+      "plain_english_example": "What is the announced time of the lunar conjunction for the coming Jewish month?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "lunar conjunction used in the Jewish calendar",
+        "announced molad time before a new month"
+      ],
+      "context_note": "In synagogue usage, often refers to the traditional calculated molad announced before Rosh Chodesh."
+    },
+    {
+      "term": "chodesh",
+      "variants": [
+        "chodes"
+      ],
+      "aleph_beis": "חודש",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "Which chodesh are we in now?",
+      "plain_english_example": "Which Jewish month are we in now?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "month",
+        "Jewish calendar month"
+      ],
+      "context_note": "Literally “month”; often used in Yeshivish conversation for a Hebrew-calendar month."
+    },
+    {
+      "term": "shanah me'uberes",
+      "variants": [
+        "shana meuberet",
+        "shana meuberes"
+      ],
+      "aleph_beis": "שנה מעוברת",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "This is a shanah me'uberes, so there are two Adars.",
+      "plain_english_example": "This is a Jewish leap year, so there are two months of Adar.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish leap year",
+        "year containing an additional month of Adar"
+      ],
+      "context_note": "The Jewish leap year contains Adar I and Adar II.",
+      "dialect_pattern": "[shanah me'uberes|shana meuberet]"
+    },
+    {
+      "term": "Adar Rishon",
+      "variants": [
+        "Adar I",
+        "Adar Aleph"
+      ],
+      "aleph_beis": "אדר ראשון",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The wedding is in Adar Rishon.",
+      "plain_english_example": "The wedding is in the first Adar of a Jewish leap year.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "first month of Adar in a Jewish leap year"
+      ],
+      "context_note": "Also commonly called Adar I or Adar Aleph."
+    },
+    {
+      "term": "Adar Sheini",
+      "variants": [
+        "Adar II",
+        "Adar Beis",
+        "Adar Sheni"
+      ],
+      "aleph_beis": "אדר שני",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "Purim is in Adar Sheini in a leap year.",
+      "plain_english_example": "Purim is observed in the second Adar in a Jewish leap year.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "second month of Adar in a Jewish leap year"
+      ],
+      "context_note": "Also commonly called Adar II or Adar Beis."
+    },
+    {
+      "term": "Nissan",
+      "variants": [
+        "Nisan"
+      ],
+      "aleph_beis": "ניסן",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Nissan.",
+      "plain_english_example": "The event is during the Jewish month of Nissan.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Nissan"
+      ],
+      "context_note": "Jewish month containing Pesach."
+    },
+    {
+      "term": "Iyar",
+      "variants": [],
+      "aleph_beis": "אייר",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Iyar.",
+      "plain_english_example": "The event is during the Jewish month of Iyar.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Iyar"
+      ],
+      "context_note": "Jewish month following Nissan."
+    },
+    {
+      "term": "Sivan",
+      "variants": [],
+      "aleph_beis": "סיון",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Sivan.",
+      "plain_english_example": "The event is during the Jewish month of Sivan.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Sivan"
+      ],
+      "context_note": "Jewish month containing Shavuos."
+    },
+    {
+      "term": "Tammuz",
+      "variants": [
+        "Tamuz"
+      ],
+      "aleph_beis": "תמוז",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Tammuz.",
+      "plain_english_example": "The event is during the Jewish month of Tammuz.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Tammuz"
+      ],
+      "context_note": "Jewish month containing the fast of the Seventeenth of Tammuz."
+    },
+    {
+      "term": "Av",
+      "variants": [
+        "Menachem Av",
+        "Menachem-Av"
+      ],
+      "aleph_beis": "אב",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Av.",
+      "plain_english_example": "The event is during the Jewish month of Av.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Av"
+      ],
+      "context_note": "Jewish month containing Tisha B’Av; Menachem Av is a traditional expanded name."
+    },
+    {
+      "term": "Elul",
+      "variants": [],
+      "aleph_beis": "אלול",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Elul.",
+      "plain_english_example": "The event is during the Jewish month of Elul.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Elul"
+      ],
+      "context_note": "Jewish month preceding Rosh Hashanah, strongly associated with repentance and preparation."
+    },
+    {
+      "term": "Tishrei",
+      "variants": [
+        "Tishri"
+      ],
+      "aleph_beis": "תשרי",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Tishrei.",
+      "plain_english_example": "The event is during the Jewish month of Tishrei.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Tishrei"
+      ],
+      "context_note": "Jewish month containing Rosh Hashanah, Yom Kippur, Sukkos, Shemini Atzeres, and Simchas Torah."
+    },
+    {
+      "term": "Cheshvan",
+      "variants": [
+        "Marcheshvan",
+        "Mar-Cheshvan",
+        "Heshvan"
+      ],
+      "aleph_beis": "חשון",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Cheshvan.",
+      "plain_english_example": "The event is during the Jewish month of Cheshvan.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Cheshvan"
+      ],
+      "context_note": "Jewish month following Tishrei; also called Marcheshvan."
+    },
+    {
+      "term": "Kislev",
+      "variants": [],
+      "aleph_beis": "כסלו",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Kislev.",
+      "plain_english_example": "The event is during the Jewish month of Kislev.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Kislev"
+      ],
+      "context_note": "Jewish month in which Chanukah begins."
+    },
+    {
+      "term": "Teves",
+      "variants": [
+        "Tevet"
+      ],
+      "aleph_beis": "טבת",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Teves.",
+      "plain_english_example": "The event is during the Jewish month of Teves.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Teves"
+      ],
+      "context_note": "Jewish month containing Asarah B’Teves."
+    },
+    {
+      "term": "Shevat",
+      "variants": [
+        "Shvat"
+      ],
+      "aleph_beis": "שבט",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Shevat.",
+      "plain_english_example": "The event is during the Jewish month of Shevat.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Shevat"
+      ],
+      "context_note": "Jewish month containing Tu B’Shvat."
+    },
+    {
+      "term": "Adar",
+      "variants": [],
+      "aleph_beis": "אדר",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The event is in Adar.",
+      "plain_english_example": "The event is during the Jewish month of Adar.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the Jewish month of Adar"
+      ],
+      "context_note": "Jewish month containing Purim in a non-leap year."
+    },
+    {
+      "term": "erev Yom Tov",
+      "variants": [
+        "Erev Yomtov"
+      ],
+      "aleph_beis": "ערב יום טוב",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "We have a lot to finish on erev Yom Tov.",
+      "plain_english_example": "We have a lot to finish on the day before the festival begins.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "day or period immediately before a Jewish festival",
+        "festival eve"
+      ],
+      "context_note": "Often refers to the preparation day before a major Yom Tov."
+    },
+    {
+      "term": "Chol Hamoed",
+      "variants": [
+        "Chol Hamo'ed"
+      ],
+      "aleph_beis": "חול המועד",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "We are going on the trip during Chol Hamoed.",
+      "plain_english_example": "We are going on the trip during the intermediate festival days.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "intermediate days of Pesach or Sukkos"
+      ],
+      "context_note": "These days have festival status but fewer work restrictions than full Yom Tov."
+    },
+    {
+      "term": "Isru Chag",
+      "variants": [],
+      "aleph_beis": "אסרו חג",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The yeshiva schedule is lighter on Isru Chag.",
+      "plain_english_example": "The yeshiva schedule is lighter on the day immediately after the festival.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "day immediately following a pilgrimage festival"
+      ],
+      "context_note": "A traditional name for the day after Pesach, Shavuos, or Sukkos/Shemini Atzeres."
+    },
+    {
+      "term": "Yom Tov Sheini",
+      "variants": [
+        "Yom Tov Sheni"
+      ],
+      "aleph_beis": "יום טוב שני",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "That is on Yom Tov Sheini in chutz laaretz.",
+      "plain_english_example": "That occurs on the second festival day observed in the Diaspora.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "second festival day observed outside the Land of Israel"
+      ],
+      "context_note": "Often shorthand for Yom Tov Sheini shel Galuyos.",
+      "dialect_pattern": "[Yom Tov Sheini|Yom Tov Sheni]"
+    },
+    {
+      "term": "Yom Tov Sheini shel Galuyos",
+      "variants": [
+        "Yom Tov Sheni shel Galuyot"
+      ],
+      "aleph_beis": "יום טוב שני של גלויות",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "The second day is Yom Tov Sheini shel Galuyos.",
+      "plain_english_example": "The second day is the additional festival day traditionally observed in the Diaspora.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "additional festival day observed in the Diaspora"
+      ],
+      "context_note": "Applies to specified biblical festivals outside Israel; Rosh Hashanah has its own two-day structure.",
+      "dialect_pattern": "[Yom Tov Sheini shel Galuyos|Yom Tov Sheni shel Galuyot]"
+    },
+    {
+      "term": "eruv tavshilin",
+      "variants": [
+        "eiruv tavshilin"
+      ],
+      "aleph_beis": "עירוב תבשילין",
+      "language_origin": "Hebrew",
+      "category": "Yom Tov practice",
+      "yeshivish_example": "Do not forget to make an eruv tavshilin before Yom Tov.",
+      "plain_english_example": "Do not forget the ritual preparation that permits specified cooking preparations from Yom Tov for Shabbos.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual food preparation made before Yom Tov when it precedes Shabbos"
+      ],
+      "context_note": "Used when Yom Tov leads directly into Shabbos, subject to the relevant halachic rules."
+    },
+    {
+      "term": "gut Yom Tov",
+      "variants": [
+        "gut Yomtov",
+        "gut yontif",
+        "gut yuntif"
+      ],
+      "aleph_beis": "גוט יום טוב",
+      "language_origin": "mixed",
+      "category": "holiday greeting",
+      "yeshivish_example": "Gut Yom Tov!",
+      "plain_english_example": "Have a good festival!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Ashkenazi/Yiddish festival greeting",
+        "have a good holiday"
+      ],
+      "context_note": "A general greeting for major Jewish festivals."
+    },
+    {
+      "term": "chag sameach",
+      "variants": [
+        "chag sameiach",
+        "hag sameach"
+      ],
+      "aleph_beis": "חג שמח",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Chag sameach!",
+      "plain_english_example": "Happy holiday!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "happy holiday",
+        "joyous festival greeting"
+      ],
+      "context_note": "A general Hebrew festival greeting."
+    },
+    {
+      "term": "gut mo'ed",
+      "variants": [
+        "gut moed",
+        "gut moyed"
+      ],
+      "aleph_beis": "גוט מועד",
+      "language_origin": "mixed",
+      "category": "holiday greeting",
+      "yeshivish_example": "Gut mo'ed!",
+      "plain_english_example": "Have a good intermediate-festival day!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Ashkenazi greeting during Chol Hamoed"
+      ],
+      "context_note": "Common during the intermediate days of Pesach and Sukkos."
+    },
+    {
+      "term": "mo'adim l'simcha",
+      "variants": [
+        "moadim lesimcha",
+        "moadim lsimcha"
+      ],
+      "aleph_beis": "מועדים לשמחה",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Mo'adim l'simcha!",
+      "plain_english_example": "May the festival times be joyous!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "festival greeting commonly used during Chol Hamoed"
+      ],
+      "context_note": "A traditional Sephardi/Israeli-style greeting especially associated with Chol Hamoed."
+    },
+    {
+      "term": "chagim u'zmanim l'sason",
+      "variants": [
+        "chagim uzmanim lesason"
+      ],
+      "aleph_beis": "חגים וזמנים לששון",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Chagim u'zmanim l'sason!",
+      "plain_english_example": "May the festivals and seasons be joyful!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional response or festival wish"
+      ],
+      "context_note": "Sometimes used in response to “mo’adim l’simcha.”"
+    },
+    {
+      "term": "shana tova",
+      "variants": [
+        "shanah tovah",
+        "lshana tova"
+      ],
+      "aleph_beis": "שנה טובה",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Shana tova!",
+      "plain_english_example": "Have a good new year!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "good-year greeting for Rosh Hashanah season"
+      ],
+      "context_note": "A common Hebrew New Year greeting."
+    },
+    {
+      "term": "kesiva v'chasima tova",
+      "variants": [
+        "ketiva vachatima tova",
+        "ksiva vchasima tova",
+        "kesivah vechasimah tovah"
+      ],
+      "aleph_beis": "כתיבה וחתימה טובה",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Kesiva v'chasima tova!",
+      "plain_english_example": "May you be inscribed and sealed for a good year!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Rosh Hashanah season greeting",
+        "wish for favorable inscription and sealing"
+      ],
+      "context_note": "Common before and around Rosh Hashanah in Ashkenazi/Yeshivish speech."
+    },
+    {
+      "term": "l'shana tova tikaseiv v'seichaseim",
+      "variants": [
+        "leshana tovah tikatev vetichatem",
+        "lshana tova tikasev vesechasem"
+      ],
+      "aleph_beis": "לשנה טובה תכתב ותחתם",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "L'shana tova tikaseiv v'seichaseim.",
+      "plain_english_example": "May you be inscribed and sealed for a good year.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "formal traditional Rosh Hashanah greeting to a man"
+      ],
+      "context_note": "Gendered grammatical forms vary according to the person being addressed."
+    },
+    {
+      "term": "a gut gebentsht yor",
+      "variants": [
+        "a gut gebentcht yor",
+        "a gut gebentsht yohr"
+      ],
+      "aleph_beis": "א גוט געבענטשט יאָר",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A gut gebentsht yor!",
+      "plain_english_example": "Have a good and blessed year!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Yiddish New Year greeting",
+        "a good and blessed year"
+      ],
+      "context_note": "A traditional Yiddish greeting for the Rosh Hashanah season."
+    },
+    {
+      "term": "gmar chasima tova",
+      "variants": [
+        "gmar chatima tova",
+        "gemar chasima tova"
+      ],
+      "aleph_beis": "גמר חתימה טובה",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Gmar chasima tova!",
+      "plain_english_example": "May your final sealing be for good.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional greeting before and on Yom Kippur",
+        "wish for a favorable final sealing"
+      ],
+      "context_note": "Common from after Rosh Hashanah through Yom Kippur."
+    },
+    {
+      "term": "a gut kvittel",
+      "variants": [
+        "gut kvittel",
+        "a guten kvittel"
+      ],
+      "aleph_beis": "א גוט קוויטל",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A gut kvittel!",
+      "plain_english_example": "May you receive a good favorable note or verdict.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Hoshana Rabbah greeting",
+        "wish for a favorable final verdict"
+      ],
+      "context_note": "A Yiddish greeting associated particularly with Hoshana Rabbah and the conclusion of the High Holiday judgment period."
+    },
+    {
+      "term": "a lichtigen Chanukah",
+      "variants": [
+        "a lichtige Chanukah",
+        "lichtigen Chanukah"
+      ],
+      "aleph_beis": "א ליכטיגן חנוכה",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A lichtigen Chanukah!",
+      "plain_english_example": "Have a light-filled Chanukah!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Yiddish Chanukah greeting wishing a bright or light-filled holiday"
+      ],
+      "context_note": "A traditional Yiddish-style Chanukah greeting."
+    },
+    {
+      "term": "a freilichen Chanukah",
+      "variants": [
+        "freilichen Chanukah"
+      ],
+      "aleph_beis": "א פרייליכן חנוכה",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A freilichen Chanukah!",
+      "plain_english_example": "Have a joyous Chanukah!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Yiddish greeting for a happy Chanukah"
+      ],
+      "context_note": "A common Yiddish holiday greeting."
+    },
+    {
+      "term": "a freilichen Purim",
+      "variants": [
+        "freilichen Purim"
+      ],
+      "aleph_beis": "א פרייליכן פורים",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A freilichen Purim!",
+      "plain_english_example": "Have a joyous Purim!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Yiddish Purim greeting"
+      ],
+      "context_note": "A common Yiddish greeting on Purim."
+    },
+    {
+      "term": "chag Purim sameach",
+      "variants": [
+        "Purim sameach"
+      ],
+      "aleph_beis": "חג פורים שמח",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Chag Purim sameach!",
+      "plain_english_example": "Happy Purim!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Hebrew Purim greeting"
+      ],
+      "context_note": "A straightforward Hebrew greeting for Purim."
+    },
+    {
+      "term": "a koshern un freilichen Pesach",
+      "variants": [
+        "a kosher un freilichen Pesach",
+        "a kasheren un freilichen Pesach"
+      ],
+      "aleph_beis": "א כשרן און פרייליכן פסח",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A koshern un freilichen Pesach!",
+      "plain_english_example": "Have a kosher and joyous Passover!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Yiddish Passover greeting"
+      ],
+      "context_note": "A common pre-Pesach and Pesach greeting emphasizing both kashrus and joy."
+    },
+    {
+      "term": "a zissen Pesach",
+      "variants": [
+        "a zisen Pesach"
+      ],
+      "aleph_beis": "א זיסן פסח",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A zissen Pesach!",
+      "plain_english_example": "Have a sweet Passover!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Yiddish Passover greeting wishing a sweet holiday"
+      ],
+      "context_note": "An affectionate traditional Passover greeting."
+    },
+    {
+      "term": "chag Pesach kasher v'sameach",
+      "variants": [
+        "chag Pesach kasher vesameach"
+      ],
+      "aleph_beis": "חג פסח כשר ושמח",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Chag Pesach kasher v'sameach!",
+      "plain_english_example": "Have a kosher and happy Passover!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Hebrew Passover greeting wishing a kosher and happy festival"
+      ],
+      "context_note": "A common Hebrew Pesach greeting."
+    },
+    {
+      "term": "Selichos",
+      "variants": [
+        "Selichot",
+        "Slichos"
+      ],
+      "aleph_beis": "סליחות",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "Selichos starts before Rosh Hashanah.",
+      "plain_english_example": "The penitential prayers begin before Rosh Hashanah according to the community custom.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "penitential prayers recited before and during the High Holiday season",
+        "forgiveness prayers"
+      ],
+      "context_note": "Ashkenazi communities begin Selichos before Rosh Hashanah according to calendar-based rules; additional Selichos are said on fast days.",
+      "dialect_pattern": "[Selichos|Selichot]"
+    },
+    {
+      "term": "Yamim Noraim",
+      "variants": [
+        "Yamim Nora'im"
+      ],
+      "aleph_beis": "ימים נוראים",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "The nusach changes for the Yamim Noraim.",
+      "plain_english_example": "The liturgical style changes for the High Holy Days.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Days of Awe",
+        "Rosh Hashanah and Yom Kippur season"
+      ],
+      "context_note": "Usually refers primarily to Rosh Hashanah and Yom Kippur, sometimes more broadly to the surrounding season."
+    },
+    {
+      "term": "Rosh Hashanah",
+      "variants": [
+        "Rosh Hashana"
+      ],
+      "aleph_beis": "ראש השנה",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "We are staying home for Rosh Hashanah.",
+      "plain_english_example": "We are staying home for the Jewish New Year.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish New Year",
+        "festival beginning the Ten Days of Repentance"
+      ],
+      "context_note": "Observed on the first two days of Tishrei."
+    },
+    {
+      "term": "Aseres Yemei Teshuvah",
+      "variants": [
+        "Aseret Yemei Teshuva",
+        "Aseres Yemei Teshuva"
+      ],
+      "aleph_beis": "עשרת ימי תשובה",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "People are especially careful during Aseres Yemei Teshuvah.",
+      "plain_english_example": "People are especially careful during the Ten Days of Repentance.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Ten Days of Repentance from Rosh Hashanah through Yom Kippur"
+      ],
+      "context_note": "A central High Holiday period focused on repentance and judgment.",
+      "dialect_pattern": "[Aseres Yemei Teshuvah|Aseret Yemei Teshuva]"
+    },
+    {
+      "term": "Shabbos Shuva",
+      "variants": [
+        "Shabbat Shuva",
+        "Shabbos Teshuvah"
+      ],
+      "aleph_beis": "שבת שובה",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "The rav gives a special drasha on Shabbos Shuva.",
+      "plain_english_example": "The rabbi gives a special sermon on the Sabbath between Rosh Hashanah and Yom Kippur.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sabbath between Rosh Hashanah and Yom Kippur"
+      ],
+      "context_note": "Named for the opening word of its special prophetic reading.",
+      "dialect_pattern": "[Shabbos Shuva|Shabbat Shuva]"
+    },
+    {
+      "term": "shofar",
+      "variants": [],
+      "aleph_beis": "שופר",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "Did you hear shofar?",
+      "plain_english_example": "Did you hear the ram’s-horn blasts required on Rosh Hashanah?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ram’s horn used for ritual blasts",
+        "Rosh Hashanah ritual horn"
+      ],
+      "context_note": "Most strongly associated with the mitzvah of hearing shofar on Rosh Hashanah."
+    },
+    {
+      "term": "tekias shofar",
+      "variants": [
+        "tekiat shofar",
+        "tekias shofer"
+      ],
+      "aleph_beis": "תקיעת שופר",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "Tekias shofar is after Krias HaTorah.",
+      "plain_english_example": "The shofar-blowing service is after the Torah reading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "blowing of the shofar",
+        "Rosh Hashanah shofar service"
+      ],
+      "context_note": "Refers to the mitzvah and structured series of Rosh Hashanah shofar blasts.",
+      "dialect_pattern": "[tekias shofar|tekiat shofar]"
+    },
+    {
+      "term": "tekiah",
+      "variants": [
+        "tekia"
+      ],
+      "aleph_beis": "תקיעה",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "The first sound is a tekiah.",
+      "plain_english_example": "The first shofar sound is a single sustained blast.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "single sustained shofar blast"
+      ],
+      "context_note": "One of the principal shofar sounds used on Rosh Hashanah."
+    },
+    {
+      "term": "shevarim",
+      "variants": [],
+      "aleph_beis": "שברים",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "That set is tekiah-shevarim-tekiah.",
+      "plain_english_example": "That sequence is a sustained blast, broken blasts, and another sustained blast.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "series of broken shofar blasts"
+      ],
+      "context_note": "One of the standard shofar sound patterns."
+    },
+    {
+      "term": "teruah",
+      "variants": [
+        "terua"
+      ],
+      "aleph_beis": "תרועה",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "The baal tokeia repeated the teruah.",
+      "plain_english_example": "The shofar blower repeated the rapid broken sound.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rapid broken shofar blast pattern"
+      ],
+      "context_note": "One of the standard shofar sounds on Rosh Hashanah."
+    },
+    {
+      "term": "baal tokeia",
+      "variants": [
+        "baal tekiah",
+        "baal tokaya"
+      ],
+      "aleph_beis": "בעל תוקע",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "The baal tokeia practiced before Yom Tov.",
+      "plain_english_example": "The person designated to blow the shofar practiced before the festival.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "shofar blower",
+        "person who performs the ritual shofar blasts"
+      ],
+      "context_note": "Common Ashkenazi term for the person blowing shofar."
+    },
+    {
+      "term": "tashlich",
+      "variants": [
+        "tashlikh"
+      ],
+      "aleph_beis": "תשליך",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "We are going to tashlich after the seudah.",
+      "plain_english_example": "We are going to the customary waterside prayer on Rosh Hashanah after the meal.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Rosh Hashanah prayer custom performed near water"
+      ],
+      "context_note": "Traditionally performed on Rosh Hashanah, with timing variations when the first day is Shabbos or by community custom."
+    },
+    {
+      "term": "simanim",
+      "variants": [
+        "simanim of Rosh Hashanah"
+      ],
+      "aleph_beis": "סימנים",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "We put the simanim on the table for the first night.",
+      "plain_english_example": "We put the symbolic Rosh Hashanah foods on the table for the first night.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "symbolic Rosh Hashanah foods accompanied by wishes or prayers"
+      ],
+      "context_note": "Common examples include apple and honey and other foods whose names or qualities symbolize hopes for the year."
+    },
+    {
+      "term": "malchiyos",
+      "variants": [
+        "malchuyot"
+      ],
+      "aleph_beis": "מלכיות",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "The first special section of Mussaf is malchiyos.",
+      "plain_english_example": "The first special Rosh Hashanah Mussaf section centers on divine kingship.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Rosh Hashanah Mussaf section about divine kingship"
+      ],
+      "context_note": "One of the three central thematic sections of Rosh Hashanah Mussaf.",
+      "dialect_pattern": "[malchiyos|malchuyot]"
+    },
+    {
+      "term": "zichronos",
+      "variants": [
+        "zichronot"
+      ],
+      "aleph_beis": "זכרונות",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "Zichronos is the middle special section of Mussaf.",
+      "plain_english_example": "Zichronos is the middle special Rosh Hashanah Mussaf section about remembrance.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Rosh Hashanah Mussaf section about divine remembrance"
+      ],
+      "context_note": "One of the three central thematic sections of Rosh Hashanah Mussaf.",
+      "dialect_pattern": "[zichronos|zichronot]"
+    },
+    {
+      "term": "shofros",
+      "variants": [
+        "shofarot"
+      ],
+      "aleph_beis": "שופרות",
+      "language_origin": "Hebrew",
+      "category": "Rosh Hashanah",
+      "yeshivish_example": "Shofros is the final special section of Mussaf.",
+      "plain_english_example": "Shofros is the final special Rosh Hashanah Mussaf section centered on the shofar.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Rosh Hashanah Mussaf section centered on shofar verses"
+      ],
+      "context_note": "One of the three central thematic sections of Rosh Hashanah Mussaf.",
+      "dialect_pattern": "[shofros|shofarot]"
+    },
+    {
+      "term": "Unesaneh Tokef",
+      "variants": [
+        "Unetaneh Tokef"
+      ],
+      "aleph_beis": "ונתנה תוקף",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "They sang Unesaneh Tokef slowly.",
+      "plain_english_example": "They recited the High Holiday liturgical poem Unesaneh Tokef slowly.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "prominent High Holiday piyut about judgment and repentance"
+      ],
+      "context_note": "Recited in many Ashkenazi communities during Rosh Hashanah and Yom Kippur Mussaf."
+    },
+    {
+      "term": "Avinu Malkeinu",
+      "variants": [],
+      "aleph_beis": "אבינו מלכנו",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "We said Avinu Malkeinu after the Amidah.",
+      "plain_english_example": "We recited the “Our Father, Our King” supplications after the Amidah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "penitential prayer beginning “Our Father, Our King”"
+      ],
+      "context_note": "Recited on many days in the High Holiday season and on certain fast days, with customs and omissions depending on the day."
+    },
+    {
+      "term": "Yom Kippur",
+      "variants": [
+        "Yom HaKippurim"
+      ],
+      "aleph_beis": "יום כיפור",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "The shul is full on Yom Kippur.",
+      "plain_english_example": "The synagogue is full on the Day of Atonement.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Day of Atonement",
+        "annual fast and day of repentance on the tenth of Tishrei"
+      ],
+      "context_note": "The culmination of the Ten Days of Repentance."
+    },
+    {
+      "term": "erev Yom Kippur",
+      "variants": [],
+      "aleph_beis": "ערב יום כיפור",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "We eat well on erev Yom Kippur.",
+      "plain_english_example": "We eat before the Yom Kippur fast begins.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "day before Yom Kippur"
+      ],
+      "context_note": "Associated with preparations, meals, requests for forgiveness, and other customs."
+    },
+    {
+      "term": "kaparos",
+      "variants": [
+        "kaparot",
+        "kapores"
+      ],
+      "aleph_beis": "כפרות",
+      "language_origin": "Hebrew",
+      "category": "High Holidays",
+      "yeshivish_example": "They do kaparos before Yom Kippur.",
+      "plain_english_example": "They perform the traditional pre-Yom Kippur atonement custom.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pre-Yom Kippur atonement custom"
+      ],
+      "context_note": "Customs vary, including the use of money or chickens.",
+      "dialect_pattern": "[kaparos|kaparot]"
+    },
+    {
+      "term": "seudah hamafsekes",
+      "variants": [
+        "seudah hamafseket",
+        "seuda hamafsekes"
+      ],
+      "aleph_beis": "סעודה המפסקת",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "We are having the seudah hamafsekes early.",
+      "plain_english_example": "We are having the final meal before the fast early.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "final meal before a major fast"
+      ],
+      "context_note": "Commonly used for the pre-fast meal before Yom Kippur and Tisha B’Av, though practices differ.",
+      "dialect_pattern": "[seudah hamafsekes|seudah hamafseket]"
+    },
+    {
+      "term": "Kol Nidrei",
+      "variants": [
+        "Kol Nidre"
+      ],
+      "aleph_beis": "כל נדרי",
+      "language_origin": "Aramaic",
+      "category": "Yom Kippur",
+      "yeshivish_example": "We got to shul before Kol Nidrei.",
+      "plain_english_example": "We arrived at synagogue before the opening Yom Kippur declaration concerning vows.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "opening Yom Kippur declaration concerning vows",
+        "name commonly used for the opening evening service"
+      ],
+      "context_note": "A prominent opening text of Yom Kippur evening."
+    },
+    {
+      "term": "chamisha inuyim",
+      "variants": [
+        "five inuyim",
+        "chamesh inuyim"
+      ],
+      "aleph_beis": "חמשה עינויים",
+      "language_origin": "Hebrew",
+      "category": "Yom Kippur",
+      "yeshivish_example": "Yom Kippur has the chamisha inuyim.",
+      "plain_english_example": "Yom Kippur includes five categories of self-denial.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "five forms of affliction or abstention on Yom Kippur"
+      ],
+      "context_note": "A halachic grouping of the principal Yom Kippur restrictions beyond ordinary work prohibitions."
+    },
+    {
+      "term": "Neilah",
+      "variants": [
+        "Ne'ilah",
+        "Neila"
+      ],
+      "aleph_beis": "נעילה",
+      "language_origin": "Hebrew",
+      "category": "Yom Kippur",
+      "yeshivish_example": "Neilah starts late in the afternoon.",
+      "plain_english_example": "The concluding Yom Kippur prayer service begins late in the afternoon.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "concluding prayer service of Yom Kippur"
+      ],
+      "context_note": "The final special prayer service of Yom Kippur."
+    },
+    {
+      "term": "Al Chet",
+      "variants": [
+        "Al Cheit"
+      ],
+      "aleph_beis": "על חטא",
+      "language_origin": "Hebrew",
+      "category": "Yom Kippur",
+      "yeshivish_example": "We say Al Chet many times on Yom Kippur.",
+      "plain_english_example": "We recite the confessional litany beginning “For the sin” repeatedly on Yom Kippur.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Yom Kippur confessional litany",
+        "repeated confession listing categories of sin"
+      ],
+      "context_note": "Part of the Yom Kippur vidui liturgy."
+    },
+    {
+      "term": "Yizkor",
+      "variants": [],
+      "aleph_beis": "יזכור",
+      "language_origin": "Hebrew",
+      "category": "holiday prayer",
+      "yeshivish_example": "They stay in shul for Yizkor.",
+      "plain_english_example": "They remain in synagogue for the memorial prayer for deceased relatives.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "memorial prayer for the deceased",
+        "memorial service on specified festivals"
+      ],
+      "context_note": "Commonly recited on Yom Kippur and on the final festival days of Pesach, Shavuos, and Shemini Atzeres according to Ashkenazi custom."
+    },
+    {
+      "term": "Sukkos",
+      "variants": [
+        "Sukkot",
+        "Succos",
+        "Succot"
+      ],
+      "aleph_beis": "סוכות",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "We are building the sukkah for Sukkos.",
+      "plain_english_example": "We are building the festival booth for Sukkot.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Festival of Booths",
+        "weeklong festival beginning on the fifteenth of Tishrei"
+      ],
+      "context_note": "A major pilgrimage festival centered on the sukkah and Four Species.",
+      "dialect_pattern": "[Sukkos|Sukkot]"
+    },
+    {
+      "term": "sukkah",
+      "variants": [
+        "succah"
+      ],
+      "aleph_beis": "סוכה",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "We are eating in the sukkah.",
+      "plain_english_example": "We are eating in the temporary festival booth.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "temporary booth used on Sukkos",
+        "ritual dwelling for the festival"
+      ],
+      "context_note": "A central mitzvah of Sukkos."
+    },
+    {
+      "term": "sechach",
+      "variants": [
+        "schach",
+        "s'chach"
+      ],
+      "aleph_beis": "סכך",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "The sechach needs to cover most of the sukkah.",
+      "plain_english_example": "The natural roofing material must provide the required sukkah covering.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "natural roofing material of a sukkah"
+      ],
+      "context_note": "Technical requirements govern suitable material and placement."
+    },
+    {
+      "term": "arba minim",
+      "variants": [
+        "arbaah minim",
+        "four minim"
+      ],
+      "aleph_beis": "ארבעת המינים",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "Did you buy your arba minim yet?",
+      "plain_english_example": "Have you bought your Four Species for Sukkos yet?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Four Species used on Sukkos",
+        "lulav, esrog, hadassim, and aravos"
+      ],
+      "context_note": "The ritual set used each day of Sukkos according to halacha, except where Shabbos rules affect practice."
+    },
+    {
+      "term": "lulav",
+      "variants": [],
+      "aleph_beis": "לולב",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "His lulav is very straight.",
+      "plain_english_example": "His palm branch for the Four Species is very straight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "palm branch used in the Four Species",
+        "sometimes shorthand for the entire Four Species set"
+      ],
+      "context_note": "Often used colloquially for the whole assembled bundle, though technically it is the palm branch."
+    },
+    {
+      "term": "esrog",
+      "variants": [
+        "etrog",
+        "esrogim"
+      ],
+      "aleph_beis": "אתרוג",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "He is checking the esrog for blemishes.",
+      "plain_english_example": "He is checking the citron used for Sukkos for ritual suitability.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "citron used as one of the Four Species"
+      ],
+      "context_note": "A key component of the Sukkos Four Species."
+    },
+    {
+      "term": "hadassim",
+      "variants": [
+        "hadasim",
+        "hadas"
+      ],
+      "aleph_beis": "הדסים",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "The hadassim go next to the lulav.",
+      "plain_english_example": "The myrtle branches are bound alongside the palm branch.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "myrtle branches used in the Four Species"
+      ],
+      "context_note": "Plural of hadas; three are traditionally used in the standard set."
+    },
+    {
+      "term": "aravos",
+      "variants": [
+        "aravot",
+        "aravah"
+      ],
+      "aleph_beis": "ערבות",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "The aravos dried out quickly.",
+      "plain_english_example": "The willow branches used in the Four Species dried out quickly.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "willow branches used in the Four Species",
+        "willows used separately on Hoshana Rabbah"
+      ],
+      "context_note": "Plural of aravah; relevant both to the Four Species and the Hoshana Rabbah willow custom.",
+      "dialect_pattern": "[aravos|aravot]"
+    },
+    {
+      "term": "naanuim",
+      "variants": [
+        "na'anuim"
+      ],
+      "aleph_beis": "נענועים",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "He did the naanuim during Hallel.",
+      "plain_english_example": "He performed the ritual waving of the Four Species during Hallel.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual waving movements of the Four Species"
+      ],
+      "context_note": "Performed at specified points during the Sukkos prayers according to community custom."
+    },
+    {
+      "term": "Hoshanos",
+      "variants": [
+        "Hoshanot",
+        "Hoshaanos"
+      ],
+      "aleph_beis": "הושענות",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "We circle the bimah during Hoshanos.",
+      "plain_english_example": "We circle the synagogue platform while reciting the Sukkos supplications for salvation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sukkos supplications recited while circling with the Four Species"
+      ],
+      "context_note": "One circuit is customary on ordinary Sukkos days and seven on Hoshana Rabbah.",
+      "dialect_pattern": "[Hoshanos|Hoshanot]"
+    },
+    {
+      "term": "ushpizin",
+      "variants": [
+        "ushpizim"
+      ],
+      "aleph_beis": "אושפיזין",
+      "language_origin": "Aramaic",
+      "category": "Sukkos",
+      "yeshivish_example": "Tonight we spoke about the ushpizin.",
+      "plain_english_example": "Tonight we discussed the traditional spiritual guests associated with the sukkah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional spiritual guests of the sukkah"
+      ],
+      "context_note": "In mystical tradition, seven biblical figures are associated with the seven days of Sukkos; some traditions add further parallel guests."
+    },
+    {
+      "term": "Simchas Beis Hashoeva",
+      "variants": [
+        "Simchat Beit Hashoeva"
+      ],
+      "aleph_beis": "שמחת בית השואבה",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "There is a Simchas Beis Hashoeva tonight.",
+      "plain_english_example": "There is a Sukkos celebration recalling the Temple water-drawing festivities tonight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sukkos celebration recalling the Temple water-drawing ceremony"
+      ],
+      "context_note": "Often marked today with music, dancing, and communal celebration.",
+      "dialect_pattern": "[Simchas Beis Hashoeva|Simchat Beit Hashoeva]"
+    },
+    {
+      "term": "Hoshana Rabbah",
+      "variants": [
+        "Hoshanah Rabbah",
+        "Hoshana Rabba"
+      ],
+      "aleph_beis": "הושענא רבה",
+      "language_origin": "Hebrew/Aramaic",
+      "category": "Sukkos",
+      "yeshivish_example": "They daven early on Hoshana Rabbah.",
+      "plain_english_example": "They pray early on the seventh day of Sukkos.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seventh and final day of Sukkos",
+        "day with expanded Hoshanos and willow customs"
+      ],
+      "context_note": "Carries distinctive prayers and customs and is associated in tradition with the finalization of the year’s judgment."
+    },
+    {
+      "term": "chavatas aravah",
+      "variants": [
+        "chibut aravah",
+        "beating aravos"
+      ],
+      "aleph_beis": "חביטת ערבה",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "We do chavatas aravah on Hoshana Rabbah.",
+      "plain_english_example": "We perform the traditional beating of willow branches on Hoshana Rabbah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Hoshana Rabbah custom of striking willow branches"
+      ],
+      "context_note": "A distinct custom from the aravos included in the Four Species."
+    },
+    {
+      "term": "Shemini Atzeres",
+      "variants": [
+        "Shemini Atzeret"
+      ],
+      "aleph_beis": "שמיני עצרת",
+      "language_origin": "Hebrew",
+      "category": "Sukkos",
+      "yeshivish_example": "Yizkor is said on Shemini Atzeres.",
+      "plain_english_example": "The memorial prayer is recited on Shemini Atzeret.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "festival immediately following the seven days of Sukkos"
+      ],
+      "context_note": "A distinct biblical festival; in the Diaspora it is followed by Simchas Torah as a separate calendar day.",
+      "dialect_pattern": "[Shemini Atzeres|Shemini Atzeret]"
+    },
+    {
+      "term": "tefillas geshem",
+      "variants": [
+        "tefillat geshem",
+        "geshem"
+      ],
+      "aleph_beis": "תפילת גשם",
+      "language_origin": "Hebrew",
+      "category": "Shemini Atzeres",
+      "yeshivish_example": "We say tefillas geshem on Shemini Atzeres.",
+      "plain_english_example": "We recite the special prayer for rain on Shemini Atzeret.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special prayer for rain recited on Shemini Atzeres"
+      ],
+      "context_note": "Marks the seasonal transition toward mentioning rain in the Amidah according to the liturgical calendar.",
+      "dialect_pattern": "[tefillas geshem|tefillat geshem]"
+    },
+    {
+      "term": "Simchas Torah",
+      "variants": [
+        "Simchat Torah"
+      ],
+      "aleph_beis": "שמחת תורה",
+      "language_origin": "Hebrew",
+      "category": "Simchas Torah",
+      "yeshivish_example": "The children are excited for Simchas Torah.",
+      "plain_english_example": "The children are excited for the festival celebrating completion and restarting of the annual Torah-reading cycle.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "festival celebrating completion and renewal of the Torah-reading cycle"
+      ],
+      "context_note": "In the Diaspora observed the day after Shemini Atzeres; in Israel the celebrations coincide with Shemini Atzeres.",
+      "dialect_pattern": "[Simchas Torah|Simchat Torah]"
+    },
+    {
+      "term": "hakafos",
+      "variants": [
+        "hakafot"
+      ],
+      "aleph_beis": "הקפות",
+      "language_origin": "Hebrew",
+      "category": "Simchas Torah",
+      "yeshivish_example": "The second hakafah went for a long time.",
+      "plain_english_example": "The second celebratory circuit with the Torah scrolls lasted a long time.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "circuits and dancing with Torah scrolls on Simchas Torah"
+      ],
+      "context_note": "Commonly refers to the seven celebratory circuits on Simchas Torah and related occasions.",
+      "dialect_pattern": "[hakafos|hakafot]"
+    },
+    {
+      "term": "Atah Hareisa",
+      "variants": [
+        "Ata Hareita"
+      ],
+      "aleph_beis": "אתה הראת",
+      "language_origin": "Hebrew",
+      "category": "Simchas Torah",
+      "yeshivish_example": "They started Atah Hareisa before hakafos.",
+      "plain_english_example": "They began the verses customarily recited before the Simchas Torah circuits.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "verses recited before Simchas Torah hakafos"
+      ],
+      "context_note": "A named liturgical section preceding hakafos in many Ashkenazi rites."
+    },
+    {
+      "term": "Chasan Torah",
+      "variants": [
+        "Chatan Torah"
+      ],
+      "aleph_beis": "חתן תורה",
+      "language_origin": "Hebrew",
+      "category": "Simchas Torah",
+      "yeshivish_example": "He received Chasan Torah this year.",
+      "plain_english_example": "He received the honor of the final Torah reading of the annual cycle.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person honored with the final aliyah of the Torah-reading cycle on Simchas Torah"
+      ],
+      "context_note": "A major Simchas Torah honor.",
+      "dialect_pattern": "[Chasan Torah|Chatan Torah]"
+    },
+    {
+      "term": "Chasan Bereishis",
+      "variants": [
+        "Chatan Bereishit",
+        "Chasan Bereshis"
+      ],
+      "aleph_beis": "חתן בראשית",
+      "language_origin": "Hebrew",
+      "category": "Simchas Torah",
+      "yeshivish_example": "His father got Chasan Bereishis.",
+      "plain_english_example": "His father received the honor of the opening Torah reading from Genesis on Simchas Torah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person honored with the first aliyah of the newly restarted Torah-reading cycle"
+      ],
+      "context_note": "A major Simchas Torah honor following Chasan Torah.",
+      "dialect_pattern": "[Chasan Bereishis|Chatan Bereishit]"
+    },
+    {
+      "term": "Kol HaNe'arim",
+      "variants": [
+        "Kol Hanearim"
+      ],
+      "aleph_beis": "כל הנערים",
+      "language_origin": "Hebrew",
+      "category": "Simchas Torah",
+      "yeshivish_example": "The children gathered for Kol HaNe'arim.",
+      "plain_english_example": "The children gathered for the special Simchas Torah aliyah associated with the children.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special Simchas Torah Torah-reading honor involving children"
+      ],
+      "context_note": "Customs vary by community regarding how the children participate."
+    },
+    {
+      "term": "Chanukah",
+      "variants": [
+        "Hanukkah",
+        "Hanukah",
+        "Chanuka"
+      ],
+      "aleph_beis": "חנוכה",
+      "language_origin": "Hebrew",
+      "category": "Chanukah",
+      "yeshivish_example": "We are going to a Chanukah party tonight.",
+      "plain_english_example": "We are going to a Hanukkah celebration tonight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "eight-day Festival of Lights",
+        "holiday commemorating the rededication of the Temple"
+      ],
+      "context_note": "Begins on the twenty-fifth of Kislev and lasts eight days."
+    },
+    {
+      "term": "Chanukah menorah",
+      "variants": [
+        "chanukiah",
+        "Chanukah lamp"
+      ],
+      "aleph_beis": "מנורת חנוכה",
+      "language_origin": "Hebrew",
+      "category": "Chanukah",
+      "yeshivish_example": "Put the Chanukah menorah by the window.",
+      "plain_english_example": "Place the Hanukkah lamp in the appropriate visible location.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "lamp used for the Chanukah lights"
+      ],
+      "context_note": "Often simply called a menorah in English and Yeshivish conversation."
+    },
+    {
+      "term": "ner Chanukah",
+      "variants": [
+        "neiros Chanukah",
+        "nerot Chanukah"
+      ],
+      "aleph_beis": "נר חנוכה",
+      "language_origin": "Hebrew",
+      "category": "Chanukah",
+      "yeshivish_example": "The zman for ner Chanukah is coming up.",
+      "plain_english_example": "The time for lighting the Hanukkah lights is approaching.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Chanukah light",
+        "mitzvah of lighting Chanukah candles or oil lamps"
+      ],
+      "context_note": "Can refer to an individual light or to the mitzvah more generally."
+    },
+    {
+      "term": "hadlakas neiros Chanukah",
+      "variants": [
+        "hadlakat nerot Chanukah",
+        "lighting Chanukah candles"
+      ],
+      "aleph_beis": "הדלקת נרות חנוכה",
+      "language_origin": "Hebrew",
+      "category": "Chanukah",
+      "yeshivish_example": "Hadlakas neiros Chanukah is at home tonight.",
+      "plain_english_example": "The Hanukkah candle-lighting is at home tonight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "lighting of the Chanukah menorah"
+      ],
+      "context_note": "The nightly mitzvah performed on each of the eight nights.",
+      "dialect_pattern": "[hadlakas neiros Chanukah|hadlakat nerot Chanukah]"
+    },
+    {
+      "term": "shamash",
+      "variants": [
+        "shamesh"
+      ],
+      "aleph_beis": "שמש",
+      "language_origin": "Hebrew",
+      "category": "Chanukah",
+      "yeshivish_example": "Use the shamash to light the other candles.",
+      "plain_english_example": "Use the auxiliary candle to light the other Hanukkah lights.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "auxiliary Chanukah candle or light"
+      ],
+      "context_note": "Set apart from the principal mitzvah lights and traditionally used as a practical light source."
+    },
+    {
+      "term": "Haneiros Halalu",
+      "variants": [
+        "Hanerot Halalu"
+      ],
+      "aleph_beis": "הנרות הללו",
+      "language_origin": "Hebrew",
+      "category": "Chanukah",
+      "yeshivish_example": "We say Haneiros Halalu after lighting.",
+      "plain_english_example": "We recite the text beginning “These lights” after lighting the Hanukkah menorah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Chanukah text recited after lighting"
+      ],
+      "context_note": "Describes the sacred commemorative purpose of the Chanukah lights."
+    },
+    {
+      "term": "Maoz Tzur",
+      "variants": [
+        "Ma'oz Tzur"
+      ],
+      "aleph_beis": "מעוז צור",
+      "language_origin": "Hebrew",
+      "category": "Chanukah",
+      "yeshivish_example": "Everyone sang Maoz Tzur after lighting.",
+      "plain_english_example": "Everyone sang the traditional Hanukkah hymn after lighting.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Chanukah hymn"
+      ],
+      "context_note": "Commonly sung after lighting the menorah."
+    },
+    {
+      "term": "Al Hanissim",
+      "variants": [],
+      "aleph_beis": "על הנסים",
+      "language_origin": "Hebrew",
+      "category": "holiday prayer",
+      "yeshivish_example": "Do not forget Al Hanissim in bentsching.",
+      "plain_english_example": "Do not forget the special thanksgiving insertion for Chanukah or Purim in Grace after Meals.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special thanksgiving prayer insertion for Chanukah and Purim"
+      ],
+      "context_note": "Added to the Amidah and Birkat Hamazon on Chanukah and Purim."
+    },
+    {
+      "term": "pirsumei nisa",
+      "variants": [
+        "pirsumei nissa",
+        "pirsum hanes"
+      ],
+      "aleph_beis": "פרסומי ניסא",
+      "language_origin": "Aramaic",
+      "category": "Chanukah",
+      "yeshivish_example": "The window placement helps with pirsumei nisa.",
+      "plain_english_example": "The window placement helps publicize the miracle.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "publicizing the miracle",
+        "principle of making a miracle publicly known"
+      ],
+      "context_note": "Especially associated with Chanukah lighting and also relevant to Purim practices."
+    },
+    {
+      "term": "dreidel",
+      "variants": [
+        "draydel"
+      ],
+      "aleph_beis": "דריידל",
+      "language_origin": "Yiddish",
+      "category": "Chanukah",
+      "yeshivish_example": "The kids are playing dreidel.",
+      "plain_english_example": "The children are playing the traditional Hanukkah spinning-top game.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Hanukkah spinning top"
+      ],
+      "context_note": "Yiddish-derived English/Yeshivish term for the four-sided Chanukah top."
+    },
+    {
+      "term": "Chanukah gelt",
+      "variants": [
+        "Hanukkah gelt",
+        "gelt"
+      ],
+      "aleph_beis": "חנוכה געלט",
+      "language_origin": "Yiddish",
+      "category": "Chanukah",
+      "yeshivish_example": "The grandparents gave the children Chanukah gelt.",
+      "plain_english_example": "The grandparents gave the children Hanukkah money.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "money traditionally given on Chanukah",
+        "Chanukah gift money"
+      ],
+      "context_note": "Gelt is Yiddish for money; Chanukah gelt may be given as real money or represented by chocolate coins."
+    },
+    {
+      "term": "Purim",
+      "variants": [],
+      "aleph_beis": "פורים",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "The Purim seudah is at three.",
+      "plain_english_example": "The Purim festive meal is at three.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "festival commemorating the deliverance described in the Book of Esther"
+      ],
+      "context_note": "Observed on the fourteenth of Adar in most places."
+    },
+    {
+      "term": "Shushan Purim",
+      "variants": [
+        "Purim d'Shushan"
+      ],
+      "aleph_beis": "שושן פורים",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "Jerusalem observes Shushan Purim.",
+      "plain_english_example": "Jerusalem observes Purim on the fifteenth of Adar.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Purim observed on the fifteenth of Adar in qualifying walled cities"
+      ],
+      "context_note": "Most prominently associated today with Jerusalem."
+    },
+    {
+      "term": "Purim Katan",
+      "variants": [
+        "Purim Qatan"
+      ],
+      "aleph_beis": "פורים קטן",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "Purim Katan is in Adar Rishon.",
+      "plain_english_example": "Purim Katan occurs in the first Adar of a Jewish leap year.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "minor Purim observance in Adar I of a leap year"
+      ],
+      "context_note": "The full Purim mitzvos are observed in Adar II; Purim Katan has a limited festive character."
+    },
+    {
+      "term": "Megillas Esther",
+      "variants": [
+        "Megillat Esther",
+        "Megillah Esther"
+      ],
+      "aleph_beis": "מגילת אסתר",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "Bring a Megillas Esther to shul.",
+      "plain_english_example": "Bring a scroll or text of the Book of Esther to synagogue.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Book of Esther",
+        "scroll read publicly on Purim"
+      ],
+      "context_note": "Often simply called “the Megillah” in Purim context.",
+      "dialect_pattern": "[Megillas Esther|Megillat Esther]"
+    },
+    {
+      "term": "krias hamegillah",
+      "variants": [
+        "kriyas megillah",
+        "kriat hamegillah"
+      ],
+      "aleph_beis": "קריאת המגילה",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "Krias hamegillah is after Maariv.",
+      "plain_english_example": "The public reading of the Book of Esther is after the evening service.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "reading of the Megillah on Purim"
+      ],
+      "context_note": "Performed at night and during the day, subject to the laws of the mitzvah.",
+      "dialect_pattern": "[krias hamegillah|kriat hamegillah]"
+    },
+    {
+      "term": "mishloach manos",
+      "variants": [
+        "mishloach manot",
+        "shalach manos"
+      ],
+      "aleph_beis": "משלוח מנות",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "We are packing mishloach manos.",
+      "plain_english_example": "We are preparing the food gifts sent to friends on Purim.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Purim gifts of ready-to-eat foods sent to another person"
+      ],
+      "context_note": "One of the central mitzvos of Purim day.",
+      "dialect_pattern": "[mishloach manos|mishloach manot]"
+    },
+    {
+      "term": "matanos l'evyonim",
+      "variants": [
+        "matanot laevyonim",
+        "matanos laevyonim"
+      ],
+      "aleph_beis": "מתנות לאביונים",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "Did you give matanos l'evyonim yet?",
+      "plain_english_example": "Have you given the required Purim gifts to people in need yet?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Purim gifts to the poor",
+        "charitable gifts given on Purim day"
+      ],
+      "context_note": "One of the central mitzvos of Purim.",
+      "dialect_pattern": "[matanos l'evyonim|matanot laevyonim]"
+    },
+    {
+      "term": "seudas Purim",
+      "variants": [
+        "seudat Purim",
+        "Purim seudah"
+      ],
+      "aleph_beis": "סעודת פורים",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "The seudas Purim starts after Mincha.",
+      "plain_english_example": "The festive Purim meal begins after the afternoon prayer.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "festive Purim meal"
+      ],
+      "context_note": "A principal mitzvah of Purim day."
+    },
+    {
+      "term": "Taanis Esther",
+      "variants": [
+        "Taanit Esther",
+        "Fast of Esther"
+      ],
+      "aleph_beis": "תענית אסתר",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "Taanis Esther is before Purim.",
+      "plain_english_example": "The Fast of Esther is observed shortly before Purim.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Fast of Esther",
+        "public fast associated with Purim"
+      ],
+      "context_note": "Normally observed on the thirteenth of Adar, with calendar adjustments when necessary.",
+      "dialect_pattern": "[Taanis Esther|Taanit Esther]"
+    },
+    {
+      "term": "machatzis hashekel",
+      "variants": [
+        "machatzit hashekel",
+        "zecher lmachatzis hashekel"
+      ],
+      "aleph_beis": "מחצית השקל",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "We give machatzis hashekel before Purim.",
+      "plain_english_example": "We give the customary half-shekel remembrance contribution before Purim.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "half-shekel remembrance contribution associated with Purim"
+      ],
+      "context_note": "A custom recalling the biblical half-shekel contribution; amounts and practice vary.",
+      "dialect_pattern": "[machatzis hashekel|machatzit hashekel]"
+    },
+    {
+      "term": "gragger",
+      "variants": [
+        "groger",
+        "grogger"
+      ],
+      "aleph_beis": "גראַגער",
+      "language_origin": "Yiddish",
+      "category": "Purim",
+      "yeshivish_example": "The kids brought graggers for the Megillah.",
+      "plain_english_example": "The children brought noisemakers for the Purim reading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Purim noisemaker used when Haman’s name is read"
+      ],
+      "context_note": "A Yiddish-derived term widely used in Ashkenazi communities."
+    },
+    {
+      "term": "Purim Torah",
+      "variants": [],
+      "aleph_beis": "פורים תורה",
+      "language_origin": "mixed",
+      "category": "Purim",
+      "yeshivish_example": "He gave a funny Purim Torah at the seudah.",
+      "plain_english_example": "He delivered a humorous parody of Torah-style reasoning at the Purim meal.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "humorous Torah parody or playful learned discourse associated with Purim"
+      ],
+      "context_note": "Can range from harmless wordplay to elaborate parody; context signals that it is not an ordinary serious Torah teaching."
+    },
+    {
+      "term": "venahafoch hu",
+      "variants": [
+        "v'nahafoch hu",
+        "venahafochu"
+      ],
+      "aleph_beis": "ונהפוך הוא",
+      "language_origin": "Hebrew",
+      "category": "Purim",
+      "yeshivish_example": "It was a real venahafoch hu.",
+      "plain_english_example": "The situation reversed completely, like the reversal described in the Purim story.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the situation was reversed",
+        "Purim-associated phrase for a dramatic reversal"
+      ],
+      "context_note": "From Megillas Esther; widely used figuratively in Yeshivish speech."
+    },
+    {
+      "term": "Pesach",
+      "variants": [
+        "Passover"
+      ],
+      "aleph_beis": "פסח",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "We are going away for Pesach.",
+      "plain_english_example": "We are traveling for Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Passover festival",
+        "festival commemorating the Exodus from Egypt"
+      ],
+      "context_note": "A major pilgrimage festival beginning on the fifteenth of Nissan."
+    },
+    {
+      "term": "erev Pesach",
+      "variants": [],
+      "aleph_beis": "ערב פסח",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Erev Pesach is always busy.",
+      "plain_english_example": "The day before Passover is always busy.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "day before Pesach begins"
+      ],
+      "context_note": "Includes final chametz-related preparations and other distinctive laws and customs."
+    },
+    {
+      "term": "Shabbos Hagadol",
+      "variants": [
+        "Shabbat HaGadol"
+      ],
+      "aleph_beis": "שבת הגדול",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "The rav gives a long drasha on Shabbos Hagadol.",
+      "plain_english_example": "The rabbi gives a special sermon on the Sabbath before Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sabbath immediately before Pesach"
+      ],
+      "context_note": "Traditionally associated with a major pre-Pesach sermon and distinctive customs.",
+      "dialect_pattern": "[Shabbos Hagadol|Shabbat HaGadol]"
+    },
+    {
+      "term": "bedikas chametz",
+      "variants": [
+        "bedikat chametz",
+        "bedikas chometz"
+      ],
+      "aleph_beis": "בדיקת חמץ",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Bedikas chametz is after nightfall.",
+      "plain_english_example": "The formal search for leaven is performed after nightfall.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "formal search for chametz before Pesach"
+      ],
+      "context_note": "Usually performed on the night before Erev Pesach, with calendar adjustments when necessary.",
+      "dialect_pattern": "[bedikas chametz|bedikat chametz]"
+    },
+    {
+      "term": "biur chametz",
+      "variants": [
+        "biur chometz"
+      ],
+      "aleph_beis": "ביעור חמץ",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "We finished biur chametz before the deadline.",
+      "plain_english_example": "We finished eliminating the remaining leaven before the deadline.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "destruction or removal of chametz before Pesach"
+      ],
+      "context_note": "Commonly includes burning remaining chametz on Erev Pesach."
+    },
+    {
+      "term": "bitul chametz",
+      "variants": [
+        "bittul chametz",
+        "bitul chometz"
+      ],
+      "aleph_beis": "ביטול חמץ",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Do not forget bitul chametz after the search.",
+      "plain_english_example": "Do not forget the formal nullification of leaven after the search.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "formal nullification of ownership or significance of chametz"
+      ],
+      "context_note": "Recited in connection with the search and removal of chametz according to the traditional procedure."
+    },
+    {
+      "term": "maos chittim",
+      "variants": [
+        "maot chittim",
+        "kimcha dPischa",
+        "kimcha dePischa"
+      ],
+      "aleph_beis": "מעות חטים",
+      "language_origin": "Hebrew/Aramaic",
+      "category": "Pesach",
+      "yeshivish_example": "The shul is collecting maos chittim.",
+      "plain_english_example": "The synagogue is collecting funds to help families with Passover needs.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "charity for Pesach necessities",
+        "pre-Pesach fund for people in need"
+      ],
+      "context_note": "Also called kimcha d’Pischa, literally “Passover flour.”"
+    },
+    {
+      "term": "Haggadah",
+      "variants": [
+        "Hagada"
+      ],
+      "aleph_beis": "הגדה",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Everyone needs a Haggadah at the table.",
+      "plain_english_example": "Everyone needs a Passover Haggadah at the Seder table.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "book containing the Passover Seder text and narrative"
+      ],
+      "context_note": "Guides the Seder and the retelling of the Exodus."
+    },
+    {
+      "term": "Seder plate",
+      "variants": [
+        "ke’arah",
+        "kearah"
+      ],
+      "aleph_beis": "קערה",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Put the maror on the Seder plate.",
+      "plain_english_example": "Place the bitter herbs on the ritual Passover plate.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual plate holding symbolic Seder foods"
+      ],
+      "context_note": "Often called the ke’arah in Hebrew/Yeshivish usage."
+    },
+    {
+      "term": "arba kosos",
+      "variants": [
+        "arba kosot",
+        "four kosos"
+      ],
+      "aleph_beis": "ארבע כוסות",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Make sure there is enough wine for arba kosos.",
+      "plain_english_example": "Make sure there is enough wine for the four ritual cups at the Seder.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "four cups of wine or grape juice at the Passover Seder"
+      ],
+      "context_note": "A central rabbinic obligation of the Seder night.",
+      "dialect_pattern": "[arba kosos|arba kosot]"
+    },
+    {
+      "term": "Ma Nishtana",
+      "variants": [
+        "Mah Nishtanah",
+        "Ma Nishtanah"
+      ],
+      "aleph_beis": "מה נשתנה",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "The youngest child is practicing Ma Nishtana.",
+      "plain_english_example": "The youngest child is practicing the Four Questions for the Passover Seder.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Four Questions of the Passover Seder",
+        "opening questions about why the Seder night is different"
+      ],
+      "context_note": "Traditionally recited near the beginning of Maggid."
+    },
+    {
+      "term": "Maggid",
+      "variants": [
+        "Magid"
+      ],
+      "aleph_beis": "מגיד",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "We spent a long time on Maggid.",
+      "plain_english_example": "We spent a long time on the Seder section devoted to telling the Exodus story.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Seder section devoted to telling the Exodus story"
+      ],
+      "context_note": "One of the named stages of the traditional Seder order."
+    },
+    {
+      "term": "Karpas",
+      "variants": [],
+      "aleph_beis": "כרפס",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "We dip the karpas early in the Seder.",
+      "plain_english_example": "We dip the vegetable used near the beginning of the Seder.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "vegetable eaten near the beginning of the Seder"
+      ],
+      "context_note": "One of the named stages and symbolic foods of the Seder."
+    },
+    {
+      "term": "Yachatz",
+      "variants": [],
+      "aleph_beis": "יחץ",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Yachatz is when we break the middle matzah.",
+      "plain_english_example": "Yachatz is the Seder stage when the middle matzah is broken.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Seder stage of breaking the middle matzah"
+      ],
+      "context_note": "Part of the traditional fifteen-step Seder order."
+    },
+    {
+      "term": "matzah",
+      "variants": [
+        "matza"
+      ],
+      "aleph_beis": "מצה",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "We need enough matzah for everyone.",
+      "plain_english_example": "We need enough unleavened bread for everyone.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "unleavened bread eaten on Pesach",
+        "ritual food of the Seder"
+      ],
+      "context_note": "A central Pesach food and mitzvah; specialized forms such as shmurah matzah may have additional requirements."
+    },
+    {
+      "term": "maror",
+      "variants": [
+        "marror"
+      ],
+      "aleph_beis": "מרור",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "The horseradish is for maror.",
+      "plain_english_example": "The horseradish is being used for the Seder’s bitter herbs.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bitter herbs eaten at the Seder"
+      ],
+      "context_note": "A central symbolic food recalling the bitterness of slavery."
+    },
+    {
+      "term": "chazeres",
+      "variants": [
+        "chazeret"
+      ],
+      "aleph_beis": "חזרת",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "We use romaine lettuce for chazeres.",
+      "plain_english_example": "We use romaine lettuce for the bitter-herb component called chazeret.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "one of the Seder bitter-herb items",
+        "often romaine lettuce or horseradish depending on custom and terminology"
+      ],
+      "context_note": "Seder-plate terminology and practical identification vary by custom.",
+      "dialect_pattern": "[chazeres|chazeret]"
+    },
+    {
+      "term": "charoses",
+      "variants": [
+        "charoset",
+        "haroset"
+      ],
+      "aleph_beis": "חרוסת",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "The charoses is on the Seder plate.",
+      "plain_english_example": "The sweet paste used at the Seder is on the ritual plate.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sweet Seder paste symbolically associated with mortar"
+      ],
+      "context_note": "Recipes vary widely by community and family custom."
+    },
+    {
+      "term": "korech",
+      "variants": [],
+      "aleph_beis": "כורך",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Korech comes after eating maror.",
+      "plain_english_example": "The Seder sandwich combining matzah and bitter herbs comes after maror.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Seder stage combining matzah and maror",
+        "Hillel sandwich"
+      ],
+      "context_note": "A named stage of the traditional Seder order."
+    },
+    {
+      "term": "afikoman",
+      "variants": [
+        "afikomen"
+      ],
+      "aleph_beis": "אפיקומן",
+      "language_origin": "Greek/Aramaic",
+      "category": "Pesach",
+      "yeshivish_example": "The children hid the afikoman.",
+      "plain_english_example": "The children hid the piece of matzah reserved for the end of the Seder meal.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "piece of matzah eaten near the end of the Seder",
+        "Seder matzah often hidden for children as a custom"
+      ],
+      "context_note": "The required eating at the end of the meal commemorates the Pesach offering in the traditional Seder framework."
+    },
+    {
+      "term": "zeroa",
+      "variants": [
+        "zeroah"
+      ],
+      "aleph_beis": "זרוע",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "The zeroa goes on the Seder plate.",
+      "plain_english_example": "The roasted shank-bone or substitute goes on the Seder plate.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Seder plate item recalling the Passover offering"
+      ],
+      "context_note": "Customs differ regarding the exact item used and whether it is eaten."
+    },
+    {
+      "term": "beitzah",
+      "variants": [
+        "beitza"
+      ],
+      "aleph_beis": "ביצה",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "The beitzah goes on the Seder plate.",
+      "plain_english_example": "The roasted egg goes on the Seder plate.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "roasted egg on the Seder plate"
+      ],
+      "context_note": "Traditionally associated with the festival offering and mourning symbolism in different explanations."
+    },
+    {
+      "term": "Chad Gadya",
+      "variants": [],
+      "aleph_beis": "חד גדיא",
+      "language_origin": "Aramaic",
+      "category": "Pesach",
+      "yeshivish_example": "The kids stayed awake for Chad Gadya.",
+      "plain_english_example": "The children stayed awake for the cumulative song at the end of the Haggadah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional cumulative song at the end of the Passover Seder"
+      ],
+      "context_note": "A well-known closing song of the Haggadah."
+    },
+    {
+      "term": "Echad Mi Yodea",
+      "variants": [
+        "Echad Mi Yode'a"
+      ],
+      "aleph_beis": "אחד מי יודע",
+      "language_origin": "Hebrew",
+      "category": "Pesach",
+      "yeshivish_example": "Everyone joined in for Echad Mi Yodea.",
+      "plain_english_example": "Everyone joined the numbered question-and-answer song near the end of the Seder.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional numbered song at the end of the Haggadah"
+      ],
+      "context_note": "A familiar closing song of the Seder."
+    },
+    {
+      "term": "Pesach Sheini",
+      "variants": [
+        "Pesach Sheni"
+      ],
+      "aleph_beis": "פסח שני",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "Today is Pesach Sheini.",
+      "plain_english_example": "Today is the minor date known as the Second Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Second Passover on the fourteenth of Iyar",
+        "date recalling the biblical makeup opportunity for the Passover offering"
+      ],
+      "context_note": "Today often marked by customs such as eating matzah in some communities."
+    },
+    {
+      "term": "Sefiras HaOmer",
+      "variants": [
+        "Sefirat HaOmer",
+        "Sefiras Omer"
+      ],
+      "aleph_beis": "ספירת העומר",
+      "language_origin": "Hebrew",
+      "category": "Omer and Shavuos",
+      "yeshivish_example": "What night of Sefiras HaOmer is it?",
+      "plain_english_example": "Which night of the Counting of the Omer is it?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "forty-nine-day count from Pesach to Shavuos"
+      ],
+      "context_note": "The count begins on the second night of Pesach and culminates before Shavuos.",
+      "dialect_pattern": "[Sefiras HaOmer|Sefirat HaOmer]"
+    },
+    {
+      "term": "the Omer",
+      "variants": [
+        "Omer"
+      ],
+      "aleph_beis": "עומר",
+      "language_origin": "Hebrew",
+      "category": "Omer and Shavuos",
+      "yeshivish_example": "We are in the middle of the Omer.",
+      "plain_english_example": "We are in the period of counting between Passover and Shavuos.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Omer-counting period between Pesach and Shavuos",
+        "biblical measure and offering underlying the count"
+      ],
+      "context_note": "In ordinary Yeshivish conversation “the Omer” often means the Sefirah period."
+    },
+    {
+      "term": "Lag BaOmer",
+      "variants": [
+        "Lag B'Omer",
+        "Lag LaOmer"
+      ],
+      "aleph_beis": "ל״ג בעומר",
+      "language_origin": "Hebrew",
+      "category": "Omer and Shavuos",
+      "yeshivish_example": "There is a bonfire on Lag BaOmer.",
+      "plain_english_example": "There is a celebration on the thirty-third day of the Omer count.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "thirty-third day of the Omer",
+        "minor festive day during Sefirah"
+      ],
+      "context_note": "Associated with Rabbi Shimon bar Yochai and with a relaxation of some mourning practices according to community custom."
+    },
+    {
+      "term": "Shavuos",
+      "variants": [
+        "Shavuot",
+        "Shovuos"
+      ],
+      "aleph_beis": "שבועות",
+      "language_origin": "Hebrew",
+      "category": "Shavuos",
+      "yeshivish_example": "We stay up learning on Shavuos night.",
+      "plain_english_example": "We stay awake studying Torah on the night of Shavuot.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Festival of Weeks",
+        "festival commemorating the giving of the Torah"
+      ],
+      "context_note": "A major pilgrimage festival observed fifty days from the start of the Omer count.",
+      "dialect_pattern": "[Shavuos|Shavuot]"
+    },
+    {
+      "term": "Tikkun Leil Shavuos",
+      "variants": [
+        "Tikkun Leil Shavuot"
+      ],
+      "aleph_beis": "תיקון ליל שבועות",
+      "language_origin": "Hebrew",
+      "category": "Shavuos",
+      "yeshivish_example": "They are learning Tikkun Leil Shavuos all night.",
+      "plain_english_example": "They are following the traditional all-night Shavuot study program.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional Shavuos-night study text or all-night study practice"
+      ],
+      "context_note": "Many communities stay awake studying Torah on the first night of Shavuos; exact study material varies.",
+      "dialect_pattern": "[Tikkun Leil Shavuos|Tikkun Leil Shavuot]"
+    },
+    {
+      "term": "matan Torah",
+      "variants": [],
+      "aleph_beis": "מתן תורה",
+      "language_origin": "Hebrew",
+      "category": "Shavuos",
+      "yeshivish_example": "Shavuos is zman matan Toraseinu.",
+      "plain_english_example": "Shavuot commemorates the giving of the Torah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "giving of the Torah at Sinai"
+      ],
+      "context_note": "A central theme of Shavuos."
+    },
+    {
+      "term": "zman matan Toraseinu",
+      "variants": [
+        "zman matan toratenu"
+      ],
+      "aleph_beis": "זמן מתן תורתנו",
+      "language_origin": "Hebrew",
+      "category": "Shavuos",
+      "yeshivish_example": "In davening we call Shavuos zman matan Toraseinu.",
+      "plain_english_example": "In the festival liturgy Shavuot is called the season of the giving of our Torah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "liturgical description of Shavuos as the season of the giving of the Torah"
+      ],
+      "context_note": "A standard phrase in the Shavuos festival Amidah and Kiddush."
+    },
+    {
+      "term": "Aseres Hadibros",
+      "variants": [
+        "Aseret Hadibrot",
+        "Ten Commandments"
+      ],
+      "aleph_beis": "עשרת הדברות",
+      "language_origin": "Hebrew",
+      "category": "Shavuos",
+      "yeshivish_example": "The shul is crowded for Aseres Hadibros.",
+      "plain_english_example": "The synagogue is crowded for the Torah reading of the Ten Commandments.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Ten Commandments",
+        "Decalogue read in the Torah on Shavuos"
+      ],
+      "context_note": "Also appears in other Torah-reading contexts, but strongly associated with Shavuos morning.",
+      "dialect_pattern": "[Aseres Hadibros|Aseret Hadibrot]"
+    },
+    {
+      "term": "Akdamus",
+      "variants": [
+        "Akdamut"
+      ],
+      "aleph_beis": "אקדמות",
+      "language_origin": "Aramaic",
+      "category": "Shavuos",
+      "yeshivish_example": "They sing Akdamus before the Torah reading.",
+      "plain_english_example": "They chant the traditional Aramaic Shavuot poem in connection with the Torah reading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Aramaic liturgical poem recited on Shavuos in many Ashkenazi communities"
+      ],
+      "context_note": "Custom and placement vary by rite."
+    },
+    {
+      "term": "Megillas Rus",
+      "variants": [
+        "Megillat Ruth",
+        "Megillas Ruth"
+      ],
+      "aleph_beis": "מגילת רות",
+      "language_origin": "Hebrew",
+      "category": "Shavuos",
+      "yeshivish_example": "They learn Megillas Rus on Shavuos.",
+      "plain_english_example": "They study or read the Book of Ruth on Shavuot.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Book of Ruth traditionally associated with Shavuos"
+      ],
+      "context_note": "Public reading customs vary among communities.",
+      "dialect_pattern": "[Megillas Rus|Megillat Ruth]"
+    },
+    {
+      "term": "bikkurim",
+      "variants": [
+        "bikurim"
+      ],
+      "aleph_beis": "ביכורים",
+      "language_origin": "Hebrew",
+      "category": "Shavuos",
+      "yeshivish_example": "Shavuos is connected with bringing bikkurim.",
+      "plain_english_example": "Shavuot is associated with the biblical bringing of first fruits to the Temple.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "first fruits brought to the Temple",
+        "biblical offering strongly associated with Shavuos"
+      ],
+      "context_note": "A major biblical theme of Shavuos and agricultural festival terminology."
+    },
+    {
+      "term": "taanis",
+      "variants": [
+        "taanit",
+        "taanes"
+      ],
+      "aleph_beis": "תענית",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "Tomorrow is a taanis.",
+      "plain_english_example": "Tomorrow is a Jewish fast day.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "fast",
+        "religious fast day"
+      ],
+      "context_note": "Can refer to an individual fast or a public fast day.",
+      "dialect_pattern": "[taanis|taanit]"
+    },
+    {
+      "term": "taanis tzibbur",
+      "variants": [
+        "taanit tzibbur",
+        "public fast"
+      ],
+      "aleph_beis": "תענית ציבור",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "It has the halachos of a taanis tzibbur.",
+      "plain_english_example": "It has the laws and prayers of a communal fast.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "public communal fast day"
+      ],
+      "context_note": "Public fasts have distinctive prayer additions and Torah readings according to halacha.",
+      "dialect_pattern": "[taanis tzibbur|taanit tzibbur]"
+    },
+    {
+      "term": "Shiva Asar b'Tammuz",
+      "variants": [
+        "Shivah Asar bTammuz",
+        "17 Tammuz"
+      ],
+      "aleph_beis": "שבעה עשר בתמוז",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "Shiva Asar b'Tammuz begins the Three Weeks.",
+      "plain_english_example": "The Fast of the Seventeenth of Tammuz begins the Three Weeks mourning period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Fast of the Seventeenth of Tammuz"
+      ],
+      "context_note": "A public fast commemorating calamities connected with the destruction of Jerusalem."
+    },
+    {
+      "term": "the Three Weeks",
+      "variants": [
+        "Three Weeks"
+      ],
+      "aleph_beis": "שלושת השבועות",
+      "language_origin": "mixed",
+      "category": "mourning period",
+      "yeshivish_example": "Those restrictions apply during the Three Weeks.",
+      "plain_english_example": "Those mourning practices apply during the three-week period leading up to Tisha B’Av.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mourning period from the Seventeenth of Tammuz through Tisha B’Av"
+      ],
+      "context_note": "Called Bein Hametzarim in Hebrew; specific practices vary by community and stage of the period."
+    },
+    {
+      "term": "Bein Hametzarim",
+      "variants": [],
+      "aleph_beis": "בין המצרים",
+      "language_origin": "Hebrew",
+      "category": "mourning period",
+      "yeshivish_example": "Those restrictions apply during Bein Hametzarim.",
+      "plain_english_example": "Those mourning practices apply during the period known as the Three Weeks.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "period between the fast of 17 Tammuz and Tisha B’Av",
+        "the Three Weeks"
+      ],
+      "context_note": "Hebrew name for the summer mourning period preceding Tisha B’Av."
+    },
+    {
+      "term": "the Nine Days",
+      "variants": [
+        "Nine Days"
+      ],
+      "aleph_beis": "תשעת הימים",
+      "language_origin": "mixed",
+      "category": "mourning period",
+      "yeshivish_example": "We do not eat meat during the Nine Days.",
+      "plain_english_example": "According to common Ashkenazi practice, additional mourning restrictions apply during the first nine days of Av.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "period from Rosh Chodesh Av through Tisha B’Av with intensified mourning customs"
+      ],
+      "context_note": "Exact practices vary by community and circumstance."
+    },
+    {
+      "term": "Tisha B'Av",
+      "variants": [
+        "Tishah BAv",
+        "Tisha BeAv"
+      ],
+      "aleph_beis": "תשעה באב",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "Tisha B'Av is a full fast.",
+      "plain_english_example": "Tisha B’Av is a major fast commemorating the destruction of the Temples and other calamities.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "fast of the Ninth of Av",
+        "major Jewish mourning day"
+      ],
+      "context_note": "Marked by fasting, mourning practices, Eicha, and Kinos."
+    },
+    {
+      "term": "Eicha",
+      "variants": [
+        "Megillas Eicha",
+        "Lamentations"
+      ],
+      "aleph_beis": "איכה",
+      "language_origin": "Hebrew",
+      "category": "Tisha BAv",
+      "yeshivish_example": "They read Eicha after Maariv.",
+      "plain_english_example": "They read the Book of Lamentations after the evening prayer on Tisha B’Av.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Book of Lamentations",
+        "public reading on Tisha B’Av night"
+      ],
+      "context_note": "Traditionally read in a mournful chant."
+    },
+    {
+      "term": "Kinos",
+      "variants": [
+        "Kinot",
+        "Kinnos"
+      ],
+      "aleph_beis": "קינות",
+      "language_origin": "Hebrew",
+      "category": "Tisha BAv",
+      "yeshivish_example": "Kinos takes most of the morning.",
+      "plain_english_example": "The elegies recited on Tisha B’Av occupy much of the morning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "liturgical elegies of mourning",
+        "especially the Tisha B’Av lamentations"
+      ],
+      "context_note": "Also recited in some other mourning contexts, but most commonly refers to the Tisha B’Av collection."
+    },
+    {
+      "term": "Shabbos Chazon",
+      "variants": [
+        "Shabbat Chazon"
+      ],
+      "aleph_beis": "שבת חזון",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "This week is Shabbos Chazon.",
+      "plain_english_example": "This week is the Sabbath immediately preceding Tisha B’Av.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sabbath before Tisha B’Av"
+      ],
+      "context_note": "Named for its prophetic reading beginning with “Chazon.”",
+      "dialect_pattern": "[Shabbos Chazon|Shabbat Chazon]"
+    },
+    {
+      "term": "Shabbos Nachamu",
+      "variants": [
+        "Shabbat Nachamu"
+      ],
+      "aleph_beis": "שבת נחמו",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "Shabbos Nachamu is after Tisha B'Av.",
+      "plain_english_example": "The Sabbath of consolation follows Tisha B’Av.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Sabbath immediately following Tisha B’Av"
+      ],
+      "context_note": "Named for its prophetic reading beginning with “Nachamu.”",
+      "dialect_pattern": "[Shabbos Nachamu|Shabbat Nachamu]"
+    },
+    {
+      "term": "Tzom Gedaliah",
+      "variants": [
+        "Fast of Gedaliah",
+        "Tzom Gedalya"
+      ],
+      "aleph_beis": "צום גדליה",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "Tzom Gedaliah is right after Rosh Hashanah.",
+      "plain_english_example": "The Fast of Gedaliah is observed immediately after Rosh Hashanah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Fast of Gedaliah on the third of Tishrei, with calendar adjustments"
+      ],
+      "context_note": "A public fast during the Ten Days of Repentance."
+    },
+    {
+      "term": "Asarah B'Teves",
+      "variants": [
+        "Asara BTevet",
+        "Tenth of Teves"
+      ],
+      "aleph_beis": "עשרה בטבת",
+      "language_origin": "Hebrew",
+      "category": "fast day",
+      "yeshivish_example": "Asarah B'Teves is a winter fast.",
+      "plain_english_example": "The Tenth of Tevet is a public fast day in the winter.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Fast of the Tenth of Teves"
+      ],
+      "context_note": "Commemorates the beginning of the siege of Jerusalem leading to the destruction of the First Temple."
+    },
+    {
+      "term": "Tu B'Shvat",
+      "variants": [
+        "Tu Bishvat",
+        "Tu BShvat"
+      ],
+      "aleph_beis": "ט״ו בשבט",
+      "language_origin": "Hebrew",
+      "category": "minor holiday",
+      "yeshivish_example": "Tu B'Shvat is the New Year for trees.",
+      "plain_english_example": "The fifteenth of Shevat is the traditional New Year for trees.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "New Year for trees",
+        "minor Jewish calendar date on the fifteenth of Shevat"
+      ],
+      "context_note": "Often marked by eating fruits, especially produce associated with the Land of Israel."
+    },
+    {
+      "term": "Tu B'Av",
+      "variants": [
+        "Tu BeAv",
+        "Tu BAv"
+      ],
+      "aleph_beis": "ט״ו באב",
+      "language_origin": "Hebrew",
+      "category": "minor holiday",
+      "yeshivish_example": "Tu B'Av is considered a joyous day.",
+      "plain_english_example": "The fifteenth of Av is traditionally considered a joyous date.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "minor festive date on the fifteenth of Av"
+      ],
+      "context_note": "Historically associated with matchmaking and other joyous events."
+    },
+    {
+      "term": "Parshas Shekalim",
+      "variants": [
+        "Parashat Shekalim"
+      ],
+      "aleph_beis": "פרשת שקלים",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "This week is Parshas Shekalim.",
+      "plain_english_example": "This week includes the special Torah reading about the half-shekel.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "first of the four special Torah readings before Pesach"
+      ],
+      "context_note": "Read around Rosh Chodesh Adar according to the calendar."
+    },
+    {
+      "term": "Parshas Zachor",
+      "variants": [
+        "Parashat Zachor"
+      ],
+      "aleph_beis": "פרשת זכור",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "Everyone makes sure to hear Parshas Zachor.",
+      "plain_english_example": "Everyone makes sure to hear the special Torah reading about remembering Amalek.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special Torah reading before Purim about remembering Amalek"
+      ],
+      "context_note": "One of the four special pre-Pesach Torah readings and closely associated with Purim."
+    },
+    {
+      "term": "Parshas Parah",
+      "variants": [
+        "Parashat Parah"
+      ],
+      "aleph_beis": "פרשת פרה",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "Parshas Parah is coming up.",
+      "plain_english_example": "The special Torah reading about the red heifer is approaching.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special Torah reading about the red heifer before Pesach"
+      ],
+      "context_note": "One of the four special Torah readings in the weeks leading to Pesach."
+    },
+    {
+      "term": "Parshas Hachodesh",
+      "variants": [
+        "Parashat HaChodesh"
+      ],
+      "aleph_beis": "פרשת החודש",
+      "language_origin": "Hebrew",
+      "category": "special Shabbos",
+      "yeshivish_example": "Parshas Hachodesh is before Nissan or on Rosh Chodesh Nissan.",
+      "plain_english_example": "The special Torah reading about the new month is read before or on the beginning of Nissan.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special Torah reading introducing Nissan and Pesach preparations"
+      ],
+      "context_note": "One of the four special Torah readings before Pesach."
+    },
+    {
+      "term": "Yaaleh Veyavo",
+      "variants": [],
+      "aleph_beis": "יעלה ויבוא",
+      "language_origin": "Hebrew",
+      "category": "holiday prayer",
+      "yeshivish_example": "Do not forget Yaaleh Veyavo tonight.",
+      "plain_english_example": "Do not forget the special Rosh Chodesh or festival insertion in the Amidah and Grace after Meals.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special prayer insertion for Rosh Chodesh and festivals"
+      ],
+      "context_note": "Recited in the Amidah and Birkat Hamazon on Rosh Chodesh and festival days according to the calendar."
+    },
+    {
+      "term": "Atah Vechartanu",
+      "variants": [
+        "Ata Vechartanu"
+      ],
+      "aleph_beis": "אתה בחרתנו",
+      "language_origin": "Hebrew",
+      "category": "holiday prayer",
+      "yeshivish_example": "The Yom Tov Amidah begins its central blessing with Atah Vechartanu.",
+      "plain_english_example": "The central festival blessing of the Amidah begins with the words “You chose us.”",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "central festival Amidah paragraph beginning “You chose us”"
+      ],
+      "context_note": "A standard defining text of the Yom Tov Amidah."
+    },
+    {
+      "term": "tefillas tal",
+      "variants": [
+        "tefillat tal",
+        "Tal prayer"
+      ],
+      "aleph_beis": "תפילת טל",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "We say tefillas tal on the first day of Pesach.",
+      "plain_english_example": "We recite the seasonal prayer for dew on the first day of Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special seasonal prayer for dew"
+      ],
+      "context_note": "Recited at the seasonal transition on Pesach according to the rite.",
+      "dialect_pattern": "[tefillas tal|tefillat tal]"
+    },
+    {
+      "term": "mashiv haruach umorid hageshem",
+      "variants": [
+        "mashiv haruach",
+        "morid hageshem"
+      ],
+      "aleph_beis": "משיב הרוח ומוריד הגשם",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "We start saying mashiv haruach umorid hageshem on Shemini Atzeres.",
+      "plain_english_example": "We begin mentioning wind and rain in the Amidah at the seasonal transition on Shemini Atzeret.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seasonal Amidah phrase mentioning wind and rain"
+      ],
+      "context_note": "Introduced during the Shemini Atzeres rain-season liturgy and omitted at the corresponding spring transition; pronunciation customs vary."
+    },
+    {
+      "term": "morid hatal",
+      "variants": [
+        "morid ha-tal"
+      ],
+      "aleph_beis": "מוריד הטל",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "Some nuschaos say morid hatal in the summer.",
+      "plain_english_example": "Some prayer rites mention dew in the Amidah during the summer season.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Amidah phrase mentioning dew"
+      ],
+      "context_note": "Use depends on nusach and season."
+    },
+    {
+      "term": "v'sein tal umatar",
+      "variants": [
+        "vesein tal umatar",
+        "veten tal umatar"
+      ],
+      "aleph_beis": "ותן טל ומטר",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "We have not started v'sein tal umatar here yet.",
+      "plain_english_example": "We have not yet begun the seasonal request for dew and rain in the weekday Amidah here.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seasonal request for dew and rain in the weekday Amidah"
+      ],
+      "context_note": "The start date differs between the Land of Israel and the Diaspora and follows halachic calendar rules."
+    },
+    {
+      "term": "Chodesh tov",
+      "variants": [],
+      "aleph_beis": "חודש טוב",
+      "language_origin": "Hebrew",
+      "category": "holiday greeting",
+      "yeshivish_example": "Chodesh tov!",
+      "plain_english_example": "Have a good new month!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Hebrew greeting for Rosh Chodesh or the new Jewish month"
+      ],
+      "context_note": "A common greeting around Rosh Chodesh."
+    },
+    {
+      "term": "a gutten chodesh",
+      "variants": [
+        "gut chodesh",
+        "a guten chodesh"
+      ],
+      "aleph_beis": "א גוטן חודש",
+      "language_origin": "Yiddish",
+      "category": "holiday greeting",
+      "yeshivish_example": "A gutten chodesh!",
+      "plain_english_example": "Have a good new month!",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Yiddish greeting for Rosh Chodesh or the new Jewish month"
+      ],
+      "context_note": "The Yiddish counterpart of “Chodesh tov.”"
+    },
+    {
+      "term": "Havdalah",
+      "variants": [
+        "Havdala"
+      ],
+      "aleph_beis": "הבדלה",
+      "language_origin": "Hebrew",
+      "category": "Jewish calendar",
+      "yeshivish_example": "We will make Havdalah after Yom Tov.",
+      "plain_english_example": "We will perform the ritual marking the transition from sacred time to ordinary time after the festival.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual marking the end of Shabbos or Yom Tov",
+        "separation ceremony over wine and prescribed blessings"
+      ],
+      "context_note": "The exact form differs depending on whether Shabbos, Yom Tov, or another sacred day is ending and what follows."
+    },
+    {
+      "term": "yaknehaz",
+      "variants": [
+        "yaknehaz order"
+      ],
+      "aleph_beis": "יקנה״ז",
+      "language_origin": "Hebrew acronym",
+      "category": "Yom Tov practice",
+      "yeshivish_example": "Tonight the Kiddush follows yaknehaz.",
+      "plain_english_example": "Tonight the festival Kiddush includes the special sequence used when Yom Tov begins on Saturday night.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "acronym for the Kiddush-Havdalah sequence when Yom Tov begins on Saturday night"
+      ],
+      "context_note": "Represents the ordered elements of wine, Kiddush, flame, Havdalah, and Shehecheyanu in the relevant situation."
+    },
+    {
+      "term": "hadlakas neiros",
+      "variants": [
+        "hadlakat nerot",
+        "candle lighting"
+      ],
+      "aleph_beis": "הדלקת נרות",
+      "language_origin": "Hebrew",
+      "category": "Yom Tov practice",
+      "yeshivish_example": "Hadlakas neiros is before Yom Tov begins.",
+      "plain_english_example": "Festival candle lighting takes place at the appropriate time before or during the festival according to the calendar and custom.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "lighting Shabbos or Yom Tov candles",
+        "ritual candle lighting before sacred days"
+      ],
+      "context_note": "Timing and method vary between Shabbos, Yom Tov, and cases when one sacred day follows another.",
+      "dialect_pattern": "[hadlakas neiros|hadlakat nerot]"
     }
   ]
 }

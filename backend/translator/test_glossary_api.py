@@ -8,9 +8,9 @@ from .models import GlossaryTerm
 
 class GlossaryModelTests(TestCase):
     def test_migration_imports_complete_runtime_glossary(self):
-        self.assertEqual(GlossaryTerm.objects.count(), 277)
-        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 277)
-        self.assertEqual(len(load_glossary()), 277)
+        self.assertEqual(GlossaryTerm.objects.count(), 460)
+        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 460)
+        self.assertEqual(len(load_glossary()), 460)
 
     def test_rov_is_distinct_from_rav(self):
         rav = GlossaryTerm.objects.get(term="rav")
@@ -29,6 +29,17 @@ class GlossaryModelTests(TestCase):
         )
         self.assertTrue(GlossaryTerm.objects.filter(term="kasher").exists())
         self.assertTrue(GlossaryTerm.objects.filter(term="bishul akum").exists())
+
+    def test_calendar_synonyms_remain_distinct_without_alias_collision(self):
+        three_weeks = GlossaryTerm.objects.get(term="the Three Weeks")
+        bein_hametzarim = GlossaryTerm.objects.get(term="Bein Hametzarim")
+
+        self.assertEqual(three_weeks.variants, ["Three Weeks"])
+        self.assertNotIn(
+            "bein hametzarim",
+            [variant.casefold() for variant in three_weeks.variants],
+        )
+        self.assertEqual(bein_hametzarim.variants, [])
 
     def test_rejects_invalid_array_fields(self):
         term = GlossaryTerm(
@@ -80,8 +91,8 @@ class GlossaryApiTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         payload = response.json()
-        self.assertEqual(payload["count"], 277)
-        self.assertEqual(len(payload["results"]), 277)
+        self.assertEqual(payload["count"], 460)
+        self.assertEqual(len(payload["results"]), 460)
         terms = [entry["term"] for entry in payload["results"]]
         self.assertEqual(terms, sorted(terms, key=str.casefold))
 
@@ -109,6 +120,14 @@ class GlossaryApiTests(TestCase):
         self.assertEqual(
             kashrus["display_terms"],
             {"shabbos": "kashrus", "shabbat": "kashrut"},
+        )
+
+        sukkos = next(
+            entry for entry in response.json()["results"] if entry["term"] == "Sukkos"
+        )
+        self.assertEqual(
+            sukkos["display_terms"],
+            {"shabbos": "Sukkos", "shabbat": "Sukkot"},
         )
 
     def test_is_public_read_only_and_rejects_post(self):

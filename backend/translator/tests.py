@@ -155,6 +155,17 @@ class GlossaryMatchingTests(TestCase):
         self.assertNotIn("basar b'chalav", [entry["term"] for entry in dairy_matches])
         self.assertNotIn("chodosh", [entry["term"] for entry in prohibition_matches])
 
+    def test_calendar_synonyms_match_their_own_canonical_entries(self):
+        english_matches = find_glossary_entries("During the Three Weeks.")
+        hebrew_matches = find_glossary_entries("During Bein Hametzarim.")
+
+        self.assertEqual(
+            [entry["term"] for entry in english_matches], ["the Three Weeks"]
+        )
+        self.assertEqual(
+            [entry["term"] for entry in hebrew_matches], ["Bein Hametzarim"]
+        )
+
     def test_matches_multiword_phrase_across_whitespace(self):
         matches = find_glossary_entries("Baruch\nHashem, everyone is well.")
 

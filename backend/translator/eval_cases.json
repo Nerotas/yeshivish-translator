@@ -58,5 +58,25 @@
     "forbidden_terms": ["bishul akum"],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "bein_hametzarim_calendar_context",
+    "direction": "yeshivish_to_english",
+    "source": "Those restrictions apply during Bein Hametzarim.",
+    "candidate_translation": "Those restrictions apply during the Three Weeks.",
+    "required_terms": ["Three Weeks"],
+    "forbidden_terms": ["Bein Hametzarim"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "shabbos_mevorchim_calendar_context",
+    "direction": "yeshivish_to_english",
+    "source": "This Shabbos is Shabbos Mevorchim.",
+    "candidate_translation": "This Sabbath is the special Sabbath when the coming Jewish month is announced and blessed.",
+    "required_terms": ["Sabbath", "Jewish month", "blessed"],
+    "forbidden_terms": ["Shabbos Mevorchim"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]

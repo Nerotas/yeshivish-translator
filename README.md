@@ -354,7 +354,7 @@ the compact `dialect_pattern` are not exposed.
 
 ```json
 {
-  "count": 277,
+  "count": 460,
   "results": [
     {
       "id": 1,
@@ -491,6 +491,9 @@ conversion. The Kashrus expansion additionally marks `kashrus`, `keilim`,
 `cholov stam`, `cholov akum`, `gevinas Yisroel`, `gevinas akum`,
 `simanei kashrus`, `bedikas tolaim`, `hafrashas challah`,
 `terumos u'maasros`, `yoshon`, `chodosh`, `kitniyos`, and `mechiras chametz`.
+The Yom Tov and calendar expansion adds explicit pronunciation pairs for 47
+more entries, including `Shabbos Mevorchim`, `Sukkos`, `Simchas Torah`,
+`Shavuos`, `Selichos`, and their Shabbat-mode forms.
 
 The runtime loader reads the database for each translation request so Admin edits
 take effect across backend workers without a restart. The frontend glossary
