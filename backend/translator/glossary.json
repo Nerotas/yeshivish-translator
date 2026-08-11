@@ -346,6 +346,7 @@
     },
     {
       "term": "b'ezras Hashem",
+      "dialect_pattern": "b'ezra[s|t] Hashem",
       "variants": [
         "b'ezrat Hashem",
         "be'ezras Hashem"
@@ -1156,6 +1157,7 @@
     },
     {
       "term": "chosson",
+      "dialect_pattern": "ch[osso|ata]n",
       "variants": [
         "chassan",
         "chatan",
@@ -1283,6 +1285,7 @@
     },
     {
       "term": "bris",
+      "dialect_pattern": "bri[s|t]",
       "variants": [
         "brit",
         "bris milah",
@@ -1319,6 +1322,7 @@
     },
     {
       "term": "bas mitzvah",
+      "dialect_pattern": "ba[s|t] mitzvah",
       "variants": [
         "bat mitzvah",
         "bat-mitzvah",
@@ -1348,7 +1352,7 @@
       "confidence": "high",
       "needs_human_review": false,
       "meanings": [
-        "the blessing over wine that sanctifies Shabbos or a festival",
+        "the blessing over wine that sanctifies the Sabbath or a festival",
         "refreshments or a reception after synagogue services"
       ],
       "context_note": "Context determines whether it means the ritual blessing itself or the communal food gathering commonly held after services."
@@ -1386,7 +1390,7 @@
         "meal",
         "formal or festive religious meal"
       ],
-      "context_note": "Often refers to a Shabbos or holiday meal, a wedding meal, or another meal connected to a religious occasion."
+      "context_note": "Often refers to a Sabbath or holiday meal, a wedding meal, or another meal connected to a religious occasion."
     },
     {
       "term": "bentsch",
@@ -1421,9 +1425,9 @@
       "confidence": "high",
       "needs_human_review": false,
       "meanings": [
-        "a slow-cooked stew traditionally eaten on Shabbos"
+        "a slow-cooked stew traditionally eaten on the Sabbath"
       ],
-      "context_note": "Recipes vary widely, but the term usually means a hot stew prepared before Shabbos and kept cooking for the daytime meal."
+      "context_note": "Recipes vary widely, but the term usually means a hot stew prepared before the Sabbath and kept cooking for the daytime meal."
     },
     {
       "term": "fleishig",
@@ -1481,9 +1485,11 @@
     },
     {
       "term": "gut Shabbos",
+      "dialect_pattern": "gut Shabb[os|at]",
       "variants": [
         "good Shabbos",
-        "gut Shabbes"
+        "gut Shabbes",
+        "gut Shabbat"
       ],
       "language_origin": "mixed",
       "category": "greeting",
@@ -1495,7 +1501,7 @@
         "have a good Sabbath",
         "a traditional Sabbath greeting"
       ],
-      "context_note": "Said before or during Shabbos, especially from Friday onward. It functions like “Have a good Shabbos” or “Good Shabbos.”"
+      "context_note": "A traditional greeting said before or during the Sabbath, especially from Friday onward. The pronunciation preference determines the generated transliteration."
     },
     {
       "term": "l'chaim",
@@ -1518,6 +1524,7 @@
     },
     {
       "term": "Shabbos",
+      "dialect_pattern": "Shabb[os|at]",
       "variants": [
         "Shabbat",
         "Shabbas"
@@ -1532,7 +1539,7 @@
         "the Jewish Sabbath",
         "the period from Friday before sunset until Saturday night"
       ],
-      "context_note": "The Ashkenazi form “Shabbos” is especially common in Yeshivish speech. Conversation may use it for the sacred day, its meals, or weekend plans centered on it."
+      "context_note": "The Ashkenazi form “Shabbos” and Modern Hebrew form “Shabbat” refer to the same sacred day. Conversation may use either form for its meals or weekend plans centered on it."
     },
     {
       "term": "yom tov",
@@ -1555,6 +1562,7 @@
     },
     {
       "term": "erev Shabbos",
+      "dialect_pattern": "erev Shabb[os|at]",
       "variants": [
         "erev Shabbat"
       ],
@@ -1565,13 +1573,14 @@
       "confidence": "high",
       "needs_human_review": false,
       "meanings": [
-        "Friday before Shabbos",
+        "Friday before the Sabbath",
         "the period of preparation before the Sabbath begins"
       ],
-      "context_note": "Literally the eve of Shabbos. In ordinary conversation it often means Friday, especially the busy hours devoted to Sabbath preparation."
+      "context_note": "Literally the eve of the Sabbath. In ordinary conversation it often means Friday, especially the busy hours devoted to Sabbath preparation."
     },
     {
       "term": "motzaei Shabbos",
+      "dialect_pattern": "motzaei Shabb[os|at]",
       "variants": [
         "motzei Shabbos",
         "motzaei Shabbat",
@@ -1584,10 +1593,10 @@
       "confidence": "high",
       "needs_human_review": false,
       "meanings": [
-        "Saturday night after Shabbos ends",
+        "Saturday night after the Sabbath ends",
         "the period immediately following the Sabbath"
       ],
-      "context_note": "Used for scheduling events after nightfall on Saturday, once Shabbos has concluded."
+      "context_note": "Used for scheduling events after nightfall on Saturday, once the Sabbath has concluded."
     },
     {
       "term": "daven",
@@ -1643,6 +1652,7 @@
     },
     {
       "term": "shacharis",
+      "dialect_pattern": "shachari[s|t]",
       "variants": [
         "shacharit",
         "shachris"
@@ -1724,6 +1734,7 @@
     },
     {
       "term": "chavrusa",
+      "dialect_pattern": "chavru[s|t]a",
       "variants": [
         "chavruta",
         "chevrusa"
@@ -1742,6 +1753,7 @@
     },
     {
       "term": "beis midrash",
+      "dialect_pattern": "bei[s|t] midrash",
       "variants": [
         "beit midrash",
         "beth midrash",
@@ -2158,6 +2170,7 @@
     },
     {
       "term": "shomer Shabbos",
+      "dialect_pattern": "shomer Shabb[os|at]",
       "variants": [
         "shomer Shabbat"
       ],
@@ -2169,9 +2182,9 @@
       "needs_human_review": false,
       "meanings": [
         "Sabbath-observant",
-        "a person who follows the laws of Shabbos"
+        "a person who follows the laws of the Sabbath"
       ],
-      "context_note": "Literally “one who keeps Shabbos.” In many Orthodox settings it may suggest broader observance as well, but its direct meaning concerns the Sabbath."
+      "context_note": "Literally “one who keeps the Sabbath.” In many Orthodox settings it may suggest broader observance as well, but its direct meaning concerns the Sabbath."
     },
     {
       "term": "loshon hara",
@@ -2194,6 +2207,7 @@
     },
     {
       "term": "hashgacha pratis",
+      "dialect_pattern": "hashgacha prati[s|t]",
       "variants": [
         "hashgacha pratit",
         "hashgachah pratis"

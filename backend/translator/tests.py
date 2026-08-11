@@ -12,10 +12,13 @@ from .glossary import (
     _validate_entry,
     find_glossary_entries,
     format_glossary_context,
+    get_display_term,
     load_glossary,
+    resolve_dialect_term,
 )
 from .prompt import (
     ENGLISH_TO_YESHIVISH_INSTRUCTIONS,
+    PRONUNCIATION_INSTRUCTIONS,
     TRANSLATOR_INSTRUCTIONS,
     build_translation_instructions,
 )
@@ -28,13 +31,16 @@ class OneRequestClientIPRateThrottle(ClientIPRateThrottle):
     rate = "1/hour"
 
 
-def glossary_entry(term, variants=None):
-    return {
+def glossary_entry(term, variants=None, dialect_pattern=None):
+    entry = {
         "term": term,
         "variants": variants or [],
         "meanings": [f"meaning of {term}"],
         "context_note": f"context for {term}",
     }
+    if dialect_pattern is not None:
+        entry["dialect_pattern"] = dialect_pattern
+    return entry
 
 
 def bearer_auth_header() -> dict[str, str]:
@@ -85,6 +91,10 @@ class GlossaryMatchingTests(SimpleTestCase):
             ({**glossary_entry("term"), "variants": "variant"}, "list of strings"),
             ({**glossary_entry("term"), "meanings": []}, "at least one meaning"),
             ({**glossary_entry("term"), "context_note": " "}, "non-empty string"),
+            (
+                {**glossary_entry("term"), "dialect_pattern": " "},
+                "dialect_pattern",
+            ),
         )
 
         for entry, message in invalid_entries:
@@ -166,7 +176,53 @@ class GlossaryMatchingTests(SimpleTestCase):
     def test_formats_compact_context(self):
         context = format_glossary_context([glossary_entry("vort", ["vertel"])])
 
-        self.assertIn("- vort (variants: vertel): meaning of vort.", context)
+        self.assertIn("- vort (recognized variants: vertel): meaning of vort.", context)
+
+    def test_resolves_dialect_patterns_in_both_modes(self):
+        cases = (
+            ("Shabb[os|at]", "shabbos", "Shabbos"),
+            ("Shabb[os|at]", "shabbat", "Shabbat"),
+            ("ba[s|t] mitzvah", "shabbos", "bas mitzvah"),
+            ("ba[s|t] mitzvah", "shabbat", "bat mitzvah"),
+        )
+
+        for pattern, preference, expected in cases:
+            with self.subTest(pattern=pattern, preference=preference):
+                self.assertEqual(resolve_dialect_term(pattern, preference), expected)
+
+    def test_resolver_supports_multiple_and_invalid_patterns(self):
+        self.assertEqual(
+            resolve_dialect_term("[bei|bei][s|t] midrash", "shabbat"),
+            "beit midrash",
+        )
+        self.assertEqual(resolve_dialect_term("Shabb[os|at", "shabbat"), "Shabb[os|at")
+
+    def test_display_term_leaves_unaffected_entry_unchanged(self):
+        self.assertEqual(
+            get_display_term(glossary_entry("mamesh"), "shabbat"), "mamesh"
+        )
+
+    def test_seed_dialect_patterns_resolve_to_canonical_shabbos_terms(self):
+        affected_entries = [
+            entry for entry in load_glossary() if entry.get("dialect_pattern")
+        ]
+
+        self.assertGreater(len(affected_entries), 0)
+        for entry in affected_entries:
+            with self.subTest(term=entry["term"]):
+                self.assertEqual(get_display_term(entry, "shabbos"), entry["term"])
+                shabbat_term = get_display_term(entry, "shabbat")
+                self.assertNotEqual(shabbat_term, entry["term"])
+                self.assertIn(
+                    shabbat_term.casefold(),
+                    [variant.casefold() for variant in entry["variants"]],
+                )
+                self.assertEqual(
+                    find_glossary_entries(entry["term"], entries=[entry]), [entry]
+                )
+                self.assertEqual(
+                    find_glossary_entries(shabbat_term, entries=[entry]), [entry]
+                )
 
     def test_rejects_unknown_context_direction(self):
         with self.assertRaisesRegex(ValueError, "Unsupported translation direction"):
@@ -175,10 +231,11 @@ class GlossaryMatchingTests(SimpleTestCase):
 
 class TranslationPromptTests(SimpleTestCase):
     def test_returns_base_instructions_when_no_terms_match(self):
-        self.assertEqual(
-            build_translation_instructions("This is an ordinary sentence."),
-            TRANSLATOR_INSTRUCTIONS,
-        )
+        instructions = build_translation_instructions("This is an ordinary sentence.")
+
+        self.assertIn(TRANSLATOR_INSTRUCTIONS.strip(), instructions)
+        self.assertIn(PRONUNCIATION_INSTRUCTIONS["shabbos"], instructions)
+        self.assertNotIn("Relevant glossary guidance:", instructions)
 
     def test_includes_only_relevant_glossary_entries(self):
         instructions = build_translation_instructions("A geshmake vort.")
@@ -199,13 +256,25 @@ class TranslationPromptTests(SimpleTestCase):
         self.assertNotIn('Yeshivish "bubbe"', instructions)
 
     def test_reverse_prompt_without_matches_uses_only_base_instructions(self):
-        self.assertEqual(
-            build_translation_instructions(
-                "ZXQV 12345",
-                direction="english_to_yeshivish",
-            ),
-            ENGLISH_TO_YESHIVISH_INSTRUCTIONS,
+        instructions = build_translation_instructions(
+            "ZXQV 12345",
+            direction="english_to_yeshivish",
         )
+
+        self.assertIn(ENGLISH_TO_YESHIVISH_INSTRUCTIONS.strip(), instructions)
+        self.assertIn(PRONUNCIATION_INSTRUCTIONS["shabbos"], instructions)
+        self.assertNotIn("Relevant glossary guidance:", instructions)
+
+    def test_shabbat_prompt_resolves_relevant_glossary_output(self):
+        instructions = build_translation_instructions(
+            "The morning prayer service starts soon.",
+            direction="english_to_yeshivish",
+            pronunciation_preference="shabbat",
+        )
+
+        self.assertIn(PRONUNCIATION_INSTRUCTIONS["shabbat"], instructions)
+        self.assertIn('Yeshivish "shacharit"', instructions)
+        self.assertNotIn('Yeshivish "shacharis"', instructions)
 
     def test_reverse_prompt_requests_maximal_entertaining_yeshivish(self):
         instructions = build_translation_instructions(
@@ -331,6 +400,31 @@ class TranslationEndpointTests(SimpleTestCase):
             "Yeshivish-to-plain-English translator",
             create.call_args.kwargs["instructions"],
         )
+        self.assertIn(
+            "Pronunciation preference: Shabbos",
+            create.call_args.kwargs["instructions"],
+        )
+
+    @patch("translator.views.get_openai_client")
+    def test_sends_shabbat_pronunciation_prompt_to_openai(self, get_client):
+        create = Mock(return_value=SimpleNamespace(output_text="Shacharit is soon."))
+        get_client.return_value.responses.create = create
+
+        response = self.client.post(
+            "/api/translate/",
+            {
+                "text": "The morning prayer service starts soon.",
+                "direction": "english_to_yeshivish",
+                "pronunciation_preference": "shabbat",
+            },
+            content_type="application/json",
+            **bearer_auth_header(),
+        )
+
+        self.assertEqual(response.status_code, 200)
+        instructions = create.call_args.kwargs["instructions"]
+        self.assertIn("Pronunciation preference: Shabbat", instructions)
+        self.assertIn('Yeshivish "shacharit"', instructions)
 
     @patch("translator.views.get_openai_client")
     def test_sends_reverse_direction_prompt_to_openai(self, get_client):
@@ -438,6 +532,25 @@ class TranslationEndpointTests(SimpleTestCase):
         )
 
         self.assertEqual(response.status_code, 400)
+
+    @patch("translator.views.get_openai_client")
+    def test_rejects_invalid_pronunciation_preference(self, get_client):
+        for preference in ("invalid", ["shabbat"]):
+            with self.subTest(preference=preference):
+                response = self.client.post(
+                    "/api/translate/",
+                    {
+                        "text": "Hello",
+                        "pronunciation_preference": preference,
+                    },
+                    content_type="application/json",
+                    **bearer_auth_header(),
+                )
+
+                self.assertEqual(response.status_code, 400)
+                self.assertIn("pronunciation_preference", response.json()["error"])
+
+        get_client.assert_not_called()
 
     @patch("translator.views.get_openai_client")
     def test_returns_bad_gateway_for_openai_error(self, get_client):

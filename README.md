@@ -295,7 +295,7 @@ The request accepts up to 3,000 characters.
 curl --fail-with-body \
   --request POST \
   --header 'Content-Type: application/json' \
-  --data '{"text":"That was mamesh a geshmake shiur.","direction":"yeshivish_to_english"}' \
+  --data '{"text":"That was mamesh a geshmake shiur.","direction":"yeshivish_to_english","pronunciation_preference":"shabbos"}' \
   http://127.0.0.1:8000/api/translate/
 ```
 
@@ -305,7 +305,7 @@ curl --fail-with-body \
 curl --fail-with-body \
   --request POST \
   --header 'Content-Type: application/json' \
-  --data '{"text":"That was a very enjoyable lesson.","direction":"english_to_yeshivish"}' \
+  --data '{"text":"That was a very enjoyable lesson.","direction":"english_to_yeshivish","pronunciation_preference":"shabbat"}' \
   http://127.0.0.1:8000/api/translate/
 ```
 
@@ -333,6 +333,11 @@ curl --fail-with-body \
   http://127.0.0.1:8000/api/translate/
 ```
 
+Supported `pronunciation_preference` values are `shabbos` and `shabbat`.
+Omitting the field defaults to `shabbos`. The preference controls generated
+transliterated terminology without changing Hebrew script, names, proper nouns,
+or quoted source wording.
+
 ### API status behavior
 
 | Status | Meaning                                                                                              |
@@ -353,12 +358,13 @@ guardrails.
 
 ## How translation works
 
-1. Django validates the input text and translation direction.
+1. Django validates the input text, translation direction, and pronunciation
+   preference.
 2. The glossary matcher normalizes the submitted text and finds relevant terms.
 3. Overlapping matches prefer the longer phrase, duplicate entries are removed,
    and at most eight glossary entries are selected.
-4. The prompt builder combines the selected glossary guidance with the system
-   instructions for the requested direction.
+4. The prompt builder resolves dialect-aware glossary terms and combines the
+   selected guidance with the direction and pronunciation instructions.
 5. Django sends the source text and instructions to the OpenAI Responses API.
 6. The API returns only the translated text to the frontend.
 
@@ -388,6 +394,31 @@ Additional metadata is allowed. Before committing glossary changes, run the
 backend tests. They verify the glossary structure, non-empty meanings, unique
 aliases, matching behavior, and the absence of citation/source artifacts in
 context notes.
+
+Entries affected by the Shabbos/Shabbat convention include a
+`dialect_pattern`, while `term` remains the canonical Shabbos-mode value:
+
+```json
+{
+  "term": "shacharis",
+  "dialect_pattern": "shachari[s|t]",
+  "variants": ["shacharit", "shachris"],
+  "meanings": ["the morning prayer service"],
+  "context_note": "Both forms refer to the same daily morning service."
+}
+```
+
+Each bracket contains `[shabbos-mode|shabbat-mode]` text. Multiple brackets are
+supported, malformed brackets remain literal, and entries without this optional
+field are unaffected. Matching continues to use the canonical term and all
+variants regardless of the selected output preference.
+
+The current glossary audit marks these canonical entries: `b'ezras Hashem`,
+`chosson`, `bris`, `bas mitzvah`, `gut Shabbos`, `Shabbos`, `erev Shabbos`,
+`motzaei Shabbos`, `shacharis`, `chavrusa`, `beis midrash`, `shomer Shabbos`,
+and `hashgacha pratis`. Entries without an explicit two-form relationship were
+left unchanged; the implementation never performs a blanket `s`-to-`t`
+conversion.
 
 The glossary loader is cached per backend process. Restart long-running backend
 workers after changing `glossary.json`.

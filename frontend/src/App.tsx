@@ -4,6 +4,10 @@ import {
   translateText,
   type TranslationDirection,
 } from "./api";
+import {
+  PRONUNCIATION_PREFERENCES,
+} from "./pronunciation";
+import { usePronunciationPreference } from "./pronunciation-context";
 import "./App.css";
 
 interface DirectionCopy {
@@ -50,6 +54,7 @@ const DIRECTIONS: Record<TranslationDirection, DirectionCopy> = {
 };
 
 export default function App() {
+  const { preference, setPreference } = usePronunciationPreference();
   const [theme, setTheme] = useState<Theme>(getSavedTheme);
   const [direction, setDirection] = useState<TranslationDirection>(
     "yeshivish_to_english",
@@ -81,7 +86,7 @@ export default function App() {
 
     setLoading(true);
     try {
-      setTranslation(await translateText(text, direction));
+      setTranslation(await translateText(text, direction, preference));
     } catch (requestError: unknown) {
       setError(
         requestError instanceof Error
@@ -117,6 +122,25 @@ export default function App() {
               {value === "light" ? "Light" : "Dark"}
             </button>
           ))}
+        </div>
+
+        <div
+          className="pronunciation-selector"
+          aria-label="Pronunciation preference"
+        >
+          <span>Pronunciation</span>
+          <div>
+            {PRONUNCIATION_PREFERENCES.map((value) => (
+              <button
+                key={value}
+                type="button"
+                aria-pressed={preference === value}
+                onClick={() => setPreference(value)}
+              >
+                {value === "shabbos" ? "Shabbos" : "Shabbat"}
+              </button>
+            ))}
+          </div>
         </div>
 
         <p className="eyebrow">{copy.eyebrow}</p>

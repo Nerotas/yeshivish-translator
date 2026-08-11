@@ -6,19 +6,24 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal, TypedDict, cast
 
+from typing_extensions import NotRequired
+
 
 class GlossaryEntry(TypedDict):
     term: str
+    dialect_pattern: NotRequired[str]
     variants: list[str]
     meanings: list[str]
     context_note: str
 
 
 TranslationDirection = Literal["yeshivish_to_english", "english_to_yeshivish"]
+PronunciationPreference = Literal["shabbos", "shabbat"]
 
 GLOSSARY_PATH = Path(__file__).with_name("glossary.json")
 MAX_GLOSSARY_MATCHES = 8
 ENGLISH_MEANING_SEPARATOR = re.compile(r"\s+(?:or|and)\s+|\s*[/;]\s*")
+DIALECT_PATTERN = re.compile(r"\[([^|\]]+)\|([^\]]+)\]")
 
 
 def _normalize(value: str) -> str:
@@ -39,6 +44,12 @@ def _validate_entry(entry: object) -> None:
 
     if not isinstance(entry["term"], str) or not entry["term"].strip():
         raise ValueError("Each glossary term must be a non-empty string.")
+
+    dialect_pattern = entry.get("dialect_pattern")
+    if dialect_pattern is not None and (
+        not isinstance(dialect_pattern, str) or not dialect_pattern.strip()
+    ):
+        raise ValueError("Glossary dialect_pattern must be a non-empty string.")
 
     for field in ("variants", "meanings"):
         values = entry[field]
@@ -90,6 +101,16 @@ def _english_aliases(entry: GlossaryEntry) -> set[str]:
         for alias in aliases
         if alias.strip(" .?!")
     }
+
+
+def resolve_dialect_term(pattern: str, preference: PronunciationPreference) -> str:
+    choice_index = 1 if preference == "shabbos" else 2
+    return DIALECT_PATTERN.sub(lambda match: match.group(choice_index), pattern)
+
+
+def get_display_term(entry: GlossaryEntry, preference: PronunciationPreference) -> str:
+    pattern = entry.get("dialect_pattern")
+    return resolve_dialect_term(pattern, preference) if pattern else entry["term"]
 
 
 def find_glossary_entries(
@@ -150,6 +171,7 @@ def find_glossary_entries(
 def format_glossary_context(
     entries: Sequence[GlossaryEntry],
     direction: TranslationDirection = "yeshivish_to_english",
+    pronunciation_preference: PronunciationPreference = "shabbos",
 ) -> str:
     if not entries:
         return ""
@@ -169,14 +191,17 @@ def format_glossary_context(
         raise ValueError(f"Unsupported translation direction: {direction}")
 
     for entry in entries:
+        display_term = get_display_term(entry, pronunciation_preference)
         variants = entry.get("variants", [])
-        variant_text = f" (variants: {', '.join(variants)})" if variants else ""
+        variant_text = (
+            f" (recognized variants: {', '.join(variants)})" if variants else ""
+        )
         meanings = "; ".join(entry["meanings"])
         if direction == "yeshivish_to_english":
-            mapping = f"{entry['term']}{variant_text}: {meanings}"
+            mapping = f"{display_term}{variant_text}: {meanings}"
         else:
             mapping = (
-                f'English "{meanings}" -> Yeshivish "{entry["term"]}"{variant_text}'
+                f'English "{meanings}" -> Yeshivish "{display_term}"{variant_text}'
             )
 
         lines.append(f"- {mapping}. Context: {entry['context_note']}")

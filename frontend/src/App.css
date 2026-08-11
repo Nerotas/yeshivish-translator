@@ -40,6 +40,48 @@
   color: var(--text-h);
 }
 
+.pronunciation-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pronunciation-selector > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.translator-card .pronunciation-selector button {
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--surface-muted);
+  color: var(--text-h);
+  font-size: 0.85rem;
+}
+
+.translator-card .pronunciation-selector button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.translator-card .pronunciation-selector button:last-child {
+  margin-left: -1px;
+  border-radius: 0 8px 8px 0;
+}
+
+.translator-card .pronunciation-selector button[aria-pressed="true"] {
+  position: relative;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -148,6 +190,7 @@
 }
 
 .translator-card .theme-selector button:hover,
+.translator-card .pronunciation-selector button:hover:not([aria-pressed="true"]),
 .translator-card .direction-selector button:hover:not(.active) {
   background: var(--surface-muted);
 }
@@ -203,5 +246,11 @@
 
   .direction-selector {
     grid-template-columns: 1fr;
+  }
+
+  .pronunciation-selector {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
