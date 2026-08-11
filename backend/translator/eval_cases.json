@@ -98,5 +98,15 @@
     "forbidden_terms": ["kriah", "tearing"],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "hefsek_taharah_context",
+    "direction": "yeshivish_to_english",
+    "source": "She completed a hefsek taharah.",
+    "candidate_translation": "She completed the examination used to establish that bleeding has ceased.",
+    "required_terms": ["examination", "bleeding has ceased"],
+    "forbidden_terms": ["hefsek taharah"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]

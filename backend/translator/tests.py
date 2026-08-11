@@ -180,6 +180,11 @@ class GlossaryMatchingTests(TestCase):
         self.assertEqual([entry["term"] for entry in reading_matches], ["kriah"])
         self.assertEqual([entry["term"] for entry in mourning_matches], ["keriah"])
 
+    def test_taharas_hamishpacha_terms_match(self):
+        matches = find_glossary_entries("She completed a hefsek taharah.")
+
+        self.assertEqual([entry["term"] for entry in matches], ["hefsek taharah"])
+
     def test_matches_multiword_phrase_across_whitespace(self):
         matches = find_glossary_entries("Baruch\nHashem, everyone is well.")
 

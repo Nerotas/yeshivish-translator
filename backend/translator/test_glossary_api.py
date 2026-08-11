@@ -8,9 +8,9 @@ from .models import GlossaryTerm
 
 class GlossaryModelTests(TestCase):
     def test_migration_imports_complete_runtime_glossary(self):
-        self.assertEqual(GlossaryTerm.objects.count(), 753)
-        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 753)
-        self.assertEqual(len(load_glossary()), 753)
+        self.assertEqual(GlossaryTerm.objects.count(), 822)
+        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 822)
+        self.assertEqual(len(load_glossary()), 822)
 
     def test_rov_is_distinct_from_rav(self):
         rav = GlossaryTerm.objects.get(term="rav")
@@ -52,6 +52,11 @@ class GlossaryModelTests(TestCase):
         self.assertNotIn("kriah", [variant.casefold() for variant in keriah.variants])
         self.assertTrue(GlossaryTerm.objects.filter(term="kriah").exists())
         self.assertTrue(GlossaryTerm.objects.filter(term="ST'M").exists())
+
+    def test_taharas_hamishpacha_terms_are_imported(self):
+        hefsek_taharah = GlossaryTerm.objects.get(term="hefsek taharah")
+
+        self.assertIn("examination used", hefsek_taharah.meanings[0])
 
     def test_rejects_invalid_array_fields(self):
         term = GlossaryTerm(
@@ -103,8 +108,8 @@ class GlossaryApiTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         payload = response.json()
-        self.assertEqual(payload["count"], 753)
-        self.assertEqual(len(payload["results"]), 753)
+        self.assertEqual(payload["count"], 822)
+        self.assertEqual(len(payload["results"]), 822)
         terms = [entry["term"] for entry in payload["results"]]
         self.assertEqual(terms, sorted(terms, key=str.casefold))
 

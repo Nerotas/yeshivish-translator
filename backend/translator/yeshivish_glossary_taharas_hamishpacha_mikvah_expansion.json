@@ -1,0 +1,1271 @@
+{
+  "name": "Yeshivish Taharas Hamishpacha and Mikvah Glossary Expansion",
+  "version": 1,
+  "entry_count": 69,
+  "expansion_counts": {
+    "bleeding": 1,
+    "classical terminology": 4,
+    "conduct": 3,
+    "cycle calendar": 17,
+    "general": 1,
+    "marriage": 4,
+    "mikvah": 6,
+    "mikvah construction": 6,
+    "mikvah preparation": 5,
+    "people": 1,
+    "postpartum": 2,
+    "pregnancy": 1,
+    "stains": 6,
+    "status": 7,
+    "taharah process": 5
+  },
+  "collision_notes": {
+    "prior_entry_count_checked": 866,
+    "exact_primary_or_variant_collisions_found": 0,
+    "normalization": "case-insensitive; punctuation/apostrophes/hyphens normalized for collision checking",
+    "note": "This expansion is intentionally additive and excludes terms already present as a primary term or variant in the prior glossary files."
+  },
+  "source_notes": [
+    "Core terminology and glossary meanings were cross-checked against Nishmat Yoatzot Halacha resources, especially its Halachic Glossary, Taharah Process, Bedikot, Stains, and Vesatot materials.",
+    "General niddah and mikvah terminology was cross-checked against Orthodox Union and Chabad reference material.",
+    "Definitions are glossary-level summaries for translation and are not practical halachic rulings. Context-sensitive or technically variable entries are marked needs_human_review."
+  ],
+  "entries": [
+    {
+      "term": "taharas hamishpacha",
+      "variants": [
+        "taharat hamishpacha",
+        "taharat hamishpachah",
+        "taharas hamishpocha"
+      ],
+      "aleph_beis": "טהרת המשפחה",
+      "language_origin": "Hebrew",
+      "category": "family purity - general",
+      "yeshivish_example": "They learned the halachos of taharas hamishpacha before the wedding.",
+      "plain_english_example": "They learned the Jewish family-purity laws before the wedding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish family-purity laws",
+        "the laws governing niddah, separation, and mikvah"
+      ],
+      "context_note": "Ashkenazi/Yeshivish pronunciation of taharat hamishpacha. It is an umbrella term for the laws of niddah and mikvah."
+    },
+    {
+      "term": "niddah",
+      "variants": [
+        "nidah"
+      ],
+      "aleph_beis": "נדה",
+      "language_origin": "Hebrew",
+      "category": "family purity - status",
+      "yeshivish_example": "She has the halachic status of niddah.",
+      "plain_english_example": "She is in the halachic status in which the couple observes the niddah restrictions.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the halachic status associated with specified uterine bleeding",
+        "a woman in that halachic status"
+      ],
+      "context_note": "In practical Orthodox usage, the status continues until the required taharah process and valid mikvah immersion are completed."
+    },
+    {
+      "term": "tehorah",
+      "variants": [
+        "tahorah",
+        "tehora"
+      ],
+      "aleph_beis": "טהורה",
+      "language_origin": "Hebrew",
+      "category": "family purity - status",
+      "yeshivish_example": "After a valid tevilah she is tehorah.",
+      "plain_english_example": "After a valid immersion she is no longer in the niddah status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritually pure, feminine",
+        "not in the niddah status"
+      ],
+      "context_note": "Feminine form of tahor; in taharas hamishpacha it commonly describes the status after completing the required process and immersion."
+    },
+    {
+      "term": "tahor",
+      "variants": [],
+      "aleph_beis": "טהור",
+      "language_origin": "Hebrew",
+      "category": "family purity - status",
+      "yeshivish_example": "The term tahor means ritually pure.",
+      "plain_english_example": "The term means ritually pure.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritually pure, masculine",
+        "pure in halachic terminology"
+      ],
+      "context_note": "General ritual-purity term. The feminine form tehorah is more common in family-purity discussions."
+    },
+    {
+      "term": "temeiah",
+      "variants": [
+        "temeah"
+      ],
+      "aleph_beis": "טמאה",
+      "language_origin": "Hebrew",
+      "category": "family purity - status",
+      "yeshivish_example": "The older terminology may describe the status as temeiah.",
+      "plain_english_example": "The older terminology may describe the status as ritually impure.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritually impure, feminine"
+      ],
+      "context_note": "Feminine form of tamei. In modern family-purity discussion, niddah is often the more precise practical term."
+    },
+    {
+      "term": "tamei",
+      "variants": [],
+      "aleph_beis": "טמא",
+      "language_origin": "Hebrew",
+      "category": "family purity - status",
+      "yeshivish_example": "Tamei is the masculine form of the ritual-impurity term.",
+      "plain_english_example": "Tamei means ritually impure in halachic terminology.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritually impure, masculine"
+      ],
+      "context_note": "A broad ritual-purity term with applications beyond taharas hamishpacha."
+    },
+    {
+      "term": "taharah",
+      "variants": [],
+      "aleph_beis": "טהרה",
+      "language_origin": "Hebrew",
+      "category": "family purity - status",
+      "yeshivish_example": "She is beginning the taharah process.",
+      "plain_english_example": "She is beginning the process of returning to a permitted family-purity status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "purity",
+        "the process of becoming tehorah"
+      ],
+      "context_note": "In this context it often refers to the process that includes a hefsek taharah, seven clean days, and mikvah immersion."
+    },
+    {
+      "term": "tumah",
+      "variants": [
+        "tum'ah"
+      ],
+      "aleph_beis": "טומאה",
+      "language_origin": "Hebrew",
+      "category": "family purity - status",
+      "yeshivish_example": "The sugya uses the language of tumah and taharah.",
+      "plain_english_example": "The Talmudic discussion uses the language of ritual impurity and purity.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual impurity",
+        "the state of being tamei or temeiah"
+      ],
+      "context_note": "A broad halachic concept that extends far beyond niddah."
+    },
+    {
+      "term": "hefsek taharah",
+      "variants": [
+        "hefsek tahara"
+      ],
+      "aleph_beis": "הפסק טהרה",
+      "language_origin": "Hebrew",
+      "category": "family purity - taharah process",
+      "yeshivish_example": "She plans to make a hefsek taharah before sunset.",
+      "plain_english_example": "She plans to perform the examination that establishes that uterine bleeding has ceased before sunset.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "examination used to establish that bleeding has ceased",
+        "the step that begins the transition toward the seven clean days"
+      ],
+      "context_note": "A core step in the taharah process. Practical timing and procedure should follow the applicable halachic guidance."
+    },
+    {
+      "term": "shivah neki'im",
+      "variants": [
+        "shiva nekiim",
+        "shivah nekiyim",
+        "shiva nekiyim",
+        "seven clean days"
+      ],
+      "aleph_beis": "שבעה נקיים",
+      "language_origin": "Hebrew",
+      "category": "family purity - taharah process",
+      "yeshivish_example": "She is in the middle of the shivah neki'im.",
+      "plain_english_example": "She is in the middle of the seven clean days.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seven blood-free clean days counted before mikvah immersion"
+      ],
+      "context_note": "The count begins after a valid hefsek taharah according to the applicable halachic rules."
+    },
+    {
+      "term": "bedikah",
+      "variants": [
+        "bedika",
+        "bedikot",
+        "bedikos"
+      ],
+      "aleph_beis": "בדיקה",
+      "language_origin": "Hebrew",
+      "category": "family purity - taharah process",
+      "yeshivish_example": "She had a shayla about a bedikah.",
+      "plain_english_example": "She had a halachic question about an internal examination.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic internal examination performed with a cloth"
+      ],
+      "context_note": "In this context, bedikah refers to an internal examination used during the taharah process or at specified anticipated-cycle times."
+    },
+    {
+      "term": "eid bedikah",
+      "variants": [
+        "ed bedikah",
+        "bedikah cloth",
+        "taharah cloth"
+      ],
+      "aleph_beis": "עד בדיקה",
+      "language_origin": "Hebrew",
+      "category": "family purity - taharah process",
+      "yeshivish_example": "She used a clean eid bedikah.",
+      "plain_english_example": "She used a clean white cloth designated for the halachic examination.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cloth used for a bedikah examination",
+        "bedikah cloth"
+      ],
+      "context_note": "Eid or ed literally means witness. As a standalone transliteration it is ambiguous outside this context."
+    },
+    {
+      "term": "moch dachuk",
+      "variants": [
+        "moch"
+      ],
+      "aleph_beis": "מוך דחוק",
+      "language_origin": "Hebrew",
+      "category": "family purity - taharah process",
+      "yeshivish_example": "She asked whether the moch dachuk was required in her case.",
+      "plain_english_example": "She asked whether the cloth kept in place around sunset after the hefsek was required in her case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bedikah cloth retained internally around the transition into the seven clean days"
+      ],
+      "context_note": "A taharah-process term. Exact timing and when it may be omitted are practical halachic questions."
+    },
+    {
+      "term": "kesem",
+      "variants": [
+        "ketem",
+        "ketamim",
+        "kesamim"
+      ],
+      "aleph_beis": "כתם",
+      "language_origin": "Hebrew",
+      "category": "family purity - stains",
+      "yeshivish_example": "She found a kesem and asked whether it affected her status.",
+      "plain_english_example": "She found a stain and asked whether it had halachic significance.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "stain considered under the laws of niddah",
+        "bloodstain evaluated under ketamim rules"
+      ],
+      "context_note": "Not every stain changes niddah status; factors such as color, size, surface, and circumstances can matter."
+    },
+    {
+      "term": "dam makkah",
+      "variants": [
+        "dam makah"
+      ],
+      "aleph_beis": "דם מכה",
+      "language_origin": "Hebrew",
+      "category": "family purity - stains",
+      "yeshivish_example": "The rav considered whether it was dam makkah.",
+      "plain_english_example": "The rabbi considered whether the blood came from a wound or irritation rather than uterine bleeding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "blood from a wound, injury, or irritation"
+      ],
+      "context_note": "Used to distinguish blood from a local injury or irritation from uterine bleeding for niddah analysis."
+    },
+    {
+      "term": "dam betulim",
+      "variants": [
+        "dam besulim"
+      ],
+      "aleph_beis": "דם בתולים",
+      "language_origin": "Hebrew",
+      "category": "family purity - marriage",
+      "yeshivish_example": "They learned the halachos of dam betulim before the wedding.",
+      "plain_english_example": "They learned the laws concerning hymenal bleeding before the wedding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "hymenal bleeding associated with initial marital relations"
+      ],
+      "context_note": "A specialized family-purity term with practical rules distinct from ordinary menstrual bleeding."
+    },
+    {
+      "term": "dam chimud",
+      "variants": [
+        "dam chimmud"
+      ],
+      "aleph_beis": "דם חימוד",
+      "language_origin": "Hebrew",
+      "category": "family purity - marriage",
+      "yeshivish_example": "The kallah teacher mentioned the concept of dam chimud.",
+      "plain_english_example": "The bridal teacher mentioned the halachic concept of bleeding associated with anticipation of marriage.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bleeding associated in halachic literature with excitement or anticipation of marriage"
+      ],
+      "context_note": "A technical pre-wedding niddah concept; practical application should be handled by a qualified halachic authority."
+    },
+    {
+      "term": "hargashah",
+      "variants": [
+        "hargasha"
+      ],
+      "aleph_beis": "הרגשה",
+      "language_origin": "Hebrew",
+      "category": "family purity - stains",
+      "yeshivish_example": "The shayla may depend on whether there was a hargashah.",
+      "plain_english_example": "The question may depend on whether there was a halachically relevant bodily sensation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachically relevant sensation associated with uterine bleeding"
+      ],
+      "context_note": "A technical criterion in niddah law. What qualifies as a hargashah is a matter of halachic analysis."
+    },
+    {
+      "term": "gris",
+      "variants": [
+        "geris"
+      ],
+      "aleph_beis": "גריס",
+      "language_origin": "Hebrew/Aramaic",
+      "category": "family purity - stains",
+      "yeshivish_example": "They discussed whether the kesem was larger than a gris.",
+      "plain_english_example": "They discussed whether the stain exceeded the relevant halachic size measure.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic area measurement used in the laws of stains"
+      ],
+      "context_note": "The practical measurement used for a gris is technical and should not be inferred from this glossary entry alone."
+    },
+    {
+      "term": "mekabel tumah",
+      "variants": [
+        "mekabel tuma"
+      ],
+      "aleph_beis": "מקבל טומאה",
+      "language_origin": "Hebrew",
+      "category": "family purity - stains",
+      "yeshivish_example": "The surface may be mekabel tumah.",
+      "plain_english_example": "The surface may be susceptible to ritual impurity.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "susceptible to ritual impurity"
+      ],
+      "context_note": "In the laws of ketamim, the status of the surface on which a stain is found can be relevant."
+    },
+    {
+      "term": "eino mekabel tumah",
+      "variants": [
+        "aino mekabel tumah",
+        "not mekabel tumah"
+      ],
+      "aleph_beis": "אינו מקבל טומאה",
+      "language_origin": "Hebrew",
+      "category": "family purity - stains",
+      "yeshivish_example": "That disposable surface may be eino mekabel tumah.",
+      "plain_english_example": "That disposable surface may not be susceptible to ritual impurity.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "not susceptible to ritual impurity"
+      ],
+      "context_note": "Used in stain analysis; the classification of particular materials can require halachic judgment."
+    },
+    {
+      "term": "mikvah",
+      "variants": [
+        "mikveh",
+        "mikva",
+        "mikveh taharah"
+      ],
+      "aleph_beis": "מקוה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah",
+      "yeshivish_example": "She is going to the mikvah tonight.",
+      "plain_english_example": "She is going to the ritual immersion pool tonight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual immersion pool",
+        "facility containing a halachically valid body of water for immersion"
+      ],
+      "context_note": "In everyday Orthodox usage, the word often refers both to the ritual pool and to the facility housing it."
+    },
+    {
+      "term": "tevilah",
+      "variants": [
+        "tevila"
+      ],
+      "aleph_beis": "טבילה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah",
+      "yeshivish_example": "Her tevilah is scheduled for tonight.",
+      "plain_english_example": "Her ritual immersion is scheduled for tonight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual immersion",
+        "immersion in a mikvah"
+      ],
+      "context_note": "The noun for immersion. In family-purity discussion it usually refers to immersion that concludes the niddah period."
+    },
+    {
+      "term": "toivel",
+      "variants": [
+        "tovel",
+        "toiveling",
+        "toveling"
+      ],
+      "aleph_beis": "טובל",
+      "language_origin": "Hebrew/Yiddishized",
+      "category": "family purity - mikvah",
+      "yeshivish_example": "She plans to toivel after nightfall.",
+      "plain_english_example": "She plans to immerse in the mikvah after nightfall.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "immerse in a mikvah",
+        "perform ritual immersion"
+      ],
+      "context_note": "Yeshivish often uses a Hebrew-derived verb as an English verb. Hebrew gendered forms differ in fully Hebrew speech."
+    },
+    {
+      "term": "tevilah bizmanah",
+      "variants": [
+        "tevila bizmanah",
+        "tevilah b'zmanah"
+      ],
+      "aleph_beis": "טבילה בזמנה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah",
+      "yeshivish_example": "They discussed the importance of tevilah bizmanah.",
+      "plain_english_example": "They discussed immersion at its appropriate halachic time.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mikvah immersion at the appropriate time"
+      ],
+      "context_note": "A timing concept in mikvah law; scheduling details can depend on circumstances and calendar constraints."
+    },
+    {
+      "term": "chafifah",
+      "variants": [
+        "chafifa"
+      ],
+      "aleph_beis": "חפיפה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah preparation",
+      "yeshivish_example": "She left enough time for chafifah before the mikvah.",
+      "plain_english_example": "She left enough time for the washing and cleansing done in preparation for immersion.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cleansing and washing in preparation for mikvah immersion"
+      ],
+      "context_note": "Preparation intended to remove material that could interfere with immersion."
+    },
+    {
+      "term": "chatzitzah",
+      "variants": [
+        "chatzitza",
+        "hatzitzah"
+      ],
+      "aleph_beis": "חציצה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah preparation",
+      "yeshivish_example": "She asked whether the bandage was a chatzitzah.",
+      "plain_english_example": "She asked whether the bandage constituted a barrier to the mikvah water.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "barrier between the body and mikvah water",
+        "intervening substance that can affect immersion"
+      ],
+      "context_note": "Whether a particular item is a disqualifying chatzitzah can depend on detailed halachic criteria."
+    },
+    {
+      "term": "iyun",
+      "variants": [],
+      "aleph_beis": "עיון",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah preparation",
+      "yeshivish_example": "She did the iyun before tevilah.",
+      "plain_english_example": "She inspected her body for possible barriers before immersion.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "inspection for possible chatzitzos before mikvah immersion"
+      ],
+      "context_note": "In yeshiva settings iyun can also mean in-depth study, so context is essential."
+    },
+    {
+      "term": "balanit",
+      "variants": [
+        "balanit mikvah",
+        "mikvah attendant"
+      ],
+      "aleph_beis": "בלנית",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah",
+      "yeshivish_example": "The balanit was available to assist at the mikvah.",
+      "plain_english_example": "The mikvah attendant was available to assist.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "female mikvah attendant"
+      ],
+      "context_note": "Common Modern Hebrew term for the woman who attends the mikvah and may observe that immersion is complete."
+    },
+    {
+      "term": "beit hastarim",
+      "variants": [
+        "beis hastarim",
+        "beit ha-setarim",
+        "beis hasetarim"
+      ],
+      "aleph_beis": "בית הסתרים",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah preparation",
+      "yeshivish_example": "The halacha of beit hastarim came up during mikvah preparation.",
+      "plain_english_example": "The law concerning accessible hidden areas of the body came up during mikvah preparation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "accessible hidden parts of the body considered in immersion preparation"
+      ],
+      "context_note": "A technical mikvah-preparation category. These areas have specific rules concerning cleanliness and water contact."
+    },
+    {
+      "term": "balua",
+      "variants": [
+        "baluah"
+      ],
+      "aleph_beis": "בלוע",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah preparation",
+      "yeshivish_example": "The item may be considered balua rather than an external chatzitzah.",
+      "plain_english_example": "The item may be considered internally absorbed or located rather than an external barrier.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "swallowed or internal",
+        "something in a normally inaccessible internal area"
+      ],
+      "context_note": "Technical terminology used when analyzing whether material in an inaccessible body area affects immersion."
+    },
+    {
+      "term": "mayim chayim",
+      "variants": [
+        "mayim chaim"
+      ],
+      "aleph_beis": "מים חיים",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah",
+      "yeshivish_example": "The shiur discussed the requirement of mayim chayim in different immersion contexts.",
+      "plain_english_example": "The lesson discussed naturally sourced living water in different immersion contexts.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "living water",
+        "naturally sourced water used in ritual-purity law"
+      ],
+      "context_note": "The exact water requirements differ among types of ritual immersion; this is a glossary-level definition."
+    },
+    {
+      "term": "arba'im se'ah",
+      "variants": [
+        "arbaim seah",
+        "forty seah"
+      ],
+      "aleph_beis": "ארבעים סאה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah construction",
+      "yeshivish_example": "A mikvah requires the halachic volume of arba'im se'ah.",
+      "plain_english_example": "A mikvah requires the halachically specified minimum volume traditionally described as forty seah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "forty seah",
+        "traditional minimum-volume measure associated with a mikvah"
+      ],
+      "context_note": "The conversion of forty seah into modern units differs among halachic measurements and should not be inferred from this glossary entry."
+    },
+    {
+      "term": "se'ah",
+      "variants": [
+        "seah",
+        "saah"
+      ],
+      "aleph_beis": "סאה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah construction",
+      "yeshivish_example": "The minimum volume is expressed in se'ah.",
+      "plain_english_example": "The minimum volume is expressed using the traditional seah measure.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional halachic unit of volume"
+      ],
+      "context_note": "Modern-unit conversions vary according to halachic measurement systems."
+    },
+    {
+      "term": "hashakah",
+      "variants": [
+        "hashaka"
+      ],
+      "aleph_beis": "השקה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah construction",
+      "yeshivish_example": "The mikvah uses a bor hashakah.",
+      "plain_english_example": "The mikvah uses a connected reservoir arrangement involving hashakah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic connection of water bodies used in mikvah construction"
+      ],
+      "context_note": "Technical mikvah-construction term; exact engineering and halachic requirements vary by design and authority."
+    },
+    {
+      "term": "z'riah",
+      "variants": [
+        "zeriah",
+        "zriah"
+      ],
+      "aleph_beis": "זריעה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah construction",
+      "yeshivish_example": "The design uses z'riah to connect or validate the water system.",
+      "plain_english_example": "The design uses a halachic water-introduction method known as zeriah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mikvah water-introduction or connection method"
+      ],
+      "context_note": "Technical mikvah-construction term whose implementation varies among accepted designs."
+    },
+    {
+      "term": "bor hashakah",
+      "variants": [
+        "bor hashaka"
+      ],
+      "aleph_beis": "בור השקה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah construction",
+      "yeshivish_example": "The mikvah has a bor hashakah beside the immersion pool.",
+      "plain_english_example": "The mikvah has a reservoir used for halachic water connection beside the immersion pool.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "reservoir used for hashakah in a mikvah system"
+      ],
+      "context_note": "Technical construction terminology; not every mikvah uses the same configuration."
+    },
+    {
+      "term": "bor z'riah",
+      "variants": [
+        "bor zeriah",
+        "bor zriah"
+      ],
+      "aleph_beis": "בור זריעה",
+      "language_origin": "Hebrew",
+      "category": "family purity - mikvah construction",
+      "yeshivish_example": "The plans show a separate bor z'riah.",
+      "plain_english_example": "The plans show a separate reservoir used for the zeriah method.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "reservoir used for zeriah in a mikvah system"
+      ],
+      "context_note": "Technical construction terminology; designs and halachic preferences differ."
+    },
+    {
+      "term": "veset",
+      "variants": [
+        "veses",
+        "vesatot",
+        "vesatos"
+      ],
+      "aleph_beis": "וסת",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "She keeps track of her veset carefully.",
+      "plain_english_example": "She keeps track of the halachically relevant pattern or anticipated time of menstruation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "menstrual pattern in halachic terminology",
+        "anticipated time or circumstance for menstruation"
+      ],
+      "context_note": "In niddah law, veset can refer to a cycle pattern or to an anticipated period requiring observance."
+    },
+    {
+      "term": "veset kavua",
+      "variants": [
+        "veses kavua"
+      ],
+      "aleph_beis": "וסת קבוע",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "She asked whether she established a veset kavua.",
+      "plain_english_example": "She asked whether she had established a halachically regular menstrual pattern.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "established regular menstrual pattern"
+      ],
+      "context_note": "Establishing and uprooting a veset kavua follows technical halachic rules."
+    },
+    {
+      "term": "veset she'eino kavua",
+      "variants": [
+        "veses she'eino kavua",
+        "veset sheino kavua"
+      ],
+      "aleph_beis": "וסת שאינו קבוע",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "This is still a veset she'eino kavua.",
+      "plain_english_example": "This is still a menstrual pattern that is not halachically established as regular.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "non-established or irregular halachic menstrual pattern"
+      ],
+      "context_note": "Contrasts with a veset kavua."
+    },
+    {
+      "term": "veset haguf",
+      "variants": [
+        "veses haguf",
+        "veset ha-guf"
+      ],
+      "aleph_beis": "וסת הגוף",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "She has a recurring veset haguf.",
+      "plain_english_example": "She has a recurring premenstrual bodily sign that may form a halachic pattern.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "menstrual pattern based on recurring physical symptoms"
+      ],
+      "context_note": "A technical veset category based on bodily signs rather than only dates or intervals."
+    },
+    {
+      "term": "veset chatzi kavua",
+      "variants": [
+        "veses chatzi kavua"
+      ],
+      "aleph_beis": "וסת חצי קבוע",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "Her pattern may be a veset chatzi kavua.",
+      "plain_english_example": "Her pattern may be a semi-regular halachic menstrual pattern.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "semi-regular menstrual pattern in halachic terminology"
+      ],
+      "context_note": "A specialized pattern category; practical consequences depend on the precise history."
+    },
+    {
+      "term": "veset hachodesh",
+      "variants": [
+        "veses hachodesh",
+        "veset ha-chodesh"
+      ],
+      "aleph_beis": "וסת החודש",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "She recorded a possible veset hachodesh.",
+      "plain_english_example": "She recorded a possible menstrual pattern based on the Hebrew-calendar date.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "menstrual pattern based on a recurring Hebrew-calendar date"
+      ],
+      "context_note": "A form of veset based on the date of the Hebrew month."
+    },
+    {
+      "term": "veset haflagah",
+      "variants": [
+        "veses haflagah",
+        "veset ha-haflagah"
+      ],
+      "aleph_beis": "וסת הפלגה",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "The calendar shows a veset haflagah.",
+      "plain_english_example": "The calendar shows a menstrual pattern based on the interval between periods.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "menstrual pattern based on a recurring interval"
+      ],
+      "context_note": "A form of veset based on the interval between the beginnings of menstrual flows."
+    },
+    {
+      "term": "veset hadilug",
+      "variants": [
+        "veses hadilug",
+        "veset ha-dilug"
+      ],
+      "aleph_beis": "וסת הדילוג",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "The rav checked whether the dates formed a veset hadilug.",
+      "plain_english_example": "The rabbi checked whether the dates formed a progressively shifting menstrual pattern.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "progressively shifting menstrual pattern recognized in halachic cycle law"
+      ],
+      "context_note": "An advanced veset category; exact establishment rules are technical."
+    },
+    {
+      "term": "onah",
+      "variants": [
+        "onot",
+        "onos"
+      ],
+      "aleph_beis": "עונה",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "That date falls in the daytime onah.",
+      "plain_english_example": "That date falls in the relevant daytime halachic time period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic time period of a day or night",
+        "period used in menstrual-calendar calculations",
+        "marital obligation in the phrase mitzvas onah"
+      ],
+      "context_note": "The word has several halachic meanings; context is required."
+    },
+    {
+      "term": "onah beinonit",
+      "variants": [
+        "onah benonit",
+        "ona beinonit"
+      ],
+      "aleph_beis": "עונה בינונית",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "She marked the onah beinonit on her calendar.",
+      "plain_english_example": "She marked the standard average-cycle anticipation period on her calendar.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "standard average interval used as an anticipated menstruation period"
+      ],
+      "context_note": "A technical calendar concept in the laws of vesatot; calculation practices should follow the applicable halachic authority."
+    },
+    {
+      "term": "onas perishah",
+      "variants": [
+        "onat perishah",
+        "onot perishah",
+        "onas perisha",
+        "onat perisha"
+      ],
+      "aleph_beis": "עונת פרישה",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "They observe the onas perishah when the period is anticipated.",
+      "plain_english_example": "They observe the prescribed separation period when menstruation is halachically anticipated.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "anticipated-period separation interval",
+        "time when specified niddah precautions are observed because menstruation is expected"
+      ],
+      "context_note": "Plural forms include onot perishah. Practical requirements depend on the type of veset and ruling followed."
+    },
+    {
+      "term": "yom hachodesh",
+      "variants": [
+        "yom ha-chodesh"
+      ],
+      "aleph_beis": "יום החודש",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "She marked the yom hachodesh for the next month.",
+      "plain_english_example": "She marked the corresponding Hebrew-calendar date for the next month.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "same Hebrew-calendar date in the following month used for cycle anticipation"
+      ],
+      "context_note": "One of the standard calendar dates tracked in vesatot practice."
+    },
+    {
+      "term": "haflagah",
+      "variants": [
+        "haflaga"
+      ],
+      "aleph_beis": "הפלגה",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "Her haflagah was shorter this month.",
+      "plain_english_example": "The interval between the beginnings of her menstrual periods was shorter this month.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "interval between menstrual periods used in halachic cycle tracking"
+      ],
+      "context_note": "The interval is used in calculating a veset haflagah."
+    },
+    {
+      "term": "Or Zarua",
+      "variants": [
+        "Or Zaruah",
+        "Ohr Zarua"
+      ],
+      "aleph_beis": "אור זרוע",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "Their minhag is to observe the Or Zarua onah.",
+      "plain_english_example": "Their custom is to observe the additional anticipation period associated with the Or Zarua practice.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "practice of observing an additional onah before an anticipated menstruation period"
+      ],
+      "context_note": "Named for the halachic source. This is not observed identically in all communities."
+    },
+    {
+      "term": "ne'ekar",
+      "variants": [
+        "neekar"
+      ],
+      "aleph_beis": "נעקר",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "The question is whether the veset was ne'ekar.",
+      "plain_english_example": "The question is whether the established menstrual pattern was halachically uprooted.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "uprooted or cancelled, especially an established veset"
+      ],
+      "context_note": "Technical term for a veset that no longer requires observance after the conditions for uprooting it have been met."
+    },
+    {
+      "term": "harchakos",
+      "variants": [
+        "harchakot",
+        "harhakot"
+      ],
+      "aleph_beis": "הרחקות",
+      "language_origin": "Hebrew",
+      "category": "family purity - conduct",
+      "yeshivish_example": "They observe the harchakos while she is niddah.",
+      "plain_english_example": "They observe the prescribed distancing rules while she is in niddah status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "restrictions designed to avoid physical contact during niddah"
+      ],
+      "context_note": "The specific harchakos include multiple practical rules and can vary in details by accepted halachic practice."
+    },
+    {
+      "term": "heker",
+      "variants": [
+        "heiker"
+      ],
+      "aleph_beis": "היכר",
+      "language_origin": "Hebrew",
+      "category": "family purity - conduct",
+      "yeshivish_example": "They put a heker on the table while eating together.",
+      "plain_english_example": "They placed a visible reminder on the table as required during niddah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "distinctive reminder used in specified niddah situations"
+      ],
+      "context_note": "Commonly refers to a visible change or reminder used when a husband and wife eat together during niddah."
+    },
+    {
+      "term": "negiah",
+      "variants": [
+        "negiya"
+      ],
+      "aleph_beis": "נגיעה",
+      "language_origin": "Hebrew",
+      "category": "family purity - conduct",
+      "yeshivish_example": "The harchakos include restrictions on negiah.",
+      "plain_english_example": "The distancing rules include restrictions on physical touch.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "touching",
+        "physical contact"
+      ],
+      "context_note": "A broader halachic term also used outside marriage; in this category it refers to physical contact during niddah."
+    },
+    {
+      "term": "mitzvas onah",
+      "variants": [
+        "mitzvat onah",
+        "mitzvah of onah"
+      ],
+      "aleph_beis": "מצות עונה",
+      "language_origin": "Hebrew",
+      "category": "family purity - marriage",
+      "yeshivish_example": "The shiur discussed mitzvas onah.",
+      "plain_english_example": "The lesson discussed the marital-intimacy obligation in Jewish law.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic marital-intimacy obligation"
+      ],
+      "context_note": "A marriage-law term distinct from onah as a day/night time period."
+    },
+    {
+      "term": "chupas niddah",
+      "variants": [
+        "chupat niddah",
+        "chuppat niddah",
+        "chuppas niddah"
+      ],
+      "aleph_beis": "חופת נדה",
+      "language_origin": "Hebrew",
+      "category": "family purity - marriage",
+      "yeshivish_example": "The wedding may have the status of a chupas niddah.",
+      "plain_english_example": "The wedding may take place while the bride is in niddah status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wedding occurring while the bride is niddah"
+      ],
+      "context_note": "This creates specialized wedding and post-wedding halachic considerations."
+    },
+    {
+      "term": "yoetzet halacha",
+      "variants": [
+        "yoatzet halacha",
+        "yoetzet",
+        "yoatzet"
+      ],
+      "aleph_beis": "יועצת הלכה",
+      "language_origin": "Hebrew",
+      "category": "family purity - people",
+      "yeshivish_example": "She called a yoetzet halacha with the question.",
+      "plain_english_example": "She consulted a woman certified to advise on family-purity halacha.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "female halachic adviser trained in taharas hamishpacha"
+      ],
+      "context_note": "A modern professional role associated especially with women's halachic questions in family purity and related health contexts."
+    },
+    {
+      "term": "yoledes",
+      "variants": [
+        "yoledet"
+      ],
+      "aleph_beis": "יולדת",
+      "language_origin": "Hebrew",
+      "category": "family purity - postpartum",
+      "yeshivish_example": "The halachos for a yoledes came up after the birth.",
+      "plain_english_example": "The family-purity laws for a woman during and after childbirth came up after the birth.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "woman during or after childbirth in relevant halachic status"
+      ],
+      "context_note": "Childbirth has specific niddah and postpartum implications beyond this glossary-level definition."
+    },
+    {
+      "term": "me'uberes",
+      "variants": [
+        "meuberet"
+      ],
+      "aleph_beis": "מעוברת",
+      "language_origin": "Hebrew",
+      "category": "family purity - pregnancy",
+      "yeshivish_example": "The veset rules can differ for a me'uberes.",
+      "plain_english_example": "The menstrual-calendar rules can differ for a pregnant woman.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pregnant woman"
+      ],
+      "context_note": "In family-purity halacha, pregnancy can affect veset expectations and related rules."
+    },
+    {
+      "term": "meinekes",
+      "variants": [
+        "meineket",
+        "menekes"
+      ],
+      "aleph_beis": "מינקת",
+      "language_origin": "Hebrew",
+      "category": "family purity - postpartum",
+      "yeshivish_example": "The status of a meinekes can affect veset calculations.",
+      "plain_english_example": "The status of a nursing or postpartum woman can affect menstrual-pattern calculations.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "nursing woman in halachic terminology",
+        "postpartum woman within a halachically defined nursing period"
+      ],
+      "context_note": "Halachic usage can be broader than whether the woman is actively breastfeeding at that moment."
+    },
+    {
+      "term": "mesulekes damim",
+      "variants": [
+        "mesuleket damim",
+        "mesulekes domim"
+      ],
+      "aleph_beis": "מסולקת דמים",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "She may have the status of mesulekes damim.",
+      "plain_english_example": "She may be in a category in which menstruation is not ordinarily expected.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "woman not expected to menstruate in specified halachic circumstances"
+      ],
+      "context_note": "A technical status used in veset law, including certain pregnancy, nursing, or later-life contexts."
+    },
+    {
+      "term": "zekeinah",
+      "variants": [
+        "zekena"
+      ],
+      "aleph_beis": "זקנה",
+      "language_origin": "Hebrew",
+      "category": "family purity - cycle calendar",
+      "yeshivish_example": "The laws discuss a zekeinah separately for some veset purposes.",
+      "plain_english_example": "The laws discuss an older woman separately for some menstrual-pattern purposes.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "older woman in a technical niddah-law category"
+      ],
+      "context_note": "The precise halachic definition is technical and should not be inferred merely from ordinary age terminology."
+    },
+    {
+      "term": "roah machmas tashmish",
+      "variants": [
+        "roah mechamat tashmish",
+        "ro'ah machmat tashmish",
+        "roeh machmas tashmish"
+      ],
+      "aleph_beis": "רואה מחמת תשמיש",
+      "language_origin": "Hebrew",
+      "category": "family purity - bleeding",
+      "yeshivish_example": "The case raised a question of roah machmas tashmish.",
+      "plain_english_example": "The case raised the halachic category of uterine bleeding associated with marital relations.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "uterine bleeding associated with marital relations in halachic terminology"
+      ],
+      "context_note": "An advanced and medically sensitive halachic category requiring individualized rabbinic and often medical guidance."
+    },
+    {
+      "term": "zivah",
+      "variants": [
+        "ziva"
+      ],
+      "aleph_beis": "זיבה",
+      "language_origin": "Hebrew",
+      "category": "family purity - classical terminology",
+      "yeshivish_example": "The Gemara distinguishes niddah from zivah.",
+      "plain_english_example": "The Talmud distinguishes menstrual bleeding from the classical category of non-menstrual uterine bleeding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "classical halachic category of non-menstrual uterine bleeding"
+      ],
+      "context_note": "The classical Torah categories remain important in study even though modern practical niddah observance generally does not rely on women identifying these categories themselves."
+    },
+    {
+      "term": "zavah",
+      "variants": [
+        "zava"
+      ],
+      "aleph_beis": "זבה",
+      "language_origin": "Hebrew",
+      "category": "family purity - classical terminology",
+      "yeshivish_example": "The sugya discusses the status of a zavah.",
+      "plain_english_example": "The Talmudic discussion addresses a woman in the classical zivah category.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "woman with bleeding in the classical halachic category of zivah"
+      ],
+      "context_note": "Primarily useful in Torah/Talmud study and the background of niddah law."
+    },
+    {
+      "term": "zavah gedolah",
+      "variants": [
+        "zava gedolah"
+      ],
+      "aleph_beis": "זבה גדולה",
+      "language_origin": "Hebrew",
+      "category": "family purity - classical terminology",
+      "yeshivish_example": "The Mishnah discusses a zavah gedolah.",
+      "plain_english_example": "The Mishnah discusses the classical category associated with zivah bleeding on three consecutive days.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "classical category of a zavah associated with three consecutive days of zivah bleeding"
+      ],
+      "context_note": "Primarily a classical halachic-study term; modern practical application requires expert halachic framing."
+    },
+    {
+      "term": "zavah ketanah",
+      "variants": [
+        "zava ketanah"
+      ],
+      "aleph_beis": "זבה קטנה",
+      "language_origin": "Hebrew",
+      "category": "family purity - classical terminology",
+      "yeshivish_example": "The sugya distinguishes a zavah ketanah from a zavah gedolah.",
+      "plain_english_example": "The Talmudic discussion distinguishes the shorter classical zivah category from the extended one.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "classical category of a zavah associated with fewer than three consecutive days of zivah bleeding"
+      ],
+      "context_note": "Primarily a classical halachic-study term; modern practical application requires expert halachic framing."
+    }
+  ]
+}
