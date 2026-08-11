@@ -1,7 +1,7 @@
 {
   "name": "Yeshivish to Plain English Runtime Glossary",
-  "version": 4,
-  "entry_count": 204,
+  "version": 5,
+  "entry_count": 277,
   "entries": [
     {
       "term": "mamesh",
@@ -2072,9 +2072,7 @@
     {
       "term": "kosher",
       "aleph_beis": "כּשר",
-      "variants": [
-        "kasher"
-      ],
+      "variants": [],
       "language_origin": "mixed",
       "category": "food and kashrus",
       "yeshivish_example": "Is this restaurant kosher?",
@@ -3152,8 +3150,7 @@
     {
       "term": "bishul",
       "variants": [
-        "bishel",
-        "bishul akum"
+        "bishel"
       ],
       "aleph_beis": "בישול",
       "language_origin": "Hebrew",
@@ -3884,6 +3881,1395 @@
         "one of the 39 primary categories of labor prohibited on Shabbos"
       ],
       "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "kashrus",
+      "dialect_pattern": "kashru[s|t]",
+      "variants": [
+        "kashrut",
+        "kashruth"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - general",
+      "yeshivish_example": "He works in kashrus for a major agency.",
+      "plain_english_example": "He works in kosher supervision for a major certification agency.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the laws and practice of keeping kosher",
+        "the field of kosher supervision and certification"
+      ],
+      "context_note": "Commonly refers both to Jewish dietary law generally and to the professional field of kosher supervision.",
+      "aleph_beis": "כשרות"
+    },
+    {
+      "term": "hashgacha",
+      "variants": [
+        "hashgocha"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - certification",
+      "yeshivish_example": "Which hashgacha does the restaurant have?",
+      "plain_english_example": "Which kosher supervision certifies the restaurant?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kosher supervision",
+        "rabbinic oversight of food production"
+      ],
+      "context_note": "In a kashrus context, usually means the supervising rabbi or certifying organization, not divine providence.",
+      "aleph_beis": "השגחה"
+    },
+    {
+      "term": "mashgiach",
+      "variants": [
+        "mashgiah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - certification",
+      "yeshivish_example": "The mashgiach checked the delivery before they opened it.",
+      "plain_english_example": "The kosher supervisor checked the delivery before it was opened.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kosher supervisor",
+        "person responsible for on-site kashrus oversight"
+      ],
+      "context_note": "A mashgiach may inspect ingredients, equipment, production, cooking, deliveries, and other kosher-control points.",
+      "aleph_beis": "משגיח"
+    },
+    {
+      "term": "mashgiach temidi",
+      "variants": [],
+      "language_origin": "Hebrew",
+      "category": "kashrus - certification",
+      "yeshivish_example": "This kitchen requires a mashgiach temidi.",
+      "plain_english_example": "This kitchen requires a continuously present kosher supervisor.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "continuously present kosher supervisor",
+        "constant on-site kosher supervision"
+      ],
+      "context_note": "Used when supervision is required on an ongoing or continuous basis rather than through periodic visits.",
+      "aleph_beis": "משגיח תמידי"
+    },
+    {
+      "term": "kasher",
+      "variants": [
+        "kashern",
+        "kosherize",
+        "kashering"
+      ],
+      "language_origin": "Yiddish",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "We need to kasher the oven before using it.",
+      "plain_english_example": "We need to make the oven fit for kosher use before using it.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "make an utensil or facility kosher",
+        "perform a kosherization procedure",
+        "prepare meat through the required koshering process"
+      ],
+      "context_note": "The Yiddish verb is commonly used in English/Yeshivish for making equipment or facilities fit for kosher use. The exact required method depends on how the item was used.",
+      "aleph_beis": "כּשרן"
+    },
+    {
+      "term": "keilim",
+      "dialect_pattern": "[keilim|kelim]",
+      "variants": [
+        "kelim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "Those keilim are fleishig.",
+      "plain_english_example": "Those utensils are designated for meat use.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "utensils",
+        "vessels",
+        "food-preparation equipment"
+      ],
+      "context_note": "Plural of kli. In kashrus discussion it often refers broadly to pots, pans, dishes, utensils, or processing equipment.",
+      "aleph_beis": "כלים"
+    },
+    {
+      "term": "hechsher keilim",
+      "dialect_pattern": "hechsher [keilim|kelim]",
+      "variants": [
+        "hechsher kelim",
+        "hachsher keilim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "The plant needs hechsher keilim before the kosher run.",
+      "plain_english_example": "The plant equipment must be made fit for kosher use before the kosher production run.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kashering utensils or equipment",
+        "making food-contact equipment fit for kosher use"
+      ],
+      "context_note": "An umbrella term for preparing previously non-kosher or otherwise problematic utensils or equipment for kosher use.",
+      "aleph_beis": "הכשר כלים"
+    },
+    {
+      "term": "tevillas keilim",
+      "dialect_pattern": "[tevillas keilim|tevilat kelim]",
+      "variants": [
+        "tevilas keilim",
+        "tevilat kelim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "Did you do tevillas keilim on the new pot?",
+      "plain_english_example": "Was the new pot immersed as required by Jewish law?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual immersion of certain food utensils",
+        "immersion of newly acquired vessels in a mikvah"
+      ],
+      "context_note": "Refers to the mitzvah of immersing certain food utensils acquired from non-Jewish ownership; it is distinct from kashering.",
+      "aleph_beis": "טבילת כלים"
+    },
+    {
+      "term": "hagalah",
+      "variants": [
+        "hag'alah",
+        "hagala"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "This pot can be kashered with hagalah.",
+      "plain_english_example": "This pot can be made kosher by immersion in boiling water.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kashering by boiling water",
+        "purging absorbed taste through hot water"
+      ],
+      "context_note": "A common kashering method for utensils that absorbed prohibited taste through hot liquid.",
+      "aleph_beis": "הגעלה"
+    },
+    {
+      "term": "libun",
+      "variants": [
+        "libbun"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "The grate may require libun instead of hagalah.",
+      "plain_english_example": "The grate may require kashering by direct heat rather than boiling water.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kashering by direct heat",
+        "burning out absorbed prohibited taste"
+      ],
+      "context_note": "A heat-based kashering method, generally associated with items that absorbed through direct dry heat.",
+      "aleph_beis": "ליבון"
+    },
+    {
+      "term": "libun kal",
+      "variants": [
+        "libbun kal"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "For this oven surface, the rav said libun kal is enough.",
+      "plain_english_example": "For this oven surface, the rabbi ruled that a lighter form of heat kashering is sufficient.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "light form of libun",
+        "lower-intensity heat kashering"
+      ],
+      "context_note": "A less intense form of libun used in particular halachic circumstances; practical application depends on the item and prior use.",
+      "aleph_beis": "ליבון קל"
+    },
+    {
+      "term": "libun gamur",
+      "variants": [
+        "libbun gamur",
+        "libun chamur"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - equipment",
+      "yeshivish_example": "That rack would need libun gamur to kasher it.",
+      "plain_english_example": "That rack would require the full-intensity form of heat kashering.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "full or severe form of libun",
+        "high-intensity heat kashering"
+      ],
+      "context_note": "The more intense form of libun. Whether an object can practically undergo it depends on its material and construction.",
+      "aleph_beis": "ליבון גמור"
+    },
+    {
+      "term": "ben yomo",
+      "variants": [
+        "ben-yomo"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "The pot is still ben yomo from the dairy use.",
+      "plain_english_example": "The pot was used hot with dairy within the relevant recent period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "utensil used with hot food within the preceding day",
+        "utensil whose absorbed taste is still considered fresh"
+      ],
+      "context_note": "In kashrus discussion, describes a utensil whose absorbed taste has not yet reached the status of eino ben yomo.",
+      "aleph_beis": "בן יומו"
+    },
+    {
+      "term": "eino ben yomo",
+      "variants": [
+        "aino ben yomo",
+        "not ben yomo"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "The equipment was eino ben yomo before the kosher production.",
+      "plain_english_example": "The equipment had not been used hot with the problematic food within the relevant preceding period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "utensil not used hot with the relevant food during the preceding day",
+        "utensil whose absorbed taste is considered stale or impaired"
+      ],
+      "context_note": "An important status in laws of absorbed taste and kashering; it does not by itself mean that a utensil may always be used without kashering.",
+      "aleph_beis": "אינו בן יומו"
+    },
+    {
+      "term": "b'lios",
+      "dialect_pattern": "[b'lios|b'liot]",
+      "variants": [
+        "blios",
+        "b'liot",
+        "bliot"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "We have to account for the b'lios in the equipment.",
+      "plain_english_example": "We have to account for the absorbed food taste in the equipment.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "absorbed tastes",
+        "substances or flavors absorbed into a utensil"
+      ],
+      "context_note": "Often used when discussing taste absorbed into cookware or industrial food equipment.",
+      "aleph_beis": "בליעות"
+    },
+    {
+      "term": "taam",
+      "variants": [
+        "ta'am"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "Does the non-kosher taam transfer into the food?",
+      "plain_english_example": "Does the non-kosher taste transfer into the food?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "taste",
+        "flavor",
+        "halachically significant transferred taste"
+      ],
+      "context_note": "In kashrus, taste can have legal significance even when the original food is no longer visibly present.",
+      "aleph_beis": "טעם"
+    },
+    {
+      "term": "nosein taam",
+      "variants": [
+        "noten taam",
+        "nosen taam",
+        "nosein ta’am"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "Is the ingredient nosein taam in the mixture?",
+      "plain_english_example": "Does the ingredient impart a noticeable or halachically significant taste to the mixture?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "imparts taste",
+        "gives flavor to another food"
+      ],
+      "context_note": "A key concept in determining whether transferred or mixed taste affects the kosher status of food.",
+      "aleph_beis": "נותן טעם"
+    },
+    {
+      "term": "nosein taam lifgam",
+      "variants": [
+        "noten taam lifgam",
+        "nosen taam lifgam"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "The question is whether the absorbed taste is nosein taam lifgam.",
+      "plain_english_example": "The question is whether the absorbed taste imparts a detrimental flavor.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "imparts a detrimental taste",
+        "gives spoiled or negative flavor"
+      ],
+      "context_note": "A halachic category for prohibited taste that worsens the food rather than improving it; application depends on the circumstances.",
+      "aleph_beis": "נותן טעם לפגם"
+    },
+    {
+      "term": "nat bar nat",
+      "variants": [
+        "nat-bar-nat",
+        "noten taam bar noten taam"
+      ],
+      "language_origin": "Hebrew/Aramaic",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "This may be a nat bar nat case rather than direct meat taste.",
+      "plain_english_example": "This may involve secondary transferred taste rather than direct meat taste.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "secondary transfer of taste",
+        "taste that was transferred from food into a utensil and then onward"
+      ],
+      "context_note": "An acronym-based kashrus concept concerning indirect or secondary transfer of permitted meat or dairy taste.",
+      "aleph_beis": "נ״ט בר נ״ט"
+    },
+    {
+      "term": "ta'aroves",
+      "dialect_pattern": "[ta'aroves|taarovet]",
+      "variants": [
+        "taaroves",
+        "taarovos",
+        "taarovet"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "This is a complicated shayla of ta'aroves.",
+      "plain_english_example": "This is a complicated kosher-law question involving mixtures.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mixtures",
+        "laws governing mixtures of permitted and prohibited foods"
+      ],
+      "context_note": "Often refers to the body of halacha dealing with mixtures, taste transfer, and nullification.",
+      "aleph_beis": "תערובות"
+    },
+    {
+      "term": "bitul",
+      "variants": [
+        "bittul"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "We need to know whether there is bitul here.",
+      "plain_english_example": "We need to know whether the prohibited component is halachically nullified here.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic nullification",
+        "loss of legal significance within a mixture"
+      ],
+      "context_note": "A general term for nullification; the required ratio or rule depends on the type of prohibited substance and the circumstances.",
+      "aleph_beis": "ביטול"
+    },
+    {
+      "term": "batel b'shishim",
+      "variants": [
+        "batul bshishim",
+        "bitul bshishim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "Is the drop batel b'shishim in the pot?",
+      "plain_english_example": "Is the drop nullified because the permitted food is at least sixty times its amount?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "nullified in sixty",
+        "halachic nullification based on a sixty-to-one ratio in applicable cases"
+      ],
+      "context_note": "A common rule of nullification, but not every prohibited substance or situation can be nullified this way.",
+      "aleph_beis": "בטל בשישים"
+    },
+    {
+      "term": "ein mevatlin issur l'chatchila",
+      "variants": [
+        "ein mevatlin issur lechatchila"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "You cannot add more food just to make it batel; ein mevatlin issur l'chatchila.",
+      "plain_english_example": "One may not deliberately create nullification of a prohibited substance in the first place.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "one may not deliberately nullify a prohibition",
+        "prohibition against intentionally creating bitul"
+      ],
+      "context_note": "A general principle limiting deliberate creation of a mixture for the purpose of nullifying prohibited food.",
+      "aleph_beis": "אין מבטלין איסור לכתחילה"
+    },
+    {
+      "term": "davar hama'amid",
+      "variants": [
+        "davar hamaamid"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "Rennet can raise a davar hama'amid issue.",
+      "plain_english_example": "Rennet can raise an issue involving an ingredient that causes a product to set or take form.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "substance that causes a food to set or take form",
+        "setting or coagulating agent with special halachic significance"
+      ],
+      "context_note": "An ingredient that establishes the form or structure of a food may not follow ordinary nullification rules.",
+      "aleph_beis": "דבר המעמיד"
+    },
+    {
+      "term": "chaticha na'asis neveilah",
+      "variants": [
+        "chaticha naasis neveilah",
+        "chanan",
+        "ch-n-n"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "The calculation may change because of chaticha na'asis neveilah.",
+      "plain_english_example": "The calculation may change because the affected piece can acquire the legal status of the prohibited substance for further mixture calculations.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a piece becomes treated like prohibited food",
+        "principle commonly abbreviated Chanan"
+      ],
+      "context_note": "An advanced rule in the laws of mixtures; its scope and application differ by type of prohibition and halachic tradition.",
+      "aleph_beis": "חתיכה נעשית נבילה"
+    },
+    {
+      "term": "davar sheyesh lo matirin",
+      "variants": [],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "That may be a davar sheyesh lo matirin, so ordinary bitul is different.",
+      "plain_english_example": "That may be an item that will later become permitted, which changes the normal nullification rules.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "an item that will become permitted later",
+        "prohibited item with an available future permitted state"
+      ],
+      "context_note": "Such an item can be subject to stricter nullification rules because waiting can remove the prohibition.",
+      "aleph_beis": "דבר שיש לו מתירין"
+    },
+    {
+      "term": "min b'mino",
+      "variants": [
+        "min bemino"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "Is this min b'mino or two different types?",
+      "plain_english_example": "Is this a mixture of the same type or of different types?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "same kind mixed with the same kind",
+        "mixture of like substances"
+      ],
+      "context_note": "A classification used in the laws of mixtures; it contrasts with min b'she'eino mino.",
+      "aleph_beis": "מין במינו"
+    },
+    {
+      "term": "min b'she'eino mino",
+      "variants": [
+        "min besheino mino",
+        "min b'sheaino mino"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - mixtures",
+      "yeshivish_example": "This looks like min b'she'eino mino.",
+      "plain_english_example": "This appears to be a mixture of unlike types.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "one kind mixed with a different kind",
+        "mixture of unlike substances"
+      ],
+      "context_note": "A classification in the laws of mixtures, often relevant to taste and nullification analysis.",
+      "aleph_beis": "מין בשאינו מינו"
+    },
+    {
+      "term": "kavush k'mevushal",
+      "variants": [
+        "kavush kemevushal"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "The food sat in the liquid long enough to raise kavush k'mevushal.",
+      "plain_english_example": "The food remained soaking long enough to raise the rule that prolonged soaking can be treated like cooking.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "prolonged soaking can be treated like cooking",
+        "pickled or soaked as though cooked"
+      ],
+      "context_note": "A halachic principle that extended soaking can transfer taste even without heat; the required duration and exceptions depend on the case.",
+      "aleph_beis": "כבוש כמבושל"
+    },
+    {
+      "term": "meliach k'roseiach",
+      "variants": [
+        "maliach keroseiach",
+        "meliach k'roseach"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "Because it was heavily salted, we have to consider meliach k'roseiach.",
+      "plain_english_example": "Because it was heavily salted, we have to consider the rule that salting can create heat-like taste transfer.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "salty food can act like hot food for certain taste-transfer rules",
+        "salting treated as boiling in specified contexts"
+      ],
+      "context_note": "A halachic principle concerning taste transfer through significant salting; practical scope depends on the food and circumstances.",
+      "aleph_beis": "מליח כרותח"
+    },
+    {
+      "term": "zei'ah",
+      "variants": [
+        "zeiah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "The steam may create a zei'ah issue in the oven.",
+      "plain_english_example": "The vapor or steam may create a kosher-law issue in the oven.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "steam or vapor",
+        "halachically significant food vapor"
+      ],
+      "context_note": "Used in discussions of whether vapor carries taste or status from one food or surface to another.",
+      "aleph_beis": "זיעה"
+    },
+    {
+      "term": "reicha",
+      "variants": [
+        "reicha milsa",
+        "rei’ach"
+      ],
+      "language_origin": "Aramaic/Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "There may be a reicha issue from cooking them together.",
+      "plain_english_example": "There may be a kosher-law issue involving aroma transferred while they cook together.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "aroma",
+        "odor transfer with possible halachic significance"
+      ],
+      "context_note": "A concept concerning aroma from one food affecting another; practical rulings depend heavily on the cooking setup and circumstances.",
+      "aleph_beis": "ריחא"
+    },
+    {
+      "term": "kedei klipah",
+      "variants": [
+        "kdei klipah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "The rav said only kedei klipah has to be removed.",
+      "plain_english_example": "The rabbi ruled that only a peel-thin outer layer must be removed.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a peel-thin layer",
+        "depth of removal approximately corresponding to a thin outer peel"
+      ],
+      "context_note": "A measurement used in some laws of taste transfer and prohibited food contact.",
+      "aleph_beis": "כדי קליפה"
+    },
+    {
+      "term": "kedei netilah",
+      "variants": [
+        "kdei netilah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - absorbed taste",
+      "yeshivish_example": "This case may require removing kedei netilah.",
+      "plain_english_example": "This case may require removing a thicker outer layer of the food.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a specified thickness that must be removed",
+        "deeper removal than kedei klipah in applicable cases"
+      ],
+      "context_note": "A halachic measure for removing affected food in certain contact or salting situations.",
+      "aleph_beis": "כדי נטילה"
+    },
+    {
+      "term": "basar b'chalav",
+      "variants": [
+        "basar bechalav",
+        "basar vchalav"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - meat and dairy",
+      "yeshivish_example": "That combination is a basar b'chalav issue.",
+      "plain_english_example": "That combination raises the prohibition of mixing meat and milk.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a prohibited meat-with-milk combination",
+        "laws governing specified meat-with-dairy mixtures"
+      ],
+      "context_note": "A central category of kashrus law concerning cooking, eating, and benefiting from specified combinations of meat and milk.",
+      "aleph_beis": "בשר בחלב"
+    },
+    {
+      "term": "bishul Yisroel",
+      "dialect_pattern": "bishul Yi[sroel|srael]",
+      "variants": [
+        "bishul Yisrael"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - cooking",
+      "yeshivish_example": "This product is marked bishul Yisroel.",
+      "plain_english_example": "This product was cooked with the Jewish participation required for Bishul Yisrael status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "food cooked with required Jewish participation",
+        "Jewish-participation status for foods subject to the laws of bishul akum"
+      ],
+      "context_note": "Applies to foods within the rabbinic rules governing certain foods cooked by non-Jews; required involvement and qualifying foods are matters of halacha.",
+      "aleph_beis": "בישול ישראל"
+    },
+    {
+      "term": "bishul akum",
+      "variants": [
+        "bishul nochri"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - cooking",
+      "yeshivish_example": "The restaurant has to address bishul akum.",
+      "plain_english_example": "The restaurant must address the kosher-law restrictions on certain foods cooked by a non-Jew without required Jewish participation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "certain foods cooked by a non-Jew without required Jewish participation",
+        "rabbinic prohibition governing specified cooked foods"
+      ],
+      "context_note": "Not every cooked food is subject to this rule; qualifying foods and the required Jewish participation depend on halachic criteria.",
+      "aleph_beis": "בישול עכו״ם"
+    },
+    {
+      "term": "pas Yisroel",
+      "dialect_pattern": "pa[s|t] Yi[sroel|srael]",
+      "variants": [
+        "pas Yisrael",
+        "pat Yisrael",
+        "pat Yisroel"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - bread",
+      "yeshivish_example": "We are buying pas Yisroel during Aseres Yemei Teshuvah.",
+      "plain_english_example": "We are buying bread baked with the Jewish participation required for Pas Yisrael status during the Ten Days of Repentance.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bread baked with required Jewish participation",
+        "Jewish-baked bread status"
+      ],
+      "context_note": "A kosher designation for qualifying baked grain products made with Jewish participation in the baking process.",
+      "aleph_beis": "פת ישראל"
+    },
+    {
+      "term": "pas palter",
+      "dialect_pattern": "pa[s|t] palter",
+      "variants": [
+        "pas paltar",
+        "pat palter",
+        "pat paltar"
+      ],
+      "language_origin": "Hebrew/Aramaic",
+      "category": "kashrus - bread",
+      "yeshivish_example": "That bread is kosher pas palter, not pas Yisroel.",
+      "plain_english_example": "That bread is kosher commercial-baker bread but does not have Pas Yisrael status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "commercial bread baked by a non-Jewish baker without Jewish baking participation",
+        "commercial non-Jewish bakery bread in the halachic category of pas palter"
+      ],
+      "context_note": "A distinct category from bread baked privately by a non-Jew; acceptance and preferred practice can vary by circumstance and community.",
+      "aleph_beis": "פת פלטר"
+    },
+    {
+      "term": "pas baal habayis",
+      "dialect_pattern": "[pas baal habayis|pat baal habayit]",
+      "variants": [
+        "pas ba'al habayis",
+        "pat baal habayit"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - bread",
+      "yeshivish_example": "Pas baal habayis is treated differently from pas palter.",
+      "plain_english_example": "Bread baked privately by a non-Jew is treated differently from commercial-baker bread.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bread baked privately by a non-Jew without Jewish participation",
+        "non-commercial household bread under the laws of pas akum"
+      ],
+      "context_note": "Contrasts with pas palter, which is commercial bakery bread.",
+      "aleph_beis": "פת בעל הבית"
+    },
+    {
+      "term": "pas akum",
+      "dialect_pattern": "pa[s|t] akum",
+      "variants": [
+        "pat akum",
+        "pas nochri"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - bread",
+      "yeshivish_example": "The sugya distinguishes categories within pas akum.",
+      "plain_english_example": "The discussion distinguishes categories of bread baked by non-Jews without Jewish participation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "bread baked by a non-Jew without Jewish baking participation",
+        "umbrella term for rabbinically restricted non-Jewish bread"
+      ],
+      "context_note": "The practical status differs between categories such as pas palter and pas baal habayis.",
+      "aleph_beis": "פת עכו״ם"
+    },
+    {
+      "term": "cholov Yisroel",
+      "dialect_pattern": "ch[olov|alav] Yi[sroel|srael]",
+      "variants": [
+        "chalav Yisrael",
+        "chalav Yisroel",
+        "cholov yisrael"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - dairy",
+      "yeshivish_example": "They only buy cholov Yisroel milk.",
+      "plain_english_example": "They only buy milk produced under Jewish supervision from the time of milking.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "milk supervised by a Jew from milking",
+        "dairy products meeting Cholov Yisroel standards"
+      ],
+      "context_note": "Refers to milk and dairy products meeting the traditional Jewish-supervision requirement associated with milking.",
+      "aleph_beis": "חלב ישראל"
+    },
+    {
+      "term": "cholov stam",
+      "dialect_pattern": "ch[olov|alav] stam",
+      "variants": [
+        "chalav stam",
+        "cholov companies",
+        "chalav hacompanies"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - dairy",
+      "yeshivish_example": "This ice cream is cholov stam, not cholov Yisroel.",
+      "plain_english_example": "This ice cream uses milk accepted without individual Jewish supervision of the milking under a recognized halachic leniency.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "commercial milk relied upon without direct Jewish supervision of milking under a halachic leniency",
+        "milk commonly called chalav hacompanies"
+      ],
+      "context_note": "Acceptance of cholov stam is a halachic and community-practice question; it should not be translated simply as non-kosher milk.",
+      "aleph_beis": "חלב סתם"
+    },
+    {
+      "term": "cholov akum",
+      "dialect_pattern": "ch[olov|alav] akum",
+      "variants": [
+        "chalav akum",
+        "cholov nochri"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - dairy",
+      "yeshivish_example": "The discussion is whether this has a cholov akum concern.",
+      "plain_english_example": "The discussion is whether this milk falls under the rabbinic restriction on unsupervised non-Jewish milk.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "milk of a non-Jew that lacks required Jewish supervision or an accepted basis for reliance",
+        "rabbinically restricted unsupervised milk"
+      ],
+      "context_note": "Distinct from the term cholov stam as used by authorities who rely on specific forms of governmental or commercial oversight.",
+      "aleph_beis": "חלב עכו״ם"
+    },
+    {
+      "term": "gevinas Yisroel",
+      "dialect_pattern": "gevin[as|at] Yi[sroel|srael]",
+      "variants": [
+        "gevinat Yisrael",
+        "gevinas yisrael"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - dairy",
+      "yeshivish_example": "The cheese is certified gevinas Yisroel.",
+      "plain_english_example": "The cheese meets the Jewish-participation or supervision requirements for Gevinas Yisrael.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cheese produced with required Jewish involvement",
+        "Jewish-supervised cheese status"
+      ],
+      "context_note": "The precise required involvement can differ among halachic authorities and certification standards.",
+      "aleph_beis": "גבינת ישראל"
+    },
+    {
+      "term": "gevinas akum",
+      "dialect_pattern": "gevin[as|at] akum",
+      "variants": [
+        "gevinat akum",
+        "gevinas nochri"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - dairy",
+      "yeshivish_example": "Even someone who uses cholov stam still has to consider gevinas akum.",
+      "plain_english_example": "Even someone who relies on cholov stam must separately consider the rabbinic prohibition concerning cheese made without required Jewish involvement.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cheese made by a non-Jew without required Jewish involvement",
+        "rabbinically prohibited non-Jewish cheese"
+      ],
+      "context_note": "A distinct rabbinic prohibition from cholov akum; kosher rennet alone does not automatically remove the issue.",
+      "aleph_beis": "גבינת עכו״ם"
+    },
+    {
+      "term": "stam yeinam",
+      "variants": [
+        "stam yaynam"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - wine",
+      "yeshivish_example": "There is a stam yeinam concern with that open bottle.",
+      "plain_english_example": "There is a kosher-law concern involving wine handled in a way governed by the laws of stam yeinam.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wine of non-Jews or wine subject to the rabbinic restrictions associated with non-Jewish handling",
+        "rabbinically restricted wine"
+      ],
+      "context_note": "A complex area of wine kashrus; exact status depends on ownership, handling, and whether the wine is mevushal.",
+      "aleph_beis": "סתם יינם"
+    },
+    {
+      "term": "yayin nesech",
+      "variants": [
+        "yayin nesekh"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - wine",
+      "yeshivish_example": "The Gemara discusses yayin nesech separately from ordinary wine concerns.",
+      "plain_english_example": "The Talmud discusses wine used for idolatrous libation separately from broader rabbinic wine restrictions.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wine used for idolatrous libation",
+        "Biblically prohibited libation wine"
+      ],
+      "context_note": "Often discussed together with stam yeinam, but the two terms are not identical.",
+      "aleph_beis": "יין נסך"
+    },
+    {
+      "term": "yayin mevushal",
+      "variants": [
+        "mevushal wine"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - wine",
+      "yeshivish_example": "Is the wine yayin mevushal?",
+      "plain_english_example": "Is the wine halachically cooked, giving it a different status for certain wine-handling laws?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cooked wine",
+        "wine with mevushal status"
+      ],
+      "context_note": "Mevushal status affects some laws concerning wine handled by non-Jews; certification standards determine how the status is established.",
+      "aleph_beis": "יין מבושל"
+    },
+    {
+      "term": "mevushal",
+      "variants": [],
+      "language_origin": "Hebrew",
+      "category": "kashrus - wine",
+      "yeshivish_example": "Check whether that bottle is mevushal.",
+      "plain_english_example": "Check whether that wine has halachically cooked status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cooked",
+        "having mevushal status, especially for wine"
+      ],
+      "context_note": "In everyday kashrus conversation, the standalone word often refers specifically to whether wine is mevushal.",
+      "aleph_beis": "מבושל"
+    },
+    {
+      "term": "glatt",
+      "variants": [
+        "glatt kosher"
+      ],
+      "language_origin": "Yiddish",
+      "category": "kashrus - meat",
+      "yeshivish_example": "The meat is certified glatt.",
+      "plain_english_example": "The meat is certified under a standard concerning the condition of the animal's lungs.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "smooth",
+        "meat meeting a stricter lung-inspection standard",
+        "colloquially, a higher kosher standard"
+      ],
+      "context_note": "Its technical meat meaning concerns lung adhesions after shechita. In popular speech, people sometimes use glatt more broadly, which can be imprecise.",
+      "aleph_beis": "גלאַט"
+    },
+    {
+      "term": "shechita",
+      "variants": [
+        "shechitah",
+        "shchita"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - meat",
+      "yeshivish_example": "The plant has a special shechita run this week.",
+      "plain_english_example": "The plant has a special kosher-slaughter production run this week.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual slaughter according to Jewish law",
+        "kosher slaughter"
+      ],
+      "context_note": "Refers to the prescribed method of slaughter for kosher mammals and birds.",
+      "aleph_beis": "שחיטה"
+    },
+    {
+      "term": "melicha",
+      "variants": [
+        "melichah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - meat",
+      "yeshivish_example": "The meat still needs melicha.",
+      "plain_english_example": "The meat still requires the prescribed salting process to remove blood.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "salting process used to remove blood from meat",
+        "koshering meat by salting"
+      ],
+      "context_note": "Part of preparing meat for kosher consumption after slaughter, subject to detailed rules of soaking, salting, timing, and rinsing.",
+      "aleph_beis": "מליחה"
+    },
+    {
+      "term": "nikur",
+      "variants": [
+        "nikkur",
+        "treibering"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - meat",
+      "yeshivish_example": "The hindquarter requires specialized nikur.",
+      "plain_english_example": "The hindquarter requires specialized removal of prohibited fats, veins, and the sciatic nerve.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "removal of forbidden fats and certain veins or nerves from meat",
+        "porging or treibering"
+      ],
+      "context_note": "A specialized process, especially complex in the hindquarters of kosher mammals.",
+      "aleph_beis": "ניקור"
+    },
+    {
+      "term": "cheilev",
+      "variants": [
+        "chelev"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - meat",
+      "yeshivish_example": "Certain cheilev has to be removed during nikur.",
+      "plain_english_example": "Certain forbidden animal fats must be removed during the porging process.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "specified forbidden fats of kosher mammals",
+        "prohibited animal fat"
+      ],
+      "context_note": "Without vowels, the Hebrew spelling can look identical to chalav, milk. Context distinguishes them.",
+      "aleph_beis": "חֵלֶב"
+    },
+    {
+      "term": "gid hanasheh",
+      "variants": [
+        "gid ha-nasheh",
+        "gid hanashe"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - meat",
+      "yeshivish_example": "Nikur includes removing the gid hanasheh.",
+      "plain_english_example": "The porging process includes removal of the sciatic nerve.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sciatic nerve prohibited for consumption",
+        "the prohibited gid hanasheh"
+      ],
+      "context_note": "The prohibition applies to the sciatic nerve in kosher mammals and contributes to the complexity of hindquarter preparation.",
+      "aleph_beis": "גיד הנשה"
+    },
+    {
+      "term": "dam",
+      "variants": [
+        "dom"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - meat",
+      "yeshivish_example": "Melicha is used to remove prohibited dam from meat.",
+      "plain_english_example": "Salting is used to remove prohibited blood from meat.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "blood",
+        "blood prohibited for consumption under Jewish law"
+      ],
+      "context_note": "In kashrus context, usually refers to the prohibition on consuming specified blood and the procedures used to remove it.",
+      "aleph_beis": "דם"
+    },
+    {
+      "term": "simanei kashrus",
+      "dialect_pattern": "simanei kashru[s|t]",
+      "variants": [
+        "simanim of kashrus",
+        "simanei kashrut"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - species",
+      "yeshivish_example": "The fish needs recognizable simanei kashrus.",
+      "plain_english_example": "The fish needs the identifying signs required for kosher species.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "identifying signs of a kosher species",
+        "kosher species indicators"
+      ],
+      "context_note": "Different signs apply to mammals, fish, and other categories under Jewish law.",
+      "aleph_beis": "סימני כשרות"
+    },
+    {
+      "term": "tolaim",
+      "variants": [
+        "tola’im",
+        "tolayim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - insects",
+      "yeshivish_example": "This vegetable is known to have a tolaim issue.",
+      "plain_english_example": "This vegetable is known to have an insect-infestation concern.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "worms or insects",
+        "insects prohibited for consumption"
+      ],
+      "context_note": "In contemporary kashrus discussion, often used broadly for insect infestation concerns in produce and other foods.",
+      "aleph_beis": "תולעים"
+    },
+    {
+      "term": "bedikas tolaim",
+      "dialect_pattern": "bedika[s|t] tolaim",
+      "variants": [
+        "bedikat tolaim",
+        "checking for tolaim"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - insects",
+      "yeshivish_example": "The lettuce needs proper bedikas tolaim.",
+      "plain_english_example": "The lettuce must be properly inspected for insects.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "inspection for insects",
+        "checking produce for prohibited insects"
+      ],
+      "context_note": "Methods and required checking depend on the produce, infestation level, and accepted kashrus guidance.",
+      "aleph_beis": "בדיקת תולעים"
+    },
+    {
+      "term": "hafrashas challah",
+      "dialect_pattern": "hafrasha[s|t] challah",
+      "variants": [
+        "hafrashat challah",
+        "hafroshas challah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - dough and produce",
+      "yeshivish_example": "The bakery has a system for hafrashas challah.",
+      "plain_english_example": "The bakery has a system for separating the required portion of dough.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "separating challah from qualifying dough",
+        "mitzvah of setting aside a portion of dough"
+      ],
+      "context_note": "Relevant in home and commercial baking when dough meets the applicable grain and quantity requirements.",
+      "aleph_beis": "הפרשת חלה"
+    },
+    {
+      "term": "terumos u'maasros",
+      "dialect_pattern": "[terumos u'maasros|terumot umaasrot]",
+      "variants": [
+        "terumot umaasrot",
+        "terumos and maasros"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Israeli produce",
+      "yeshivish_example": "Israeli produce may need terumos u'maasros separated.",
+      "plain_english_example": "Israeli produce may require the prescribed tithes and portions to be separated before eating.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "priestly gifts and tithes separated from Israeli produce",
+        "agricultural separations required by Jewish law"
+      ],
+      "context_note": "Produce grown in the Land of Israel can require these separations before it may be eaten.",
+      "aleph_beis": "תרומות ומעשרות"
+    },
+    {
+      "term": "tevel",
+      "variants": [
+        "tevel produce"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Israeli produce",
+      "yeshivish_example": "You cannot eat the produce while it is still tevel.",
+      "plain_english_example": "The produce may not be eaten before the required agricultural separations are made.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "produce from which required tithes have not been separated",
+        "untithed produce"
+      ],
+      "context_note": "Commonly used for Israeli produce that still requires terumos and maasros.",
+      "aleph_beis": "טבל"
+    },
+    {
+      "term": "orlah",
+      "variants": [
+        "orla"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Israeli produce",
+      "yeshivish_example": "Fruit can have an orlah concern during the tree's early years.",
+      "plain_english_example": "Fruit can be prohibited because it grew during the tree's first three years.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "fruit of a tree during its first three years",
+        "prohibition of orlah fruit"
+      ],
+      "context_note": "A produce-related kashrus concern that applies to fruit grown during the prohibited early years of a tree.",
+      "aleph_beis": "ערלה"
+    },
+    {
+      "term": "yoshon",
+      "dialect_pattern": "[yoshon|yashan]",
+      "variants": [
+        "yashan"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - grain",
+      "yeshivish_example": "The package is marked yoshon.",
+      "plain_english_example": "The package is marked as containing grain from the permitted older crop under the laws of chadash.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "old grain permitted under the laws of chadash",
+        "product with yoshon status"
+      ],
+      "context_note": "A designation used for grain products that meet the halachic requirements concerning the new crop.",
+      "aleph_beis": "ישן"
+    },
+    {
+      "term": "chodosh",
+      "dialect_pattern": "ch[odosh|adash]",
+      "variants": [
+        "chadash",
+        "chadosh"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - grain",
+      "yeshivish_example": "Some consumers avoid chodosh grain until the permitted time.",
+      "plain_english_example": "Some consumers avoid grain from the new crop until it becomes permitted under Jewish law.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "new grain before the permitted date",
+        "the prohibited status of chadash grain"
+      ],
+      "context_note": "The pronunciation chodosh is common in Ashkenazi/Yeshivish speech; practices concerning its application outside Israel vary among communities and authorities.",
+      "aleph_beis": "חדש"
+    },
+    {
+      "term": "kitniyos",
+      "dialect_pattern": "kitniy[os|ot]",
+      "variants": [
+        "kitniyot",
+        "kitnios"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Pesach",
+      "yeshivish_example": "Our family does not eat kitniyos on Pesach.",
+      "plain_english_example": "Our family follows the Ashkenazi custom not to eat legumes and certain similar foods on Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "legumes and certain grain-like foods avoided by many Ashkenazim on Passover",
+        "Passover category governed by communal custom"
+      ],
+      "context_note": "Kitniyos is not chametz. The custom to avoid it on Pesach is characteristic of Ashkenazi practice and is not universal among Jewish communities.",
+      "aleph_beis": "קטניות"
+    },
+    {
+      "term": "chametz",
+      "variants": [
+        "chometz",
+        "hametz"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Pesach",
+      "yeshivish_example": "We have to remove the chametz before Pesach.",
+      "plain_english_example": "We have to remove prohibited leavened grain products before Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "leavened grain prohibited on Passover",
+        "food containing or becoming chametz"
+      ],
+      "context_note": "A central Passover-law category involving the five grains after contact with water under conditions that permit fermentation or leavening.",
+      "aleph_beis": "חמץ"
+    },
+    {
+      "term": "kosher l'Pesach",
+      "variants": [
+        "kosher for Pesach",
+        "kosher lePesach",
+        "KLP"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Pesach",
+      "yeshivish_example": "Make sure the product is kosher l'Pesach.",
+      "plain_english_example": "Make sure the product is certified kosher for Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kosher for Passover",
+        "meeting Passover-specific kosher requirements"
+      ],
+      "context_note": "Passover certification addresses chametz and other Passover-specific ingredient and equipment concerns beyond ordinary year-round kashrus.",
+      "aleph_beis": "כשר לפסח"
+    },
+    {
+      "term": "gebrochts",
+      "variants": [
+        "gebrokts",
+        "gebruchts"
+      ],
+      "language_origin": "Yiddish",
+      "category": "kashrus - Pesach",
+      "yeshivish_example": "They do not eat gebrochts on Pesach.",
+      "plain_english_example": "They follow the custom of avoiding matzah that has come into contact with liquid on Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "matzah that has contacted liquid",
+        "custom of avoiding wetted matzah on Passover"
+      ],
+      "context_note": "A Yiddish term associated especially with Hasidic communities that avoid matzah mixed with liquid during Pesach; it is a custom, not a universal Passover prohibition.",
+      "aleph_beis": "געבראָכטס"
+    },
+    {
+      "term": "shmurah matzah",
+      "variants": [
+        "matzah shmura",
+        "matza shmurah"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Pesach",
+      "yeshivish_example": "We use shmurah matzah for the Seder.",
+      "plain_english_example": "We use matzah made from grain guarded for the mitzvah from the required stage.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "guarded matzah",
+        "matzah produced with special supervision against becoming chametz"
+      ],
+      "context_note": "The term refers to matzah whose grain or flour was specially guarded against leavening; practices differ as to when the guarding begins.",
+      "aleph_beis": "מצה שמורה"
+    },
+    {
+      "term": "mechiras chametz",
+      "dialect_pattern": "mechira[s|t] chametz",
+      "variants": [
+        "mechirat chametz",
+        "selling chametz"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Pesach",
+      "yeshivish_example": "The rav arranged the mechiras chametz before Pesach.",
+      "plain_english_example": "The rabbi arranged the halachic sale of chametz before Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sale of chametz before Passover",
+        "halachic transfer of ownership of chametz"
+      ],
+      "context_note": "Used to avoid Jewish ownership of specified chametz during Pesach; practical implementation is normally arranged through a rabbi.",
+      "aleph_beis": "מכירת חמץ"
+    },
+    {
+      "term": "chametz she'avar alav haPesach",
+      "variants": [
+        "chometz she'avar alav haPesach",
+        "chametz after Pesach"
+      ],
+      "language_origin": "Hebrew",
+      "category": "kashrus - Pesach",
+      "yeshivish_example": "There may be a chametz she'avar alav haPesach issue with that inventory.",
+      "plain_english_example": "There may be a post-Passover prohibition involving chametz that was owned by a Jew during Passover.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "chametz that remained under prohibited Jewish ownership during Passover",
+        "post-Passover status of chametz owned during Pesach"
+      ],
+      "context_note": "Relevant after Pesach when determining whether chametz was properly sold or otherwise not under prohibited Jewish ownership during the holiday.",
+      "aleph_beis": "חמץ שעבר עליו הפסח"
     }
   ]
 }

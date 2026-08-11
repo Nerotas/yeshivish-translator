@@ -8,9 +8,9 @@ from .models import GlossaryTerm
 
 class GlossaryModelTests(TestCase):
     def test_migration_imports_complete_runtime_glossary(self):
-        self.assertEqual(GlossaryTerm.objects.count(), 204)
-        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 204)
-        self.assertEqual(len(load_glossary()), 204)
+        self.assertEqual(GlossaryTerm.objects.count(), 277)
+        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 277)
+        self.assertEqual(len(load_glossary()), 277)
 
     def test_rov_is_distinct_from_rav(self):
         rav = GlossaryTerm.objects.get(term="rav")
@@ -18,6 +18,17 @@ class GlossaryModelTests(TestCase):
 
         self.assertNotIn("rov", [variant.casefold() for variant in rav.variants])
         self.assertIn("majority", rov.meanings)
+
+    def test_kashrus_expansion_terms_are_distinct_from_existing_aliases(self):
+        kosher = GlossaryTerm.objects.get(term="kosher")
+        bishul = GlossaryTerm.objects.get(term="bishul")
+
+        self.assertNotIn("kasher", [variant.casefold() for variant in kosher.variants])
+        self.assertNotIn(
+            "bishul akum", [variant.casefold() for variant in bishul.variants]
+        )
+        self.assertTrue(GlossaryTerm.objects.filter(term="kasher").exists())
+        self.assertTrue(GlossaryTerm.objects.filter(term="bishul akum").exists())
 
     def test_rejects_invalid_array_fields(self):
         term = GlossaryTerm(
@@ -69,8 +80,8 @@ class GlossaryApiTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         payload = response.json()
-        self.assertEqual(payload["count"], 204)
-        self.assertEqual(len(payload["results"]), 204)
+        self.assertEqual(payload["count"], 277)
+        self.assertEqual(len(payload["results"]), 277)
         terms = [entry["term"] for entry in payload["results"]]
         self.assertEqual(terms, sorted(terms, key=str.casefold))
 
@@ -91,6 +102,14 @@ class GlossaryApiTests(TestCase):
         self.assertNotIn("dialect_pattern", shabbos)
         self.assertNotIn("confidence", shabbos)
         self.assertNotIn("needs_human_review", shabbos)
+
+        kashrus = next(
+            entry for entry in response.json()["results"] if entry["term"] == "kashrus"
+        )
+        self.assertEqual(
+            kashrus["display_terms"],
+            {"shabbos": "kashrus", "shabbat": "kashrut"},
+        )
 
     def test_is_public_read_only_and_rejects_post(self):
         get_response = self.client.get("/api/glossary/")

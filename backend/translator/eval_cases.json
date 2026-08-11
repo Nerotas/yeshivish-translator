@@ -38,5 +38,25 @@
     "forbidden_terms": ["rov", "rabbi"],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "kasher_is_an_action",
+    "direction": "yeshivish_to_english",
+    "source": "We need to kasher the oven before using it.",
+    "candidate_translation": "We need to make the oven kosher before using it.",
+    "required_terms": ["make", "oven", "kosher"],
+    "forbidden_terms": ["kasher"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "bishul_akum_is_context_specific",
+    "direction": "yeshivish_to_english",
+    "source": "The restaurant must address bishul akum.",
+    "candidate_translation": "The restaurant must address restrictions on certain foods cooked by a non-Jew.",
+    "required_terms": ["restaurant", "cooked", "non-Jew"],
+    "forbidden_terms": ["bishul akum"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]

@@ -132,6 +132,29 @@ class GlossaryMatchingTests(TestCase):
         self.assertEqual([entry["term"] for entry in rav_matches], ["rav"])
         self.assertEqual([entry["term"] for entry in rov_matches], ["rov"])
 
+    def test_distinguishes_kasher_from_kosher(self):
+        kasher_matches = find_glossary_entries("We need to kasher the oven.")
+        kosher_matches = find_glossary_entries("The restaurant is kosher.")
+
+        self.assertEqual([entry["term"] for entry in kasher_matches], ["kasher"])
+        self.assertEqual([entry["term"] for entry in kosher_matches], ["kosher"])
+
+    def test_prefers_bishul_akum_over_the_general_bishul_term(self):
+        matches = find_glossary_entries("The restaurant must address bishul akum.")
+
+        self.assertEqual([entry["term"] for entry in matches], ["bishul akum"])
+
+    def test_kashrus_definitions_do_not_create_overbroad_reverse_matches(self):
+        dairy_matches = find_glossary_entries(
+            "This meal contains dairy.", direction="english_to_yeshivish"
+        )
+        prohibition_matches = find_glossary_entries(
+            "That is a prohibition.", direction="english_to_yeshivish"
+        )
+
+        self.assertNotIn("basar b'chalav", [entry["term"] for entry in dairy_matches])
+        self.assertNotIn("chodosh", [entry["term"] for entry in prohibition_matches])
+
     def test_matches_multiword_phrase_across_whitespace(self):
         matches = find_glossary_entries("Baruch\nHashem, everyone is well.")
 
