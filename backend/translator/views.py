@@ -1,6 +1,7 @@
 import logging
 import os
 from functools import lru_cache
+from typing import Any, cast
 
 from openai import OpenAI
 from rest_framework import status
@@ -8,13 +9,20 @@ from rest_framework.decorators import (
     api_view,
     authentication_classes,
     permission_classes,
+    throttle_classes,
 )
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.request import Request
 from rest_framework.response import Response
 
+from .authentication import (
+    SessionTokenAuthentication,
+    issue_session_token,
+    revoke_session_token,
+)
 from .glossary import TranslationDirection
 from .prompt import build_translation_instructions
+from .throttling import SessionIssueRateThrottle, TranslateRateThrottle
 
 logger = logging.getLogger(__name__)
 
@@ -32,8 +40,9 @@ def get_openai_client() -> OpenAI:
 
 
 @api_view(["POST"])
-@authentication_classes([])
-@permission_classes([AllowAny])
+@authentication_classes([SessionTokenAuthentication])
+@permission_classes([IsAuthenticated])
+@throttle_classes([TranslateRateThrottle])
 def translate(request: Request) -> Response:
     text = request.data.get("text")
     direction = request.data.get("direction", DEFAULT_DIRECTION)
@@ -94,3 +103,22 @@ def translate(request: Request) -> Response:
 @permission_classes([AllowAny])
 def health(request: Request) -> Response:
     return Response({"status": "ok"})
+
+
+@api_view(["POST"])
+@authentication_classes([])
+@permission_classes([AllowAny])
+@throttle_classes([SessionIssueRateThrottle])
+def issue_session(request: Request) -> Response:
+    token, expires_in = issue_session_token()
+    return Response(
+        {"access_token": token, "token_type": "Bearer", "expires_in": expires_in}
+    )
+
+
+@api_view(["POST"])
+@authentication_classes([SessionTokenAuthentication])
+@permission_classes([IsAuthenticated])
+def revoke_session(request: Request) -> Response:
+    revoke_session_token(cast("dict[str, Any]", request.auth))
+    return Response(status=status.HTTP_204_NO_CONTENT)

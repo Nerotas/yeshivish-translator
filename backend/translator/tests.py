@@ -4,9 +4,9 @@ from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
 from django.core.cache import cache
-from django.test import SimpleTestCase
-from rest_framework.throttling import AnonRateThrottle
+from django.test import SimpleTestCase, override_settings
 
+from .authentication import issue_session_token
 from .glossary import (
     MAX_GLOSSARY_MATCHES,
     _validate_entry,
@@ -19,10 +19,12 @@ from .prompt import (
     TRANSLATOR_INSTRUCTIONS,
     build_translation_instructions,
 )
+from .throttling import ClientIPRateThrottle
 from .views import MAX_INPUT_CHARACTERS, get_openai_client, translate
 
 
-class OneRequestAnonRateThrottle(AnonRateThrottle):
+class OneRequestClientIPRateThrottle(ClientIPRateThrottle):
+    scope = "translate"
     rate = "1/hour"
 
 
@@ -33,6 +35,12 @@ def glossary_entry(term, variants=None):
         "meanings": [f"meaning of {term}"],
         "context_note": f"context for {term}",
     }
+
+
+def bearer_auth_header() -> dict[str, str]:
+    """A valid `Authorization` header for a freshly minted session token."""
+    token, _ = issue_session_token()
+    return {"HTTP_AUTHORIZATION": f"Bearer {token}"}
 
 
 class GlossaryMatchingTests(SimpleTestCase):
@@ -239,7 +247,7 @@ class TranslationEndpointTests(SimpleTestCase):
         self.assertEqual(response.json(), {"status": "ok"})
 
     def test_rejects_get_requests(self):
-        response = self.client.get("/api/translate/")
+        response = self.client.get("/api/translate/", **bearer_auth_header())
 
         self.assertEqual(response.status_code, 405)
 
@@ -248,6 +256,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 400)
@@ -258,6 +267,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": 123},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 400)
@@ -267,6 +277,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": " \n\t "},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 400)
@@ -277,6 +288,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "x" * (MAX_INPUT_CHARACTERS + 1)},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 400)
@@ -291,6 +303,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "That was mamesh good."},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 200)
@@ -310,6 +323,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "Mamesh good."},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 200)
@@ -332,6 +346,7 @@ class TranslationEndpointTests(SimpleTestCase):
                 "direction": "english_to_yeshivish",
             },
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 200)
@@ -356,6 +371,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": source, "direction": "english_to_yeshivish"},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 200)
@@ -371,6 +387,7 @@ class TranslationEndpointTests(SimpleTestCase):
                 "/api/translate/",
                 {"text": "Mamesh good."},
                 content_type="application/json",
+                **bearer_auth_header(),
             )
 
         self.assertEqual(response.status_code, 200)
@@ -391,6 +408,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "Mamesh good."},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(
@@ -404,6 +422,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "Hello", "direction": "sideways"},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 400)
@@ -415,6 +434,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "Hello", "direction": ["english_to_yeshivish"]},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 400)
@@ -427,6 +447,7 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "Mamesh good."},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 502)
@@ -445,28 +466,161 @@ class TranslationEndpointTests(SimpleTestCase):
             "/api/translate/",
             {"text": "Mamesh good."},
             content_type="application/json",
+            **bearer_auth_header(),
         )
 
         self.assertEqual(response.status_code, 502)
 
     @patch("translator.views.get_openai_client")
-    def test_throttles_repeated_anonymous_requests(self, get_client):
+    def test_throttles_repeated_requests_from_the_same_client(self, get_client):
         cache.clear()
         get_client.return_value.responses.create.return_value = SimpleNamespace(
             output_text="Translated."
         )
         payload = {"text": "Mamesh good."}
+        auth_header = bearer_auth_header()
 
         with patch.object(
-            translate.cls, "throttle_classes", [OneRequestAnonRateThrottle]
+            translate.cls, "throttle_classes", [OneRequestClientIPRateThrottle]
         ):
             first = self.client.post(
-                "/api/translate/", payload, content_type="application/json"
+                "/api/translate/",
+                payload,
+                content_type="application/json",
+                **auth_header,
             )
             second = self.client.post(
-                "/api/translate/", payload, content_type="application/json"
+                "/api/translate/",
+                payload,
+                content_type="application/json",
+                **auth_header,
             )
 
         self.assertEqual(first.status_code, 200)
         self.assertEqual(second.status_code, 429)
         cache.clear()
+
+
+class TranslateAuthenticationTests(SimpleTestCase):
+    """`/api/translate/` is the billable, OpenAI-backed endpoint. See
+    docs/authentication.md for why it requires a short-lived session token
+    rather than allowing anonymous access."""
+
+    def tearDown(self):
+        cache.clear()
+
+    def test_rejects_a_request_with_no_credentials(self):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_rejects_an_invalid_token(self):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+            HTTP_AUTHORIZATION="Bearer not-a-real-token",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_rejects_a_malformed_authorization_header(self):
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+            HTTP_AUTHORIZATION="not-bearer-scheme",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    def test_rejects_an_expired_token(self):
+        with override_settings(JWT_ACCESS_TOKEN_TTL_SECONDS=-1):
+            token, _ = issue_session_token()
+
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Bearer {token}",
+        )
+
+        self.assertEqual(response.status_code, 401)
+
+    @patch("translator.views.get_openai_client")
+    def test_accepts_a_valid_token_in_both_directions(self, get_client):
+        create = Mock(return_value=SimpleNamespace(output_text="Translated."))
+        get_client.return_value.responses.create = create
+
+        for direction in ("yeshivish_to_english", "english_to_yeshivish"):
+            with self.subTest(direction=direction):
+                response = self.client.post(
+                    "/api/translate/",
+                    {"text": "Mamesh good.", "direction": direction},
+                    content_type="application/json",
+                    **bearer_auth_header(),
+                )
+
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(response.json(), {"translation": "Translated."})
+
+
+class SessionTokenEndpointTests(SimpleTestCase):
+    def tearDown(self):
+        cache.clear()
+
+    def test_issues_a_bearer_token(self):
+        response = self.client.post("/api/auth/session/")
+
+        self.assertEqual(response.status_code, 200)
+        body = response.json()
+        self.assertEqual(body["token_type"], "Bearer")
+        self.assertIsInstance(body["access_token"], str)
+        self.assertGreater(body["expires_in"], 0)
+
+    def test_rejects_get_requests(self):
+        response = self.client.get("/api/auth/session/")
+
+        self.assertEqual(response.status_code, 405)
+
+    @patch("translator.views.get_openai_client")
+    def test_issued_token_authorizes_a_translate_request(self, get_client):
+        get_client.return_value.responses.create.return_value = SimpleNamespace(
+            output_text="Translated."
+        )
+
+        access_token = self.client.post("/api/auth/session/").json()["access_token"]
+        response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Bearer {access_token}",
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_revoking_a_token_immediately_invalidates_it(self):
+        access_token = self.client.post("/api/auth/session/").json()["access_token"]
+
+        revoke_response = self.client.post(
+            "/api/auth/session/revoke/",
+            HTTP_AUTHORIZATION=f"Bearer {access_token}",
+        )
+        translate_response = self.client.post(
+            "/api/translate/",
+            {"text": "Mamesh good."},
+            content_type="application/json",
+            HTTP_AUTHORIZATION=f"Bearer {access_token}",
+        )
+
+        self.assertEqual(revoke_response.status_code, 204)
+        self.assertEqual(translate_response.status_code, 401)
+
+    def test_revoke_rejects_a_request_with_no_credentials(self):
+        response = self.client.post("/api/auth/session/revoke/")
+
+        self.assertEqual(response.status_code, 401)

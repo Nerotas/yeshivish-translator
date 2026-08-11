@@ -2,6 +2,16 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
+  await page.route("**/api/auth/session/", async (route) => {
+    await route.fulfill({
+      json: {
+        access_token: "e2e-test-token",
+        token_type: "Bearer",
+        expires_in: 300,
+      },
+    });
+  });
+
   await page.route("**/api/translate/", async (route) => {
     const request = route.request().postDataJSON() as { direction?: string };
     const translation =
