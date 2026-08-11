@@ -4,7 +4,7 @@ MYPY ?= .venv/bin/mypy
 PIP_AUDIT ?= .venv/bin/pip-audit
 RUFF ?= .venv/bin/ruff
 
-.PHONY: audit backend-check check coverage e2e eval frontend-check test
+.PHONY: audit backend-check check coverage e2e eval frontend-check live-eval test
 
 test:
 	$(PYTHON) backend/manage.py test translator
@@ -20,6 +20,11 @@ coverage:
 
 eval:
 	$(PYTHON) backend/translator/evals.py
+
+# Calls the OpenAI API and bills tokens. Never add to check, test, or CI.
+# Requires OPENAI_API_KEY. See backend/translator/live_evals.py for details.
+live-eval:
+	YESHIVISH_LIVE_EVAL_AUTHORIZED=true $(PYTHON) backend/translator/live_evals.py
 
 backend-check:
 	$(RUFF) check backend

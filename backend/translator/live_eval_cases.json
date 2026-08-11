@@ -1,0 +1,62 @@
+[
+  {
+    "id": "y2e_common_expressions",
+    "direction": "yeshivish_to_english",
+    "source": "Mamesh, the shiur today was such a chiddush. It was really gishmak.",
+    "required_terms": [],
+    "forbidden_terms": ["mamesh", "shiur", "chiddush", "gishmak"],
+    "tone_markers": [],
+    "preserve_names": [],
+    "preserve_paragraphs": true,
+    "preserve_quotes": false,
+    "scoring_note": "Common intensifiers and Torah-study terms must all be rendered in English; none may be passed through untranslated"
+  },
+  {
+    "id": "y2e_paragraph_and_name_preservation",
+    "direction": "yeshivish_to_english",
+    "source": "Avada, Yosef should bentsch before everyone leaves.\n\nThe whole mishpacha is coming for Shabbos.",
+    "required_terms": ["Yosef"],
+    "forbidden_terms": ["avada", "bentsch", "mishpacha"],
+    "tone_markers": [],
+    "preserve_names": ["Yosef"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": false,
+    "scoring_note": "Two-paragraph structure must be preserved; proper name Yosef must survive; 'avada', 'bentsch', 'mishpacha' must be translated to English"
+  },
+  {
+    "id": "y2e_quoted_speech",
+    "direction": "yeshivish_to_english",
+    "source": "Leah said, \"Nu, are we leaving or not? It's mamesh time to go.\"",
+    "required_terms": ["Leah"],
+    "forbidden_terms": ["mamesh"],
+    "tone_markers": [],
+    "preserve_names": ["Leah"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true,
+    "scoring_note": "Name 'Leah' and quotation boundaries must be preserved; 'mamesh' must be replaced with an English equivalent inside the quote"
+  },
+  {
+    "id": "e2y_saturday_night_celebration",
+    "direction": "english_to_yeshivish",
+    "source": "Please join us for a party on Saturday night. Bring the whole family.",
+    "required_terms": ["mishpacha"],
+    "forbidden_terms": [],
+    "tone_markers": ["simcha", "motzaei", "mishpacha", "gevaldig", "mamash", "mamesh", "!"],
+    "preserve_names": [],
+    "preserve_paragraphs": true,
+    "preserve_quotes": false,
+    "scoring_note": "'whole family' maps to 'mishpacha' (primary glossary term); Saturday night context should yield Yeshivish tone markers; at least one tone marker must appear"
+  },
+  {
+    "id": "e2y_serious_learning_and_pride",
+    "direction": "english_to_yeshivish",
+    "source": "He studies Torah very seriously every day. His teacher is so proud of him.",
+    "required_terms": ["shtark", "nachas"],
+    "forbidden_terms": [],
+    "tone_markers": ["shtark", "nachas", "mamash", "mamesh", "!"],
+    "preserve_names": [],
+    "preserve_paragraphs": true,
+    "preserve_quotes": false,
+    "scoring_note": "'very seriously' in a Torah-study context maps to 'shtark'; teacher pride in a student maps to 'nachas'; both are primary glossary terms for these contexts"
+  }
+]
