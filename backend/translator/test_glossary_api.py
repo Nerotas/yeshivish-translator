@@ -8,9 +8,16 @@ from .models import GlossaryTerm
 
 class GlossaryModelTests(TestCase):
     def test_migration_imports_complete_runtime_glossary(self):
-        self.assertEqual(GlossaryTerm.objects.count(), 130)
-        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 130)
-        self.assertEqual(len(load_glossary()), 130)
+        self.assertEqual(GlossaryTerm.objects.count(), 204)
+        self.assertEqual(GlossaryTerm.objects.exclude(aleph_beis="").count(), 204)
+        self.assertEqual(len(load_glossary()), 204)
+
+    def test_rov_is_distinct_from_rav(self):
+        rav = GlossaryTerm.objects.get(term="rav")
+        rov = GlossaryTerm.objects.get(term="rov")
+
+        self.assertNotIn("rov", [variant.casefold() for variant in rav.variants])
+        self.assertIn("majority", rov.meanings)
 
     def test_rejects_invalid_array_fields(self):
         term = GlossaryTerm(
@@ -62,8 +69,8 @@ class GlossaryApiTests(TestCase):
 
         self.assertEqual(response.status_code, 200)
         payload = response.json()
-        self.assertEqual(payload["count"], 130)
-        self.assertEqual(len(payload["results"]), 130)
+        self.assertEqual(payload["count"], 204)
+        self.assertEqual(len(payload["results"]), 204)
         terms = [entry["term"] for entry in payload["results"]]
         self.assertEqual(terms, sorted(terms, key=str.casefold))
 

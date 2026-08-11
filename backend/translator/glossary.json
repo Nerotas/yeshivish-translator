@@ -1,7 +1,7 @@
 {
   "name": "Yeshivish to Plain English Runtime Glossary",
-  "version": 3,
-  "entry_count": 130,
+  "version": 4,
+  "entry_count": 204,
   "entries": [
     {
       "term": "mamesh",
@@ -24,24 +24,24 @@
       "context_note": "Usually an intensifier meaning “really” or “truly.” In Torah discussion it can also contrast something concrete or literal with something abstract."
     },
     {
-  "term": "avreich",
-  "aleph_beis": "אברך",
-  "variants": [
-    "avrech"
-  ],
-  "language_origin": "Hebrew",
-  "category": "yeshivish noun",
-  "yeshivish_example": "He's an avreich learning in kollel.",
-  "plain_english_example": "He's a married Torah scholar studying full-time in a yeshiva.",
-  "confidence": "high",
-  "needs_human_review": false,
-  "meanings": [
-    "married yeshiva student",
-    "full-time Torah scholar",
-    "married man studying Torah in kollel"
-  ],
-  "context_note": "Usually refers to a married Orthodox Jewish man who studies Torah full-time, typically in a kollel. The closest plain-English equivalent depends on context; “full-time Torah scholar” is generally the most natural."
-},
+      "term": "avreich",
+      "aleph_beis": "אברך",
+      "variants": [
+        "avrech"
+      ],
+      "language_origin": "Hebrew",
+      "category": "yeshivish noun",
+      "yeshivish_example": "He's an avreich learning in kollel.",
+      "plain_english_example": "He's a married Torah scholar studying full-time in a yeshiva.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "married yeshiva student",
+        "full-time Torah scholar",
+        "married man studying Torah in kollel"
+      ],
+      "context_note": "Usually refers to a married Orthodox Jewish man who studies Torah full-time, typically in a kollel. The closest plain-English equivalent depends on context; “full-time Torah scholar” is generally the most natural."
+    },
     {
       "term": "taka",
       "aleph_beis": "טאַקע",
@@ -179,27 +179,27 @@
       "context_note": "Used for worry, frustration, pain, or dismay. It can be serious or mildly comic depending on tone."
     },
     {
-  "term": "shmutz",
-  "aleph_beis": "שמוץ",
-  "variants": [
-    "schmutz",
-    "shmuts",
-    "shmootz"
-  ],
-  "language_origin": "Yiddish",
-  "category": "everyday expression",
-  "yeshivish_example": "You have some shmutz on your shirt.",
-  "plain_english_example": "You have some dirt on your shirt.",
-  "confidence": "high",
-  "needs_human_review": false,
-  "meanings": [
-    "dirt",
-    "grime",
-    "a dirty or soiling substance",
-    "garbage"
-  ],
-  "context_note": "Usually refers to dirt, grime, or some unwanted dirty substance on a person or object."
-},
+      "term": "shmutz",
+      "aleph_beis": "שמוץ",
+      "variants": [
+        "schmutz",
+        "shmuts",
+        "shmootz"
+      ],
+      "language_origin": "Yiddish",
+      "category": "everyday expression",
+      "yeshivish_example": "You have some shmutz on your shirt.",
+      "plain_english_example": "You have some dirt on your shirt.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "dirt",
+        "grime",
+        "a dirty or soiling substance",
+        "garbage"
+      ],
+      "context_note": "Usually refers to dirt, grime, or some unwanted dirty substance on a person or object."
+    },
     {
       "term": "gevalt",
       "aleph_beis": "געוואַלד",
@@ -1144,9 +1144,7 @@
     {
       "term": "rav",
       "aleph_beis": "רב",
-      "variants": [
-        "rov"
-      ],
+      "variants": [],
       "language_origin": "Hebrew",
       "category": "people and family",
       "yeshivish_example": "I need to ask the rav before we use it.",
@@ -2527,6 +2525,1365 @@
         "holy woman"
       ],
       "context_note": "Usually expresses admiration for a woman's character or religious devotion."
+    },
+    {
+      "term": "yad soledes bo",
+      "variants": [
+        "yad soledet bo",
+        "yad soledes boh",
+        "yad soledet boh"
+      ],
+      "aleph_beis": "יד סולדת בו",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "The water is still yad soledes bo.",
+      "plain_english_example": "The water is still at the halachically significant heat level described as causing the hand to recoil.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a halachically significant heat threshold",
+        "heat from which the hand recoils"
+      ],
+      "context_note": "Used especially in the laws of cooking on Shabbos. The exact practical temperature corresponding to the phrase is subject to halachic discussion."
+    },
+    {
+      "term": "peshita",
+      "variants": [
+        "pshita"
+      ],
+      "aleph_beis": "פשיטא",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Peshita; why would we have thought otherwise?",
+      "plain_english_example": "It is obvious; why would we have thought otherwise?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "obviously",
+        "this appears self-evident",
+        "why does this need to be stated?"
+      ],
+      "context_note": "A common Gemara expression marking a statement as apparently obvious and often introducing the need to explain what novelty is being taught."
+    },
+    {
+      "term": "ta shma",
+      "variants": [
+        "tashma",
+        "ta shema"
+      ],
+      "aleph_beis": "תא שמע",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Ta shma, there is a braisa that addresses the question.",
+      "plain_english_example": "Come and hear; there is a baraita that addresses the question.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "come and hear",
+        "consider this source or proof"
+      ],
+      "context_note": "Introduces a source, proof, or attempted resolution in Talmudic argument."
+    },
+    {
+      "term": "ibaya lehu",
+      "variants": [
+        "ibaya lhu",
+        "iba'ya lehu"
+      ],
+      "aleph_beis": "איבעיא להו",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Ibaya lehu whether the same rule applies in the second case.",
+      "plain_english_example": "A question was posed whether the same rule applies in the second case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a question was posed",
+        "they asked the following question"
+      ],
+      "context_note": "Introduces an unresolved or investigated question in the Gemara."
+    },
+    {
+      "term": "teiku",
+      "variants": [
+        "teyku"
+      ],
+      "aleph_beis": "תיקו",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "The Gemara ends the question with teiku.",
+      "plain_english_example": "The Talmud leaves the question unresolved.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the question remains unresolved",
+        "let the question stand"
+      ],
+      "context_note": "A standard Talmudic conclusion indicating that the question is not resolved in the discussion."
+    },
+    {
+      "term": "shma mina",
+      "variants": [
+        "shema mina",
+        "shma minah"
+      ],
+      "aleph_beis": "שמע מינה",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Shma mina that the first interpretation is correct.",
+      "plain_english_example": "Infer from this that the first interpretation is correct.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "learn from this",
+        "infer from this",
+        "deduce from this"
+      ],
+      "context_note": "Signals a conclusion or inference drawn from a source or argument."
+    },
+    {
+      "term": "ka mashma lan",
+      "variants": [
+        "kamashmalan",
+        "ka mashma l'an"
+      ],
+      "aleph_beis": "קא משמע לן",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Ka mashma lan that the rule applies even here.",
+      "plain_english_example": "This teaches us that the rule applies even here.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "this teaches us",
+        "the novelty is that"
+      ],
+      "context_note": "Often follows a rejected assumption and identifies the point the source comes to teach."
+    },
+    {
+      "term": "mai ta'ama",
+      "variants": [
+        "mai taama"
+      ],
+      "aleph_beis": "מאי טעמא",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Mai ta'ama of the first opinion?",
+      "plain_english_example": "What is the reason for the first opinion?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "what is the reason?",
+        "why?"
+      ],
+      "context_note": "A standard question asking for the rationale behind a ruling, statement, or opinion."
+    },
+    {
+      "term": "mai shna",
+      "variants": [
+        "mai shana"
+      ],
+      "aleph_beis": "מאי שנא",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Mai shna this case from the earlier case?",
+      "plain_english_example": "Why is this case different from the earlier case?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "what is different?",
+        "why is this case different?"
+      ],
+      "context_note": "Used to challenge an apparent distinction between two cases."
+    },
+    {
+      "term": "hacha b'mai askinan",
+      "variants": [
+        "hacha bemai askinan"
+      ],
+      "aleph_beis": "הכא במאי עסקינן",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Hacha b'mai askinan? In a case where the item was already separated.",
+      "plain_english_example": "What case are we dealing with here? A case where the item was already separated.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "what case are we dealing with here?",
+        "here we are dealing with a case where"
+      ],
+      "context_note": "Introduces a narrower factual setup used to explain how a source should be understood."
+    },
+    {
+      "term": "mistabra",
+      "variants": [
+        "mistaber"
+      ],
+      "aleph_beis": "מסתברא",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Mistabra that the second reading fits better.",
+      "plain_english_example": "It is reasonable that the second reading fits better.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "it is reasonable",
+        "it makes sense",
+        "the more plausible view is"
+      ],
+      "context_note": "Introduces a conclusion based on logic or plausibility."
+    },
+    {
+      "term": "mima nafshach",
+      "variants": [
+        "mimah nafshach",
+        "mah nafshach",
+        "mima nafshoch"
+      ],
+      "aleph_beis": "ממה נפשך",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Mima nafshach, either possibility leads to the same result.",
+      "plain_english_example": "Either way, both possibilities lead to the same result.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "either way",
+        "whichever way you look at it",
+        "on either possibility"
+      ],
+      "context_note": "Used when an argument reaches the same conclusion regardless of which of two alternatives is assumed."
+    },
+    {
+      "term": "ika d'amri",
+      "variants": [
+        "ika deamri",
+        "ika damri"
+      ],
+      "aleph_beis": "איכא דאמרי",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "Ika d'amri that the statement was said in the opposite order.",
+      "plain_english_example": "Some say that the statement was said in the opposite order.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "some say",
+        "there is another version of the teaching"
+      ],
+      "context_note": "Introduces an alternate textual or oral version of a Talmudic statement."
+    },
+    {
+      "term": "lishna achrina",
+      "variants": [
+        "lishna acharina"
+      ],
+      "aleph_beis": "לישנא אחרינא",
+      "language_origin": "Aramaic",
+      "category": "Gemara expression",
+      "yeshivish_example": "The Gemara gives a lishna achrina of the discussion.",
+      "plain_english_example": "The Talmud gives another version or wording of the discussion.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "another wording",
+        "another version",
+        "an alternate formulation"
+      ],
+      "context_note": "Refers to an alternate formulation or textual version of a statement or discussion."
+    },
+    {
+      "term": "machlokes",
+      "variants": [
+        "machloket",
+        "machloikes",
+        "machlokess"
+      ],
+      "aleph_beis": "מחלוקת",
+      "language_origin": "Hebrew",
+      "category": "yeshiva and Torah study",
+      "yeshivish_example": "There is a machlokes between the two opinions.",
+      "plain_english_example": "There is a dispute between the two opinions.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "dispute",
+        "disagreement",
+        "difference of opinion"
+      ],
+      "context_note": "Usually refers to a substantive disagreement between rabbinic authorities, texts, or positions."
+    },
+    {
+      "term": "d'oraisa",
+      "variants": [
+        "de'oraisa",
+        "d'oraita",
+        "deoraisa"
+      ],
+      "aleph_beis": "דאורייתא",
+      "language_origin": "Aramaic",
+      "category": "religious practice",
+      "yeshivish_example": "Is this requirement d'oraisa or d'rabbanan?",
+      "plain_english_example": "Is this requirement from Torah law or rabbinic law?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "from Torah law",
+        "biblical in legal status"
+      ],
+      "context_note": "Describes a law or obligation treated as having Torah-level legal status."
+    },
+    {
+      "term": "d'rabbanan",
+      "variants": [
+        "derabbanan",
+        "d'rabanan",
+        "derabanan"
+      ],
+      "aleph_beis": "דרבנן",
+      "language_origin": "Aramaic",
+      "category": "religious practice",
+      "yeshivish_example": "The concern here is d'rabbanan.",
+      "plain_english_example": "The concern here is rabbinic in legal status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rabbinic in legal status",
+        "established by the Sages"
+      ],
+      "context_note": "Describes a prohibition, obligation, or rule established at the rabbinic level rather than directly as Torah law."
+    },
+    {
+      "term": "l'chumra",
+      "variants": [
+        "lechumra"
+      ],
+      "aleph_beis": "לחומרא",
+      "language_origin": "Aramaic",
+      "category": "religious practice",
+      "yeshivish_example": "In a safek they treated the case l'chumra.",
+      "plain_english_example": "In a case of doubt they treated the matter stringently.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "stringently",
+        "toward the stricter outcome"
+      ],
+      "context_note": "Describes resolving or approaching a question in the stricter direction."
+    },
+    {
+      "term": "l'kula",
+      "variants": [
+        "lekula"
+      ],
+      "aleph_beis": "לקולא",
+      "language_origin": "Aramaic",
+      "category": "religious practice",
+      "yeshivish_example": "The ruling follows the opinion l'kula.",
+      "plain_english_example": "The ruling follows the more lenient outcome.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "leniently",
+        "toward the less restrictive outcome"
+      ],
+      "context_note": "Describes resolving or applying a question in the more lenient direction."
+    },
+    {
+      "term": "chumra",
+      "variants": [
+        "chumrah",
+        "khumra"
+      ],
+      "aleph_beis": "חומרא",
+      "language_origin": "Aramaic",
+      "category": "religious practice",
+      "yeshivish_example": "That practice is a chumra, not the basic requirement.",
+      "plain_english_example": "That practice is a stringency, not the basic requirement.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "stringency",
+        "a stricter practice or ruling"
+      ],
+      "context_note": "A stricter halachic practice or position. It should not automatically be translated as more correct."
+    },
+    {
+      "term": "kula",
+      "variants": [
+        "kulah"
+      ],
+      "aleph_beis": "קולא",
+      "language_origin": "Aramaic",
+      "category": "religious practice",
+      "yeshivish_example": "The second opinion has a kula in this case.",
+      "plain_english_example": "The second opinion has a leniency in this case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "leniency",
+        "a less restrictive accepted ruling"
+      ],
+      "context_note": "A halachic leniency or less restrictive position within the relevant legal framework."
+    },
+    {
+      "term": "issur",
+      "variants": [
+        "isur"
+      ],
+      "aleph_beis": "איסור",
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "What is the issur involved in doing that?",
+      "plain_english_example": "What prohibition is involved in doing that?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "prohibition",
+        "forbidden status or act"
+      ],
+      "context_note": "Can refer to a prohibited act, the legal prohibition itself, or a forbidden status."
+    },
+    {
+      "term": "heter",
+      "variants": [
+        "hetter"
+      ],
+      "aleph_beis": "היתר",
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "What is the heter for doing it this way?",
+      "plain_english_example": "What is the basis for permitting it this way?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "permission",
+        "permissive ruling",
+        "basis for allowing an act"
+      ],
+      "context_note": "Usually means a halachic permission or the legal basis for permitting something."
+    },
+    {
+      "term": "safek",
+      "variants": [
+        "sofek"
+      ],
+      "aleph_beis": "ספק",
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "There is a safek whether the condition was met.",
+      "plain_english_example": "There is a doubt whether the condition was met.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "doubt",
+        "uncertain case",
+        "legal uncertainty"
+      ],
+      "context_note": "A case in which a relevant fact or legal conclusion is uncertain."
+    },
+    {
+      "term": "rov",
+      "variants": [],
+      "aleph_beis": "רוב",
+      "language_origin": "Hebrew",
+      "category": "Talmudic expression",
+      "yeshivish_example": "We follow the rov in this case.",
+      "plain_english_example": "We follow the majority in this case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "majority",
+        "the greater part",
+        "majority-based legal principle"
+      ],
+      "context_note": "In halachic discussion, refers to using a majority to resolve or characterize an uncertain situation. Translate according to whether the context emphasizes the greater part generally or a majority-based legal principle."
+    },
+    {
+      "term": "chazakah",
+      "variants": [
+        "chazaka",
+        "hazakah"
+      ],
+      "aleph_beis": "חזקה",
+      "language_origin": "Hebrew",
+      "category": "Talmudic expression",
+      "yeshivish_example": "The original chazakah remains in place.",
+      "plain_english_example": "The prior established status or presumption remains in place.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "established status",
+        "legal presumption",
+        "possession or established claim, depending on context"
+      ],
+      "context_note": "A broad legal term whose exact sense depends on context; it can refer to an established status, presumption, possession, or evidentiary standing."
+    },
+    {
+      "term": "psak",
+      "variants": [
+        "pesak"
+      ],
+      "aleph_beis": "פסק",
+      "language_origin": "Hebrew",
+      "category": "religious practice",
+      "yeshivish_example": "What was the final psak?",
+      "plain_english_example": "What was the final halachic ruling?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic ruling",
+        "legal decision"
+      ],
+      "context_note": "Refers to the practical legal ruling or decision, especially after competing views have been considered."
+    },
+    {
+      "term": "posek",
+      "variants": [
+        "poseiq",
+        "posek halacha"
+      ],
+      "aleph_beis": "פוסק",
+      "language_origin": "Hebrew",
+      "category": "people and family",
+      "yeshivish_example": "Ask a posek who knows the details of the case.",
+      "plain_english_example": "Ask a rabbinic authority who issues practical Jewish-law rulings and knows the details of the case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic decisor",
+        "rabbinic authority who issues legal rulings"
+      ],
+      "context_note": "A rabbinic scholar consulted for practical halachic decisions."
+    },
+    {
+      "term": "kli rishon",
+      "variants": [
+        "keli rishon"
+      ],
+      "aleph_beis": "כלי ראשון",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "The soup is still in the kli rishon.",
+      "plain_english_example": "The soup is still in the original vessel in which it was heated or cooked.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "first vessel",
+        "the original cooking or heating vessel"
+      ],
+      "context_note": "A standard term in the laws of cooking and heat transfer, especially on Shabbos and in kashrus."
+    },
+    {
+      "term": "kli sheini",
+      "variants": [
+        "kli sheni",
+        "keli sheni",
+        "keli sheini"
+      ],
+      "aleph_beis": "כלי שני",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "He poured it from the pot into a kli sheini.",
+      "plain_english_example": "He poured it from the pot into a second vessel.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "second vessel",
+        "a vessel into which hot contents were transferred from the first vessel"
+      ],
+      "context_note": "A standard halachic heat-transfer category. Its practical effects depend on the food, temperature, and issue being discussed."
+    },
+    {
+      "term": "kli shlishi",
+      "variants": [
+        "kli shlishit",
+        "keli shlishi"
+      ],
+      "aleph_beis": "כלי שלישי",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "The tea was prepared in a kli shlishi.",
+      "plain_english_example": "The tea was prepared in a third vessel.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "third vessel",
+        "a vessel receiving hot contents from a second vessel"
+      ],
+      "context_note": "A commonly used term in practical Shabbos discussions, especially concerning cooking in transferred hot liquids."
+    },
+    {
+      "term": "davar gush",
+      "variants": [
+        "dovor gush"
+      ],
+      "aleph_beis": "דבר גוש",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "A hot potato is a davar gush.",
+      "plain_english_example": "A hot potato is a hot solid item.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "hot solid item",
+        "solid mass that retains heat"
+      ],
+      "context_note": "Used in halachic discussions of heat transfer, cooking, and absorption. The legal treatment can differ among authorities and circumstances."
+    },
+    {
+      "term": "irui",
+      "variants": [
+        "iruy"
+      ],
+      "aleph_beis": "עירוי",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "The question is whether irui from the pot changes the status.",
+      "plain_english_example": "The question is whether pouring from the pot changes the status.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pouring",
+        "pouring from one vessel onto another item or vessel"
+      ],
+      "context_note": "Often used in the laws of cooking and kashrus for pouring hot liquid from one vessel onto something else."
+    },
+    {
+      "term": "bishul",
+      "variants": [
+        "bishel",
+        "bishul akum"
+      ],
+      "aleph_beis": "בישול",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "The issue is one of bishul on Shabbos.",
+      "plain_english_example": "The issue concerns cooking on Shabbos.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cooking",
+        "the halachic category of cooking by heat"
+      ],
+      "context_note": "A central halachic term for cooking. In the list of the 39 melachos, the Mishnah names ofeh, baking; practical Shabbos discussion commonly treats cooking within this labor category."
+    },
+    {
+      "term": "ein bishul achar bishul",
+      "variants": [
+        "ain bishul achar bishul"
+      ],
+      "aleph_beis": "אין בישול אחר בישול",
+      "language_origin": "Hebrew",
+      "category": "Shabbos and halacha",
+      "yeshivish_example": "He mentioned the rule of ein bishul achar bishul.",
+      "plain_english_example": "He mentioned the principle that already-cooked food is not necessarily treated as undergoing a new act of cooking.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "there is no cooking after cooking",
+        "a principle concerning reheating already-cooked food"
+      ],
+      "context_note": "A shorthand halachic principle in the laws of Shabbos cooking. Its application depends on factors such as the food, its state, temperature, and the ruling being followed."
+    },
+    {
+      "term": "zore'a",
+      "variants": [
+        "zorea",
+        "zoreia"
+      ],
+      "aleph_beis": "זורע",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of zore'a.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of sowing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sowing or promoting plant growth",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "choresh",
+      "variants": [
+        "choreish",
+        "horesh"
+      ],
+      "aleph_beis": "חורש",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of choresh.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of plowing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "plowing or preparing soil for growth",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "kotzer",
+      "variants": [
+        "kotzeir"
+      ],
+      "aleph_beis": "קוצר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of kotzer.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of reaping.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "reaping or detaching a growing plant",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "me'amer",
+      "variants": [
+        "meamer"
+      ],
+      "aleph_beis": "מעמר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of me'amer.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of gathering.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "gathering produce into a collected bundle",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "dash",
+      "variants": [],
+      "aleph_beis": "דש",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of dash.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of threshing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "threshing or extracting produce from its natural covering",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "zoreh",
+      "variants": [
+        "zore"
+      ],
+      "aleph_beis": "זורה",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of zoreh.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of winnowing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "winnowing",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "borer",
+      "variants": [
+        "boirer"
+      ],
+      "aleph_beis": "בורר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of borer.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of selecting.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "selecting or sorting",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "tochen",
+      "variants": [
+        "toichein"
+      ],
+      "aleph_beis": "טוחן",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of tochen.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of grinding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "grinding",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "meraked",
+      "variants": [
+        "merakeid"
+      ],
+      "aleph_beis": "מרקד",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of meraked.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of sifting.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sifting",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "lash",
+      "variants": [],
+      "aleph_beis": "לש",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of lash.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of kneading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "kneading or combining a mixture into a mass",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "ofeh",
+      "variants": [
+        "ofe"
+      ],
+      "aleph_beis": "אופה",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of ofeh.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of baking.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "baking; the Shabbos labor category also encompasses cooking by heat",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "gozez",
+      "variants": [
+        "gozeiz"
+      ],
+      "aleph_beis": "גוזז",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of gozez.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of shearing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "shearing or removing hair, wool, or similar growth",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "melaben",
+      "variants": [
+        "melabein"
+      ],
+      "aleph_beis": "מלבן",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of melaben.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of laundering.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "laundering or cleaning absorbent material",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "menapetz",
+      "variants": [
+        "menapeitz"
+      ],
+      "aleph_beis": "מנפץ",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of menapetz.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of combing fibers.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "combing or carding fibers",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "tzove'a",
+      "variants": [
+        "tzovea",
+        "tzoveya"
+      ],
+      "aleph_beis": "צובע",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of tzove'a.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of dyeing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "dyeing or coloring",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "toveh",
+      "variants": [
+        "tove"
+      ],
+      "aleph_beis": "טווה",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of toveh.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of spinning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "spinning fibers into thread",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "meisech",
+      "variants": [
+        "misech",
+        "mesach"
+      ],
+      "aleph_beis": "מיסך",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of meisech.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of warping.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "setting up the warp threads for weaving",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "oseh shtei batei nirin",
+      "variants": [
+        "oseh shnei batei nirin"
+      ],
+      "aleph_beis": "עושה שתי בתי נירין",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of oseh shtei batei nirin.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of making heddles.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "making heddle loops for weaving",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "oreg",
+      "variants": [],
+      "aleph_beis": "אורג",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of oreg.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of weaving.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "weaving",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "potze'a",
+      "variants": [
+        "potzea"
+      ],
+      "aleph_beis": "פוצע",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of potze'a.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of separating threads.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "separating or undoing woven threads",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "kosheir",
+      "variants": [
+        "kosher - tying",
+        "kosher (tying)"
+      ],
+      "aleph_beis": "קושר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of kosheir.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of tying.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tying a knot",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "matir",
+      "variants": [],
+      "aleph_beis": "מתיר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of matir.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of untying.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "untying a knot",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "tofer",
+      "variants": [],
+      "aleph_beis": "תופר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of tofer.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of sewing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "sewing",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "kore'a",
+      "variants": [
+        "korea"
+      ],
+      "aleph_beis": "קורע",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of kore'a.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of tearing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tearing for a constructive purpose",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "tzad",
+      "variants": [
+        "tsad"
+      ],
+      "aleph_beis": "צד",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of tzad.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of trapping.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "trapping or confining a living creature",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "shochet",
+      "variants": [
+        "shoichet"
+      ],
+      "aleph_beis": "שוחט",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of shochet.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of slaughtering.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "slaughtering or taking animal life",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "mafshit",
+      "variants": [],
+      "aleph_beis": "מפשיט",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of mafshit.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of skinning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "skinning or removing a hide",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "mole'ach",
+      "variants": [
+        "moleach",
+        "molayach"
+      ],
+      "aleph_beis": "מולח",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of mole'ach.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of salting.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "salting a hide",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "me'abed",
+      "variants": [
+        "meabed"
+      ],
+      "aleph_beis": "מעבד",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of me'abed.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of tanning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tanning or processing a hide",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "memachek",
+      "variants": [
+        "memacheik"
+      ],
+      "aleph_beis": "ממחק",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of memachek.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of smoothing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "smoothing a surface",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "mechatech",
+      "variants": [
+        "mechateich"
+      ],
+      "aleph_beis": "מחתך",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of mechatech.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of measured cutting.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cutting to a measured or desired size",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "kotev",
+      "variants": [
+        "koisev"
+      ],
+      "aleph_beis": "כותב",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of kotev.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of writing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "writing meaningful characters",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "mochek",
+      "variants": [
+        "moichek"
+      ],
+      "aleph_beis": "מוחק",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of mochek.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of erasing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "erasing for a constructive writing purpose",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "boneh",
+      "variants": [
+        "boineh"
+      ],
+      "aleph_beis": "בונה",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of boneh.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of building.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "building or constructing",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "soter",
+      "variants": [
+        "soiser"
+      ],
+      "aleph_beis": "סותר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of soter.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of demolishing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "demolishing for a constructive purpose",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "mechabeh",
+      "variants": [
+        "mechabe"
+      ],
+      "aleph_beis": "מכבה",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of mechabeh.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of extinguishing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "extinguishing or diminishing a flame",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "mav'ir",
+      "variants": [
+        "mavir"
+      ],
+      "aleph_beis": "מבעיר",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of mav'ir.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of kindling.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "igniting or sustaining a fire",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "makeh b'patish",
+      "variants": [
+        "makeh bepatish",
+        "makeh bapatish"
+      ],
+      "aleph_beis": "מכה בפטיש",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of makeh b'patish.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of completing an object.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "the final completing act of creating or repairing an object",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
+    },
+    {
+      "term": "hotza'ah",
+      "variants": [
+        "hotzaah",
+        "motzi me'reshus l'reshus",
+        "hotza'ah me'reshus l'reshus"
+      ],
+      "aleph_beis": "הוצאה",
+      "language_origin": "Hebrew",
+      "category": "Shabbos melacha",
+      "yeshivish_example": "The sugya discusses the melacha of hotza'ah.",
+      "plain_english_example": "The Talmudic discussion addresses the Shabbos labor category of carrying between domains.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "transferring or carrying between halachic domains",
+        "one of the 39 primary categories of labor prohibited on Shabbos"
+      ],
+      "context_note": "One of the 39 avos melachos listed in Mishnah Shabbos 7:2. This glossary definition identifies the category; practical applications can require additional halachic detail."
     }
   ]
 }

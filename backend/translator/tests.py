@@ -125,6 +125,13 @@ class GlossaryMatchingTests(TestCase):
         self.assertEqual([entry["term"] for entry in canonical_matches], ["mamesh"])
         self.assertEqual([entry["term"] for entry in variant_matches], ["mamesh"])
 
+    def test_distinguishes_rav_from_rov(self):
+        rav_matches = find_glossary_entries("I need to ask the rav about this.")
+        rov_matches = find_glossary_entries("We follow the rov in this case.")
+
+        self.assertEqual([entry["term"] for entry in rav_matches], ["rav"])
+        self.assertEqual([entry["term"] for entry in rov_matches], ["rov"])
+
     def test_matches_multiword_phrase_across_whitespace(self):
         matches = find_glossary_entries("Baruch\nHashem, everyone is well.")
 

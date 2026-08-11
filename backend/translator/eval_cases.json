@@ -18,5 +18,25 @@
     "forbidden_terms": [],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "rav_means_rabbinic_authority",
+    "direction": "yeshivish_to_english",
+    "source": "I need to ask the rav before deciding.",
+    "candidate_translation": "I need to ask the rabbi before deciding.",
+    "required_terms": ["rabbi"],
+    "forbidden_terms": ["rav", "majority"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "rov_means_majority",
+    "direction": "yeshivish_to_english",
+    "source": "We follow the rov in this case.",
+    "candidate_translation": "We follow the majority in this case.",
+    "required_terms": ["majority"],
+    "forbidden_terms": ["rov", "rabbi"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]
