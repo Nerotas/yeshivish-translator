@@ -8,6 +8,7 @@ omit =
     backend/translator/models.py
     backend/translator/test*.py
     backend/translator/tests.py
+    backend/translator/live_evals.py
 
 [report]
 exclude_also =
