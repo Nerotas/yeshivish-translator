@@ -23,6 +23,26 @@
       "context_note": "Usually an intensifier meaning “really” or “truly.” In Torah discussion it can also contrast something concrete or literal with something abstract."
     },
     {
+  "term": "avreich",
+  "variants": [
+    "avrech",
+    "avreich",
+    "avrech"
+  ],
+  "language_origin": "Hebrew",
+  "category": "yeshivish noun",
+  "yeshivish_example": "He's an avreich learning in kollel.",
+  "plain_english_example": "He's a married Torah scholar studying full-time in a yeshiva.",
+  "confidence": "high",
+  "needs_human_review": false,
+  "meanings": [
+    "married yeshiva student",
+    "full-time Torah scholar",
+    "married man studying Torah in kollel"
+  ],
+  "context_note": "Usually refers to a married Orthodox Jewish man who studies Torah full-time, typically in a kollel. The closest plain-English equivalent depends on context; “full-time Torah scholar” is generally the most natural."
+},
+    {
       "term": "taka",
       "variants": [
         "tahke",
