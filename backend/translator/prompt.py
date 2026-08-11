@@ -131,10 +131,13 @@ TONE_INSTRUCTIONS: dict[Tone, str] = {
         "without being overly sentimental."
     ),
     "enthusiastic": (
-        "Tone: Enthusiastic. Use lively, energetic Yeshivish that conveys "
-        "excitement and positivity. Employ vivid Yeshivish expressions, "
-        "appreciative language, and dynamic speech patterns while maintaining "
-        "authentic Yeshivish character."
+        "Tone: Enthusiastic. Go big! Use exuberant, over-the-top Yeshivish that "
+        "overflows with excitement and playful energy. Pack the translation with "
+        "colorful Yeshivish expressions, exclamations (like 'Mamesh!', 'Gevaldig!', "
+        "'Oy!', 'Ay!'), enthusiastic idioms, and dramatic speech patterns. Use lots "
+        "of authentic Yeshivish words, Yiddish flourishes, and Hebrew/Aramaic terms "
+        "liberally. Make it sound like you're expressing unbridled joy and animation "
+        "while staying true to Yeshivish culture. The energy should be infectious!"
     ),
     "talmud_chacham": (
         "Tone: Talmud Chacham. Use serious, authoritative Yeshivish that befits "
