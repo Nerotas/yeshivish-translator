@@ -82,7 +82,7 @@
   font-weight: 600;
 }
 
-.pronunciation-selector > div {
+.pronunciation-selector>div {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -107,6 +107,64 @@
 }
 
 .translator-card .pronunciation-selector button[aria-pressed="true"] {
+  position: relative;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.tone-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tone-selector>div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.translator-card .tone-selector button {
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--surface-muted);
+  color: var(--text-h);
+  font-size: 0.85rem;
+}
+
+.translator-card .tone-selector button:nth-child(1) {
+  border-radius: 8px 0 0 0;
+}
+
+.translator-card .tone-selector button:nth-child(2) {
+  border-radius: 0 8px 0 0;
+  margin-left: -1px;
+}
+
+.translator-card .tone-selector button:nth-child(3) {
+  border-radius: 0 0 0 8px;
+  margin-top: -1px;
+}
+
+.translator-card .tone-selector button:nth-child(4) {
+  border-radius: 0 0 8px 0;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.translator-card .tone-selector button:not(:nth-child(1)):not(:nth-child(2)) {
+  margin-left: -1px;
+}
+
+.translator-card .tone-selector button[aria-pressed="true"] {
   position: relative;
   border-color: var(--accent);
   background: var(--accent);
@@ -205,7 +263,7 @@
   outline-offset: 2px;
 }
 
-.translator-page form > button {
+.translator-page form>button {
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
   font-size: 1rem;
@@ -216,7 +274,7 @@
   cursor: pointer;
 }
 
-.translator-page form > button:hover:not(:disabled) {
+.translator-page form>button:hover:not(:disabled) {
   background: var(--accent-hover);
 }
 
@@ -226,7 +284,7 @@
   background: var(--surface-muted);
 }
 
-.translator-page form > button:disabled {
+.translator-page form>button:disabled {
   background: var(--disabled);
   cursor: not-allowed;
 }
@@ -284,7 +342,7 @@
   color: var(--text) !important;
 }
 
-.MuiDialogContent-root p + p {
+.MuiDialogContent-root p+p {
   margin-top: 1rem;
 }
 
@@ -312,11 +370,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .spinner,
   .page-loader-spinner {
     animation: none;
   }
 }
+
 @media (max-width: 560px) {
   .app-shell {
     padding: 1rem;
@@ -340,6 +400,12 @@
   }
 
   .pronunciation-selector {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tone-selector {
     align-items: stretch;
     flex-direction: column;
     gap: 0.5rem;

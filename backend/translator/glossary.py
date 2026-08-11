@@ -17,6 +17,7 @@ class GlossaryEntry(TypedDict):
 
 TranslationDirection = Literal["yeshivish_to_english", "english_to_yeshivish"]
 PronunciationPreference = Literal["shabbos", "shabbat"]
+Tone = Literal["straightforward", "warm_friendly", "enthusiastic", "talmud_chacham"]
 
 MAX_GLOSSARY_MATCHES = 8
 ENGLISH_MEANING_SEPARATOR = re.compile(r"\s+(?:or|and)\s+|\s*[/;]\s*")

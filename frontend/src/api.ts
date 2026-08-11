@@ -7,6 +7,15 @@ export const TRANSLATION_DIRECTIONS = [
 
 export type TranslationDirection = (typeof TRANSLATION_DIRECTIONS)[number];
 
+export const TONES = [
+  "straightforward",
+  "warm_friendly",
+  "enthusiastic",
+  "talmud_chacham",
+] as const;
+
+export type Tone = (typeof TONES)[number];
+
 export interface GlossaryTerm {
   id: number;
   term: string;
@@ -97,14 +106,18 @@ function readStringProperty(
 }
 
 function isStringArray(value: unknown): value is string[] {
-  return Array.isArray(value) && value.every((item) => typeof item === "string");
+  return (
+    Array.isArray(value) && value.every((item) => typeof item === "string")
+  );
 }
 
 function isGlossaryTerm(value: unknown): value is GlossaryTerm {
   if (typeof value !== "object" || value === null) return false;
 
   const term = value as Record<string, unknown>;
-  const displayTerms = term.display_terms as Record<string, unknown> | undefined;
+  const displayTerms = term.display_terms as
+    | Record<string, unknown>
+    | undefined;
   return (
     typeof term.id === "number" &&
     typeof term.term === "string" &&
@@ -158,6 +171,7 @@ function requestTranslation(
   text: string,
   direction: TranslationDirection,
   pronunciationPreference: PronunciationPreference,
+  tone: Tone,
   token: string,
 ): Promise<Response> {
   return fetch(`${API_BASE_URL}/api/translate/`, {
@@ -170,6 +184,7 @@ function requestTranslation(
       text,
       direction,
       pronunciation_preference: pronunciationPreference,
+      tone,
     }),
   });
 }
@@ -178,12 +193,14 @@ export async function translateText(
   text: string,
   direction: TranslationDirection = "yeshivish_to_english",
   pronunciationPreference: PronunciationPreference = "shabbos",
+  tone: Tone = "warm_friendly",
 ): Promise<string> {
   let token = await getSessionToken();
   let response = await requestTranslation(
     text,
     direction,
     pronunciationPreference,
+    tone,
     token,
   );
 
@@ -195,6 +212,7 @@ export async function translateText(
       text,
       direction,
       pronunciationPreference,
+      tone,
       token,
     );
   }

@@ -26,7 +26,7 @@ from .authentication import (
     issue_session_token,
     revoke_session_token,
 )
-from .glossary import PronunciationPreference, TranslationDirection
+from .glossary import PronunciationPreference, Tone, TranslationDirection
 from .models import GlossaryTerm
 from .prompt import build_translation_instructions
 from .serializers import GlossaryTermSerializer
@@ -52,6 +52,13 @@ DEFAULT_PRONUNCIATION_PREFERENCE: PronunciationPreference = "shabbos"
 SUPPORTED_PRONUNCIATION_PREFERENCES: set[PronunciationPreference] = {
     DEFAULT_PRONUNCIATION_PREFERENCE,
     "shabbat",
+}
+DEFAULT_TONE: Tone = "warm_friendly"
+SUPPORTED_TONES: set[Tone] = {
+    DEFAULT_TONE,
+    "straightforward",
+    "enthusiastic",
+    "talmud_chacham",
 }
 
 
@@ -102,6 +109,7 @@ def translate(request: Request) -> Response:
     pronunciation_preference = request.data.get(
         "pronunciation_preference", DEFAULT_PRONUNCIATION_PREFERENCE
     )
+    tone = request.data.get("tone", DEFAULT_TONE)
 
     if not isinstance(direction, str) or direction not in SUPPORTED_DIRECTIONS:
         return Response(
@@ -129,6 +137,17 @@ def translate(request: Request) -> Response:
                 "error": (
                     "The pronunciation_preference field must be one of: "
                     "shabbos, shabbat."
+                )
+            },
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    if not isinstance(tone, str) or tone not in SUPPORTED_TONES:
+        return Response(
+            {
+                "error": (
+                    "The tone field must be one of: "
+                    "straightforward, warm_friendly, enthusiastic, talmud_chacham."
                 )
             },
             status=status.HTTP_400_BAD_REQUEST,
@@ -162,6 +181,7 @@ def translate(request: Request) -> Response:
                 text,
                 direction=direction,
                 pronunciation_preference=pronunciation_preference,
+                tone=tone,
             ),
             input=[{"role": "user", "content": text}],
             text_format=TranslationOutput,
