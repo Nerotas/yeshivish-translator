@@ -40,6 +40,10 @@ def int_env(name: str, default: int = 0) -> int:
     return int(os.getenv(name, str(default)))
 
 
+def float_env(name: str, default: float = 0.0) -> float:
+    return float(os.getenv(name, str(default)))
+
+
 def csv_env(name: str, default: str = "") -> list[str]:
     return [
         value.strip() for value in os.getenv(name, default).split(",") if value.strip()
@@ -54,6 +58,67 @@ JWT_SIGNING_KEY = os.getenv("JWT_SIGNING_KEY") or SECRET_KEY
 JWT_PREVIOUS_SIGNING_KEYS = csv_env("JWT_PREVIOUS_SIGNING_KEYS")
 JWT_ACCESS_TOKEN_TTL_SECONDS = int_env("JWT_ACCESS_TOKEN_TTL_SECONDS", 300)
 JWT_ISSUER = os.getenv("JWT_ISSUER", "yeshivish-translator")
+
+
+# Shared cache (see docs/operations.md). Rate-limit counters, the JWT
+# revocation denylist, and cost/usage guardrail counters all use Django's
+# cache framework. `REDIS_URL` must be set in any multi-process/multi-instance
+# deployment so these limits are enforced consistently across workers -
+# otherwise each process gets its own independent, in-memory counters, which
+# is only appropriate for local development and tests.
+REDIS_URL = os.getenv("REDIS_URL")
+if REDIS_URL:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": REDIS_URL,
+        }
+    }
+else:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        }
+    }
+    if not DEBUG:
+        import warnings
+
+        warnings.warn(
+            "REDIS_URL is not set and DJANGO_DEBUG is false. Falling back to "
+            "an in-process cache means rate limits, the JWT revocation "
+            "denylist, and cost guardrails are NOT shared across workers or "
+            "instances. Set REDIS_URL before deploying with more than one "
+            "process. See docs/operations.md.",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+
+# Number of trusted reverse-proxy hops in front of this app (e.g. a load
+# balancer or CDN). Determines how `X-Forwarded-For` is parsed for throttling
+# and logging. Defaults to 0 (trust only `REMOTE_ADDR`, ignore
+# `X-Forwarded-For` entirely) because that header is trivially spoofable by
+# any direct caller unless a specific number of trusted hops is configured.
+# See docs/operations.md for how to size this for your deployment.
+TRUSTED_PROXY_COUNT = int_env("TRUSTED_PROXY_COUNT", 0)
+
+# OpenAI request resilience (see docs/operations.md). Bounded so a slow or
+# unresponsive upstream cannot hang a worker indefinitely or retry silently.
+OPENAI_CONNECT_TIMEOUT_SECONDS = float_env("OPENAI_CONNECT_TIMEOUT_SECONDS", 5.0)
+OPENAI_READ_TIMEOUT_SECONDS = float_env("OPENAI_READ_TIMEOUT_SECONDS", 20.0)
+OPENAI_MAX_RETRIES = int_env("OPENAI_MAX_RETRIES", 1)
+
+# Global cost/usage guardrails (see docs/operations.md). Once either budget is
+# exceeded within the rolling window, `/api/translate/` stops calling OpenAI
+# and returns a generic 503 until the window resets, regardless of individual
+# throttle limits.
+OPENAI_INPUT_COST_PER_MILLION_TOKENS = float_env(
+    "OPENAI_INPUT_COST_PER_MILLION_TOKENS", 0.15
+)
+OPENAI_OUTPUT_COST_PER_MILLION_TOKENS = float_env(
+    "OPENAI_OUTPUT_COST_PER_MILLION_TOKENS", 0.60
+)
+DAILY_COST_BUDGET_USD = float_env("DAILY_COST_BUDGET_USD", 20.0)
+DAILY_REQUEST_BUDGET = int_env("DAILY_REQUEST_BUDGET", 5000)
 
 
 # Application definition
@@ -112,10 +177,21 @@ REST_FRAMEWORK = {
         "rest_framework.throttling.AnonRateThrottle",
     ],
     "DEFAULT_THROTTLE_RATES": {
-        "anon": "60/hour",
-        "auth_session": "30/hour",
-        "translate": "60/hour",
+        "anon": os.getenv("THROTTLE_RATE_ANON", "60/hour"),
+        # Per-IP limits.
+        "auth_session": os.getenv("THROTTLE_RATE_AUTH_SESSION_IP", "30/hour"),
+        "translate": os.getenv("THROTTLE_RATE_TRANSLATE_IP", "60/hour"),
+        # Per-session-token limits (the "authenticated-user where applicable"
+        # identity for this anonymous, tokenless-account app - see
+        # docs/operations.md).
+        "translate_session": os.getenv("THROTTLE_RATE_TRANSLATE_SESSION", "120/hour"),
+        # Global limits shared by every caller, regardless of IP or session.
+        "auth_session_global": os.getenv(
+            "THROTTLE_RATE_AUTH_SESSION_GLOBAL", "600/hour"
+        ),
+        "translate_global": os.getenv("THROTTLE_RATE_TRANSLATE_GLOBAL", "2000/hour"),
     },
+    "NUM_PROXIES": TRUSTED_PROXY_COUNT,
 }
 
 ROOT_URLCONF = "config.urls"

@@ -98,10 +98,11 @@
 
 ## Known limitations
 
-- Both the throttle counters and the revocation denylist use Django's default
-  cache, which is in-process `LocMemCache` unless a `CACHES` setting is added.
-  In a multi-process/multi-worker production deployment, limits and
-  revocations are only enforced per-process. Deploy a shared cache backend
-  (e.g. Redis) in production for correct cross-worker enforcement. This
-  limitation predates this change (the original anonymous throttle had the
-  same constraint) and is not a regression.
+- The revocation denylist uses Django's cache (`CACHES["default"]`), which is
+  in-process `LocMemCache` unless `REDIS_URL` is configured. As of the shared
+  throttling work described in [`docs/operations.md`](operations.md), setting
+  `REDIS_URL` gives both the revocation denylist and all rate-limit counters
+  correct cross-worker/cross-instance enforcement automatically - see
+  `docs/operations.md` for configuration and monitoring details. Deployments
+  that leave `REDIS_URL` unset in production get a `RuntimeWarning` at
+  startup and only per-process enforcement, same as before this change.

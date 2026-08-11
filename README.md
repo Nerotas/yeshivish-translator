@@ -335,17 +335,21 @@ curl --fail-with-body \
 
 ### API status behavior
 
-| Status | Meaning                                                                         |
-| ------ | ------------------------------------------------------------------------------- |
-| `200`  | Translation completed successfully.                                             |
-| `400`  | Invalid, empty, oversized, or unsupported request data.                         |
-| `429`  | Anonymous request limit exceeded. The configured limit is 60 requests per hour. |
-| `502`  | OpenAI was unavailable or returned an empty translation.                        |
+| Status | Meaning                                                                                              |
+| ------ | ---------------------------------------------------------------------------------------------------- |
+| `200`  | Translation completed successfully.                                                                  |
+| `400`  | Invalid, empty, oversized, or unsupported request data.                                              |
+| `401`  | Missing, malformed, expired, or revoked session token. See `docs/authentication.md`.                 |
+| `429`  | A per-IP, per-session, or global request-rate limit was exceeded. See `docs/operations.md`.          |
+| `502`  | OpenAI was unavailable or returned an empty translation.                                             |
+| `503`  | The global daily cost/usage guardrail was exceeded; OpenAI was not called. See `docs/operations.md`. |
 
-The translation endpoint is intentionally unauthenticated. CORS controls which
-browser origins may call it, but CORS is not an authentication mechanism. Add an
-authentication layer before exposing the endpoint where anonymous access is not
-appropriate.
+`/api/translate/` requires a short-lived bearer session token (minted via
+`POST /api/auth/session/`); CORS controls which browser origins may call it,
+but CORS is not itself an authentication mechanism. See
+`docs/authentication.md` for the session-token design and
+`docs/operations.md` for rate limiting, upstream timeouts/retries, and cost
+guardrails.
 
 ## How translation works
 
@@ -493,8 +497,10 @@ DJANGO_DEBUG=false .venv/bin/python backend/manage.py check --deploy
 ```
 
 The included SQLite database is suitable for local development and small,
-single-instance deployments. Evaluate a production database and shared rate-limit
-storage before running multiple application instances.
+single-instance deployments. Evaluate a production database before running
+multiple application instances. Set `REDIS_URL` before running more than one
+worker/instance so rate limits, session-token revocation, and cost guardrails
+are enforced consistently across all of them - see `docs/operations.md`.
 
 ### Frontend
 
@@ -516,6 +522,8 @@ is for local verification, not production hosting.
   `CORS_ALLOWED_ORIGINS`, including its scheme and port.
 - Treat `502` responses as upstream/model failures and inspect backend logs.
 - Treat `429` responses as expected throttling before increasing limits.
+- Treat `503` responses as the global cost/usage guardrail tripping; see
+  `docs/operations.md` for tuning and incident response.
 - Rotate exposed OpenAI or Django secrets immediately and restart backend workers.
 - Never enable `DJANGO_DEBUG` in production.
 
