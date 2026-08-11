@@ -48,6 +48,13 @@ def csv_env(name: str, default: str = "") -> list[str]:
 
 ALLOWED_HOSTS = csv_env("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1")
 
+# JWT session tokens (see docs/authentication.md). These tokens represent a
+# short-lived, anonymous "trusted client" handshake, not a user account.
+JWT_SIGNING_KEY = os.getenv("JWT_SIGNING_KEY") or SECRET_KEY
+JWT_PREVIOUS_SIGNING_KEYS = csv_env("JWT_PREVIOUS_SIGNING_KEYS")
+JWT_ACCESS_TOKEN_TTL_SECONDS = int_env("JWT_ACCESS_TOKEN_TTL_SECONDS", 300)
+JWT_ISSUER = os.getenv("JWT_ISSUER", "yeshivish-translator")
+
 
 # Application definition
 
@@ -72,9 +79,21 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "config.middleware.DisableClientSideCompressionMiddleware",
 ]
 
 CORS_ALLOWED_ORIGINS = csv_env("CORS_ALLOWED_ORIGINS", "http://localhost:5173")
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
 
 # HTTPS settings are opt-in for local development and must be enabled by the
 # production environment after TLS termination has been configured.
@@ -94,6 +113,8 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_THROTTLE_RATES": {
         "anon": "60/hour",
+        "auth_session": "30/hour",
+        "translate": "60/hour",
     },
 }
 

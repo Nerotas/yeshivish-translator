@@ -25,6 +25,15 @@ Enter the Yeshivish Translator, a true lifesaver! Its whole tachlis is to help m
 
 This app is a treasure! It takes Yeshivish and transforms it into plain, clear English for better comprehension, while also turning English into vibrant, expressive Yeshivish for learning, chaverus, and pure enjoyment. It’s crafted to be a heimish communication tool—creating connections and understanding without needing to be an expert on all those fancy words.
 
+## API authentication
+
+`POST /api/translate/` requires a short-lived bearer token minted by
+`POST /api/auth/session/`; it is not a public, permanently embedded secret and
+is never compiled into the frontend bundle or persisted in browser storage.
+See [docs/authentication.md](docs/authentication.md) for the full threat
+model, token lifecycle (issuance, refresh, revocation, key rotation), and the
+migration note for existing integrations.
+
 ## What it does
 
 Yeshivish Translator supports two directions:
@@ -49,15 +58,15 @@ avoids sending the entire glossary with every translation.
 
 ## Technology
 
-| Area | Technology |
-| --- | --- |
-| Frontend | React, TypeScript, Vite |
-| Frontend testing | Vitest, Testing Library, jsdom |
-| Frontend linting | Oxlint |
-| Backend | Python, Django, Django REST Framework |
-| AI integration | OpenAI Python SDK, Responses API |
-| Local database | SQLite |
-| Production backend server | Gunicorn |
+| Area                      | Technology                            |
+| ------------------------- | ------------------------------------- |
+| Frontend                  | React, TypeScript, Vite               |
+| Frontend testing          | Vitest, Testing Library, jsdom        |
+| Frontend linting          | Oxlint                                |
+| Backend                   | Python, Django, Django REST Framework |
+| AI integration            | OpenAI Python SDK, Responses API      |
+| Local database            | SQLite                                |
+| Production backend server | Gunicorn                              |
 
 ## Repository structure
 
@@ -173,27 +182,31 @@ points to the default local Django address.
 
 The backend reads `backend/.env` through `python-dotenv`.
 
-| Variable | Required | Default | Purpose |
-| --- | --- | --- | --- |
-| `OPENAI_API_KEY` | Yes | None | Authenticates OpenAI API requests. |
-| `OPENAI_MODEL` | No | `gpt-4o-mini` | Selects the model used by the Responses API. |
-| `DJANGO_SECRET_KEY` | Yes | None | Signs Django sessions and security-sensitive values. |
-| `DJANGO_DEBUG` | No | `false` | Enables Django debug mode only when set to `true`. |
-| `DJANGO_ALLOWED_HOSTS` | No | `localhost,127.0.0.1` | Comma-separated hosts Django may serve. |
-| `CORS_ALLOWED_ORIGINS` | No | `http://localhost:5173` | Comma-separated frontend origins allowed to call the API. |
-| `DJANGO_SECURE_SSL_REDIRECT` | No | `false` | Redirects HTTP requests to HTTPS. Enable after HTTPS is configured. |
-| `DJANGO_SESSION_COOKIE_SECURE` | No | `false` | Restricts session cookies to HTTPS. |
-| `DJANGO_CSRF_COOKIE_SECURE` | No | `false` | Restricts CSRF cookies to HTTPS. |
-| `DJANGO_SECURE_HSTS_SECONDS` | No | `0` | Enables HTTP Strict Transport Security for the specified lifetime. |
-| `DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS` | No | `false` | Extends HSTS to subdomains. |
-| `DJANGO_SECURE_HSTS_PRELOAD` | No | `false` | Adds the HSTS preload directive. |
-| `DJANGO_TRUST_X_FORWARDED_PROTO` | No | `false` | Trusts `X-Forwarded-Proto` from a controlled reverse proxy. |
+| Variable                                | Required | Default                 | Purpose                                                                                           |
+| --------------------------------------- | -------- | ----------------------- | ------------------------------------------------------------------------------------------------- |
+| `OPENAI_API_KEY`                        | Yes      | None                    | Authenticates OpenAI API requests.                                                                |
+| `OPENAI_MODEL`                          | No       | `gpt-4o-mini`           | Selects the model used by the Responses API.                                                      |
+| `DJANGO_SECRET_KEY`                     | Yes      | None                    | Signs Django sessions and security-sensitive values.                                              |
+| `DJANGO_DEBUG`                          | No       | `false`                 | Enables Django debug mode only when set to `true`.                                                |
+| `DJANGO_ALLOWED_HOSTS`                  | No       | `localhost,127.0.0.1`   | Comma-separated hosts Django may serve.                                                           |
+| `CORS_ALLOWED_ORIGINS`                  | No       | `http://localhost:5173` | Comma-separated frontend origins allowed to call the API.                                         |
+| `DJANGO_SECURE_SSL_REDIRECT`            | No       | `false`                 | Redirects HTTP requests to HTTPS. Enable after HTTPS is configured.                               |
+| `DJANGO_SESSION_COOKIE_SECURE`          | No       | `false`                 | Restricts session cookies to HTTPS.                                                               |
+| `DJANGO_CSRF_COOKIE_SECURE`             | No       | `false`                 | Restricts CSRF cookies to HTTPS.                                                                  |
+| `DJANGO_SECURE_HSTS_SECONDS`            | No       | `0`                     | Enables HTTP Strict Transport Security for the specified lifetime.                                |
+| `DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS` | No       | `false`                 | Extends HSTS to subdomains.                                                                       |
+| `DJANGO_SECURE_HSTS_PRELOAD`            | No       | `false`                 | Adds the HSTS preload directive.                                                                  |
+| `DJANGO_TRUST_X_FORWARDED_PROTO`        | No       | `false`                 | Trusts `X-Forwarded-Proto` from a controlled reverse proxy.                                       |
+| `JWT_SIGNING_KEY`                       | No       | `DJANGO_SECRET_KEY`     | Signs short-lived translate session tokens. See [docs/authentication.md](docs/authentication.md). |
+| `JWT_PREVIOUS_SIGNING_KEYS`             | No       | (empty)                 | Comma-separated prior signing keys still accepted during key rotation.                            |
+| `JWT_ACCESS_TOKEN_TTL_SECONDS`          | No       | `300`                   | Lifetime, in seconds, of a translate session token.                                               |
+| `JWT_ISSUER`                            | No       | `yeshivish-translator`  | Issuer claim checked on every session token.                                                      |
 
 ### Frontend
 
-| Variable | Required | Default | Purpose |
-| --- | --- | --- | --- |
-| `VITE_API_BASE_URL` | No | `http://127.0.0.1:8000` | Base URL used for API requests. |
+| Variable            | Required | Default                 | Purpose                         |
+| ------------------- | -------- | ----------------------- | ------------------------------- |
+| `VITE_API_BASE_URL` | No       | `http://127.0.0.1:8000` | Base URL used for API requests. |
 
 Vite embeds `VITE_*` values into the frontend bundle at build time. Set the
 production API URL before running `npm run build`.
@@ -322,12 +335,12 @@ curl --fail-with-body \
 
 ### API status behavior
 
-| Status | Meaning |
-| --- | --- |
-| `200` | Translation completed successfully. |
-| `400` | Invalid, empty, oversized, or unsupported request data. |
-| `429` | Anonymous request limit exceeded. The configured limit is 60 requests per hour. |
-| `502` | OpenAI was unavailable or returned an empty translation. |
+| Status | Meaning                                                                         |
+| ------ | ------------------------------------------------------------------------------- |
+| `200`  | Translation completed successfully.                                             |
+| `400`  | Invalid, empty, oversized, or unsupported request data.                         |
+| `429`  | Anonymous request limit exceeded. The configured limit is 60 requests per hour. |
+| `502`  | OpenAI was unavailable or returned an empty translation.                        |
 
 The translation endpoint is intentionally unauthenticated. CORS controls which
 browser origins may call it, but CORS is not an authentication mechanism. Add an
