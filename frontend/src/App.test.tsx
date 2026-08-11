@@ -1,4 +1,6 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 import { translateText } from "./api";
@@ -13,10 +15,17 @@ vi.mock("./api", async (importOriginal) => ({
 const mockedTranslateText = vi.mocked(translateText);
 
 function renderApp() {
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { retry: false } },
+  });
   return render(
-    <PronunciationProvider>
-      <App />
-    </PronunciationProvider>,
+    <MemoryRouter>
+      <QueryClientProvider client={queryClient}>
+        <PronunciationProvider>
+          <App />
+        </PronunciationProvider>
+      </QueryClientProvider>
+    </MemoryRouter>,
   );
 }
 

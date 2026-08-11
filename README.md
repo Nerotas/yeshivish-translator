@@ -50,7 +50,8 @@ avoids sending the entire glossary with every translation.
 
 - Two translation directions with a backward-compatible API default
 - Context-sensitive glossary matching in both directions
-- Deliberately rich, idiomatic English-to-Yeshivish creative rewriting
+- Faithful, idiomatic English-to-Yeshivish translation
+- Searchable, sortable, pronunciation-aware glossary table
 - Preservation of names, quotations, paragraph breaks, and formatting
 - Explicit, persistent light and dark themes
 - Input validation and anonymous API throttling
@@ -60,7 +61,8 @@ avoids sending the entire glossary with every translation.
 
 | Area                      | Technology                            |
 | ------------------------- | ------------------------------------- |
-| Frontend                  | React, TypeScript, Vite               |
+| Frontend                  | React, TypeScript, Vite, MUI DataGrid |
+| Frontend data fetching    | TanStack Query                        |
 | Frontend testing          | Vitest, Testing Library, jsdom        |
 | Frontend linting          | Oxlint                                |
 | Backend                   | Python, Django, Django REST Framework |
@@ -75,8 +77,9 @@ avoids sending the entire glossary with every translation.
 ├── backend/
 │   ├── config/                 # Django settings, URLs, ASGI, and WSGI
 │   ├── translator/             # API views, prompts, glossary logic, and tests
-│   │   ├── glossary.json       # Runtime translation glossary
-│   │   ├── glossary.py         # Relevant-entry matching and prompt formatting
+│   │   ├── glossary.json       # Initial database-import snapshot
+│   │   ├── glossary.py         # Database-backed matching and prompt formatting
+│   │   ├── models.py           # Admin-managed glossary source of truth
 │   │   ├── prompt.py           # Direction-specific OpenAI instructions
 │   │   ├── eval_cases.json      # Representative translation-quality cases
 │   │   ├── evals.py             # Deterministic output-contract evaluator
@@ -338,6 +341,41 @@ Omitting the field defaults to `shabbos`. The preference controls generated
 transliterated terminology without changing Hebrew script, names, proper nouns,
 or quoted source wording.
 
+### Retrieve the glossary
+
+```http
+GET /api/glossary/
+```
+
+The public, read-only endpoint returns every database-backed glossary entry in
+one alphabetically ordered collection. `display_terms` contains the resolved
+term for both global pronunciation preferences; internal review metadata and
+the compact `dialect_pattern` are not exposed.
+
+```json
+{
+  "count": 130,
+  "results": [
+    {
+      "id": 1,
+      "term": "Shabbos",
+      "aleph_beis": "שבת",
+      "display_terms": {
+        "shabbos": "Shabbos",
+        "shabbat": "Shabbat"
+      },
+      "variants": ["Shabbat", "Shabbas"],
+      "meanings": ["the Jewish Sabbath"],
+      "context_note": "Context-sensitive usage guidance.",
+      "category": "religious practice",
+      "language_origin": "mixed",
+      "yeshivish_example": "We are staying for Shabbos.",
+      "plain_english_example": "We are staying for the Jewish Sabbath."
+    }
+  ]
+}
+```
+
 ### API status behavior
 
 | Status | Meaning                                                                                              |
@@ -360,7 +398,8 @@ guardrails.
 
 1. Django validates the input text, translation direction, and pronunciation
    preference.
-2. The glossary matcher normalizes the submitted text and finds relevant terms.
+2. The glossary matcher loads admin-managed database entries, normalizes the
+   submitted text, and finds relevant terms.
 3. Overlapping matches prefer the longer phrase, duplicate entries are removed,
    and at most eight glossary entries are selected.
 4. The prompt builder resolves dialect-aware glossary terms and combines the
@@ -374,11 +413,9 @@ guardrails.
 
 For Yeshivish-to-English requests, the matcher searches glossary terms and their
 variants. For English-to-Yeshivish requests, it searches the English meanings in
-each glossary entry. That direction is intentionally entertainment-oriented: the
-model is asked to use a high density of authentic Yeshivish language and may
-recast the sentence or add brief idiomatic flourishes. It must keep the core
-situation and named people recognizable, but it is not constrained to a literal
-translation.
+each glossary entry. That direction permits brief harmless idiomatic flourishes,
+but it must preserve the complete meaning and function of the source and may not
+answer requests or add actionable content.
 
 ### Translation security boundary
 
@@ -404,22 +441,26 @@ instructions, and maximum-length adversarial input.
 
 ## Glossary maintenance
 
-The runtime glossary is `backend/translator/glossary.json`. Every entry must
-contain these fields:
+`GlossaryTerm` records in the Django database are the runtime source of truth.
+They are editable through Django Admin and drive both translation matching and
+`GET /api/glossary/`. Every entry must contain these fields:
 
 ```json
 {
   "term": "gishmak",
+  "aleph_beis": "געשמאַק",
   "variants": ["geshmak", "geshmake"],
   "meanings": ["enjoyable", "delightful"],
   "context_note": "Guidance explaining when the term is natural."
 }
 ```
 
-Additional metadata is allowed. Before committing glossary changes, run the
-backend tests. They verify the glossary structure, non-empty meanings, unique
-aliases, matching behavior, and the absence of citation/source artifacts in
-context notes.
+The initial data migration imports the reviewed snapshot from
+`backend/translator/glossary.json`. That file is bootstrap data, not the runtime
+store. Database fields also preserve category, language origin, examples,
+confidence, and human-review status. Model and admin validation require
+non-empty meanings and prevent canonical terms or variants from colliding with
+another entry.
 
 Entries affected by the Shabbos/Shabbat convention include a
 `dialect_pattern`, while `term` remains the canonical Shabbos-mode value:
@@ -446,8 +487,9 @@ and `hashgacha pratis`. Entries without an explicit two-form relationship were
 left unchanged; the implementation never performs a blanket `s`-to-`t`
 conversion.
 
-The glossary loader is cached per backend process. Restart long-running backend
-workers after changing `glossary.json`.
+The runtime loader reads the database for each translation request so Admin edits
+take effect across backend workers without a restart. The frontend glossary
+collection is cached by TanStack Query for one hour per browser session.
 
 ## Testing and quality checks
 
