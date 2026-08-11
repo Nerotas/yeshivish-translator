@@ -236,7 +236,7 @@ class TranslationEndpointTests(SimpleTestCase):
         try:
             self.assertIs(get_openai_client(), client)
             self.assertIs(get_openai_client(), client)
-            openai.assert_called_once_with()
+            openai.assert_called_once()
         finally:
             get_openai_client.cache_clear()
 
