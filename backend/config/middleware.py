@@ -1,4 +1,3 @@
-"""
 """Custom middleware for the yeshivish-translator backend."""
 
 from collections.abc import Callable
