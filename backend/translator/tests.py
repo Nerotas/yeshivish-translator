@@ -166,6 +166,13 @@ class GlossaryMatchingTests(TestCase):
             [entry["term"] for entry in hebrew_matches], ["Bein Hametzarim"]
         )
 
+    def test_lifecycle_variants_match_chuppah(self):
+        canonical_matches = find_glossary_entries("The chuppah was beautiful.")
+        variant_matches = find_glossary_entries("The huppah was beautiful.")
+
+        self.assertEqual([entry["term"] for entry in canonical_matches], ["chuppah"])
+        self.assertEqual([entry["term"] for entry in variant_matches], ["chuppah"])
+
     def test_matches_multiword_phrase_across_whitespace(self):
         matches = find_glossary_entries("Baruch\nHashem, everyone is well.")
 

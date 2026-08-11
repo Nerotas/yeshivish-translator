@@ -1,7 +1,7 @@
 {
   "name": "Yeshivish to Plain English Runtime Glossary",
-  "version": 6,
-  "entry_count": 460,
+  "version": 7,
+  "entry_count": 596,
   "entries": [
     {
       "term": "mamesh",
@@ -8525,6 +8525,2524 @@
       ],
       "context_note": "Timing and method vary between Shabbos, Yom Tov, and cases when one sacred day follows another.",
       "dialect_pattern": "[hadlakas neiros|hadlakat nerot]"
+    },
+    {
+      "term": "milah",
+      "variants": [],
+      "aleph_beis": "מילה",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "The milah is scheduled for this morning.",
+      "plain_english_example": "The circumcision ceremony is scheduled for this morning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "circumcision",
+        "the circumcision component of the covenant ceremony"
+      ],
+      "context_note": "Often appears as part of the phrase bris milah. The base glossary already contains bris as the broader ceremony."
+    },
+    {
+      "term": "mohel",
+      "variants": [
+        "moheil"
+      ],
+      "aleph_beis": "מוהל",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "The mohel will arrive before the bris.",
+      "plain_english_example": "The person trained to perform the ritual circumcision will arrive before the ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person who performs a bris",
+        "ritual circumciser"
+      ],
+      "context_note": "A mohel is the person who performs a Jewish ritual circumcision."
+    },
+    {
+      "term": "sandek",
+      "variants": [
+        "sandak"
+      ],
+      "aleph_beis": "סנדק",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "His grandfather will be the sandek.",
+      "plain_english_example": "His grandfather will hold the baby in the honored role during the circumcision.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "honored person who holds the baby during the bris",
+        "sandek"
+      ],
+      "context_note": "A major honor at a bris, traditionally associated with holding the baby during the circumcision."
+    },
+    {
+      "term": "kvatter",
+      "variants": [
+        "kvater",
+        "kavatter"
+      ],
+      "aleph_beis": "קוואַטער",
+      "language_origin": "Yiddish",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "They asked him to be the kvatter at the bris.",
+      "plain_english_example": "They asked him to help carry the baby into the circumcision ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person participating in carrying the baby into the bris",
+        "bris honor"
+      ],
+      "context_note": "A Yiddish term for a person given the honor of conveying the baby into the bris ceremony; details of the role vary by custom."
+    },
+    {
+      "term": "kvatterin",
+      "variants": [
+        "kvaterin",
+        "kvatterine"
+      ],
+      "aleph_beis": "קוואַטערין",
+      "language_origin": "Yiddish",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "She was honored as the kvatterin.",
+      "plain_english_example": "She was honored to participate in bringing the baby into the circumcision ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "woman participating in carrying the baby into the bris",
+        "bris honor"
+      ],
+      "context_note": "The feminine Yiddish form corresponding to kvatter; exact ceremonial roles vary by community."
+    },
+    {
+      "term": "shalom zachar",
+      "variants": [
+        "sholom zochor",
+        "shalom zochor",
+        "shulem zucher"
+      ],
+      "aleph_beis": "שלום זכר",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "We are going to the shalom zachar Friday night.",
+      "plain_english_example": "We are going to the traditional gathering held on the first Friday night after a baby boy is born.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Friday-night gathering after the birth of a baby boy",
+        "Ashkenazi birth celebration"
+      ],
+      "context_note": "An Ashkenazi custom held on the first Friday night after the birth of a boy."
+    },
+    {
+      "term": "vach nacht",
+      "variants": [
+        "vacht nacht",
+        "wach nacht",
+        "vakhnakht"
+      ],
+      "aleph_beis": "וואך נאכט",
+      "language_origin": "Yiddish",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "The children came to say Shema at the vach nacht.",
+      "plain_english_example": "The children came for the traditional gathering on the night before the circumcision.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "night-before-bris gathering",
+        "watch night before a bris"
+      ],
+      "context_note": "A custom observed in some Ashkenazi communities on the night before a bris; practices vary by community."
+    },
+    {
+      "term": "kisei shel Eliyahu",
+      "variants": [
+        "kisei Eliyahu",
+        "kisei shel Eliyahu Hanavi"
+      ],
+      "aleph_beis": "כסא של אליהו",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "The baby was brought near the kisei shel Eliyahu.",
+      "plain_english_example": "The baby was brought near the special chair associated with Elijah at the circumcision ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "chair of Elijah used at a bris",
+        "special ceremonial chair"
+      ],
+      "context_note": "A special chair associated with Eliyahu Hanavi at a bris."
+    },
+    {
+      "term": "seudas bris",
+      "variants": [
+        "seudat bris",
+        "seudas habris",
+        "seudas milah"
+      ],
+      "aleph_beis": "סעודת ברית",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "They invited us to the seudas bris.",
+      "plain_english_example": "They invited us to the festive meal following the circumcision.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "festive meal for a bris",
+        "circumcision celebration meal"
+      ],
+      "context_note": "The celebratory meal associated with a bris."
+    },
+    {
+      "term": "pidyon haben",
+      "variants": [
+        "pidyon ha-ben"
+      ],
+      "aleph_beis": "פדיון הבן",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "The pidyon haben is next week.",
+      "plain_english_example": "The redemption ceremony for the firstborn son is next week.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "redemption of a firstborn son",
+        "firstborn-son ceremony"
+      ],
+      "context_note": "A mitzvah performed for a qualifying firstborn son, in which the father redeems him from a kohen."
+    },
+    {
+      "term": "bechor",
+      "variants": [
+        "bchor"
+      ],
+      "aleph_beis": "בכור",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "He is the bechor in the family.",
+      "plain_english_example": "He is the firstborn son in the family.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "firstborn",
+        "firstborn son, depending on context"
+      ],
+      "context_note": "The halachic category of firstborn has specific definitions; in ordinary conversation the word commonly means firstborn."
+    },
+    {
+      "term": "peter rechem",
+      "variants": [],
+      "aleph_beis": "פטר רחם",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "Pidyon haben applies only when the child meets the rules of peter rechem.",
+      "plain_english_example": "The redemption applies only when the child qualifies as the first issue of the womb under Jewish law.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "first issue of the womb",
+        "halachic firstborn status relevant to pidyon haben"
+      ],
+      "context_note": "A technical halachic term used in determining eligibility for pidyon haben."
+    },
+    {
+      "term": "kohen",
+      "variants": [
+        "cohen"
+      ],
+      "aleph_beis": "כהן",
+      "language_origin": "Hebrew",
+      "category": "people and lifecycle",
+      "yeshivish_example": "They brought five selaim to the kohen for the pidyon haben.",
+      "plain_english_example": "They brought the redemption payment to a man of priestly lineage for the firstborn ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish man of priestly lineage",
+        "priest, especially a descendant of Aaron"
+      ],
+      "context_note": "A kohen has special roles and restrictions in Jewish law. In this lifecycle section the term is especially relevant to pidyon haben and mourning laws."
+    },
+    {
+      "term": "chamisha selaim",
+      "variants": [
+        "five selaim",
+        "chamishah selaim"
+      ],
+      "aleph_beis": "חמשה סלעים",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and bris",
+      "yeshivish_example": "The father gave the kohen chamisha selaim.",
+      "plain_english_example": "The father gave the kohen the prescribed five-sela redemption value.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "five selaim used for pidyon haben",
+        "prescribed redemption payment"
+      ],
+      "context_note": "The Torah-prescribed redemption amount for pidyon haben; practical valuation of the silver is a halachic matter."
+    },
+    {
+      "term": "simchas bas",
+      "variants": [
+        "simchat bat",
+        "simchas habas"
+      ],
+      "aleph_beis": "שמחת בת",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and naming",
+      "yeshivish_example": "They are making a simchas bas on Sunday.",
+      "plain_english_example": "They are holding a celebration for the birth and naming of their daughter on Sunday.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "celebration for a baby girl",
+        "daughter-naming celebration"
+      ],
+      "context_note": "A general term used for a celebration connected with the birth or naming of a girl; customs vary."
+    },
+    {
+      "term": "krias shem",
+      "variants": [
+        "kriyas shem",
+        "kerias shem"
+      ],
+      "aleph_beis": "קריאת שם",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - birth and naming",
+      "yeshivish_example": "The krias shem will be during the Torah reading.",
+      "plain_english_example": "The baby will be formally given her Jewish name during the Torah reading.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "giving or announcing a Jewish name",
+        "naming ceremony or act"
+      ],
+      "context_note": "Literally calling a name; used for formally giving or announcing a Jewish name."
+    },
+    {
+      "term": "upsherin",
+      "variants": [
+        "upshern",
+        "upsherinish",
+        "opsherin",
+        "chalakah",
+        "chalakeh"
+      ],
+      "aleph_beis": "אפשערן",
+      "language_origin": "Yiddish",
+      "category": "lifecycle - childhood",
+      "yeshivish_example": "His upsherin will be on his third birthday.",
+      "plain_english_example": "His traditional first haircut celebration will be on his third birthday.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional first haircut ceremony for a young boy",
+        "first haircut custom"
+      ],
+      "context_note": "A custom in many communities, commonly held around a boy’s third birthday. The Hebrew/Sephardic term chalakah is included as a variant."
+    },
+    {
+      "term": "peyos",
+      "variants": [
+        "payos",
+        "payot",
+        "peyes"
+      ],
+      "aleph_beis": "פאות",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - childhood",
+      "yeshivish_example": "They left his peyos at the upsherin.",
+      "plain_english_example": "They left the side-lock areas of his hair uncut at the first haircut ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "side-locks",
+        "hair at the sides of the head governed by the prohibition against rounding the corners"
+      ],
+      "context_note": "Commonly discussed at an upsherin and in everyday Orthodox dress and grooming."
+    },
+    {
+      "term": "shadchanus",
+      "variants": [
+        "shadchanut",
+        "shadchonus"
+      ],
+      "aleph_beis": "שדכנות",
+      "language_origin": "mixed",
+      "category": "marriage - shidduchim",
+      "yeshivish_example": "She does shadchanus for several families.",
+      "plain_english_example": "She works at suggesting and facilitating marriage matches for several families.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "matchmaking",
+        "the activity of arranging shidduchim"
+      ],
+      "context_note": "The activity or field of matchmaking."
+    },
+    {
+      "term": "shadchanus gelt",
+      "variants": [
+        "shadchanus money",
+        "shadchan gelt"
+      ],
+      "aleph_beis": "שדכנות געלט",
+      "language_origin": "mixed",
+      "category": "marriage - shidduchim",
+      "yeshivish_example": "They paid the shadchanus gelt after the engagement.",
+      "plain_english_example": "They paid the customary matchmaking fee after the engagement.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "matchmaker fee",
+        "payment to a shadchan"
+      ],
+      "context_note": "A Yeshivish/Yiddish expression for payment made to a matchmaker."
+    },
+    {
+      "term": "redt a shidduch",
+      "variants": [
+        "redd a shidduch",
+        "red a shidduch",
+        "redn a shidduch"
+      ],
+      "aleph_beis": "רעדט אַ שידוך",
+      "language_origin": "Yiddish",
+      "category": "marriage - shidduchim",
+      "yeshivish_example": "Who redt this shidduch?",
+      "plain_english_example": "Who suggested or arranged this marriage match?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "suggest or propose a marriage match",
+        "act as the person who brings a shidduch idea"
+      ],
+      "context_note": "A Yiddish-derived phrase used in Yeshivish English. Spelling and conjugation vary widely."
+    },
+    {
+      "term": "beshow",
+      "variants": [
+        "bashow",
+        "besho",
+        "basho"
+      ],
+      "aleph_beis": "באַשוי",
+      "language_origin": "Yiddish",
+      "category": "marriage - shidduchim",
+      "yeshivish_example": "They met at a beshow before the families continued the shidduch.",
+      "plain_english_example": "They met at a formal arranged meeting used in some communities before proceeding with the match.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "formal prospective-marriage meeting in some Hasidic communities"
+      ],
+      "context_note": "A community-specific shidduch term, especially in some Hasidic circles; not universal Yeshivish usage."
+    },
+    {
+      "term": "tenoyim",
+      "variants": [
+        "tenaim",
+        "tnoim",
+        "tnaim"
+      ],
+      "aleph_beis": "תנאים",
+      "language_origin": "Hebrew",
+      "category": "marriage - engagement",
+      "yeshivish_example": "The families signed the tenoyim before the wedding.",
+      "plain_english_example": "The families formalized the engagement arrangements before the wedding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "engagement conditions or agreement",
+        "ceremony or document associated with an engagement"
+      ],
+      "context_note": "Historically a formal set of marriage conditions; in contemporary communities it may refer to an engagement ceremony or document, with practices varying."
+    },
+    {
+      "term": "kinyan",
+      "variants": [
+        "qinyan"
+      ],
+      "aleph_beis": "קנין",
+      "language_origin": "Hebrew",
+      "category": "marriage - legal ceremony",
+      "yeshivish_example": "They made a kinyan when the agreement was finalized.",
+      "plain_english_example": "They performed a formal Jewish-law act of acquisition to give legal effect to the agreement.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "formal halachic act of acquisition",
+        "legal mechanism for creating an obligation or transfer"
+      ],
+      "context_note": "A broad halachic concept used in many legal contexts, including marriage-related documents and agreements."
+    },
+    {
+      "term": "b'shaah tovah",
+      "variants": [
+        "b'sha'a tovah",
+        "beshaah tovah",
+        "b'shaah tova"
+      ],
+      "aleph_beis": "בשעה טובה",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - greeting",
+      "yeshivish_example": "They are expecting a baby, so we wished them b'shaah tovah.",
+      "plain_english_example": "They are expecting a baby, so we wished that everything happen at the proper and favorable time.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "at a good time",
+        "a traditional wish used before a future happy event"
+      ],
+      "context_note": "Often used for pregnancy and other anticipated milestones where speakers may avoid congratulating before the event occurs. Usage varies by community."
+    },
+    {
+      "term": "besoros tovos",
+      "variants": [
+        "besorot tovot",
+        "besuros tovos"
+      ],
+      "aleph_beis": "בשורות טובות",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - greeting",
+      "yeshivish_example": "Besoroes tovos; keep us posted.",
+      "plain_english_example": "May we hear good news; keep us posted.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "good news",
+        "may there be good tidings"
+      ],
+      "context_note": "A common wish when awaiting an outcome, recovery, birth, match, or other hoped-for development."
+    },
+    {
+      "term": "aufruf",
+      "variants": [
+        "oyfruf",
+        "ufruf",
+        "oifruf"
+      ],
+      "aleph_beis": "אויפרוף",
+      "language_origin": "Yiddish",
+      "category": "marriage - wedding",
+      "yeshivish_example": "His aufruf is this Shabbos.",
+      "plain_english_example": "He will be called to the Torah in the traditional pre-wedding celebration this Sabbath.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pre-wedding Torah aliyah for a groom",
+        "celebration surrounding that aliyah"
+      ],
+      "context_note": "An Ashkenazi custom in which the groom is called to the Torah, commonly on the Shabbos before the wedding."
+    },
+    {
+      "term": "Shabbos kallah",
+      "variants": [
+        "Shabbat kallah",
+        "shabbos kala"
+      ],
+      "aleph_beis": "שבת כלה",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "Her friends are coming for the Shabbos kallah.",
+      "plain_english_example": "Her friends are gathering with the bride on the Sabbath before the wedding.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pre-wedding Sabbath gathering for a bride"
+      ],
+      "context_note": "A pre-wedding custom whose form varies by community."
+    },
+    {
+      "term": "kabbalas panim",
+      "variants": [
+        "kabbalat panim",
+        "kabbolas ponim"
+      ],
+      "aleph_beis": "קבלת פנים",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The kabbalas panim starts an hour before the chuppah.",
+      "plain_english_example": "The pre-wedding reception begins an hour before the wedding canopy ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "reception",
+        "welcoming gathering before a wedding"
+      ],
+      "context_note": "At an Orthodox wedding, often refers to the separate pre-chuppah receptions for the groom and bride."
+    },
+    {
+      "term": "chosson tish",
+      "variants": [
+        "chassan tish",
+        "chatan tish"
+      ],
+      "aleph_beis": "חתן טיש",
+      "language_origin": "mixed",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The witnesses signed documents at the chosson tish.",
+      "plain_english_example": "The witnesses handled pre-wedding formalities at the groom’s table gathering.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "groom’s pre-wedding table or reception",
+        "pre-chuppah gathering around the groom"
+      ],
+      "context_note": "A Yiddish/Hebrew hybrid term for the groom’s pre-wedding gathering; customs and formalities vary."
+    },
+    {
+      "term": "badeken",
+      "variants": [
+        "bedeken",
+        "badecken",
+        "badekenish"
+      ],
+      "aleph_beis": "באַדעקן",
+      "language_origin": "Yiddish",
+      "category": "marriage - wedding",
+      "yeshivish_example": "Everyone gathered for the badeken before the chuppah.",
+      "plain_english_example": "Everyone gathered for the ceremony in which the groom veils the bride before the wedding canopy.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "veiling of the bride",
+        "pre-chuppah veiling ceremony"
+      ],
+      "context_note": "A Yiddish term meaning covering or veiling, used for the traditional ceremony before the chuppah."
+    },
+    {
+      "term": "chuppah",
+      "variants": [
+        "chupah",
+        "huppah"
+      ],
+      "aleph_beis": "חופה",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The chuppah is called for six o’clock.",
+      "plain_english_example": "The wedding-canopy ceremony is scheduled for six o’clock.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wedding canopy",
+        "marriage ceremony held beneath the canopy"
+      ],
+      "context_note": "Can refer to the physical canopy or, conversationally, to the central wedding ceremony."
+    },
+    {
+      "term": "mesader kiddushin",
+      "variants": [
+        "mesader kidushin"
+      ],
+      "aleph_beis": "מסדר קידושין",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The rav will be the mesader kiddushin.",
+      "plain_english_example": "The rabbi will officiate and oversee the Jewish marriage ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rabbi or authority who officiates at kiddushin",
+        "person arranging the halachic marriage ceremony"
+      ],
+      "context_note": "The officiating rabbinic role responsible for properly arranging the marriage ceremony."
+    },
+    {
+      "term": "kiddushin",
+      "variants": [
+        "kidushin"
+      ],
+      "aleph_beis": "קידושין",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The ring is given as part of the kiddushin.",
+      "plain_english_example": "The ring is given as part of the halachic betrothal stage of marriage.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "halachic betrothal",
+        "first legal stage of Jewish marriage"
+      ],
+      "context_note": "In the contemporary wedding ceremony, kiddushin and nisuin are performed together even though they are conceptually distinct stages."
+    },
+    {
+      "term": "erusin",
+      "variants": [
+        "eirusin",
+        "erussin"
+      ],
+      "aleph_beis": "אירוסין",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The first bracha is connected with erusin.",
+      "plain_english_example": "The first marriage blessing relates to the betrothal stage.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "betrothal",
+        "legal engagement stage, often equivalent to kiddushin in halachic usage"
+      ],
+      "context_note": "In classical halachic terminology, erusin is the betrothal stage; it is not identical to a modern social engagement."
+    },
+    {
+      "term": "nisuin",
+      "variants": [
+        "nissuin",
+        "nesuin"
+      ],
+      "aleph_beis": "נישואין",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The chuppah completes the nisuin stage.",
+      "plain_english_example": "The wedding canopy completes the full-marriage stage of the ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "marriage",
+        "completion of the marriage stage following kiddushin"
+      ],
+      "context_note": "The second legal stage of Jewish marriage, following kiddushin/erusin."
+    },
+    {
+      "term": "birkas erusin",
+      "variants": [
+        "birkat erusin",
+        "birchas erusin"
+      ],
+      "aleph_beis": "ברכת אירוסין",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The mesader kiddushin recited birkas erusin over the wine.",
+      "plain_english_example": "The officiant recited the blessing associated with the betrothal stage over wine.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "betrothal blessing",
+        "blessing recited at kiddushin"
+      ],
+      "context_note": "The blessing recited at the beginning of the halachic marriage ceremony."
+    },
+    {
+      "term": "kesubah",
+      "variants": [
+        "ketubah",
+        "kesuba",
+        "ketuba"
+      ],
+      "aleph_beis": "כתובה",
+      "language_origin": "Aramaic/Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The eidim signed the kesubah before the chuppah.",
+      "plain_english_example": "The witnesses signed the Jewish marriage contract before the ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish marriage contract",
+        "marital obligations document"
+      ],
+      "context_note": "A formal Aramaic marriage document setting out the husband’s obligations and the financial protections due to the wife."
+    },
+    {
+      "term": "eid",
+      "variants": [
+        "ed"
+      ],
+      "aleph_beis": "עד",
+      "language_origin": "Hebrew",
+      "category": "marriage - legal ceremony",
+      "yeshivish_example": "He was asked to serve as an eid for the kiddushin.",
+      "plain_english_example": "He was asked to serve as a halachic witness to the marriage.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "witness",
+        "halachically qualified witness"
+      ],
+      "context_note": "Singular of eidim. Jewish-law witness qualifications depend on the legal context."
+    },
+    {
+      "term": "eidim",
+      "variants": [
+        "edim"
+      ],
+      "aleph_beis": "עדים",
+      "language_origin": "Hebrew",
+      "category": "marriage - legal ceremony",
+      "yeshivish_example": "The eidim watched the ring being given.",
+      "plain_english_example": "The witnesses observed the act that effects the marriage.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "witnesses",
+        "halachically qualified witnesses"
+      ],
+      "context_note": "Plural of eid; marriage requires properly qualified witnesses."
+    },
+    {
+      "term": "harei at mekudeshes li",
+      "variants": [
+        "harei at mekudeshet li",
+        "harei at mekudeshes"
+      ],
+      "aleph_beis": "הרי את מקודשת לי",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "He said harei at mekudeshes li when giving the ring.",
+      "plain_english_example": "He recited the traditional declaration of betrothal while giving the ring.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "you are hereby betrothed to me",
+        "opening words of the traditional kiddushin declaration"
+      ],
+      "context_note": "A recognizable portion of the formula used when effecting kiddushin. This glossary entry identifies the phrase rather than providing legal instructions."
+    },
+    {
+      "term": "yichud",
+      "variants": [
+        "yihud"
+      ],
+      "aleph_beis": "יחוד",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The chosson and kallah went to yichud after the chuppah.",
+      "plain_english_example": "The bride and groom went to a private room together after the wedding ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seclusion",
+        "private time of the bride and groom following the ceremony"
+      ],
+      "context_note": "At Ashkenazi Orthodox weddings, commonly refers to the private room entered by the newly married couple after the chuppah."
+    },
+    {
+      "term": "sheva brachos",
+      "variants": [
+        "sheva brachot",
+        "sheva brochos",
+        "sheva bruches"
+      ],
+      "aleph_beis": "שבע ברכות",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "We are invited to sheva brachos tonight.",
+      "plain_english_example": "We are invited to a newlywed celebration at which the seven marriage blessings may be recited.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seven wedding blessings",
+        "post-wedding meal or celebration during the first week"
+      ],
+      "context_note": "Can mean the seven blessings themselves or a meal during the post-wedding week at which they are recited when the requirements are met."
+    },
+    {
+      "term": "sheva yemei hamishteh",
+      "variants": [
+        "shivah yemei hamishteh"
+      ],
+      "aleph_beis": "שבעת ימי המשתה",
+      "language_origin": "Hebrew",
+      "category": "marriage - newlyweds",
+      "yeshivish_example": "They are still in the sheva yemei hamishteh.",
+      "plain_english_example": "They are still within the seven-day wedding celebration period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seven days of wedding celebration",
+        "first week following the wedding"
+      ],
+      "context_note": "The seven-day celebratory period beginning with the wedding; practical laws depend on circumstances."
+    },
+    {
+      "term": "panim chadashos",
+      "variants": [
+        "panim chadashot"
+      ],
+      "aleph_beis": "פנים חדשות",
+      "language_origin": "Hebrew",
+      "category": "marriage - newlyweds",
+      "yeshivish_example": "Do we have panim chadashos for sheva brachos tonight?",
+      "plain_english_example": "Is there a qualifying new guest for tonight’s seven-blessings meal?",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "new face or new guest",
+        "qualifying new participant for certain sheva-brachos meals"
+      ],
+      "context_note": "A technical condition relevant to reciting sheva brachos at meals during the wedding week; details vary by halachic circumstance."
+    },
+    {
+      "term": "taanis chosson v'kallah",
+      "variants": [
+        "taanit chatan vekallah",
+        "taanis chassan v’kallah"
+      ],
+      "aleph_beis": "תענית חתן וכלה",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "They are observing the taanis chosson v'kallah until the chuppah.",
+      "plain_english_example": "The bride and groom are observing the traditional wedding-day fast until the ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "wedding-day fast of bride and groom"
+      ],
+      "context_note": "A custom in many Ashkenazi communities; exceptions and practices vary."
+    },
+    {
+      "term": "shviras hakos",
+      "variants": [
+        "shevirat hakos",
+        "breaking the glass"
+      ],
+      "aleph_beis": "שבירת הכוס",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "Shviras hakos comes at the end of the chuppah.",
+      "plain_english_example": "Breaking the glass comes near the end of the wedding ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "breaking the glass at a Jewish wedding"
+      ],
+      "context_note": "A customary act at the conclusion of the chuppah, commonly associated with remembrance of the destruction of Jerusalem."
+    },
+    {
+      "term": "zecher l'churban",
+      "variants": [
+        "zecher lechurban"
+      ],
+      "aleph_beis": "זכר לחורבן",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The broken glass is done as a zecher l'churban.",
+      "plain_english_example": "The broken glass is done as a remembrance of the destruction of the Temple.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "remembrance of the destruction",
+        "practice commemorating the destruction of Jerusalem and the Temple"
+      ],
+      "context_note": "A broad phrase used for customs that preserve remembrance of the Churban, including wedding practices."
+    },
+    {
+      "term": "mitzvah tantz",
+      "variants": [
+        "mitzve tantz",
+        "mitzvah dance"
+      ],
+      "aleph_beis": "מצוה טאנץ",
+      "language_origin": "mixed",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The mitzvah tantz was held late at the wedding.",
+      "plain_english_example": "The traditional ceremonial dance was held late in the wedding celebration.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "ceremonial wedding dance in some Hasidic communities"
+      ],
+      "context_note": "A Hasidic wedding custom and not universal across Yeshivish or Orthodox communities."
+    },
+    {
+      "term": "badchan",
+      "variants": [
+        "badkhan"
+      ],
+      "aleph_beis": "בדחן",
+      "language_origin": "mixed",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The badchan introduced the honors with rhyming verses.",
+      "plain_english_example": "The traditional wedding entertainer or master of ceremonies introduced the honors with rhyming verses.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional wedding entertainer",
+        "rhyming master of ceremonies"
+      ],
+      "context_note": "Especially associated with traditional or Hasidic weddings; exact role varies."
+    },
+    {
+      "term": "siman tov u'mazel tov",
+      "variants": [
+        "siman tov umazal tov",
+        "siman tov un mazel tov"
+      ],
+      "aleph_beis": "סימן טוב ומזל טוב",
+      "language_origin": "Hebrew",
+      "category": "lifecycle - greeting",
+      "yeshivish_example": "Everyone sang siman tov u'mazel tov after the chuppah.",
+      "plain_english_example": "Everyone sang a traditional wish for a good sign and congratulations after the wedding ceremony.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "a good sign and good fortune",
+        "traditional celebratory wedding or lifecycle refrain"
+      ],
+      "context_note": "A standard celebratory phrase and song used at weddings and other happy lifecycle events. The base glossary separately contains mazel tov."
+    },
+    {
+      "term": "od yishama",
+      "variants": [
+        "od yishoma"
+      ],
+      "aleph_beis": "עוד ישמע",
+      "language_origin": "Hebrew",
+      "category": "marriage - wedding",
+      "yeshivish_example": "The band started od yishama as the dancing began.",
+      "plain_english_example": "The band began the traditional wedding song based on the verse about voices of joy being heard again.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "opening words of a traditional Jewish wedding verse and song"
+      ],
+      "context_note": "A common shorthand for the wedding verse/song beginning with the words “od yishama.”"
+    },
+    {
+      "term": "bayis ne'eman b'Yisrael",
+      "variants": [
+        "bayit neeman bYisrael",
+        "bayis neeman beyisrael"
+      ],
+      "aleph_beis": "בית נאמן בישראל",
+      "language_origin": "Hebrew",
+      "category": "marriage - blessing",
+      "yeshivish_example": "We wished them a bayis ne'eman b'Yisrael.",
+      "plain_english_example": "We wished them a faithful and enduring Jewish home.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "faithful Jewish home",
+        "traditional blessing for a newly married couple"
+      ],
+      "context_note": "A common wedding blessing expressing hope that the couple build a stable Jewish home."
+    },
+    {
+      "term": "binyan adei ad",
+      "variants": [
+        "binyan adei-ad",
+        "binyan adey ad"
+      ],
+      "aleph_beis": "בנין עדי עד",
+      "language_origin": "Hebrew",
+      "category": "marriage - blessing",
+      "yeshivish_example": "May their marriage be a binyan adei ad.",
+      "plain_english_example": "May their marriage be an enduring union.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "everlasting building or union",
+        "enduring marriage"
+      ],
+      "context_note": "A poetic wedding blessing comparing marriage to an enduring structure."
+    },
+    {
+      "term": "shana rishona",
+      "variants": [
+        "shanah rishonah"
+      ],
+      "aleph_beis": "שנה ראשונה",
+      "language_origin": "Hebrew",
+      "category": "marriage - newlyweds",
+      "yeshivish_example": "They are still in shana rishona.",
+      "plain_english_example": "They are still in their first year of marriage.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "first year of marriage",
+        "first year"
+      ],
+      "context_note": "In Yeshivish conversation, often specifically refers to a couple’s first year of marriage."
+    },
+    {
+      "term": "shalom bayis",
+      "variants": [
+        "shalom bayit",
+        "sholom bayis"
+      ],
+      "aleph_beis": "שלום בית",
+      "language_origin": "Hebrew",
+      "category": "marriage - married life",
+      "yeshivish_example": "They are working on shalom bayis.",
+      "plain_english_example": "They are working on peace and harmony in their marriage and home.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "marital harmony",
+        "peace in the home"
+      ],
+      "context_note": "Often used specifically for healthy relations between spouses, though literally it means peace in the household."
+    },
+    {
+      "term": "baal",
+      "variants": [
+        "ba’al"
+      ],
+      "aleph_beis": "בעל",
+      "language_origin": "Hebrew",
+      "category": "marriage - family status",
+      "yeshivish_example": "Her baal is learning in the next room.",
+      "plain_english_example": "Her husband is studying in the next room.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "husband",
+        "owner or master in other contexts"
+      ],
+      "context_note": "In Yeshivish usage baal can mean husband, but the Hebrew word has several other meanings and requires context."
+    },
+    {
+      "term": "eishes ish",
+      "variants": [
+        "eshes ish"
+      ],
+      "aleph_beis": "אשת איש",
+      "language_origin": "Hebrew",
+      "category": "marriage - family status",
+      "yeshivish_example": "The sugya discusses the status of an eishes ish.",
+      "plain_english_example": "The Talmudic discussion addresses the status of a married woman.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "married woman",
+        "woman legally married under Jewish law"
+      ],
+      "context_note": "A halachic status term, not merely a conversational synonym for wife."
+    },
+    {
+      "term": "gerushin",
+      "variants": [
+        "geirushin"
+      ],
+      "aleph_beis": "גירושין",
+      "language_origin": "Hebrew",
+      "category": "marriage - divorce",
+      "yeshivish_example": "The beis din handles matters of gerushin.",
+      "plain_english_example": "The rabbinical court handles matters of Jewish divorce.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "divorce",
+        "Jewish divorce proceedings"
+      ],
+      "context_note": "The general Hebrew term for divorce, especially in halachic discussion."
+    },
+    {
+      "term": "get",
+      "variants": [
+        "gett",
+        "get krisus"
+      ],
+      "aleph_beis": "גט",
+      "language_origin": "Aramaic/Hebrew",
+      "category": "marriage - divorce",
+      "yeshivish_example": "She received the get through the beis din.",
+      "plain_english_example": "She received the Jewish bill of divorce through the rabbinical court.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish bill of divorce",
+        "halachic divorce document"
+      ],
+      "context_note": "A properly written and delivered get is central to Jewish divorce law. This glossary entry is descriptive, not procedural."
+    },
+    {
+      "term": "mesader get",
+      "variants": [
+        "mesader a get"
+      ],
+      "aleph_beis": "מסדר גט",
+      "language_origin": "Hebrew",
+      "category": "marriage - divorce",
+      "yeshivish_example": "They went to a rav who is experienced as a mesader get.",
+      "plain_english_example": "They went to a rabbi experienced in arranging a Jewish divorce.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rabbinic authority who arranges a get"
+      ],
+      "context_note": "A specialized role requiring expertise in Jewish divorce law."
+    },
+    {
+      "term": "beis din",
+      "variants": [
+        "beit din",
+        "beth din",
+        "bais din"
+      ],
+      "aleph_beis": "בית דין",
+      "language_origin": "Hebrew",
+      "category": "religious legal system",
+      "yeshivish_example": "The matter was brought to a beis din.",
+      "plain_english_example": "The matter was brought before a rabbinical court.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rabbinical court",
+        "Jewish-law court"
+      ],
+      "context_note": "A court of dayanim that adjudicates matters under Jewish law; scope and authority depend on context."
+    },
+    {
+      "term": "dayan",
+      "variants": [
+        "dayyan"
+      ],
+      "aleph_beis": "דיין",
+      "language_origin": "Hebrew",
+      "category": "religious legal system",
+      "yeshivish_example": "A dayan reviewed the documents.",
+      "plain_english_example": "A rabbinical judge reviewed the documents.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "rabbinical judge",
+        "judge on a beis din"
+      ],
+      "context_note": "A rabbinic judge qualified to decide matters of Jewish law."
+    },
+    {
+      "term": "agunah",
+      "variants": [
+        "aguna"
+      ],
+      "aleph_beis": "עגונה",
+      "language_origin": "Hebrew",
+      "category": "marriage - divorce",
+      "yeshivish_example": "The organization helps an agunah obtain a get.",
+      "plain_english_example": "The organization helps a woman unable to obtain the Jewish divorce needed to remarry under Jewish law.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "woman unable to remarry because her Jewish marriage remains unresolved",
+        "chained wife"
+      ],
+      "context_note": "A sensitive halachic and social status. The exact legal situation can arise for more than one reason."
+    },
+    {
+      "term": "agun",
+      "variants": [
+        "agoon"
+      ],
+      "aleph_beis": "עגון",
+      "language_origin": "Hebrew",
+      "category": "marriage - divorce",
+      "yeshivish_example": "The case also involved the status of an agun.",
+      "plain_english_example": "The case also involved a man whose marital status was halachically unresolved.",
+      "confidence": "medium",
+      "needs_human_review": false,
+      "meanings": [
+        "man whose marital status is unresolved or who cannot remarry in a relevant halachic circumstance"
+      ],
+      "context_note": "The masculine counterpart term is less common in everyday English than agunah."
+    },
+    {
+      "term": "mesarev get",
+      "variants": [
+        "mesarev a get",
+        "get refuser"
+      ],
+      "aleph_beis": "מסרב גט",
+      "language_origin": "Hebrew",
+      "category": "marriage - divorce",
+      "yeshivish_example": "The beis din issued instructions concerning a mesarev get.",
+      "plain_english_example": "The rabbinical court addressed a person refusing to cooperate with giving or receiving a required Jewish divorce.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person refusing a get process",
+        "get refuser"
+      ],
+      "context_note": "A sensitive legal label whose proper application depends on the specific beis-din ruling and circumstances."
+    },
+    {
+      "term": "heter meah rabbanim",
+      "variants": [
+        "heter meah rabbonim",
+        "heter 100 rabbanim"
+      ],
+      "aleph_beis": "היתר מאה רבנים",
+      "language_origin": "Hebrew",
+      "category": "marriage - divorce",
+      "yeshivish_example": "The rav said that a heter meah rabbanim is an exceptional procedure.",
+      "plain_english_example": "The rabbi said that permission involving one hundred rabbis is an exceptional Jewish-law procedure.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "special dispensation involving one hundred rabbis",
+        "exceptional marital-law authorization"
+      ],
+      "context_note": "A rare and technical Ashkenazi halachic mechanism with significant procedural requirements."
+    },
+    {
+      "term": "yibum",
+      "variants": [
+        "levirate marriage"
+      ],
+      "aleph_beis": "יבום",
+      "language_origin": "Hebrew",
+      "category": "marriage - family law",
+      "yeshivish_example": "The masechta discusses yibum and chalitzah.",
+      "plain_english_example": "The tractate discusses levirate marriage and the ceremony that releases the parties from it.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "levirate marriage",
+        "marriage of a childless widow to her deceased husband’s brother under Torah law"
+      ],
+      "context_note": "A technical Torah-law institution whose modern practical treatment depends on community and halachic tradition."
+    },
+    {
+      "term": "chalitzah",
+      "variants": [
+        "halitzah",
+        "chalitza"
+      ],
+      "aleph_beis": "חליצה",
+      "language_origin": "Hebrew",
+      "category": "marriage - family law",
+      "yeshivish_example": "They needed a beis din for chalitzah.",
+      "plain_english_example": "They needed a rabbinical court for the ceremony releasing the widow and brother-in-law from the levirate bond.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ceremony releasing a widow and brother-in-law from yibum",
+        "release from levirate obligation"
+      ],
+      "context_note": "A formal halachic ceremony related to yibum."
+    },
+    {
+      "term": "yavam",
+      "variants": [
+        "yevom"
+      ],
+      "aleph_beis": "יבם",
+      "language_origin": "Hebrew",
+      "category": "marriage - family law",
+      "yeshivish_example": "The halacha discusses the obligations of the yavam.",
+      "plain_english_example": "Jewish law discusses the status of the deceased husband’s brother in a yibum case.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "brother-in-law subject to yibum or chalitzah"
+      ],
+      "context_note": "Technical family-law term."
+    },
+    {
+      "term": "yevamah",
+      "variants": [
+        "yevama"
+      ],
+      "aleph_beis": "יבמה",
+      "language_origin": "Hebrew",
+      "category": "marriage - family law",
+      "yeshivish_example": "The mishnah discusses the yevamah before chalitzah.",
+      "plain_english_example": "The Mishnah discusses the widow subject to yibum or chalitzah.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "widow subject to yibum or chalitzah"
+      ],
+      "context_note": "Technical family-law term."
+    },
+    {
+      "term": "almana",
+      "variants": [
+        "almanah"
+      ],
+      "aleph_beis": "אלמנה",
+      "language_origin": "Hebrew",
+      "category": "marriage - family status",
+      "yeshivish_example": "The halacha has specific rules concerning an almana.",
+      "plain_english_example": "Jewish law has specific rules concerning a widow.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "widow"
+      ],
+      "context_note": "Common Hebrew/halachic term for a widow."
+    },
+    {
+      "term": "alman",
+      "variants": [
+        "widower"
+      ],
+      "aleph_beis": "אלמן",
+      "language_origin": "Hebrew",
+      "category": "marriage - family status",
+      "yeshivish_example": "He became an alman several years ago.",
+      "plain_english_example": "He became a widower several years ago.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "widower"
+      ],
+      "context_note": "Hebrew term for a widower; less frequent in Yeshivish English than almana."
+    },
+    {
+      "term": "gerusha",
+      "variants": [
+        "gerushah"
+      ],
+      "aleph_beis": "גרושה",
+      "language_origin": "Hebrew",
+      "category": "marriage - family status",
+      "yeshivish_example": "The discussion concerns the status of a gerusha.",
+      "plain_english_example": "The discussion concerns the status of a divorced woman.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "divorced woman"
+      ],
+      "context_note": "A legal-status term with particular relevance in some areas of Jewish law."
+    },
+    {
+      "term": "mamzer",
+      "variants": [
+        "mamzerim"
+      ],
+      "aleph_beis": "ממזר",
+      "language_origin": "Hebrew",
+      "category": "marriage - family status",
+      "yeshivish_example": "The term mamzer has a very specific halachic meaning.",
+      "plain_english_example": "The term refers to a narrowly defined Jewish-law lineage status, not simply to an illegitimate child.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "specific prohibited-lineage status under Jewish law"
+      ],
+      "context_note": "A sensitive and frequently mistranslated halachic status; it should not be rendered simply as “bastard” or “illegitimate child.”"
+    },
+    {
+      "term": "mamzeres",
+      "variants": [
+        "mamzeret"
+      ],
+      "aleph_beis": "ממזרת",
+      "language_origin": "Hebrew",
+      "category": "marriage - family status",
+      "yeshivish_example": "The same lineage rules can apply to a mamzeres.",
+      "plain_english_example": "The same narrowly defined lineage status can apply to a woman.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "female person with the halachic status of mamzer"
+      ],
+      "context_note": "Feminine form of mamzer; a sensitive technical status."
+    },
+    {
+      "term": "petirah",
+      "variants": [
+        "petira"
+      ],
+      "aleph_beis": "פטירה",
+      "language_origin": "Hebrew",
+      "category": "mourning - death",
+      "yeshivish_example": "We heard about his petirah this morning.",
+      "plain_english_example": "We heard about his passing this morning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "passing",
+        "death, expressed respectfully"
+      ],
+      "context_note": "A common respectful Hebrew/Yeshivish term for a person’s death."
+    },
+    {
+      "term": "niftar",
+      "variants": [
+        "niftor"
+      ],
+      "aleph_beis": "נפטר",
+      "language_origin": "Hebrew",
+      "category": "mourning - death",
+      "yeshivish_example": "The niftar was well known in the community.",
+      "plain_english_example": "The deceased man was well known in the community.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "deceased man",
+        "a man who passed away"
+      ],
+      "context_note": "Masculine term commonly used respectfully for the deceased."
+    },
+    {
+      "term": "nifteres",
+      "variants": [
+        "nifteret"
+      ],
+      "aleph_beis": "נפטרת",
+      "language_origin": "Hebrew",
+      "category": "mourning - death",
+      "yeshivish_example": "The nifteres taught for many years.",
+      "plain_english_example": "The deceased woman taught for many years.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "deceased woman",
+        "a woman who passed away"
+      ],
+      "context_note": "Feminine counterpart of niftar."
+    },
+    {
+      "term": "meis",
+      "variants": [
+        "met"
+      ],
+      "aleph_beis": "מת",
+      "language_origin": "Hebrew",
+      "category": "mourning - death and burial",
+      "yeshivish_example": "The halacha discusses kavod hameis.",
+      "plain_english_example": "Jewish law discusses the honor due to the deceased.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "dead person",
+        "corpse or deceased person in halachic terminology"
+      ],
+      "context_note": "A direct halachic term that can sound clinical in ordinary English; respectful speech often uses niftar/nifteres instead."
+    },
+    {
+      "term": "meisah",
+      "variants": [
+        "mitah"
+      ],
+      "aleph_beis": "מיתה",
+      "language_origin": "Hebrew",
+      "category": "mourning - death",
+      "yeshivish_example": "The sugya discusses what happens after meisah.",
+      "plain_english_example": "The Talmudic discussion addresses what happens after death.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "death",
+        "act or state of dying"
+      ],
+      "context_note": "A halachic/textual term for death; not the usual condolence expression."
+    },
+    {
+      "term": "levaya",
+      "variants": [
+        "levayah",
+        "leviyah"
+      ],
+      "aleph_beis": "לוויה",
+      "language_origin": "Hebrew",
+      "category": "mourning - funeral",
+      "yeshivish_example": "The levaya will leave the shul at noon.",
+      "plain_english_example": "The funeral procession will leave the synagogue at noon.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "funeral",
+        "funeral procession or accompanying the deceased"
+      ],
+      "context_note": "Literally accompanying; commonly means the funeral or procession accompanying the deceased to burial."
+    },
+    {
+      "term": "levayas hameis",
+      "variants": [
+        "levayat hameit"
+      ],
+      "aleph_beis": "לוית המת",
+      "language_origin": "Hebrew",
+      "category": "mourning - funeral",
+      "yeshivish_example": "Levayas hameis is considered a major chesed.",
+      "plain_english_example": "Accompanying the deceased to burial is considered an important act of kindness.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "accompanying the deceased to burial",
+        "funeral escort"
+      ],
+      "context_note": "The mitzvah or act of accompanying the deceased, broader than merely attending a funeral service."
+    },
+    {
+      "term": "kevurah",
+      "variants": [
+        "kevura"
+      ],
+      "aleph_beis": "קבורה",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The kevurah took place that afternoon.",
+      "plain_english_example": "The burial took place that afternoon.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "burial",
+        "interment"
+      ],
+      "context_note": "The act of burying the deceased."
+    },
+    {
+      "term": "kever",
+      "variants": [],
+      "aleph_beis": "קבר",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "They went to the kever on the yahrzeit.",
+      "plain_english_example": "They visited the grave on the anniversary of the death.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "grave",
+        "burial place"
+      ],
+      "context_note": "Common Hebrew/Yeshivish term for a grave."
+    },
+    {
+      "term": "beis hachaim",
+      "variants": [
+        "beit hachaim",
+        "bais hachaim"
+      ],
+      "aleph_beis": "בית החיים",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The levaya continued to the beis hachaim.",
+      "plain_english_example": "The funeral continued to the Jewish cemetery.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cemetery",
+        "Jewish cemetery, literally house of life"
+      ],
+      "context_note": "A traditional euphemistic name for a cemetery."
+    },
+    {
+      "term": "beis olam",
+      "variants": [
+        "beit olam",
+        "bais olam"
+      ],
+      "aleph_beis": "בית עולם",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "They purchased a plot in the beis olam.",
+      "plain_english_example": "They purchased a burial plot in the cemetery.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "cemetery",
+        "burial ground, literally eternal house"
+      ],
+      "context_note": "Another traditional Hebrew term for a cemetery."
+    },
+    {
+      "term": "chevra kadisha",
+      "variants": [
+        "chevrah kadisha",
+        "chevra kaddisha"
+      ],
+      "aleph_beis": "חברה קדישא",
+      "language_origin": "Aramaic/Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The chevra kadisha arranged the taharah and burial.",
+      "plain_english_example": "The Jewish burial society arranged the ritual preparation and burial.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish burial society",
+        "group responsible for care of the deceased and burial"
+      ],
+      "context_note": "Literally holy society; commonly the organization or volunteers handling traditional Jewish burial preparations."
+    },
+    {
+      "term": "chesed shel emes",
+      "variants": [
+        "chesed shel emet"
+      ],
+      "aleph_beis": "חסד של אמת",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "Serving on the chevra kadisha is called a chesed shel emes.",
+      "plain_english_example": "Caring for the deceased is described as a kindness that cannot be repaid by the recipient.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "true kindness",
+        "kindness performed for the deceased"
+      ],
+      "context_note": "Often applied to burial and funeral care because the deceased cannot repay the favor."
+    },
+    {
+      "term": "kavod hameis",
+      "variants": [
+        "kavod hamet"
+      ],
+      "aleph_beis": "כבוד המת",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "They changed the schedule because of kavod hameis.",
+      "plain_english_example": "They changed the schedule to preserve the dignity and honor of the deceased.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "honor of the deceased",
+        "dignity owed to a dead person"
+      ],
+      "context_note": "A central principle affecting treatment, transport, burial, and other decisions concerning the deceased."
+    },
+    {
+      "term": "taharas hameis",
+      "variants": [
+        "taharat hameit",
+        "tahara of the meis"
+      ],
+      "aleph_beis": "טהרת המת",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The chevra kadisha performed taharas hameis.",
+      "plain_english_example": "The burial society performed the traditional ritual preparation and purification of the deceased.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual preparation and purification of the deceased before burial"
+      ],
+      "context_note": "This phrase distinguishes burial taharah from family-purity uses of the word taharah."
+    },
+    {
+      "term": "shmira",
+      "variants": [
+        "shemirah"
+      ],
+      "aleph_beis": "שמירה",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "They arranged shmira until the levaya.",
+      "plain_english_example": "They arranged for the deceased not to be left unattended before the funeral.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "watching over the deceased",
+        "guarding or attending the body before burial"
+      ],
+      "context_note": "Traditional practice of maintaining a watch over the deceased until burial."
+    },
+    {
+      "term": "shomer hameis",
+      "variants": [
+        "shomer hamet"
+      ],
+      "aleph_beis": "שומר המת",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "A shomer hameis stayed there overnight.",
+      "plain_english_example": "A person assigned to watch over the deceased remained there overnight.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person who watches over the deceased before burial"
+      ],
+      "context_note": "The person performing shmira."
+    },
+    {
+      "term": "tachrichim",
+      "variants": [
+        "tachrichin"
+      ],
+      "aleph_beis": "תכריכים",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The niftar was dressed in tachrichim.",
+      "plain_english_example": "The deceased was dressed in traditional Jewish burial shrouds.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "burial shrouds",
+        "traditional simple garments for burial"
+      ],
+      "context_note": "Traditional Jewish burial garments."
+    },
+    {
+      "term": "aron",
+      "variants": [
+        "aron meis",
+        "aron met"
+      ],
+      "aleph_beis": "ארון",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The aron was carried to the graveside.",
+      "plain_english_example": "The coffin was carried to the graveside.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "coffin",
+        "casket; also means cabinet or ark in other contexts"
+      ],
+      "context_note": "In burial context aron means coffin or casket; in synagogue context the same word can mean the Torah ark, so context is essential."
+    },
+    {
+      "term": "halanas hameis",
+      "variants": [
+        "halanat hamet"
+      ],
+      "aleph_beis": "הלנת המת",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The rav discussed whether the delay creates a problem of halanas hameis.",
+      "plain_english_example": "The rabbi discussed whether delaying the burial overnight raises a Jewish-law concern.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "delaying burial of the deceased",
+        "leaving the deceased unburied overnight"
+      ],
+      "context_note": "A technical burial-law concept with exceptions and details that require halachic guidance."
+    },
+    {
+      "term": "meis mitzvah",
+      "variants": [
+        "met mitzvah"
+      ],
+      "aleph_beis": "מת מצוה",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "The Gemara discusses the special obligations of a meis mitzvah.",
+      "plain_english_example": "The Talmud discusses the special duty to bury an unattended deceased person.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "deceased person with no one available to arrange burial",
+        "special burial obligation"
+      ],
+      "context_note": "A technical halachic category carrying unusually strong burial obligations."
+    },
+    {
+      "term": "tumas meis",
+      "variants": [
+        "tumat met"
+      ],
+      "aleph_beis": "טומאת מת",
+      "language_origin": "Hebrew",
+      "category": "mourning - burial",
+      "yeshivish_example": "A kohen has to be careful about tumas meis.",
+      "plain_english_example": "A kohen must be careful about ritual impurity associated with contact or proximity to the dead.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "ritual impurity associated with a corpse",
+        "corpse impurity"
+      ],
+      "context_note": "A technical ritual-purity category especially relevant to kohanim and burial settings."
+    },
+    {
+      "term": "hesped",
+      "variants": [
+        "hespeid"
+      ],
+      "aleph_beis": "הספד",
+      "language_origin": "Hebrew",
+      "category": "mourning - funeral",
+      "yeshivish_example": "The rosh yeshiva gave a hesped at the levaya.",
+      "plain_english_example": "The head of the yeshiva delivered a eulogy at the funeral.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "eulogy",
+        "formal words of mourning and praise for the deceased"
+      ],
+      "context_note": "A funeral or memorial eulogy, usually focused on the deceased’s life and loss."
+    },
+    {
+      "term": "maspid",
+      "variants": [
+        "masped"
+      ],
+      "aleph_beis": "מספיד",
+      "language_origin": "Hebrew",
+      "category": "mourning - funeral",
+      "yeshivish_example": "He was asked to be maspid at the levaya.",
+      "plain_english_example": "He was asked to deliver a eulogy at the funeral.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "person delivering a hesped",
+        "one who eulogizes"
+      ],
+      "context_note": "The person who gives a hesped."
+    },
+    {
+      "term": "El Malei Rachamim",
+      "variants": [
+        "Kel Malei Rachamim",
+        "El Male Rachamim"
+      ],
+      "aleph_beis": "אל מלא רחמים",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial prayer",
+      "yeshivish_example": "They recited El Malei Rachamim at the memorial.",
+      "plain_english_example": "They recited the traditional memorial prayer asking for divine mercy for the deceased.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "Jewish memorial prayer for the deceased"
+      ],
+      "context_note": "A memorial prayer commonly recited at funerals, memorial occasions, and cemetery visits in many Ashkenazi communities."
+    },
+    {
+      "term": "aninus",
+      "variants": [
+        "aninut"
+      ],
+      "aleph_beis": "אנינות",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "During aninus, the immediate family has a distinct halachic status.",
+      "plain_english_example": "Before burial, immediate mourners have a distinct Jewish-law status with special rules.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "pre-burial mourning status",
+        "period between death and burial for an immediate mourner"
+      ],
+      "context_note": "A technical status applying to specified close relatives before burial; practical rules require halachic guidance."
+    },
+    {
+      "term": "onen",
+      "variants": [],
+      "aleph_beis": "אונן",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "He was an onen until the kevurah.",
+      "plain_english_example": "He had the special pre-burial status of an immediate mourner until burial.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "male immediate mourner before burial"
+      ],
+      "context_note": "Masculine person-form corresponding to aninus."
+    },
+    {
+      "term": "onenes",
+      "variants": [
+        "onenet"
+      ],
+      "aleph_beis": "אוננת",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "She was an onenes until the burial.",
+      "plain_english_example": "She had the special pre-burial status of an immediate mourner until burial.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "female immediate mourner before burial"
+      ],
+      "context_note": "Feminine person-form corresponding to aninus."
+    },
+    {
+      "term": "aveilus",
+      "variants": [
+        "avelus",
+        "aveilut"
+      ],
+      "aleph_beis": "אבלות",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "He is still in aveilus for a parent.",
+      "plain_english_example": "He is still observing the Jewish mourning period for a parent.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mourning",
+        "halachic state and practices of bereavement"
+      ],
+      "context_note": "The general term for Jewish mourning observance after burial."
+    },
+    {
+      "term": "avel",
+      "variants": [
+        "aveil"
+      ],
+      "aleph_beis": "אבל",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "The avel is saying Kaddish.",
+      "plain_english_example": "The mourner is reciting Kaddish.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mourner",
+        "bereaved person observing aveilus"
+      ],
+      "context_note": "Singular masculine/general form for a mourner."
+    },
+    {
+      "term": "aveilim",
+      "variants": [
+        "avelim"
+      ],
+      "aleph_beis": "אבלים",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "Neighbors brought food for the aveilim.",
+      "plain_english_example": "Neighbors brought food for the mourners.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "mourners",
+        "people observing Jewish mourning"
+      ],
+      "context_note": "Plural of avel."
+    },
+    {
+      "term": "shiva",
+      "variants": [
+        "shivah"
+      ],
+      "aleph_beis": "שבעה",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "They are sitting shiva at the family home.",
+      "plain_english_example": "They are observing the seven-day mourning period at the family home.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "seven-day mourning period after burial",
+        "sitting shiva"
+      ],
+      "context_note": "The intensive seven-day mourning period counted from burial, subject to rules concerning holidays and other circumstances."
+    },
+    {
+      "term": "beis avel",
+      "variants": [
+        "beit avel",
+        "bais avel",
+        "shiva house"
+      ],
+      "aleph_beis": "בית אבל",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "Minyan will be at the beis avel.",
+      "plain_english_example": "The prayer quorum will meet at the house of mourning.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "house of mourning",
+        "home where shiva is being observed"
+      ],
+      "context_note": "Often the location where visitors come for nichum aveilim and where prayer services are held during shiva."
+    },
+    {
+      "term": "shloshim",
+      "variants": [
+        "sheloshim"
+      ],
+      "aleph_beis": "שלושים",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "The family is still within shloshim.",
+      "plain_english_example": "The family is still within the thirty-day mourning period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "thirty-day mourning period",
+        "first thirty days from burial including shiva"
+      ],
+      "context_note": "The thirty-day mourning period counted from burial; restrictions differ by relationship to the deceased and other circumstances."
+    },
+    {
+      "term": "yud beis chodesh",
+      "variants": [
+        "yud-beis chodesh",
+        "twelve months of aveilus"
+      ],
+      "aleph_beis": "י״ב חודש",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning periods",
+      "yeshivish_example": "For a parent, some aveilus continues through yud beis chodesh.",
+      "plain_english_example": "For a parent, aspects of mourning continue through the twelve-month period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "twelve-month mourning period for a parent",
+        "year of mourning"
+      ],
+      "context_note": "A common Yeshivish shorthand for the extended mourning period for a parent."
+    },
+    {
+      "term": "keriah",
+      "variants": [
+        "kriah",
+        "kriya"
+      ],
+      "aleph_beis": "קריעה",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning practices",
+      "yeshivish_example": "The aveilim made keriah before the burial.",
+      "plain_english_example": "The mourners tore a garment as required in the mourning ritual.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "tearing a garment in mourning",
+        "ritual rending of clothing"
+      ],
+      "context_note": "A formal mourning act performed by specified mourners, generally around the funeral or burial depending on custom."
+    },
+    {
+      "term": "nichum aveilim",
+      "variants": [
+        "nichum avelim"
+      ],
+      "aleph_beis": "ניחום אבלים",
+      "language_origin": "Hebrew",
+      "category": "mourning - condolence",
+      "yeshivish_example": "We went for nichum aveilim after work.",
+      "plain_english_example": "We went to comfort the mourners after work.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "comforting mourners",
+        "shiva visit as a mitzvah"
+      ],
+      "context_note": "The mitzvah of comforting mourners, commonly performed by visiting during shiva."
+    },
+    {
+      "term": "menachem avel",
+      "variants": [
+        "menachem aveil"
+      ],
+      "aleph_beis": "מנחם אבל",
+      "language_origin": "Hebrew",
+      "category": "mourning - condolence",
+      "yeshivish_example": "We went to be menachem avel.",
+      "plain_english_example": "We went to comfort the mourner.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "comfort a mourner",
+        "person or act of consoling a mourner, depending on construction"
+      ],
+      "context_note": "Commonly appears in the phrase “to be menachem avel,” meaning to pay a condolence visit."
+    },
+    {
+      "term": "seudas havraah",
+      "variants": [
+        "seudat havraah",
+        "seudas havra’a"
+      ],
+      "aleph_beis": "סעודת הבראה",
+      "language_origin": "Hebrew",
+      "category": "mourning - mourning practices",
+      "yeshivish_example": "Neighbors prepared the seudas havraah after the kevurah.",
+      "plain_english_example": "Neighbors prepared the traditional first meal for the mourners after burial.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "meal of consolation after burial",
+        "first meal provided to mourners after the funeral"
+      ],
+      "context_note": "The first meal eaten by mourners after burial, traditionally provided by others."
+    },
+    {
+      "term": "yahrzeit",
+      "variants": [
+        "yartzeit",
+        "yohrtzeit",
+        "yarzeit"
+      ],
+      "aleph_beis": "יאָרצײַט",
+      "language_origin": "Yiddish",
+      "category": "mourning - memorial",
+      "yeshivish_example": "His yahrzeit is next week.",
+      "plain_english_example": "The annual Jewish-calendar anniversary of his death is next week.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "annual anniversary of a death",
+        "memorial anniversary"
+      ],
+      "context_note": "A Yiddish term for the annual anniversary of a person’s death, observed according to the Jewish calendar."
+    },
+    {
+      "term": "yom hashanah",
+      "variants": [
+        "yom hashana"
+      ],
+      "aleph_beis": "יום השנה",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial",
+      "yeshivish_example": "The family marked the yom hashanah with learning and tzedakah.",
+      "plain_english_example": "The family marked the anniversary of the death with Torah study and charity.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "anniversary of a death",
+        "Hebrew term corresponding to yahrzeit"
+      ],
+      "context_note": "Literally anniversary; in mourning context it can refer to the yahrzeit."
+    },
+    {
+      "term": "yahrzeit candle",
+      "variants": [
+        "yartzeit candle",
+        "yahrzeit licht"
+      ],
+      "aleph_beis": "יאָרצײַט ליכט",
+      "language_origin": "mixed",
+      "category": "mourning - memorial",
+      "yeshivish_example": "She lit a yahrzeit candle before nightfall.",
+      "plain_english_example": "She lit a memorial candle for the anniversary of the death.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "memorial candle lit for a yahrzeit",
+        "yahrzeit light"
+      ],
+      "context_note": "A candle or light traditionally kindled for a yahrzeit and certain memorial occasions."
+    },
+    {
+      "term": "ner neshama",
+      "variants": [
+        "ner neshamah"
+      ],
+      "aleph_beis": "נר נשמה",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial",
+      "yeshivish_example": "They lit a ner neshama in his memory.",
+      "plain_english_example": "They lit a memorial light in memory of the deceased.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "memorial candle or light",
+        "soul candle"
+      ],
+      "context_note": "A Hebrew term for a memorial light, often used for yahrzeit or other remembrance."
+    },
+    {
+      "term": "matzeivah",
+      "variants": [
+        "matzeiva",
+        "matzevah"
+      ],
+      "aleph_beis": "מצבה",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial",
+      "yeshivish_example": "The family visited the matzeivah.",
+      "plain_english_example": "The family visited the gravestone.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "gravestone",
+        "grave marker"
+      ],
+      "context_note": "Commonly means the headstone or monument marking a Jewish grave."
+    },
+    {
+      "term": "hakamas matzeivah",
+      "variants": [
+        "hakamat matzeivah",
+        "hakomas matzeivah"
+      ],
+      "aleph_beis": "הקמת מצבה",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial",
+      "yeshivish_example": "The hakamas matzeivah will be after shloshim.",
+      "plain_english_example": "The dedication or setting of the gravestone will take place after the thirty-day period.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "setting or dedication of a gravestone",
+        "gravestone ceremony"
+      ],
+      "context_note": "Communities differ on timing and ceremony; sometimes described in English as an unveiling."
+    },
+    {
+      "term": "l'ilui nishmas",
+      "variants": [
+        "leilui nishmas",
+        "l'ilui nishmat"
+      ],
+      "aleph_beis": "לעילוי נשמת",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial",
+      "yeshivish_example": "The shiur was sponsored l'ilui nishmas his father.",
+      "plain_english_example": "The Torah class was sponsored for the spiritual elevation of his father’s soul.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "for the elevation of the soul of",
+        "in memory of, with spiritual merit intended for the deceased"
+      ],
+      "context_note": "Common dedication phrase before the name of a deceased person."
+    },
+    {
+      "term": "aliyas neshama",
+      "variants": [
+        "aliyat neshama",
+        "aliyas haneshama"
+      ],
+      "aleph_beis": "עליית נשמה",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial",
+      "yeshivish_example": "They learned Mishnayos for an aliyas neshama.",
+      "plain_english_example": "They studied in the hope of bringing spiritual elevation to the deceased soul.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "elevation of a soul",
+        "spiritual ascent or merit for the deceased"
+      ],
+      "context_note": "Used when discussing mitzvos, Torah learning, or charity performed in memory of the deceased."
+    },
+    {
+      "term": "neshama",
+      "variants": [
+        "neshamah"
+      ],
+      "aleph_beis": "נשמה",
+      "language_origin": "Hebrew",
+      "category": "religious concept - lifecycle",
+      "yeshivish_example": "May the neshama have an aliyah.",
+      "plain_english_example": "May the soul experience spiritual elevation.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "soul",
+        "spiritual soul of a person"
+      ],
+      "context_note": "A broad religious term; in mourning conversation it often specifically means the soul of the deceased."
+    },
+    {
+      "term": "Baruch Dayan Ha'emes",
+      "variants": [
+        "Baruch Dayan Emes",
+        "Baruch Dayan HaEmet",
+        "BDH",
+        "BDE",
+        "BD\"E"
+      ],
+      "aleph_beis": "ברוך דיין האמת",
+      "language_origin": "Hebrew",
+      "category": "mourning - condolence",
+      "yeshivish_example": "Baruch Dayan Ha'emes; we just heard the news.",
+      "plain_english_example": "Blessed is the true Judge; we just heard the news of the death.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional response or blessing upon hearing of a death",
+        "Blessed is the true Judge"
+      ],
+      "context_note": "A traditional Jewish response to news of a death. The exact blessing with God’s name has halachic rules; conversational use often omits the divine-name formula."
+    },
+    {
+      "term": "Hamakom yenachem eschem b'soch sha'ar aveilei Tzion v'Yerushalayim",
+      "variants": [
+        "hamakom yenachem etchem",
+        "hamakom yenachem"
+      ],
+      "aleph_beis": "המקום ינחם אתכם בתוך שאר אבלי ציון וירושלים",
+      "language_origin": "Hebrew",
+      "category": "mourning - condolence",
+      "yeshivish_example": "Before leaving, he said Hamakom yenachem eschem.",
+      "plain_english_example": "Before leaving, he recited the traditional Ashkenazi words of comfort to the mourners.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "traditional condolence formula for mourners",
+        "may God comfort you among the mourners of Zion and Jerusalem"
+      ],
+      "context_note": "A standard Ashkenazi condolence formula used during shiva. Gender and singular/plural forms can vary."
+    },
+    {
+      "term": "zichrono livracha",
+      "variants": [
+        "zikhrono livracha",
+        "zichrono l'vracha",
+        "z\"l",
+        "zl"
+      ],
+      "aleph_beis": "זכרונו לברכה",
+      "language_origin": "Hebrew",
+      "category": "mourning - honorific",
+      "yeshivish_example": "Rabbi Cohen, zichrono livracha, taught here for decades.",
+      "plain_english_example": "Rabbi Cohen, of blessed memory, taught here for decades.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "of blessed memory, masculine",
+        "may his memory be a blessing"
+      ],
+      "context_note": "A respectful phrase after the name of a deceased man; often abbreviated z”l."
+    },
+    {
+      "term": "zichrona livracha",
+      "variants": [
+        "zikhrona livracha",
+        "zichrona l'vracha"
+      ],
+      "aleph_beis": "זכרונה לברכה",
+      "language_origin": "Hebrew",
+      "category": "mourning - honorific",
+      "yeshivish_example": "Mrs. Cohen, zichrona livracha, founded the program.",
+      "plain_english_example": "Mrs. Cohen, of blessed memory, founded the program.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "of blessed memory, feminine",
+        "may her memory be a blessing"
+      ],
+      "context_note": "Feminine form of zichrono livracha."
+    },
+    {
+      "term": "zecher tzaddik livracha",
+      "variants": [
+        "zekher tzaddik livracha",
+        "ztl",
+        "zt\"l"
+      ],
+      "aleph_beis": "זכר צדיק לברכה",
+      "language_origin": "Hebrew",
+      "category": "mourning - honorific",
+      "yeshivish_example": "The sefer quotes Rav Moshe, zecher tzaddik livracha.",
+      "plain_english_example": "The book quotes Rav Moshe, may the memory of the righteous be a blessing.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "may the memory of the righteous be a blessing",
+        "honorific for a deceased righteous person"
+      ],
+      "context_note": "A reverential phrase often used after the name of a deceased rabbinic or righteous figure; commonly abbreviated zt”l."
+    },
+    {
+      "term": "alav hashalom",
+      "variants": [
+        "olov hasholom",
+        "a\"h"
+      ],
+      "aleph_beis": "עליו השלום",
+      "language_origin": "Hebrew",
+      "category": "mourning - honorific",
+      "yeshivish_example": "His father, alav hashalom, was a longtime gabbai.",
+      "plain_english_example": "His late father, may he rest in peace, was a longtime synagogue official.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "peace be upon him",
+        "respectful phrase for a deceased man"
+      ],
+      "context_note": "A traditional phrase appended to the name or reference to a deceased man; often abbreviated a”h."
+    },
+    {
+      "term": "aleha hashalom",
+      "variants": [
+        "oleha hasholom"
+      ],
+      "aleph_beis": "עליה השלום",
+      "language_origin": "Hebrew",
+      "category": "mourning - honorific",
+      "yeshivish_example": "Her mother, aleha hashalom, was known for her chesed.",
+      "plain_english_example": "Her late mother, may she rest in peace, was known for her kindness.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "peace be upon her",
+        "respectful phrase for a deceased woman"
+      ],
+      "context_note": "Feminine counterpart of alav hashalom."
+    },
+    {
+      "term": "Hashem yikom damo",
+      "variants": [
+        "Hashem yinkom damo",
+        "HYD",
+        "hy\"d"
+      ],
+      "aleph_beis": "השם יקום דמו",
+      "language_origin": "Hebrew",
+      "category": "mourning - honorific",
+      "yeshivish_example": "His name was followed by Hashem yikom damo.",
+      "plain_english_example": "His name was followed by the traditional phrase asking God to avenge his blood.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "may God avenge his blood",
+        "honorific used for a Jew killed through violence or persecution"
+      ],
+      "context_note": "Traditionally used for someone killed because of anti-Jewish violence or persecution; application should follow community convention and context."
+    },
+    {
+      "term": "zechuso yagen aleinu",
+      "variants": [
+        "zechuso yagein aleinu",
+        "zya",
+        "zya\"a"
+      ],
+      "aleph_beis": "זכותו יגן עלינו",
+      "language_origin": "Hebrew",
+      "category": "mourning - honorific",
+      "yeshivish_example": "They mentioned the rebbe, zechuso yagen aleinu.",
+      "plain_english_example": "They referred to the deceased righteous leader with the phrase “may his merit protect us.”",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "may his merit protect us",
+        "reverential phrase for a deceased righteous person"
+      ],
+      "context_note": "Common after names of revered deceased rabbis or tzaddikim; frequently abbreviated זיע״א."
+    },
+    {
+      "term": "tehei nishmaso tzrurah b'tzror hachayim",
+      "variants": [
+        "tehei nishmato tzrura bitzror hachayim",
+        "TNTBH",
+        "tnzbh"
+      ],
+      "aleph_beis": "תהא נשמתו צרורה בצרור החיים",
+      "language_origin": "Hebrew",
+      "category": "mourning - memorial",
+      "yeshivish_example": "The inscription ends with tehei nishmaso tzrurah b'tzror hachayim.",
+      "plain_english_example": "The inscription ends with the traditional wish that his soul be bound in the bond of life.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "may his soul be bound in the bond of life",
+        "traditional memorial inscription"
+      ],
+      "context_note": "A traditional memorial phrase commonly represented on gravestones by the Hebrew abbreviation תנצב״ה; feminine grammar may differ depending on the person."
+    },
+    {
+      "term": "tanchumim",
+      "variants": [
+        "tanchumin"
+      ],
+      "aleph_beis": "תנחומים",
+      "language_origin": "Hebrew",
+      "category": "mourning - condolence",
+      "yeshivish_example": "Please accept our tanchumim.",
+      "plain_english_example": "Please accept our condolences.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "condolences",
+        "words of consolation"
+      ],
+      "context_note": "General Hebrew term for condolences or consolation after a loss."
+    },
+    {
+      "term": "rachmana litzlan",
+      "variants": [
+        "rachmana litzlolan",
+        "R\"L",
+        "RL"
+      ],
+      "aleph_beis": "רחמנא ליצלן",
+      "language_origin": "Aramaic",
+      "category": "mourning - expression",
+      "yeshivish_example": "Rachmana litzlan, there was a terrible accident.",
+      "plain_english_example": "May the Merciful One spare us; there was a terrible accident.",
+      "confidence": "high",
+      "needs_human_review": false,
+      "meanings": [
+        "may the Merciful One save us",
+        "God spare us"
+      ],
+      "context_note": "An Aramaic expression used when mentioning tragedy, danger, or something deeply undesirable. It is broader than mourning but common in that context."
     }
   ]
 }

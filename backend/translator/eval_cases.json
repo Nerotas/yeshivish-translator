@@ -78,5 +78,15 @@
     "forbidden_terms": ["Shabbos Mevorchim"],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "chuppah_lifecycle_context",
+    "direction": "yeshivish_to_english",
+    "source": "The chuppah was beautiful.",
+    "candidate_translation": "The wedding canopy was beautiful.",
+    "required_terms": ["wedding canopy"],
+    "forbidden_terms": ["chuppah"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]
