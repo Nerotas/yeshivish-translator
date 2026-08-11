@@ -390,7 +390,8 @@ into the trusted instructions; it is sent as a separate user-role message.
 
 The endpoint is deliberately non-agentic: it sends no conversation history or
 `previous_response_id`, provides an empty tool list, disables response storage,
-and caps output at 500 tokens. The default `gpt-4o-mini` model supports
+and applies a source-length-relative output cap with an absolute maximum of 500
+tokens. The default `gpt-4o-mini` model supports
 Structured Outputs, and the Python SDK parses its response into a strict
 single-field schema. The frontend renders the resulting string through normal
 React text interpolation, with no Markdown parser or unsafe HTML rendering.

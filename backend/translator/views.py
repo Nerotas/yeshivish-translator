@@ -39,6 +39,8 @@ from .throttling import (
 logger = logging.getLogger(__name__)
 
 MAX_INPUT_CHARACTERS = 3000
+MIN_OUTPUT_TOKENS = 48
+MAX_OUTPUT_TOKENS = 500
 DEFAULT_DIRECTION: TranslationDirection = "yeshivish_to_english"
 SUPPORTED_DIRECTIONS: set[TranslationDirection] = {
     DEFAULT_DIRECTION,
@@ -55,6 +57,11 @@ class TranslationOutput(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     translation: str
+
+
+def _max_output_tokens(text: str) -> int:
+    proportional_limit = len(text) // 2 + 32
+    return min(MAX_OUTPUT_TOKENS, max(MIN_OUTPUT_TOKENS, proportional_limit))
 
 
 def _classify_openai_error(error: Exception) -> str:
@@ -158,7 +165,7 @@ def translate(request: Request) -> Response:
             text_format=TranslationOutput,
             tools=[],
             store=False,
-            max_output_tokens=500,
+            max_output_tokens=_max_output_tokens(text),
         )
         parsed_output = api_response.output_parsed
         if parsed_output is None:
