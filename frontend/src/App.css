@@ -234,6 +234,23 @@
   color: var(--placeholder);
 }
 
+.char-counter {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.char-counter.at-limit {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.char-counter .limit-warning {
+  margin-left: 0.5rem;
+}
+
+
 .translator-card textarea:focus-visible,
 .translator-card button:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
