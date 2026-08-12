@@ -164,11 +164,19 @@ function TranslatorPage() {
         <textarea
           id="source-text"
           rows={7}
-          maxLength={3000}
+          maxLength={1500}
           placeholder={copy.placeholder}
           value={text}
           onChange={(event) => setText(event.target.value)}
         />
+        <div
+          className={`char-counter ${text.length >= 1500 ? "at-limit" : ""}`}
+        >
+          {text.length} / 1500 characters
+          {text.length >= 1500 && (
+            <span className="limit-warning"> — Character limit reached</span>
+          )}
+        </div>
 
         <button type="submit" disabled={loading}>
           {loading && <span className="spinner" aria-hidden="true" />}

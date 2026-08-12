@@ -40,7 +40,7 @@ from .throttling import (
 
 logger = logging.getLogger(__name__)
 
-MAX_INPUT_CHARACTERS = 3000
+MAX_INPUT_CHARACTERS = 1500
 MIN_OUTPUT_TOKENS = 48
 MAX_OUTPUT_TOKENS = 500
 DEFAULT_DIRECTION: TranslationDirection = "yeshivish_to_english"

@@ -108,5 +108,25 @@
     "forbidden_terms": ["hefsek taharah"],
     "preserve_paragraphs": true,
     "preserve_quotes": true
+  },
+  {
+    "id": "lyrics_function_words_in_english",
+    "direction": "yeshivish_to_english",
+    "source": "Ich hob a song in meyn kop, un es iz a little bit oysgedreyt.",
+    "candidate_translation": "I had a song in my head, and it was a little bit twisted.",
+    "required_terms": ["I", "had", "song", "my head", "little bit", "twisted"],
+    "forbidden_terms": ["ich", "hob", "iz", "oysgedreyt"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
+  },
+  {
+    "id": "sheriff_door_glass_no_kidnapping",
+    "direction": "yeshivish_to_english",
+    "source": "Di Adams County Sheriff hot gekickd mayn tir\nThen hob ich gehert di glass brekh\nZey hobn gefundn koiben oich nisht\nAfach a lemon pound cake",
+    "candidate_translation": "The Adams County sheriff kicked down my door.\nThen I heard the glass break.\nThey found no kidnapping victims.\nJust some lemon pound cake.",
+    "required_terms": ["The Adams County sheriff", "heard the glass break", "no kidnapping victims", "lemon pound cake"],
+    "forbidden_terms": ["di", "der", "hot", "hob", "zey", "koiben", "gefundn", "oy vey", "Der", "fun", "gebrakht"],
+    "preserve_paragraphs": true,
+    "preserve_quotes": true
   }
 ]
