@@ -292,15 +292,14 @@
       "language_origin": "Hebrew",
       "category": "greeting and praise",
       "yeshivish_example": "Yasher koach for organizing the kiddush.",
-      "plain_english_example": "Thank you for organizing the reception after services.",
+      "plain_english_example": "Well done organizing the reception after services.",
       "confidence": "high",
       "needs_human_review": false,
       "meanings": [
-        "thank you",
         "well done",
         "more strength to you"
       ],
-      "context_note": "Commonly said after someone performs a synagogue honor, teaches, helps, or does something commendable. It combines thanks with praise and encouragement."
+      "context_note": "Commonly said after someone performs a synagogue honor, teaches, helps, or does something commendable. It combines praise and encouragement."
     },
     {
       "term": "mazel tov",
