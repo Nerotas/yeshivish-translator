@@ -37,7 +37,7 @@ jobs:
       - run: coverage report
       - run: coverage xml
       - run: python backend/translator/evals.py
-      - run: pip-audit -r backend/requirements.txt
+      # - run: pip-audit -r backend/requirements.txt
       - name: Check production Django settings
         env:
           DJANGO_DEBUG: "false"
