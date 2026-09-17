@@ -14,12 +14,12 @@ vi.mock("./api", async (importOriginal) => ({
 
 const mockedTranslateText = vi.mocked(translateText);
 
-function renderApp() {
+function renderApp(pathname = "/") {
   const queryClient = new QueryClient({
     defaultOptions: { queries: { retry: false } },
   });
   return render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={[pathname]}>
       <QueryClientProvider client={queryClient}>
         <PronunciationProvider>
           <App />
@@ -214,6 +214,41 @@ describe("App", () => {
     expect(await screen.findByRole("alert")).toHaveTextContent(
       "Translation request failed.",
     );
+  });
+
+  it("renders the About methodology page", async () => {
+    renderApp("/about");
+
+    expect(
+      await screen.findByRole("heading", { name: "Yeshivish Translator" }),
+    ).toBeVisible();
+    expect(
+      screen.getByRole("heading", { name: "Glossary methodology" }),
+    ).toBeVisible();
+    expect(screen.getByRole("heading", { name: "Why I built it" })).toBeVisible();
+    expect(screen.getByText(/I am a convert to Judaism/)).toBeVisible();
+    expect(screen.getByText(/I am also dyslexic/)).toBeVisible();
+    expect(screen.getByText("“I have no idea what that means.”")).toBeVisible();
+    expect(
+      screen.getByRole("heading", { name: "How the project grew" }),
+    ).toBeVisible();
+    expect(screen.getByRole("link", { name: "GitHub" })).toHaveAttribute(
+      "href",
+      "https://github.com/Nerotas/yeshivish-translator",
+    );
+  });
+
+  it("renders an unknown route as a noindex not-found page", async () => {
+    renderApp("/not-a-real-page");
+
+    expect(
+      await screen.findByRole("heading", { name: "Page not found" }),
+    ).toBeVisible();
+    expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute(
+      "content",
+      "noindex, nofollow",
+    );
+    expect(document.head.querySelector('link[rel="canonical"]')).toBeNull();
   });
 
   it("renders model output as escaped plain text", async () => {

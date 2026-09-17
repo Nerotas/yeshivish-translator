@@ -189,6 +189,46 @@
   color: var(--text-muted);
 }
 
+.about-page,
+.not-found-page {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.about-page section + section {
+  margin-top: 1.75rem;
+}
+
+.about-quote {
+  margin: 1.25rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text-h);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.about-page h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.about-page p,
+.not-found-page p {
+  line-height: 1.65;
+}
+
+.about-page a,
+.not-found-page a {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.not-found-page a {
+  display: inline-block;
+  margin-top: 1.25rem;
+}
+
 .direction-selector {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -300,6 +340,70 @@
   color: var(--text-muted);
 }
 
+.glossary-term-page {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.glossary-back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.glossary-term-article header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.glossary-term-article header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.glossary-term-aleph-beis {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.35rem;
+}
+
+.glossary-term-article section {
+  margin-top: 1.5rem;
+}
+
+.glossary-term-article h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.glossary-term-article section p,
+.glossary-term-article blockquote {
+  margin-block: 0;
+}
+
+.glossary-term-article blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid var(--border);
+  color: var(--text-muted);
+}
+
+.glossary-term-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.glossary-term-facts dt {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.glossary-term-facts dd {
+  margin: 0.25rem 0 0;
+}
+
 .glossary-grid {
   width: 100%;
   height: 680px;
@@ -311,6 +415,58 @@
   place-items: center;
   height: 100%;
   color: var(--text-muted);
+}
+
+.glossary-term-link {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.glossary-index {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.glossary-index > h2 {
+  margin-bottom: 1rem;
+}
+
+.glossary-alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.glossary-alphabet a,
+.glossary-index-groups a {
+  color: var(--text-h);
+}
+
+.glossary-alphabet a {
+  font-weight: 600;
+}
+
+.glossary-index-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: start;
+  gap: 2rem;
+}
+
+.glossary-index-groups h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text-h);
+}
+
+.glossary-index-groups ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.glossary-index-groups li + li {
+  margin-top: 0.35rem;
 }
 
 .page-loader {
@@ -401,5 +557,9 @@
 
   .glossary-grid {
     height: 620px;
+  }
+
+  .glossary-term-facts {
+    grid-template-columns: 1fr;
   }
 }

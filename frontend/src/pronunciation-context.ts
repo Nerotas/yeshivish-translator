@@ -1,10 +1,5 @@
 import { createContext, useContext } from "react";
-import type { PronunciationPreference } from "./pronunciation";
-
-export interface PronunciationContextValue {
-  preference: PronunciationPreference;
-  setPreference: (preference: PronunciationPreference) => void;
-}
+import type { PronunciationContextValue } from "./models/pronunciation";
 
 export const PronunciationContext =
   createContext<PronunciationContextValue | null>(null);

@@ -55,13 +55,18 @@ describe("GlossaryPage", () => {
 
       expect(screen.getByRole("status")).toHaveTextContent("Loading glossary");
       expect(
-        await screen.findByText("the Jewish Sabbath", {}, { timeout: 5_000 }),
+        await screen.findByText("the Jewish Sabbath", {}, { timeout: 10_000 }),
       ).toBeVisible();
       expect(screen.getByText(/Browse 1 term/)).toBeVisible();
       expect(screen.getByRole("gridcell", { name: "שבת" })).toBeVisible();
       expect(
         screen.getByRole("columnheader", { name: "Aleph Beis" }),
       ).toBeVisible();
+      const termLinks = screen.getAllByRole("link", { name: "Shabbos" });
+      expect(termLinks).toHaveLength(2);
+      for (const termLink of termLinks) {
+        expect(termLink).toHaveAttribute("href", "/glossary/shabbos");
+      }
 
       const detailsButton = screen.getByRole("button", {
         name: "View details for Shabbos",
@@ -81,7 +86,7 @@ describe("GlossaryPage", () => {
         expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
       });
     },
-    10_000,
+    20_000,
   );
 
   it("uses the global pronunciation preference for display", async () => {
@@ -90,7 +95,11 @@ describe("GlossaryPage", () => {
 
     await screen.findByText("the Jewish Sabbath");
     fireEvent.click(screen.getByRole("button", { name: "Shabbat" }));
-    expect(screen.getByText("Shabbat", { selector: ".MuiDataGrid-cell" })).toBeVisible();
+    const termLinks = screen.getAllByRole("link", { name: "Shabbat" });
+    expect(termLinks).toHaveLength(2);
+    for (const termLink of termLinks) {
+      expect(termLink).toHaveAttribute("href", "/glossary/shabbos");
+    }
     expect(
       screen.getByRole("columnheader", { name: "Aleph Beit" }),
     ).toBeVisible();

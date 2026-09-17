@@ -167,3 +167,33 @@ changes to a differently priced model.
    rather than silently skipping enforcement - check Redis connectivity/health
    first, since this also affects session-token revocation
    (`docs/authentication.md`).
+
+## Search indexing maintenance
+
+Google Search Console and Bing Webmaster Tools are already configured for the
+production domain. The canonical submitted sitemap is:
+
+```text
+https://www.yeshivish-translator.com/sitemap.xml
+```
+
+The frontend build verifies the sitemap, crawler policy, generated glossary
+pages, canonical metadata, JSON-LD, internal links, favicon, social image, About
+page, and 404 page. Run the same artifact check directly with:
+
+```bash
+npm --prefix frontend run verify:static
+```
+
+After a substantial change to routing, canonical URLs, glossary generation, or
+crawler policy, inspect these representative URLs in both existing webmaster
+tools:
+
+- `https://www.yeshivish-translator.com/`
+- `https://www.yeshivish-translator.com/glossary`
+- `https://www.yeshivish-translator.com/glossary/shabbos`
+- `https://www.yeshivish-translator.com/about`
+
+Confirm that the submitted sitemap remains successful, the production domain is
+selected as canonical, and representative pages are crawlable. Do not submit
+translation results or API URLs for indexing.

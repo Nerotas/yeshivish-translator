@@ -140,7 +140,7 @@ test("searches, sorts, paginates, and applies pronunciation in the glossary", as
   await expect(
     page.getByRole("heading", { name: "Yeshivish glossary" }),
   ).toBeVisible();
-  await expect(page).toHaveURL(/#\/glossary$/);
+  await expect(page).toHaveURL(/\/glossary$/);
   await page.reload();
   await expect(
     page.getByRole("heading", { name: "Yeshivish glossary" }),

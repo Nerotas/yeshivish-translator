@@ -7,7 +7,6 @@ import {
 } from "react";
 import {
   NavLink,
-  Navigate,
   Route,
   Routes,
   useLocation,
@@ -16,14 +15,18 @@ import {
   TONES,
   TRANSLATION_DIRECTIONS,
   translateText,
-  type Tone,
-  type TranslationDirection,
 } from "./api";
+import type { Tone, TranslationDirection } from "./models/translation";
+import PageMetadata from "./PageMetadata";
+import { createHomepageMetadata } from "./page-metadata";
 import { PRONUNCIATION_PREFERENCES } from "./pronunciation";
 import { usePronunciationPreference } from "./pronunciation-context";
 import "./App.css";
 
 const GlossaryPage = lazy(() => import("./GlossaryPage"));
+const GlossaryTermPage = lazy(() => import("./GlossaryTermPage"));
+const AboutPage = lazy(() => import("./AboutPage"));
+const NotFoundPage = lazy(() => import("./NotFoundPage"));
 
 interface DirectionCopy {
   button: string;
@@ -38,6 +41,7 @@ type Theme = "light" | "dark";
 
 const THEMES: readonly Theme[] = ["light", "dark"];
 const THEME_STORAGE_KEY = "yeshivish-translator-theme";
+const HOMEPAGE_METADATA = createHomepageMetadata();
 
 function getSavedTheme(): Theme {
   try {
@@ -114,7 +118,9 @@ function TranslatorPage() {
   const copy = DIRECTIONS[direction];
 
   return (
-    <section className="translator-page" aria-labelledby="translator-heading">
+    <>
+      <PageMetadata metadata={HOMEPAGE_METADATA} />
+      <section className="translator-page" aria-labelledby="translator-heading">
       <p className="eyebrow">{copy.eyebrow}</p>
       <h1 id="translator-heading">Translate a sentence</h1>
 
@@ -212,7 +218,8 @@ function TranslatorPage() {
           sensitive or personally identifying information.
         </p>
       </section>
-    </section>
+      </section>
+    </>
   );
 }
 
@@ -220,7 +227,7 @@ export default function App() {
   const { preference, setPreference } = usePronunciationPreference();
   const [theme, setTheme] = useState<Theme>(getSavedTheme);
   const location = useLocation();
-  const isGlossary = location.pathname.endsWith("/glossary");
+  const isGlossary = location.pathname.startsWith("/glossary");
 
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -239,8 +246,9 @@ export default function App() {
       >
         <header className="app-header">
           <nav aria-label="Primary navigation">
-            <NavLink to="/">Translator</NavLink>
+            <NavLink to="/" end>Translator</NavLink>
             <NavLink to="/glossary">Glossary</NavLink>
+            <NavLink to="/about">About</NavLink>
           </nav>
 
           <div className="theme-selector" aria-label="Color theme">
@@ -293,7 +301,37 @@ export default function App() {
               </Suspense>
             }
           />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route
+            path="/glossary/:termSlug"
+            element={
+              <Suspense
+                fallback={
+                  <div className="page-loader" role="status">
+                    <span className="page-loader-spinner" aria-hidden="true" />
+                    <span>Loading glossary term...</span>
+                  </div>
+                }
+              >
+                <GlossaryTermPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<div className="page-loader">Loading...</div>}>
+                <AboutPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<div className="page-loader">Loading...</div>}>
+                <NotFoundPage />
+              </Suspense>
+            }
+          />
         </Routes>
       </section>
     </main>
