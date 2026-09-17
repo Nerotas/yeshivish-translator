@@ -88,6 +88,22 @@ export default function AboutPage() {
             .
           </p>
         </section>
+
+        <section>
+          <h2>Support the project</h2>
+          <p>
+            Yeshivish Translator is a free, open-source tool. If you find it
+            useful, please consider supporting continued development on{` `}
+            <a
+              href="https://ko-fi.com/nicholaserotas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ko-fi
+            </a>
+            .
+          </p>
+        </section>
       </article>
     </>
   );
