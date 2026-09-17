@@ -236,6 +236,13 @@ describe("App", () => {
       "href",
       "https://github.com/Nerotas/yeshivish-translator",
     );
+    const supportLink = screen.getByRole("link", { name: "Ko-fi" });
+    expect(supportLink).toHaveAttribute(
+      "href",
+      "https://ko-fi.com/nicholaserotas",
+    );
+    expect(supportLink).toHaveAttribute("target", "_blank");
+    expect(supportLink).toHaveAttribute("rel", "noopener noreferrer");
   });
 
   it("renders an unknown route as a noindex not-found page", async () => {
