@@ -3,7 +3,7 @@ import type { GlossaryTerm } from "./models/glossary";
 import type { PageMetadata, StructuredData } from "./models/page-metadata";
 
 export const SITE_ORIGIN = "https://www.yeshivish-translator.com";
-export const SOCIAL_IMAGE_URL = `${SITE_ORIGIN}/torah-scroll.svg`;
+export const SOCIAL_IMAGE_URL = `${SITE_ORIGIN}/social-preview.png`;
 
 const GLOSSARY_URL = `${SITE_ORIGIN}/glossary`;
 const WEBSITE_ID = `${SITE_ORIGIN}/#website`;
@@ -68,6 +68,32 @@ export function createGlossaryMetadata(): PageMetadata {
     url: GLOSSARY_URL,
     description,
   });
+}
+
+export function createAboutMetadata(): PageMetadata {
+  const title = "About & Methodology | Yeshivish Translator";
+  const description =
+    "Learn how Yeshivish Translator and its glossary help explain terminology influenced by Yiddish, Hebrew, Aramaic, and Jewish communal life.";
+  const canonicalUrl = absoluteUrl("/about");
+
+  return baseMetadata(title, description, "/about", {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: title,
+    description,
+    isPartOf: { "@id": WEBSITE_ID },
+  });
+}
+
+export function createNotFoundMetadata(): PageMetadata {
+  return {
+    title: "Page Not Found | Yeshivish Translator",
+    description: "The requested Yeshivish Translator page could not be found.",
+    socialImageUrl: SOCIAL_IMAGE_URL,
+    robots: "noindex, nofollow",
+  };
 }
 
 function createTermDescription(term: GlossaryTerm): string {
@@ -151,22 +177,48 @@ function serializeStructuredData(structuredData: StructuredData): string {
 export function renderPageMetadataHtml(metadata: PageMetadata): string {
   const title = escapeHtml(metadata.title);
   const description = escapeHtml(metadata.description);
-  const canonicalUrl = escapeHtml(metadata.canonicalUrl);
   const socialImageUrl = escapeHtml(metadata.socialImageUrl);
 
-  return [
+  const metadataElements = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}" />`,
-    `<link rel="canonical" href="${canonicalUrl}" />`,
     `<meta property="og:type" content="website" />`,
     `<meta property="og:title" content="${title}" />`,
     `<meta property="og:description" content="${description}" />`,
-    `<meta property="og:url" content="${canonicalUrl}" />`,
     `<meta property="og:image" content="${socialImageUrl}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${description}" />`,
     `<meta name="twitter:image" content="${socialImageUrl}" />`,
-    `<script id="page-structured-data" type="application/ld+json">${serializeStructuredData(metadata.structuredData)}</script>`,
-  ].join("\n");
+  ];
+
+  if (metadata.canonicalUrl) {
+    const canonicalUrl = escapeHtml(metadata.canonicalUrl);
+    metadataElements.splice(
+      2,
+      0,
+      `<link rel="canonical" href="${canonicalUrl}" />`,
+    );
+    metadataElements.splice(
+      6,
+      0,
+      `<meta property="og:url" content="${canonicalUrl}" />`,
+    );
+  }
+
+  if (metadata.robots) {
+    metadataElements.splice(
+      2,
+      0,
+      `<meta name="robots" content="${metadata.robots}" />`,
+    );
+  }
+
+  if (metadata.structuredData) {
+    metadataElements.push(
+      `<script id="page-structured-data" type="application/ld+json">${serializeStructuredData(metadata.structuredData)}</script>`,
+    );
+  }
+
+  return metadataElements.join("\n");
 }

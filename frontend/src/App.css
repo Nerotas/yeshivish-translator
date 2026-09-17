@@ -189,6 +189,46 @@
   color: var(--text-muted);
 }
 
+.about-page,
+.not-found-page {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.about-page section + section {
+  margin-top: 1.75rem;
+}
+
+.about-quote {
+  margin: 1.25rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text-h);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.about-page h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.about-page p,
+.not-found-page p {
+  line-height: 1.65;
+}
+
+.about-page a,
+.not-found-page a {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.not-found-page a {
+  display: inline-block;
+  margin-top: 1.25rem;
+}
+
 .direction-selector {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

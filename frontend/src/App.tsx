@@ -7,7 +7,6 @@ import {
 } from "react";
 import {
   NavLink,
-  Navigate,
   Route,
   Routes,
   useLocation,
@@ -26,6 +25,8 @@ import "./App.css";
 
 const GlossaryPage = lazy(() => import("./GlossaryPage"));
 const GlossaryTermPage = lazy(() => import("./GlossaryTermPage"));
+const AboutPage = lazy(() => import("./AboutPage"));
+const NotFoundPage = lazy(() => import("./NotFoundPage"));
 
 interface DirectionCopy {
   button: string;
@@ -245,8 +246,9 @@ export default function App() {
       >
         <header className="app-header">
           <nav aria-label="Primary navigation">
-            <NavLink to="/">Translator</NavLink>
+            <NavLink to="/" end>Translator</NavLink>
             <NavLink to="/glossary">Glossary</NavLink>
+            <NavLink to="/about">About</NavLink>
           </nav>
 
           <div className="theme-selector" aria-label="Color theme">
@@ -314,7 +316,22 @@ export default function App() {
               </Suspense>
             }
           />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<div className="page-loader">Loading...</div>}>
+                <AboutPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<div className="page-loader">Loading...</div>}>
+                <NotFoundPage />
+              </Suspense>
+            }
+          />
         </Routes>
       </section>
     </main>

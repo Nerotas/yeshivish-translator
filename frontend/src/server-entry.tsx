@@ -7,18 +7,24 @@ import { createPublishedGlossaryResponse } from "./glossary-publication";
 import { createGlossarySlug } from "./glossary-routing";
 import type { InitialPageData } from "./models/initial-page-data";
 import {
+  createAboutMetadata,
   createGlossaryMetadata,
   createGlossaryTermMetadata,
   createHomepageMetadata,
+  createNotFoundMetadata,
   renderPageMetadataHtml,
 } from "./page-metadata";
+import { createSitemapXml } from "./sitemap";
 
 export {
+  createAboutMetadata,
   createGlossaryMetadata,
   createGlossarySlug,
   createGlossaryTermMetadata,
   createHomepageMetadata,
+  createNotFoundMetadata,
   createPublishedGlossaryResponse,
+  createSitemapXml,
   renderPageMetadataHtml,
 };
 

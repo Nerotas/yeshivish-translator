@@ -66,12 +66,12 @@ async function writeRenderedRoute({
   route,
   initialPageData,
   metadata,
+  outputPath = outputPathForRoute(route),
   renderApplication,
   renderPageMetadataHtml,
   template,
 }) {
   const applicationHtml = await renderApplication(route, initialPageData);
-  const outputPath = outputPathForRoute(route);
   await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(
     outputPath,
@@ -88,11 +88,14 @@ async function writeRenderedRoute({
 async function generateStaticPages() {
   const serverEntryPath = join(serverBundleDirectory, "server-entry.js");
   const {
+    createAboutMetadata,
     createGlossaryMetadata,
     createGlossarySlug,
     createGlossaryTermMetadata,
     createHomepageMetadata,
+    createNotFoundMetadata,
     createPublishedGlossaryResponse,
+    createSitemapXml,
     renderApplication,
     renderPageMetadataHtml,
   } = await import(pathToFileURL(serverEntryPath).href);
@@ -101,6 +104,7 @@ async function generateStaticPages() {
     readFile(glossaryPath, "utf8"),
   ]);
   const glossary = createPublishedGlossaryResponse(JSON.parse(glossarySource));
+  const publicRoutes = ["/", "/glossary", "/about"];
 
   await writeRenderedRoute({
     route: "/",
@@ -118,10 +122,20 @@ async function generateStaticPages() {
     renderPageMetadataHtml,
     template,
   });
+  await writeRenderedRoute({
+    route: "/about",
+    initialPageData: {},
+    metadata: createAboutMetadata(),
+    renderApplication,
+    renderPageMetadataHtml,
+    template,
+  });
 
   for (const glossaryTerm of glossary.results) {
+    const route = `/glossary/${createGlossarySlug(glossaryTerm.term)}`;
+    publicRoutes.push(route);
     await writeRenderedRoute({
-      route: `/glossary/${createGlossarySlug(glossaryTerm.term)}`,
+      route,
       initialPageData: { glossaryTerm },
       metadata: createGlossaryTermMetadata(glossaryTerm),
       renderApplication,
@@ -130,7 +144,26 @@ async function generateStaticPages() {
     });
   }
 
-  console.log(`Generated ${glossary.count + 2} static pages.`);
+  await Promise.all([
+    writeRenderedRoute({
+      route: "/404",
+      outputPath: join(distributionDirectory, "404.html"),
+      initialPageData: {},
+      metadata: createNotFoundMetadata(),
+      renderApplication,
+      renderPageMetadataHtml,
+      template,
+    }),
+    writeFile(
+      join(distributionDirectory, "sitemap.xml"),
+      createSitemapXml(publicRoutes),
+      "utf8",
+    ),
+  ]);
+
+  console.log(
+    `Generated ${glossary.count + 4} static pages and ${publicRoutes.length} sitemap URLs.`,
+  );
 }
 
 try {

@@ -1,9 +1,11 @@
 import { describe, expect, it } from "vitest";
 import type { GlossaryTerm } from "./models/glossary";
 import {
+  createAboutMetadata,
   createGlossaryMetadata,
   createGlossaryTermMetadata,
   createHomepageMetadata,
+  createNotFoundMetadata,
   renderPageMetadataHtml,
   SITE_ORIGIN,
 } from "./page-metadata";
@@ -31,6 +33,20 @@ describe("page metadata", () => {
     expect(glossary.canonicalUrl).toBe(`${SITE_ORIGIN}/glossary`);
     expect(homepage.title).not.toBe(glossary.title);
     expect(homepage.description).not.toBe(glossary.description);
+  });
+
+  it("defines canonical About metadata and noindex 404 metadata", () => {
+    const about = createAboutMetadata();
+    const notFound = createNotFoundMetadata();
+
+    expect(about.canonicalUrl).toBe(`${SITE_ORIGIN}/about`);
+    expect(about.structuredData).toMatchObject({ "@type": "AboutPage" });
+    expect(notFound.canonicalUrl).toBeUndefined();
+    expect(notFound.structuredData).toBeUndefined();
+    expect(notFound.robots).toBe("noindex, nofollow");
+    expect(renderPageMetadataHtml(notFound)).toContain(
+      '<meta name="robots" content="noindex, nofollow" />',
+    );
   });
 
   it("derives term metadata from published glossary content", () => {
