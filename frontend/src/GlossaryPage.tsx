@@ -7,6 +7,9 @@ import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import { DataGrid, type GridColDef } from "@mui/x-data-grid";
+import { Link } from "react-router-dom";
+import GlossaryIndex from "./GlossaryIndex";
+import { createGlossarySlug } from "./glossary-routing";
 import type { GlossaryTerm } from "./models/glossary";
 import { usePronunciationPreference } from "./pronunciation-context";
 import { useGlossary } from "./useGlossary";
@@ -62,6 +65,14 @@ export default function GlossaryPage() {
         headerName: "Term",
         minWidth: 145,
         flex: 0.8,
+        renderCell: ({ row }) => (
+          <Link
+            className="glossary-term-link"
+            to={`/glossary/${createGlossarySlug(row.term)}`}
+          >
+            {row.displayTerm}
+          </Link>
+        ),
       },
       {
         field: "aleph_beis",
@@ -203,6 +214,13 @@ export default function GlossaryPage() {
           }}
         />
       </div>
+
+      {!glossary.isLoading && (
+        <GlossaryIndex
+          pronunciationPreference={preference}
+          terms={glossary.data?.results ?? []}
+        />
+      )}
 
       <Dialog
         open={selectedTerm !== null}

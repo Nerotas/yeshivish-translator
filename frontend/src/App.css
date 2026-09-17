@@ -377,6 +377,58 @@
   color: var(--text-muted);
 }
 
+.glossary-term-link {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.glossary-index {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.glossary-index > h2 {
+  margin-bottom: 1rem;
+}
+
+.glossary-alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.glossary-alphabet a,
+.glossary-index-groups a {
+  color: var(--text-h);
+}
+
+.glossary-alphabet a {
+  font-weight: 600;
+}
+
+.glossary-index-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: start;
+  gap: 2rem;
+}
+
+.glossary-index-groups h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text-h);
+}
+
+.glossary-index-groups ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.glossary-index-groups li + li {
+  margin-top: 0.35rem;
+}
+
 .page-loader {
   display: flex;
   align-items: center;
