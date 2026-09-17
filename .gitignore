@@ -22,3 +22,6 @@ frontend/test-results/
 .idea/
 .DS_Store
 archive
+tmp
+/tmp
+./tmp
