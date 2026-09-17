@@ -1,9 +1,9 @@
 import { type ReactNode, useLayoutEffect, useState } from "react";
+import type { PronunciationPreference } from "./models/pronunciation";
 import { PronunciationContext } from "./pronunciation-context";
 import {
   getSavedPronunciationPreference,
   PRONUNCIATION_STORAGE_KEY,
-  type PronunciationPreference,
 } from "./pronunciation";
 
 export function PronunciationProvider({ children }: { children: ReactNode }) {

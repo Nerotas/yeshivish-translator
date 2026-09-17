@@ -300,6 +300,70 @@
   color: var(--text-muted);
 }
 
+.glossary-term-page {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.glossary-back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.glossary-term-article header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.glossary-term-article header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.glossary-term-aleph-beis {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.35rem;
+}
+
+.glossary-term-article section {
+  margin-top: 1.5rem;
+}
+
+.glossary-term-article h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.glossary-term-article section p,
+.glossary-term-article blockquote {
+  margin-block: 0;
+}
+
+.glossary-term-article blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid var(--border);
+  color: var(--text-muted);
+}
+
+.glossary-term-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--surface-muted);
+}
+
+.glossary-term-facts dt {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.glossary-term-facts dd {
+  margin: 0.25rem 0 0;
+}
+
 .glossary-grid {
   width: 100%;
   height: 680px;
@@ -401,5 +465,9 @@
 
   .glossary-grid {
     height: 620px;
+  }
+
+  .glossary-term-facts {
+    grid-template-columns: 1fr;
   }
 }

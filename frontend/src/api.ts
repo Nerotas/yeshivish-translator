@@ -1,38 +1,17 @@
-import type { PronunciationPreference } from "./pronunciation";
+import type { GlossaryResponse, GlossaryTerm } from "./models/glossary";
+import type { PronunciationPreference } from "./models/pronunciation";
+import type { Tone, TranslationDirection } from "./models/translation";
 
 export const TRANSLATION_DIRECTIONS = [
   "yeshivish_to_english",
   "english_to_yeshivish",
-] as const;
-
-export type TranslationDirection = (typeof TRANSLATION_DIRECTIONS)[number];
+] as const satisfies readonly TranslationDirection[];
 
 export const TONES = [
   "straightforward",
   "warm_friendly",
   "enthusiastic",
-] as const;
-
-export type Tone = (typeof TONES)[number];
-
-export interface GlossaryTerm {
-  id: number;
-  term: string;
-  aleph_beis: string;
-  display_terms: Record<PronunciationPreference, string>;
-  variants: string[];
-  meanings: string[];
-  context_note: string;
-  category: string;
-  language_origin: string;
-  yeshivish_example: string;
-  plain_english_example: string;
-}
-
-export interface GlossaryResponse {
-  count: number;
-  results: GlossaryTerm[];
-}
+] as const satisfies readonly Tone[];
 
 export const glossaryQueryKey = ["glossary"] as const;
 export const GLOSSARY_STALE_TIME_MS = 60 * 60 * 1000;

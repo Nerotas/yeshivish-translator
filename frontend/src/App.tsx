@@ -16,14 +16,14 @@ import {
   TONES,
   TRANSLATION_DIRECTIONS,
   translateText,
-  type Tone,
-  type TranslationDirection,
 } from "./api";
+import type { Tone, TranslationDirection } from "./models/translation";
 import { PRONUNCIATION_PREFERENCES } from "./pronunciation";
 import { usePronunciationPreference } from "./pronunciation-context";
 import "./App.css";
 
 const GlossaryPage = lazy(() => import("./GlossaryPage"));
+const GlossaryTermPage = lazy(() => import("./GlossaryTermPage"));
 
 interface DirectionCopy {
   button: string;
@@ -220,7 +220,7 @@ export default function App() {
   const { preference, setPreference } = usePronunciationPreference();
   const [theme, setTheme] = useState<Theme>(getSavedTheme);
   const location = useLocation();
-  const isGlossary = location.pathname.endsWith("/glossary");
+  const isGlossary = location.pathname.startsWith("/glossary");
 
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -290,6 +290,21 @@ export default function App() {
                 }
               >
                 <GlossaryPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/glossary/:termSlug"
+            element={
+              <Suspense
+                fallback={
+                  <div className="page-loader" role="status">
+                    <span className="page-loader-spinner" aria-hidden="true" />
+                    <span>Loading glossary term...</span>
+                  </div>
+                }
+              >
+                <GlossaryTermPage />
               </Suspense>
             }
           />

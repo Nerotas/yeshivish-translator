@@ -1,11 +1,10 @@
-export const PRONUNCIATION_PREFERENCES = ["shabbos", "shabbat"] as const;
-export type PronunciationPreference =
-  (typeof PRONUNCIATION_PREFERENCES)[number];
+import type { GlossaryEntry } from "./models/glossary";
+import type { PronunciationPreference } from "./models/pronunciation";
 
-export interface GlossaryEntry {
-  term: string;
-  dialect_pattern?: string;
-}
+export const PRONUNCIATION_PREFERENCES = [
+  "shabbos",
+  "shabbat",
+] as const satisfies readonly PronunciationPreference[];
 
 export const PRONUNCIATION_STORAGE_KEY = "pronunciationPreference";
 

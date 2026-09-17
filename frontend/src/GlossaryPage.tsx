@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -8,13 +7,9 @@ import DialogTitle from "@mui/material/DialogTitle";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import { DataGrid, type GridColDef } from "@mui/x-data-grid";
-import {
-  fetchGlossary,
-  GLOSSARY_STALE_TIME_MS,
-  glossaryQueryKey,
-  type GlossaryTerm,
-} from "./api";
+import type { GlossaryTerm } from "./models/glossary";
 import { usePronunciationPreference } from "./pronunciation-context";
+import { useGlossary } from "./useGlossary";
 
 interface GlossaryRow extends GlossaryTerm {
   displayTerm: string;
@@ -30,12 +25,7 @@ function EmptyGlossary() {
 export default function GlossaryPage() {
   const { preference } = usePronunciationPreference();
   const [selectedTerm, setSelectedTerm] = useState<GlossaryRow | null>(null);
-  const glossary = useQuery({
-    queryKey: glossaryQueryKey,
-    queryFn: fetchGlossary,
-    staleTime: GLOSSARY_STALE_TIME_MS,
-    retry: 1,
-  });
+  const glossary = useGlossary();
 
   const rows = useMemo<GlossaryRow[]>(
     () =>
