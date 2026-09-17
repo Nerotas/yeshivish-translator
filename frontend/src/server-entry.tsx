@@ -6,8 +6,21 @@ import AppProviders from "./AppProviders";
 import { createPublishedGlossaryResponse } from "./glossary-publication";
 import { createGlossarySlug } from "./glossary-routing";
 import type { InitialPageData } from "./models/initial-page-data";
+import {
+  createGlossaryMetadata,
+  createGlossaryTermMetadata,
+  createHomepageMetadata,
+  renderPageMetadataHtml,
+} from "./page-metadata";
 
-export { createGlossarySlug, createPublishedGlossaryResponse };
+export {
+  createGlossaryMetadata,
+  createGlossarySlug,
+  createGlossaryTermMetadata,
+  createHomepageMetadata,
+  createPublishedGlossaryResponse,
+  renderPageMetadataHtml,
+};
 
 /** Renders one route after all lazy page modules have resolved. */
 export async function renderApplication(

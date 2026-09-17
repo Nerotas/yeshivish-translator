@@ -18,6 +18,8 @@ import {
   translateText,
 } from "./api";
 import type { Tone, TranslationDirection } from "./models/translation";
+import PageMetadata from "./PageMetadata";
+import { createHomepageMetadata } from "./page-metadata";
 import { PRONUNCIATION_PREFERENCES } from "./pronunciation";
 import { usePronunciationPreference } from "./pronunciation-context";
 import "./App.css";
@@ -38,6 +40,7 @@ type Theme = "light" | "dark";
 
 const THEMES: readonly Theme[] = ["light", "dark"];
 const THEME_STORAGE_KEY = "yeshivish-translator-theme";
+const HOMEPAGE_METADATA = createHomepageMetadata();
 
 function getSavedTheme(): Theme {
   try {
@@ -114,7 +117,9 @@ function TranslatorPage() {
   const copy = DIRECTIONS[direction];
 
   return (
-    <section className="translator-page" aria-labelledby="translator-heading">
+    <>
+      <PageMetadata metadata={HOMEPAGE_METADATA} />
+      <section className="translator-page" aria-labelledby="translator-heading">
       <p className="eyebrow">{copy.eyebrow}</p>
       <h1 id="translator-heading">Translate a sentence</h1>
 
@@ -212,7 +217,8 @@ function TranslatorPage() {
           sensitive or personally identifying information.
         </p>
       </section>
-    </section>
+      </section>
+    </>
   );
 }
 

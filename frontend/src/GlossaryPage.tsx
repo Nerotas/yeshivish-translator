@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import GlossaryIndex from "./GlossaryIndex";
 import { createGlossarySlug } from "./glossary-routing";
 import type { GlossaryTerm } from "./models/glossary";
+import PageMetadata from "./PageMetadata";
+import { createGlossaryMetadata } from "./page-metadata";
 import { usePronunciationPreference } from "./pronunciation-context";
 import { useGlossary } from "./useGlossary";
 
@@ -20,6 +22,8 @@ interface GlossaryRow extends GlossaryTerm {
   meaningText: string;
   searchText: string;
 }
+
+const GLOSSARY_METADATA = createGlossaryMetadata();
 
 function EmptyGlossary() {
   return <div className="empty-glossary">No glossary terms were found.</div>;
@@ -123,19 +127,24 @@ export default function GlossaryPage() {
 
   if (glossary.isError) {
     return (
-      <section className="glossary-page" aria-labelledby="glossary-heading">
-        <h1 id="glossary-heading">Yeshivish glossary</h1>
-        <p role="alert" className="error">
-          {glossary.error instanceof Error
-            ? glossary.error.message
-            : "Unable to load the glossary."}
-        </p>
-      </section>
+      <>
+        <PageMetadata metadata={GLOSSARY_METADATA} />
+        <section className="glossary-page" aria-labelledby="glossary-heading">
+          <h1 id="glossary-heading">Yeshivish glossary</h1>
+          <p role="alert" className="error">
+            {glossary.error instanceof Error
+              ? glossary.error.message
+              : "Unable to load the glossary."}
+          </p>
+        </section>
+      </>
     );
   }
 
   return (
-    <section className="glossary-page" aria-labelledby="glossary-heading">
+    <>
+      <PageMetadata metadata={GLOSSARY_METADATA} />
+      <section className="glossary-page" aria-labelledby="glossary-heading">
       <p className="eyebrow">Terms used by the translator</p>
       <h1 id="glossary-heading">Yeshivish glossary</h1>
       {glossary.isLoading ? (
@@ -259,6 +268,7 @@ export default function GlossaryPage() {
           </>
         )}
       </Dialog>
-    </section>
+      </section>
+    </>
   );
 }

@@ -2,6 +2,11 @@ import { Link, useParams } from "react-router-dom";
 import GlossaryTermArticle from "./GlossaryTermArticle";
 import { findGlossaryEntryBySlug } from "./glossary-routing";
 import { useInitialPageData } from "./initial-page-data";
+import PageMetadata from "./PageMetadata";
+import {
+  createGlossaryMetadata,
+  createGlossaryTermMetadata,
+} from "./page-metadata";
 import { usePronunciationPreference } from "./pronunciation-context";
 import { useGlossary } from "./useGlossary";
 
@@ -22,24 +27,30 @@ export default function GlossaryTermPage() {
 
   if (term) {
     return (
-      <section className="glossary-term-page">
-        <Link className="glossary-back-link" to="/glossary">
-          Back to the glossary
-        </Link>
-        <GlossaryTermArticle
-          pronunciationPreference={preference}
-          term={term}
-        />
-      </section>
+      <>
+        <PageMetadata metadata={createGlossaryTermMetadata(term)} />
+        <section className="glossary-term-page">
+          <Link className="glossary-back-link" to="/glossary">
+            Back to the glossary
+          </Link>
+          <GlossaryTermArticle
+            pronunciationPreference={preference}
+            term={term}
+          />
+        </section>
+      </>
     );
   }
 
   if (glossary.isLoading) {
     return (
-      <div className="page-loader" role="status">
-        <span className="page-loader-spinner" aria-hidden="true" />
-        <span>Loading glossary term...</span>
-      </div>
+      <>
+        <PageMetadata metadata={createGlossaryMetadata()} />
+        <div className="page-loader" role="status">
+          <span className="page-loader-spinner" aria-hidden="true" />
+          <span>Loading glossary term...</span>
+        </div>
+      </>
     );
   }
 

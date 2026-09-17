@@ -14,6 +14,8 @@ const glossaryPath = join(
   "glossary.json",
 );
 const rootPlaceholder = '<div id="root"></div>';
+const metadataPattern =
+  /<!-- page-metadata:start -->[\s\S]*?<!-- page-metadata:end -->/;
 
 function serializeInitialData(initialPageData) {
   return JSON.stringify(initialPageData)
@@ -24,9 +26,17 @@ function serializeInitialData(initialPageData) {
     .replaceAll("\u2029", "\\u2029");
 }
 
-function addRenderedApplication(template, applicationHtml, initialPageData) {
+function addRenderedApplication(
+  template,
+  applicationHtml,
+  initialPageData,
+  metadataHtml,
+) {
   if (!template.includes(rootPlaceholder)) {
     throw new Error("The built HTML does not contain the application root.");
+  }
+  if (!metadataPattern.test(template)) {
+    throw new Error("The built HTML does not contain the metadata region.");
   }
 
   const serializedData = serializeInitialData(initialPageData);
@@ -35,7 +45,15 @@ function addRenderedApplication(template, applicationHtml, initialPageData) {
     `<script id="initial-page-data" type="application/json">${serializedData}</script>`,
   ].join("\n");
 
-  return template.replace(rootPlaceholder, renderedRoot);
+  const renderedMetadata = [
+    "<!-- page-metadata:start -->",
+    metadataHtml,
+    "<!-- page-metadata:end -->",
+  ].join("\n");
+
+  return template
+    .replace(metadataPattern, renderedMetadata)
+    .replace(rootPlaceholder, renderedRoot);
 }
 
 function outputPathForRoute(route) {
@@ -47,7 +65,9 @@ function outputPathForRoute(route) {
 async function writeRenderedRoute({
   route,
   initialPageData,
+  metadata,
   renderApplication,
+  renderPageMetadataHtml,
   template,
 }) {
   const applicationHtml = await renderApplication(route, initialPageData);
@@ -55,15 +75,27 @@ async function writeRenderedRoute({
   await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(
     outputPath,
-    addRenderedApplication(template, applicationHtml, initialPageData),
+    addRenderedApplication(
+      template,
+      applicationHtml,
+      initialPageData,
+      renderPageMetadataHtml(metadata),
+    ),
     "utf8",
   );
 }
 
 async function generateStaticPages() {
   const serverEntryPath = join(serverBundleDirectory, "server-entry.js");
-  const { createGlossarySlug, createPublishedGlossaryResponse, renderApplication } =
-    await import(pathToFileURL(serverEntryPath).href);
+  const {
+    createGlossaryMetadata,
+    createGlossarySlug,
+    createGlossaryTermMetadata,
+    createHomepageMetadata,
+    createPublishedGlossaryResponse,
+    renderApplication,
+    renderPageMetadataHtml,
+  } = await import(pathToFileURL(serverEntryPath).href);
   const [template, glossarySource] = await Promise.all([
     readFile(templatePath, "utf8"),
     readFile(glossaryPath, "utf8"),
@@ -73,13 +105,17 @@ async function generateStaticPages() {
   await writeRenderedRoute({
     route: "/",
     initialPageData: {},
+    metadata: createHomepageMetadata(),
     renderApplication,
+    renderPageMetadataHtml,
     template,
   });
   await writeRenderedRoute({
     route: "/glossary",
     initialPageData: { glossary },
+    metadata: createGlossaryMetadata(),
     renderApplication,
+    renderPageMetadataHtml,
     template,
   });
 
@@ -87,7 +123,9 @@ async function generateStaticPages() {
     await writeRenderedRoute({
       route: `/glossary/${createGlossarySlug(glossaryTerm.term)}`,
       initialPageData: { glossaryTerm },
+      metadata: createGlossaryTermMetadata(glossaryTerm),
       renderApplication,
+      renderPageMetadataHtml,
       template,
     });
   }
