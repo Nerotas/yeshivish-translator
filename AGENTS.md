@@ -58,6 +58,10 @@ handoff boundary, explain that repository policy reserves the action for a
 human, and provide safe instructions instead. The only exception is an
 explicitly requested OpenAI inference call made under the safeguards below.
 
+## Developer Friendliness
+
+All code created with intent to be read, handled and approved by human developers. Prioritize inline comments, modularization and clear var names.
+
 ## Translator-specific invariants
 
 ### API compatibility
