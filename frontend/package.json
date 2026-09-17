@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:client && npm run build:ssr && npm run generate:static",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/server-entry.tsx --outDir .ssr",
+    "generate:static": "node scripts/generate-static-pages.mjs",
     "lint": "oxlint",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",

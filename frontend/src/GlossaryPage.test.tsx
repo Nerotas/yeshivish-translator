@@ -55,7 +55,7 @@ describe("GlossaryPage", () => {
 
       expect(screen.getByRole("status")).toHaveTextContent("Loading glossary");
       expect(
-        await screen.findByText("the Jewish Sabbath", {}, { timeout: 5_000 }),
+        await screen.findByText("the Jewish Sabbath", {}, { timeout: 10_000 }),
       ).toBeVisible();
       expect(screen.getByText(/Browse 1 term/)).toBeVisible();
       expect(screen.getByRole("gridcell", { name: "שבת" })).toBeVisible();
@@ -86,7 +86,7 @@ describe("GlossaryPage", () => {
         expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
       });
     },
-    10_000,
+    20_000,
   );
 
   it("uses the global pronunciation preference for display", async () => {

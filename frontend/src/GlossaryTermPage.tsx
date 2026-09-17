@@ -1,13 +1,38 @@
 import { Link, useParams } from "react-router-dom";
 import GlossaryTermArticle from "./GlossaryTermArticle";
 import { findGlossaryEntryBySlug } from "./glossary-routing";
+import { useInitialPageData } from "./initial-page-data";
 import { usePronunciationPreference } from "./pronunciation-context";
 import { useGlossary } from "./useGlossary";
 
 export default function GlossaryTermPage() {
   const { termSlug = "" } = useParams();
   const { preference } = usePronunciationPreference();
+  const { glossaryTerm: initialGlossaryTerm } = useInitialPageData();
   const glossary = useGlossary();
+
+  const fetchedTerm = findGlossaryEntryBySlug(
+    glossary.data?.results ?? [],
+    termSlug,
+  );
+  const initialTermMatchesRoute =
+    initialGlossaryTerm &&
+    findGlossaryEntryBySlug([initialGlossaryTerm], termSlug);
+  const term = fetchedTerm ?? initialTermMatchesRoute;
+
+  if (term) {
+    return (
+      <section className="glossary-term-page">
+        <Link className="glossary-back-link" to="/glossary">
+          Back to the glossary
+        </Link>
+        <GlossaryTermArticle
+          pronunciationPreference={preference}
+          term={term}
+        />
+      </section>
+    );
+  }
 
   if (glossary.isLoading) {
     return (
@@ -32,31 +57,12 @@ export default function GlossaryTermPage() {
     );
   }
 
-  const term = findGlossaryEntryBySlug(
-    glossary.data?.results ?? [],
-    termSlug,
-  );
-
-  if (!term) {
-    return (
-      <section className="glossary-term-page">
-        <p className="eyebrow">Yeshivish glossary</p>
-        <h1>Glossary term not found</h1>
-        <p>No glossary entry exists at this address.</p>
-        <Link to="/glossary">Return to the glossary</Link>
-      </section>
-    );
-  }
-
   return (
     <section className="glossary-term-page">
-      <Link className="glossary-back-link" to="/glossary">
-        Back to the glossary
-      </Link>
-      <GlossaryTermArticle
-        pronunciationPreference={preference}
-        term={term}
-      />
+      <p className="eyebrow">Yeshivish glossary</p>
+      <h1>Glossary term not found</h1>
+      <p>No glossary entry exists at this address.</p>
+      <Link to="/glossary">Return to the glossary</Link>
     </section>
   );
 }

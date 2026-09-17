@@ -12,6 +12,7 @@ coverage/
 # Node
 frontend/node_modules/
 frontend/dist/
+frontend/.ssr/
 frontend/.env
 frontend/.env.local
 frontend/playwright-report/
