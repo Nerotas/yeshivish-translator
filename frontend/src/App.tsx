@@ -43,6 +43,16 @@ const THEMES: readonly Theme[] = ["light", "dark"];
 const THEME_STORAGE_KEY = "yeshivish-translator-theme";
 const HOMEPAGE_METADATA = createHomepageMetadata();
 
+function trackSuccessfulTranslation(direction: TranslationDirection) {
+  window.dataLayer ??= [];
+  window.dataLayer.push({
+    event:
+      direction === "yeshivish_to_english"
+        ? "translate_yeshivish_to_english"
+        : "translate_english_to_yeshivish",
+  });
+}
+
 function getSavedTheme(): Theme {
   try {
     return localStorage.getItem(THEME_STORAGE_KEY) === "dark"
@@ -95,7 +105,14 @@ function TranslatorPage() {
 
     setLoading(true);
     try {
-      setTranslation(await translateText(text, direction, preference, tone));
+      const translatedText = await translateText(
+        text,
+        direction,
+        preference,
+        tone,
+      );
+      setTranslation(translatedText);
+      trackSuccessfulTranslation(direction);
     } catch (requestError: unknown) {
       setError(
         requestError instanceof Error

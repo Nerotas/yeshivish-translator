@@ -32,6 +32,7 @@ function renderApp(pathname = "/") {
 describe("App", () => {
   beforeEach(() => {
     mockedTranslateText.mockReset();
+    window.dataLayer = [];
     localStorage.clear();
     delete document.documentElement.dataset.theme;
   });
@@ -125,6 +126,44 @@ describe("App", () => {
     );
   });
 
+  it("tracks each direction only after a translation succeeds", async () => {
+    let finishRequest: (translation: string) => void = () => undefined;
+    mockedTranslateText.mockReturnValue(
+      new Promise((resolve) => {
+        finishRequest = resolve;
+      }),
+    );
+    renderApp();
+
+    fireEvent.change(screen.getByLabelText("Yeshivish text"), {
+      target: { value: "A gut vort." },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Translate" }));
+
+    expect(window.dataLayer).toEqual([]);
+
+    finishRequest("A good insight.");
+    expect(await screen.findByText("A good insight.")).toBeVisible();
+    expect(window.dataLayer).toEqual([
+      { event: "translate_yeshivish_to_english" },
+    ]);
+
+    mockedTranslateText.mockResolvedValue("A geshmake vort.");
+    fireEvent.click(
+      screen.getByRole("button", { name: "English → Yeshivish" }),
+    );
+    fireEvent.change(screen.getByLabelText("English text"), {
+      target: { value: "A good insight." },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Translate" }));
+
+    expect(await screen.findByText("A geshmake vort.")).toBeVisible();
+    expect(window.dataLayer).toEqual([
+      { event: "translate_yeshivish_to_english" },
+      { event: "translate_english_to_yeshivish" },
+    ]);
+  });
+
   it("shows API errors", async () => {
     mockedTranslateText.mockRejectedValue(
       new Error("Translation request failed."),
@@ -141,6 +180,7 @@ describe("App", () => {
         "Translation request failed.",
       );
     });
+    expect(window.dataLayer).toEqual([]);
   });
 
   it("validates empty input without making an API request", () => {
