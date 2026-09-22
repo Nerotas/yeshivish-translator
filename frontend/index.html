@@ -2,11 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- page-metadata:start -->
     <meta
@@ -42,7 +38,26 @@
       content="https://www.yeshivish-translator.com/social-preview.png"
     />
     <script id="page-structured-data" type="application/ld+json">
-      {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.yeshivish-translator.com/#website","name":"Yeshivish Translator","url":"https://www.yeshivish-translator.com","description":"Translate Yeshivish into plain English and explore a glossary of Yiddish, Hebrew, Aramaic, and Jewish terminology."},{"@type":"WebApplication","name":"Yeshivish Translator","url":"https://www.yeshivish-translator.com","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","description":"Translate Yeshivish into plain English and explore a glossary of Yiddish, Hebrew, Aramaic, and Jewish terminology."}]}
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.yeshivish-translator.com/#website",
+            "name": "Yeshivish Translator",
+            "url": "https://www.yeshivish-translator.com",
+            "description": "Translate Yeshivish into plain English and explore a glossary of Yiddish, Hebrew, Aramaic, and Jewish terminology."
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Yeshivish Translator",
+            "url": "https://www.yeshivish-translator.com",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "description": "Translate Yeshivish into plain English and explore a glossary of Yiddish, Hebrew, Aramaic, and Jewish terminology."
+          }
+        ]
+      }
     </script>
     <title>Yeshivish Translator - Translate Yeshivish to Plain English</title>
     <!-- page-metadata:end -->
@@ -63,8 +78,33 @@
 
       gtag("config", "G-P9EBHQ88V6");
     </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TL5D9WFW");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TL5D9WFW"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
